@@ -13,8 +13,6 @@
 		E9CCA68F2B88E03500F5AA7F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68E2B88E03500F5AA7F /* Resources.swift */; };
 		E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA6902B88E06C00F5AA7F /* ElementView.swift */; };
 		E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */; };
-		E9E641662B8A89CA00CD5D33 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641652B8A89CA00CD5D33 /* ConfigureViewController.swift */; };
-		E9E641BC2B8CACDF00CD5D33 /* ConfigureSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641BB2B8CACDF00CD5D33 /* ConfigureSheetController.swift */; };
 		E9E641BE2B8CAD5600CD5D33 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +24,6 @@
 		E9CCA68E2B88E03500F5AA7F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		E9CCA6902B88E06C00F5AA7F /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSaverTextView.swift; sourceTree = "<group>"; };
-		E9E641652B8A89CA00CD5D33 /* ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
-		E9E641BB2B8CACDF00CD5D33 /* ConfigureSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureSheetController.swift; sourceTree = "<group>"; };
 		E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,12 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */,
+				E9E641C02B8CDAED00CD5D33 /* ElementView */,
+				E9E641C12B8CDB1700CD5D33 /* Resources */,
 				E9E641BF2B8CAD8400CD5D33 /* Extensions */,
-				E9CCA68E2B88E03500F5AA7F /* Resources.swift */,
-				E9CCA6902B88E06C00F5AA7F /* ElementView.swift */,
-				E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */,
-				E9E641652B8A89CA00CD5D33 /* ConfigureViewController.swift */,
-				E9E641BB2B8CACDF00CD5D33 /* ConfigureSheetController.swift */,
 			);
 			path = MinimalCountdown;
 			sourceTree = "<group>";
@@ -80,6 +73,23 @@
 				E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9E641C02B8CDAED00CD5D33 /* ElementView */ = {
+			isa = PBXGroup;
+			children = (
+				E9CCA6902B88E06C00F5AA7F /* ElementView.swift */,
+				E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */,
+			);
+			path = ElementView;
+			sourceTree = "<group>";
+		};
+		E9E641C12B8CDB1700CD5D33 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9CCA68E2B88E03500F5AA7F /* Resources.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,13 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E641BC2B8CACDF00CD5D33 /* ConfigureSheetController.swift in Sources */,
 				E9E641BE2B8CAD5600CD5D33 /* CGFloat+Extensions.swift in Sources */,
 				E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */,
 				E9CCA68F2B88E03500F5AA7F /* Resources.swift in Sources */,
 				E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */,
 				E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */,
-				E9E641662B8A89CA00CD5D33 /* ConfigureViewController.swift in Sources */,
 				E9CCA68D2B88E01600F5AA7F /* Date+Extensions.swift in Sources */,
 				E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */,
 			);
