@@ -16,6 +16,11 @@ final class SSaverTextView: NSTextField {
         self.isSelectable = false
         self.isBezeled = false
         self.alignment = .center
+        self.textColor = Resources.mainTitleColor.withAlphaComponent(
+            Resources.brightIsNormal
+                ? .normalBright.texts
+                : .dimBright.texts
+        )
     }
 
     required init?(coder: NSCoder) {
