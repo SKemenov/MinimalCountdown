@@ -9,6 +9,8 @@ import ScreenSaver
 
 final class MinimalCountdownView: ScreenSaverView {
 
+    lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
+
     private let daysView = ElementView()
     private let hoursView = ElementView()
     private let minutesView = ElementView()
@@ -41,7 +43,6 @@ final class MinimalCountdownView: ScreenSaverView {
         configureScene()
     }
 
-
     // NSView
 
     override func draw(_ rect: NSRect) {
@@ -60,16 +61,16 @@ final class MinimalCountdownView: ScreenSaverView {
         minutesView.digitsLabel.stringValue = goalDate.minutesString
         secondsView.digitsLabel.stringValue = goalDate.secondsString
     }
+}
 
+private extension MinimalCountdownView {
     func configureScene() {
         configureUI()
         configureElements()
         configureTitle()
         configureConstraints()
     }
-}
 
-private extension MinimalCountdownView {
     func configureUI() {
         let elementWidth = round(bounds.width / .elementsWithSpaces)
         let digitsFont =  NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
