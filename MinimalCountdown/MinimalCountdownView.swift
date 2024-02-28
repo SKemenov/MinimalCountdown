@@ -26,6 +26,45 @@ final class MinimalCountdownView: ScreenSaverView {
         return stack
     }()
 
+    var mainTitleColorIndex = Resources.mainTitleColorIndex {
+        didSet {
+            configureScene()
+        }
+    }
+
+    var titleString = Resources.titleString {
+        didSet {
+            configureScene()
+        }
+    }
+
+    var brightIsNormal = Resources.brightIsNormal {
+        didSet {
+            configureScene()
+        }
+    }
+
+    var titleIsHidden = Resources.titleIsHidden {
+        didSet {
+            configureScene()
+        }
+    }
+    
+    var goalDate = Resources.goalDate {
+        didSet {
+            configureScene()
+        }
+    }
+
+
+    override var hasConfigureSheet: Bool {
+        return true
+    }
+
+    override var configureSheet: NSWindow? {
+        return sheetController.window
+    }
+
     // Inits
 
     convenience init() {
@@ -55,7 +94,7 @@ final class MinimalCountdownView: ScreenSaverView {
     // ScreenSaverView
 
     override func animateOneFrame() {
-        guard let goalDate = Resources.goalDate else { return }
+//        guard let goalDate = goalDate else { return }
         daysView.digitsLabel.stringValue = goalDate.daysString
         hoursView.digitsLabel.stringValue = goalDate.hoursString
         minutesView.digitsLabel.stringValue = goalDate.minutesString
@@ -78,12 +117,27 @@ private extension MinimalCountdownView {
 
         [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
         titleLabel.font = textsFont
+        titleLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
+            brightIsNormal
+            ? .normalBright.texts
+            : .dimBright.texts
+        )
         elementsStack.spacing = round(bounds.width * .elementsSpacingRatio)
 
         [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, element) in
             element.digitsLabel.font = digitsFont
             element.descriptionLabel.font = textsFont
             element.descriptionLabel.stringValue = Resources.elements[index].uppercased()
+            element.digitsLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
+                brightIsNormal
+                ? .normalBright.digits
+                : .dimBright.digits
+            )
+            element.descriptionLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
+                brightIsNormal
+                ? .normalBright.texts
+                : .dimBright.texts
+            )
             elementsStack.addArrangedSubview(element)
         }
 
@@ -92,8 +146,8 @@ private extension MinimalCountdownView {
     }
 
     func configureTitle() {
-        titleLabel.stringValue = Resources.titleIsHidden ? "" : Resources.titleString.uppercased()
-        titleLabel.isHidden = Resources.titleIsHidden
+        titleLabel.stringValue = titleIsHidden ? "" : titleString.uppercased()
+        titleLabel.isHidden = titleIsHidden
     }
 
     func configureElements() {
