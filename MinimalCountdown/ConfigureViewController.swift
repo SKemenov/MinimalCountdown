@@ -35,6 +35,7 @@ final class ConfigureViewController: NSViewController {
     // MARK: - Private properties
     private var screenSaverDefaults = ScreenSaverDefaults()
 
+    // MARK: - Lifecycle
 
     override func loadView() {
         let bundleIdentifier = Bundle.main.bundleIdentifier!

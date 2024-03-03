@@ -58,6 +58,8 @@ final class MinimalCountdownView: ScreenSaverView {
 //        }
 //    }
 
+    // MARK: - Public properties
+
     override var hasConfigureSheet: Bool {
         return true
     }
@@ -66,7 +68,7 @@ final class MinimalCountdownView: ScreenSaverView {
         return sheetController.window
     }
 
-    // Inits
+    // MARK: - Inits
 
     convenience init() {
         self.init(frame: .zero, isPreview: false)
@@ -85,21 +87,20 @@ final class MinimalCountdownView: ScreenSaverView {
         configureScene()
     }
 
-    // NSView
+    // MARK: - Lifecycle
 
     override func draw(_ rect: NSRect) {
         configureScene()
         updateScene()
     }
 
-
-    // ScreenSaverView
-
     override func animateOneFrame() {
 //        guard let targetDate = targetDate else { return }
         updateScene()
     }
 }
+
+// MARK: - Private methods
 
 private extension MinimalCountdownView {
     func configureScene() {
