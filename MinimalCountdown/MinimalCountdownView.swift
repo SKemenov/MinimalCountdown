@@ -18,7 +18,7 @@ final class MinimalCountdownView: ScreenSaverView {
     private let minutesView = ElementView()
     private let secondsView = ElementView()
 
-    private let titleLabel = SSaverTextView()
+    private let messageLabel = SSaverTextView()
 
     private let elementsStack = NSStackView()
 
