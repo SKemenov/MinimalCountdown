@@ -8,7 +8,7 @@
 import AppKit
 
 extension NSFont {
-    // MARK: - Private enum
+    // MARK: - Custom property
 
     var monospacedNumbers: NSFont {
         let features = [

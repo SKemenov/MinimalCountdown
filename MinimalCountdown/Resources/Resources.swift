@@ -10,7 +10,7 @@ import AppKit
 enum Resources {
     // MARK: - Dictionaries
 
-    enum ScreensaverState {
+    enum ScreensaverState: Int {
         case showDays
         case showDaysHours
         case showDaysHoursMinutes
@@ -24,39 +24,39 @@ enum Resources {
         "seconds"
     ]
 
-    static let preferences = [
+    static let preferenceLabels = [
         "Message:",
         "Color:",
         "Date:",
         "Style:"
     ]
 
-    static let colorSet = [
+    static let colorNames = [
         "White",
-        "Orange",
-        "Indigo",
-        "Yellow",
-        "Purple",
         "Red",
         "Pink",
-        "Mint",
-        "Blue",
+        "Orange",
+        "Yellow",
         "Green",
-        "Cyan"
+        "Mint",
+        "Cyan",
+        "Blue",
+        "Indigo",
+        "Purple"
     ]
 
-    static let titleColors: [NSColor] = [
+    static let colors: [NSColor] = [
         .white,
-        .systemOrange,
-        .systemIndigo,
-        .systemYellow,
-        .systemPurple,
         .systemRed,
         .systemPink,
-        .systemMint,
-        .systemBlue,
+        .systemOrange,
+        .systemYellow,
         .systemGreen,
-        .cyan
+        .systemMint,
+        .cyan,
+        .systemBlue,
+        .systemIndigo,
+        .systemPurple
     ]
 
     static let backgroundColors: [NSColor] = [
@@ -67,18 +67,18 @@ enum Resources {
     // MARK: - Preferencies
 
 //    static var mainTitleColor = Resources.titleColors[mainTitleColorIndex]
-    static var mainBackgroundColor = Resources.backgroundColors[0]
-    static var mainTitleColorIndex = 9
-    static var titleString = "My BDay party in"
-    static var brightIsNormal = false
-    static var titleIsHidden = true
-    static var showElements: Resources.ScreensaverState = .showAll
-    static var goalDate = DateComponents(
-        calendar: .current,
-        year: 2024,
-        month: 3,
-        day: 26,
-        hour: 2,
-        minute: 30
-    ).date!
+//    static var mainBackgroundColor = Resources.backgroundColors[screenSaverDefaults.backgroundColorIndex]
+//    static var mainTitleColorIndex = 9
+//    static var titleString = "My BDay party in"
+//    static var brightIsNormal = false
+//    static var titleIsHidden = true
+//    static var showElements: Resources.ScreensaverState = .showAll
+//    static var targetDate = DateComponents(
+//        calendar: .current,
+//        year: 2024,
+//        month: 3,
+//        day: 26,
+//        hour: 2,
+//        minute: 30
+//    ).date!
 }
