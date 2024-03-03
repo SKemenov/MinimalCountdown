@@ -19,9 +19,6 @@ Minimal Countdown is a minimalistic countdown screen saver for macOS. Shows the 
 - [x] Select a style for your timer to display days, hours, minutes and even seconds
 - [x] Localization - English
 
-## Configurations
-![Configurations](vendors/mc-screenshot-02s.png)
-
 ## Compatibility
 Minimal Countdowns screen saver requires OS X Ventura or later.
 
@@ -31,7 +28,10 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 
 ## Downloads
 ### [Minimal Countdown Screen Saver (.zip)](https://github.com/SKemenov/MinimalCountdown/releases/download/1.0/MinimalCountdown.saver.zip)
-### [Minimal Countdown Screen Saver (.zip)](/releases/download/1.0/MinimalCountdown.saver.zip)
+
+## Configurations
+![Configurations](vendors/mc-screenshot-02s.png)
+
 
 ## How to install
 1. Download zip file, unzip it and double-click `MinimalCountdown.ssaver`
