@@ -8,15 +8,17 @@
 import ScreenSaver
 
 final class MinimalCountdownView: ScreenSaverView {
+// MARK: - Private properties
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
+    private var screenSaverDefaults = ScreenSaverDefaults()
 
     private let daysView = ElementView()
     private let hoursView = ElementView()
     private let minutesView = ElementView()
     private let secondsView = ElementView()
 
-    private let titleLabel = SSaverTextView()
+    private let messageLabel = SSaverTextView()
 
     private let elementsStack = NSStackView()
 
@@ -26,36 +28,37 @@ final class MinimalCountdownView: ScreenSaverView {
         return stack
     }()
 
-    var mainTitleColorIndex = Resources.mainTitleColorIndex {
-        didSet {
-            configureScene()
-        }
-    }
+//    var mainTitleColorIndex = Resources.mainTitleColorIndex {
+//        didSet {
+//            configureScene()
+//        }
+//    }
+//
+//    var titleString = Resources.titleString {
+//        didSet {
+//            configureScene()
+//        }
+//    }
+//
+//    var brightIsNormal = Resources.brightIsNormal {
+//        didSet {
+//            configureScene()
+//        }
+//    }
+//
+//    var titleIsHidden = Resources.titleIsHidden {
+//        didSet {
+//            configureScene()
+//        }
+//    }
+//    
+//    var targetDate = Resources.targetDate {
+//        didSet {
+//            configureScene()
+//        }
+//    }
 
-    var titleString = Resources.titleString {
-        didSet {
-            configureScene()
-        }
-    }
-
-    var brightIsNormal = Resources.brightIsNormal {
-        didSet {
-            configureScene()
-        }
-    }
-
-    var titleIsHidden = Resources.titleIsHidden {
-        didSet {
-            configureScene()
-        }
-    }
-    
-    var goalDate = Resources.goalDate {
-        didSet {
-            configureScene()
-        }
-    }
-
+    // MARK: - Public properties
 
     override var hasConfigureSheet: Bool {
         return true
@@ -65,7 +68,7 @@ final class MinimalCountdownView: ScreenSaverView {
         return sheetController.window
     }
 
-    // Inits
+    // MARK: - Inits
 
     convenience init() {
         self.init(frame: .zero, isPreview: false)
@@ -73,6 +76,8 @@ final class MinimalCountdownView: ScreenSaverView {
 
     override init!(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
+        let bundleIdentifier = Bundle.main.bundleIdentifier!
+        screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
         configureScene()
         animateOneFrame()
     }
@@ -82,76 +87,105 @@ final class MinimalCountdownView: ScreenSaverView {
         configureScene()
     }
 
-    // NSView
+    // MARK: - Lifecycle
 
     override func draw(_ rect: NSRect) {
-        Resources.mainBackgroundColor.setFill()
-        NSBezierPath.fill(bounds)
         configureScene()
+        updateScene()
     }
-
-
-    // ScreenSaverView
 
     override func animateOneFrame() {
-//        guard let goalDate = goalDate else { return }
-        daysView.digitsLabel.stringValue = goalDate.daysString
-        hoursView.digitsLabel.stringValue = goalDate.hoursString
-        minutesView.digitsLabel.stringValue = goalDate.minutesString
-        secondsView.digitsLabel.stringValue = goalDate.secondsString
+//        guard let targetDate = targetDate else { return }
+        updateScene()
     }
 }
+
+// MARK: - Private methods
 
 private extension MinimalCountdownView {
     func configureScene() {
         configureUI()
-        configureElements()
-        configureTitle()
         configureConstraints()
     }
 
+    func updateScene() {
+        screenSaverDefaults.synchronize()
+        updateColor()
+        configureElements()
+        updateTitle()
+        updateTargetDate()
+    }
+
     func configureUI() {
+        Resources.backgroundColors[screenSaverDefaults.backgroundColorIndex].setFill()
+        NSBezierPath.fill(bounds)
+
+        [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
+
         let elementWidth = round(bounds.width / .elementsWithSpaces)
         let digitsFont =  NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
         let textsFont = NSFont.systemFont(ofSize: elementWidth / 5, weight: .ultraLight)
 
-        [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-        titleLabel.font = textsFont
-        titleLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
-            brightIsNormal
-            ? .normalBright.texts
-            : .dimBright.texts
-        )
+        messageLabel.font = textsFont
         elementsStack.spacing = round(bounds.width * .elementsSpacingRatio)
 
-        [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, element) in
-            element.digitsLabel.font = digitsFont
-            element.descriptionLabel.font = textsFont
-            element.descriptionLabel.stringValue = Resources.elements[index].uppercased()
-            element.digitsLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
-                brightIsNormal
-                ? .normalBright.digits
-                : .dimBright.digits
-            )
-            element.descriptionLabel.textColor = Resources.titleColors[mainTitleColorIndex].withAlphaComponent(
-                brightIsNormal
-                ? .normalBright.texts
-                : .dimBright.texts
-            )
-            elementsStack.addArrangedSubview(element)
+        [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, view) in
+            view.digitsLabel.font = digitsFont
+            view.descriptionLabel.font = textsFont
+            view.descriptionLabel.stringValue = Resources.elements[index].uppercased()
+            elementsStack.addArrangedSubview(view)
         }
 
-        [titleLabel, elementsStack].forEach { vStack.addArrangedSubview($0) }
+        [messageLabel, elementsStack].forEach { vStack.addArrangedSubview($0) }
         addSubview(vStack)
     }
 
-    func configureTitle() {
-        titleLabel.stringValue = titleIsHidden ? "" : titleString.uppercased()
-        titleLabel.isHidden = titleIsHidden
+    func configureConstraints() {
+        NSLayoutConstraint.activate([
+            vStack.centerXAnchor.constraint(equalTo: centerXAnchor),
+            vStack.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ])
+    }
+
+    func updateTargetDate() {
+        daysView.digitsLabel.stringValue = screenSaverDefaults.targetDate.daysString
+        hoursView.digitsLabel.stringValue = screenSaverDefaults.targetDate.hoursString
+        minutesView.digitsLabel.stringValue = screenSaverDefaults.targetDate.minutesString
+        secondsView.digitsLabel.stringValue = screenSaverDefaults.targetDate.secondsString
+    }
+
+    func updateColor() {
+        [daysView, hoursView, minutesView, secondsView].forEach { view in
+            view.digitsLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
+                screenSaverDefaults.brightIsNormal
+                ? .normalBright.digits
+                : .dimBright.digits
+            )
+            view.descriptionLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
+                screenSaverDefaults.brightIsNormal
+                ? .normalBright.texts
+                : .dimBright.texts
+            )
+        }
+    }
+
+    func updateTitle() {
+        messageLabel.isHidden = screenSaverDefaults.messageIsHidden
+        if !messageLabel.isHidden {
+            let string = screenSaverDefaults.messageString.uppercased()
+            let words = string.components(separatedBy: " ")
+            let separator = string.count <= 20 ? "  " : "   "
+            messageLabel.stringValue = words.joined(separator: separator)
+            messageLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
+                screenSaverDefaults.brightIsNormal
+                ? .normalBright.texts
+                : .dimBright.texts
+            )
+        }
     }
 
     func configureElements() {
-        switch Resources.showElements {
+        switch Resources.ScreensaverState(rawValue: screenSaverDefaults.showElementsIndex) {
         case .showDays:
             daysView.isHidden = false
             [hoursView, minutesView, secondsView].forEach{ $0.isHidden = true }
@@ -161,15 +195,9 @@ private extension MinimalCountdownView {
         case .showDaysHoursMinutes:
             [daysView, hoursView, minutesView].forEach{ $0.isHidden = false }
             [secondsView].forEach{ $0.isHidden = true }
-        case .showAll:
+        default:
+//        case .showAll:
             [daysView, hoursView, minutesView, secondsView].forEach{ $0.isHidden = false }
         }
-    }
-
-    func configureConstraints() {
-        NSLayoutConstraint.activate([
-            vStack.centerXAnchor.constraint(equalTo: centerXAnchor),
-            vStack.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
     }
 }
