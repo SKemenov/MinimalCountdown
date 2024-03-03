@@ -36,25 +36,30 @@ final class ConfigureViewController: NSViewController {
     // MARK: - Private properties
     private var screenSaverDefaults = ScreenSaverDefaults()
 
-    let screenSaverView = MinimalCountdownView()
-
-    var messageFieldValue = MinimalCountdownView().titleString
-    var messageCheckboxValue = !MinimalCountdownView().titleIsHidden
-    var dimCheckboxValue = !MinimalCountdownView().brightIsNormal
-    var colorPopupButtonIndex = MinimalCountdownView().mainTitleColorIndex
-    var datePickerValue = MinimalCountdownView().goalDate // ?? Date()
-    var styleSliderValue = 3
 
     override func loadView() {
-        view = NSView(frame: NSMakeRect(0.0, 0.0, 400, 292))
         let bundleIdentifier = Bundle.main.bundleIdentifier!
         screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
+        view = NSView(frame: NSMakeRect(0.0, 0.0, 390, 256))
         configureUI()
         configureConstraints()
+    }
+
+    override func viewWillAppear() {
+        configureValues()
     }
 }
 
 private extension ConfigureViewController {
+    func configureValues() {
+        colorPopupButton.selectItem(at: screenSaverDefaults.colorIndex)
+        styleSlider.integerValue = screenSaverDefaults.showElementsIndex
+        messageField.stringValue = screenSaverDefaults.messageString
+        messageCheckbox.state = !screenSaverDefaults.messageIsHidden ? .on : .off
+        dimCheckbox.state = !screenSaverDefaults.brightIsNormal ? .on : .off
+        datePicker.dateValue = screenSaverDefaults.targetDate
+    }
+
     func configureUI() {
         [
             messageLabel, colorLabel, dateLabel, styleLabel, daysLabel, hoursLabel, minutesLabel, secondsLabel,
@@ -213,12 +218,13 @@ private extension ConfigureViewController {
     }
 
     func saveData() {
-        MinimalCountdownView().mainTitleColorIndex = colorPopupButtonIndex
-        MinimalCountdownView().titleString = messageField.stringValue
-//        MinimalCountdownView().titleString = messageFieldValue
-        MinimalCountdownView().brightIsNormal = !dimCheckboxValue
-        MinimalCountdownView().titleIsHidden = !messageCheckboxValue
-        MinimalCountdownView().goalDate = datePickerValue
+        screenSaverDefaults.brightIsNormal = !(dimCheckbox.state.rawValue == 1 ? true : false)
+        screenSaverDefaults.messageIsHidden = !(messageCheckbox.state.rawValue == 1 ? true : false)
+        screenSaverDefaults.colorIndex = colorPopupButton.indexOfSelectedItem
+        screenSaverDefaults.showElementsIndex = styleSlider.integerValue
+        screenSaverDefaults.messageString = messageField.stringValue
+        screenSaverDefaults.targetDate = datePicker.dateValue
+        screenSaverDefaults.synchronize()
     }
 
     func closeSheet() {
