@@ -63,22 +63,4 @@ enum Resources {
         .black,
         .white
     ]
-
-    // MARK: - Preferencies
-
-//    static var mainTitleColor = Resources.titleColors[mainTitleColorIndex]
-//    static var mainBackgroundColor = Resources.backgroundColors[screenSaverDefaults.backgroundColorIndex]
-//    static var mainTitleColorIndex = 9
-//    static var titleString = "My BDay party in"
-//    static var brightIsNormal = false
-//    static var titleIsHidden = true
-//    static var showElements: Resources.ScreensaverState = .showAll
-//    static var targetDate = DateComponents(
-//        calendar: .current,
-//        year: 2024,
-//        month: 3,
-//        day: 26,
-//        hour: 2,
-//        minute: 30
-//    ).date!
 }

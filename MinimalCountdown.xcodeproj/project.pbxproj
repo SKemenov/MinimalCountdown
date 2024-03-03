@@ -48,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E915580B2B94914C0010D67F /* ConfigureView */ = {
+			isa = PBXGroup;
+			children = (
+				E9E641C22B8CDD0700CD5D33 /* ConfigureSheetController.swift */,
+				E9E641C42B8CDD7800CD5D33 /* ConfigureViewController.swift */,
+			);
+			path = ConfigureView;
+			sourceTree = "<group>";
+		};
 		E9B531912B854D60002A2B79 = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +78,9 @@
 			children = (
 				E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */,
 				E9E641C02B8CDAED00CD5D33 /* ElementView */,
-				E9E641C12B8CDB1700CD5D33 /* Resources */,
+				E915580B2B94914C0010D67F /* ConfigureView */,
 				E9E641BF2B8CAD8400CD5D33 /* Extensions */,
-				E9E641C22B8CDD0700CD5D33 /* ConfigureSheetController.swift */,
-				E9E641C42B8CDD7800CD5D33 /* ConfigureViewController.swift */,
+				E9E641C12B8CDB1700CD5D33 /* Resources */,
 			);
 			path = MinimalCountdown;
 			sourceTree = "<group>";

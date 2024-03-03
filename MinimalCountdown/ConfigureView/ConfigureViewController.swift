@@ -33,6 +33,7 @@ final class ConfigureViewController: NSViewController {
     private var styleSlider = NSSlider()
 
     // MARK: - Private properties
+    
     private var screenSaverDefaults = ScreenSaverDefaults()
 
     // MARK: - Lifecycle
