@@ -28,36 +28,6 @@ final class MinimalCountdownView: ScreenSaverView {
         return stack
     }()
 
-//    var mainTitleColorIndex = Resources.mainTitleColorIndex {
-//        didSet {
-//            configureScene()
-//        }
-//    }
-//
-//    var titleString = Resources.titleString {
-//        didSet {
-//            configureScene()
-//        }
-//    }
-//
-//    var brightIsNormal = Resources.brightIsNormal {
-//        didSet {
-//            configureScene()
-//        }
-//    }
-//
-//    var titleIsHidden = Resources.titleIsHidden {
-//        didSet {
-//            configureScene()
-//        }
-//    }
-//    
-//    var targetDate = Resources.targetDate {
-//        didSet {
-//            configureScene()
-//        }
-//    }
-
     // MARK: - Public properties
 
     override var hasConfigureSheet: Bool {
@@ -95,7 +65,6 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     override func animateOneFrame() {
-//        guard let targetDate = targetDate else { return }
         updateScene()
     }
 }
@@ -196,7 +165,6 @@ private extension MinimalCountdownView {
             [daysView, hoursView, minutesView].forEach{ $0.isHidden = false }
             [secondsView].forEach{ $0.isHidden = true }
         default:
-//        case .showAll:
             [daysView, hoursView, minutesView, secondsView].forEach{ $0.isHidden = false }
         }
     }

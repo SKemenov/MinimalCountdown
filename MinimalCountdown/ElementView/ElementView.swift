@@ -32,8 +32,6 @@ private extension ElementView {
     func configureUI() {
         [digitsLabel, descriptionLabel].forEach { addSubview($0) }
 
-        //let space = Resources.messageIsHidden ? CGFloat.zero : .elementsVSpacing
-
         NSLayoutConstraint.activate([
             digitsLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             digitsLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
