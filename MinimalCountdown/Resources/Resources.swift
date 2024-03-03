@@ -24,6 +24,27 @@ enum Resources {
         "seconds"
     ]
 
+    static let preferences = [
+        "Message:",
+        "Color:",
+        "Date:",
+        "Style:"
+    ]
+
+    static let colorSet = [
+        "White",
+        "Orange",
+        "Indigo",
+        "Yellow",
+        "Purple",
+        "Red",
+        "Pink",
+        "Mint",
+        "Blue",
+        "Green",
+        "Cyan"
+    ]
+
     static let titleColors: [NSColor] = [
         .white,
         .systemOrange,
@@ -45,8 +66,9 @@ enum Resources {
 
     // MARK: - Preferencies
 
-    static var mainTitleColor = Resources.titleColors[9]
+//    static var mainTitleColor = Resources.titleColors[mainTitleColorIndex]
     static var mainBackgroundColor = Resources.backgroundColors[0]
+    static var mainTitleColorIndex = 9
     static var titleString = "My BDay party in"
     static var brightIsNormal = false
     static var titleIsHidden = true
@@ -58,5 +80,5 @@ enum Resources {
         day: 26,
         hour: 2,
         minute: 30
-    ).date
+    ).date!
 }
