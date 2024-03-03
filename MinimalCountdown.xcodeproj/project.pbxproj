@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */; };
+		E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BBA5482B931EEE008AEC40 /* Assets.xcassets */; };
 		E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */; };
 		E9CCA68D2B88E01600F5AA7F /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68C2B88E01600F5AA7F /* Date+Extensions.swift */; };
 		E9CCA68F2B88E03500F5AA7F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68E2B88E03500F5AA7F /* Resources.swift */; };
 		E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA6902B88E06C00F5AA7F /* ElementView.swift */; };
 		E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */; };
+		E9E2DDAF2B912216002A8C90 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2DDAE2B912216002A8C90 /* UserDefaults+Extensions.swift */; };
 		E9E641BE2B8CAD5600CD5D33 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */; };
 		E9E641C32B8CDD0700CD5D33 /* ConfigureSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641C22B8CDD0700CD5D33 /* ConfigureSheetController.swift */; };
 		E9E641C52B8CDD7800CD5D33 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E641C42B8CDD7800CD5D33 /* ConfigureViewController.swift */; };
@@ -21,11 +23,13 @@
 /* Begin PBXFileReference section */
 		E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalCountdownView.swift; sourceTree = "<group>"; };
 		E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimalCountdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BBA5482B931EEE008AEC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFont+Extensions.swift"; sourceTree = "<group>"; };
 		E9CCA68C2B88E01600F5AA7F /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E9CCA68E2B88E03500F5AA7F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		E9CCA6902B88E06C00F5AA7F /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		E9CCA6922B88E0AA00F5AA7F /* SSaverTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSaverTextView.swift; sourceTree = "<group>"; };
+		E9E2DDAE2B912216002A8C90 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		E9E641C22B8CDD0700CD5D33 /* ConfigureSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureSheetController.swift; sourceTree = "<group>"; };
 		E9E641C42B8CDD7800CD5D33 /* ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */,
 				E9CCA68C2B88E01600F5AA7F /* Date+Extensions.swift */,
 				E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */,
+				E9E2DDAE2B912216002A8C90 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CCA68E2B88E03500F5AA7F /* Resources.swift */,
+				E9BBA5482B931EEE008AEC40 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = E9B531912B854D60002A2B79;
 			productRefGroup = E9B5319C2B854D60002A2B79 /* Products */;
@@ -169,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +217,7 @@
 				E9E641C52B8CDD7800CD5D33 /* ConfigureViewController.swift in Sources */,
 				E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */,
 				E9CCA68D2B88E01600F5AA7F /* Date+Extensions.swift in Sources */,
+				E9E2DDAF2B912216002A8C90 /* UserDefaults+Extensions.swift in Sources */,
 				E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
