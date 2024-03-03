@@ -32,13 +32,7 @@ private extension ElementView {
     func configureUI() {
         [digitsLabel, descriptionLabel].forEach { addSubview($0) }
 
-        digitsLabel.textColor = Resources.mainTitleColor.withAlphaComponent(
-            Resources.brightIsNormal
-                ? .normalBright.digits
-                : .dimBright.digits
-        )
-
-        let space = Resources.titleIsHidden ? CGFloat.zero : .verticalSpacing
+        let space = Resources.titleIsHidden ? CGFloat.zero : .elementsVSpacing
 
         NSLayoutConstraint.activate([
             digitsLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
