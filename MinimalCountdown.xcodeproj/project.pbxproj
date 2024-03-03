@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9432EA42B948E1E00A5D823 /* NSTextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9432EA32B948E1E00A5D823 /* NSTextView+Extensions.swift */; };
 		E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */; };
 		E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BBA5482B931EEE008AEC40 /* Assets.xcassets */; };
 		E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9432EA32B948E1E00A5D823 /* NSTextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+Extensions.swift"; sourceTree = "<group>"; };
 		E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalCountdownView.swift; sourceTree = "<group>"; };
 		E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimalCountdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BBA5482B931EEE008AEC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				E9CCA68C2B88E01600F5AA7F /* Date+Extensions.swift */,
 				E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */,
 				E9E2DDAE2B912216002A8C90 /* UserDefaults+Extensions.swift */,
+				E9432EA32B948E1E00A5D823 /* NSTextView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				E9E641C52B8CDD7800CD5D33 /* ConfigureViewController.swift in Sources */,
 				E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */,
 				E9CCA68D2B88E01600F5AA7F /* Date+Extensions.swift in Sources */,
+				E9432EA42B948E1E00A5D823 /* NSTextView+Extensions.swift in Sources */,
 				E9E2DDAF2B912216002A8C90 /* UserDefaults+Extensions.swift in Sources */,
 				E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */,
 			);

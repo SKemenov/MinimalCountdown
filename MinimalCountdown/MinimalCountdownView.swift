@@ -200,6 +200,4 @@ private extension MinimalCountdownView {
             [daysView, hoursView, minutesView, secondsView].forEach{ $0.isHidden = false }
         }
     }
-
-    }
 }
