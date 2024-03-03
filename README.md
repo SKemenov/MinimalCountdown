@@ -30,8 +30,8 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 `Swift only`, `no storyboards`, `AppKit`, `ScreenSaver`, `ScreenSaverDefaults`
 
 ## Downloads
-### [Minimal Countdown Screen Saver (.zip)](Releases/1.0/MinimalCountdown.ssaver.zip)
-
+### [Minimal Countdown Screen Saver (.zip)](https://github.com/SKemenov/MinimalCountdown/releases/download/1.0/MinimalCountdown.saver.zip)
+### [Minimal Countdown Screen Saver (.zip)](/releases/download/1.0/MinimalCountdown.saver.zip)
 
 ## How to install
 1. Download zip file, unzip it and double-click `MinimalCountdown.ssaver`
