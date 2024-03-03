@@ -10,7 +10,7 @@ import AppKit
 enum Resources {
     // MARK: - Dictionaries
 
-    enum ScreensaverState {
+    enum ScreensaverState: Int {
         case showDays
         case showDaysHours
         case showDaysHoursMinutes
@@ -24,39 +24,39 @@ enum Resources {
         "seconds"
     ]
 
-    static let preferences = [
+    static let preferenceLabels = [
         "Message:",
         "Color:",
         "Date:",
         "Style:"
     ]
 
-    static let colorSet = [
+    static let colorNames = [
         "White",
-        "Orange",
-        "Indigo",
-        "Yellow",
-        "Purple",
         "Red",
         "Pink",
-        "Mint",
-        "Blue",
+        "Orange",
+        "Yellow",
         "Green",
-        "Cyan"
+        "Mint",
+        "Cyan",
+        "Blue",
+        "Indigo",
+        "Purple"
     ]
 
-    static let titleColors: [NSColor] = [
+    static let colors: [NSColor] = [
         .white,
-        .systemOrange,
-        .systemIndigo,
-        .systemYellow,
-        .systemPurple,
         .systemRed,
         .systemPink,
-        .systemMint,
-        .systemBlue,
+        .systemOrange,
+        .systemYellow,
         .systemGreen,
-        .cyan
+        .systemMint,
+        .cyan,
+        .systemBlue,
+        .systemIndigo,
+        .systemPurple
     ]
 
     static let backgroundColors: [NSColor] = [
