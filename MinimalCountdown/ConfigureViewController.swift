@@ -5,6 +5,7 @@
 //  Created by Sergey Kemenov on 26.02.2024.
 //
 
+import ScreenSaver
 import AppKit
 
 final class ConfigureViewController: NSViewController {
@@ -32,6 +33,8 @@ final class ConfigureViewController: NSViewController {
     var styleSlider = NSSlider()
 
     // MARK: - Store properties
+    // MARK: - Private properties
+    private var screenSaverDefaults = ScreenSaverDefaults()
 
     let screenSaverView = MinimalCountdownView()
 
@@ -44,6 +47,8 @@ final class ConfigureViewController: NSViewController {
 
     override func loadView() {
         view = NSView(frame: NSMakeRect(0.0, 0.0, 400, 292))
+        let bundleIdentifier = Bundle.main.bundleIdentifier!
+        screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
         configureUI()
         configureConstraints()
     }

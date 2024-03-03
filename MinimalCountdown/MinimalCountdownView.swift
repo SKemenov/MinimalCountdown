@@ -8,8 +8,10 @@
 import ScreenSaver
 
 final class MinimalCountdownView: ScreenSaverView {
+// MARK: - Private properties
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
+    private var screenSaverDefaults = ScreenSaverDefaults()
 
     private let daysView = ElementView()
     private let hoursView = ElementView()
@@ -73,6 +75,8 @@ final class MinimalCountdownView: ScreenSaverView {
 
     override init!(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
+        let bundleIdentifier = Bundle.main.bundleIdentifier!
+        screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
         configureScene()
         animateOneFrame()
     }
