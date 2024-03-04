@@ -294,6 +294,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -348,6 +349,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -362,6 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimalCountdown/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
@@ -385,6 +388,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimalCountdown/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
