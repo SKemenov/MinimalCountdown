@@ -1,6 +1,8 @@
-## Minimal Countdown (macOS)
+## Minimal Countdown screensaver (macOS) v1.1
 
 Minimal Countdown is a minimalistic countdown screen saver for macOS. Shows the timer while you take a rest for a while. 
+
+Last release notes [read here](https://github.com/SKemenov/MinimalCountdown/releases).
 
 ![Screenshot](vendors/mc-screenshot-01s.png)
 ![Screenshot](vendors/mc-screenshot-03s.png)
@@ -30,7 +32,7 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 ### [Minimal Countdown Screen Saver (.zip)](https://github.com/SKemenov/MinimalCountdown/releases/download/1.1/MinimalCountdown.saver.zip)
 
 ## How to install
-1. Unzip and install it
+1. Unzip and install it (now without any Gatekeeper warnings)
 2. You can choose to install this screen saver only into your account or for all users
 3. Customize the settings to fit your imagination
 4. Enjoy it!
