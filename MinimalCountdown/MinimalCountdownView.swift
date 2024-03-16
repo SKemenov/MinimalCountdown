@@ -73,6 +73,7 @@ final class MinimalCountdownView: ScreenSaverView {
 
 private extension MinimalCountdownView {
     func configureScene() {
+        configureDefaults()
         configureUI()
         configureConstraints()
     }
@@ -83,6 +84,15 @@ private extension MinimalCountdownView {
         configureElements()
         updateTitle()
         updateTargetDate()
+    }
+
+    func configureDefaults() {
+        if screenSaverDefaults.targetDate.timeIntervalSince1970 == 0.0 {
+            screenSaverDefaults.brightIsNormal = true
+            screenSaverDefaults.messageIsHidden = true
+            screenSaverDefaults.showElementsIndex = 3
+            screenSaverDefaults.targetDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 30)
+        }
     }
 
     func configureUI() {
