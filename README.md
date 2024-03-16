@@ -27,34 +27,17 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 `Swift only`, `no storyboards`, `AppKit`, `ScreenSaver`, `ScreenSaverDefaults`
 
 ## Downloads
-### [Minimal Countdown Screen Saver (.zip)](https://github.com/SKemenov/MinimalCountdown/releases/download/1.0/MinimalCountdown.saver.zip)
+### [Minimal Countdown Screen Saver (.zip)](https://github.com/SKemenov/MinimalCountdown/releases/download/1.1/MinimalCountdown.saver.zip)
+
+## How to install
+1. Unzip and install it
+2. You can choose to install this screen saver only into your account or for all users
+3. Customize the settings to fit your imagination
+4. Enjoy it!
 
 ## Configurations
 ![Configurations](vendors/mc-screenshot-02s.png)
 
-
-## How to install
-1. Download zip file, unzip it and double-click `MinimalCountdown.ssaver`
-2. You can choose to install this screen saver only into your account or for all users
-3. Close `System Settings` and reopen it
-4. My current build is not yet notarized so you may see macOS notification _"MinimalCountdown.saver can’t be opened because Apple cannot check it for malicious software."_
-5. To fix this issue click `Show in Finder` button, macOS opens `Screen Savers` folder in the Finder
-6. Click `Ok` to close the notification alert and `System Settings` window too
-7. Hold `Shift` and after that right-click `MinimalCountdown.ssaver` file, then select `Open` in the context menu
-8. In the new notification window please click `Open` button
-9. Customize the settings to fit your imagination
-10. Enjoy it!
-
-**Note:**
-If you doubt about this issue, you may clone my repo and try to build the screen saver by yourself.
-
-<!---
-## How to build
-1. Clone the git
-2. Open the project in Xcode and build it
-3. Make an archive and take `MinimalCountdown.ssaver` from there 
-4. Double-click `MinimalCountdown.ssaver` file to add it into the `System Settings`
---->
 
 ## How to re-install
 1. Delete screen saver in `System Settings` (right-click && `Delete "MinimalCountdown"` && `Move to Trash`)
