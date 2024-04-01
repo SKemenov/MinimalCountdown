@@ -5,10 +5,10 @@ Minimal Countdown is a minimalistic countdown screen saver for macOS. Shows the 
 Last release notes [read here](https://github.com/SKemenov/MinimalCountdown/releases).
 
 <p align="center">
-  <img src="vendors/mc-screenshot-01s.png" width="24%"/> 
-  <img src="vendors/mc-screenshot-03s.png" width="24%"/> 
-  <img src="vendors/mc-screenshot-04s.png" width="24%"/> 
-  <img src="vendors/mc-screenshot-05s.png" width="24%"/> 
+  <img src="vendors/mc-screenshot-03s.png" width="49%"/> 
+  <img src="vendors/mc-screenshot-01s.png" width="49%"/> 
+  <img src="vendors/mc-screenshot-04s.png" width="49%"/> 
+  <img src="vendors/mc-screenshot-05s.png" width="49%"/> 
 </p>
 
 
