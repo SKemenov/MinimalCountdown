@@ -20,22 +20,16 @@ extension Date {
     // MARK: - Private method
 
     private func durationFromToday(in period: CountdownComponents) -> String {
-        let calendar = Calendar.current
-        let currentDate = Date()
-        let components = calendar.dateComponents(
-            [.day, .hour, .minute, .second],
-            from: currentDate,
-            to: self
-        )
-        var value = ""
-
-        switch period {
-        case .day: value = String(format: "%02d", abs(components.day ?? 0))
-        case .hour: value = String(format: "%02d", abs(components.hour ?? 0))
-        case .minute: value = String(format: "%02d", abs(components.minute ?? 0))
-        case .second: value = String(format: "%02d", abs(components.second ?? 0))
+        let total = Int(abs(self.timeIntervalSinceNow))
+        // 86400 = 60s * 60m * 24h
+        // 3600 = 60s * 60m
+        let value: Int = switch period {
+        case .day: total / 86_400
+        case .hour: total % 86_400 / 3_600
+        case .minute: total % 3_600 / 60
+        case .second: total % 60
         }
-        return value
+        return String(format: "%02d", value)
     }
 
     // MARK: - Custom properties
