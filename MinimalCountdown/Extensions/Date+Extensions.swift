@@ -7,17 +7,22 @@
 
 import Foundation
 
+// MARK: - Custom properties
 extension Date {
-    // MARK: - Private enum
+    var daysString: String { self.durationFromToday(in: .day) }
+    var hoursString: String { self.durationFromToday(in: .hour) }
+    var minutesString: String { self.durationFromToday(in: .minute) }
+    var secondsString: String { self.durationFromToday(in: .second) }
+}
 
+// MARK: - Private properties
+private extension Date {
     private enum CountdownComponents {
         case day
         case hour
         case minute
         case second
     }
-
-    // MARK: - Private method
 
     private func durationFromToday(in period: CountdownComponents) -> String {
         let total = Int(abs(self.timeIntervalSinceNow))
@@ -30,23 +35,5 @@ extension Date {
         case .second: total % 60
         }
         return String(format: "%02d", value)
-    }
-
-    // MARK: - Custom properties
-
-    var daysString: String {
-        self.durationFromToday(in: .day)
-    }
-
-    var hoursString: String {
-        self.durationFromToday(in: .hour)
-    }
-
-    var minutesString: String {
-        self.durationFromToday(in: .minute)
-    }
-
-    var secondsString: String {
-        self.durationFromToday(in: .second)
     }
 }
