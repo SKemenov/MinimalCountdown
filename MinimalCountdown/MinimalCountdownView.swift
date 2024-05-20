@@ -60,11 +60,11 @@ final class MinimalCountdownView: ScreenSaverView {
     // MARK: - Lifecycle
 
     override func draw(_ rect: NSRect) {
-        configureScene()
-        updateScene()
+        configureBackground()
     }
 
     override func animateOneFrame() {
+        needsDisplay = true
         updateScene()
     }
 }
@@ -95,10 +95,12 @@ private extension MinimalCountdownView {
         }
     }
 
-    func configureUI() {
+    func configureBackground() {
         Resources.backgroundColors[screenSaverDefaults.backgroundColorIndex].setFill()
         NSBezierPath.fill(bounds)
+    }
 
+    func configureUI() {
         [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 
         let elementWidth = round(bounds.width / .elementsWithSpaces)
