@@ -2,7 +2,7 @@
 //  NSFont+Extensions.swift
 //  MinimalCountdown
 //
-//  Created by Sergey Kemenov on 23.02.2024.
+//  Created by Sergey Kemenov
 //
 
 import AppKit

@@ -2,7 +2,7 @@
 //  NSTextView+Extensions.swift
 //  MinimalCountdown
 //
-//  Created by Sergey Kemenov on 03.03.2024.
+//  Created by Sergey Kemenov
 //
 
 import AppKit

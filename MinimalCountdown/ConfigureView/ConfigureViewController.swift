@@ -2,10 +2,9 @@
 //  ConfigureViewController.swift
 //  MinimalCountdown
 //
-//  Created by Sergey Kemenov on 26.02.2024.
+//  Created by Sergey Kemenov
 //
 
-import ScreenSaver
 import AppKit
 
 final class ConfigureViewController: NSViewController {
