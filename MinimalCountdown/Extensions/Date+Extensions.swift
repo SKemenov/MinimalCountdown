@@ -9,30 +9,23 @@ import Foundation
 
 // MARK: - Custom properties
 extension Date {
-    var daysString: String { self.durationFromToday(in: .day) }
-    var hoursString: String { self.durationFromToday(in: .hour) }
-    var minutesString: String { self.durationFromToday(in: .minute) }
-    var secondsString: String { self.durationFromToday(in: .second) }
+    var daysString: String { self.durationFromToday(in: .days) }
+    var hoursString: String { self.durationFromToday(in: .hours) }
+    var minutesString: String { self.durationFromToday(in: .minutes) }
+    var secondsString: String { self.durationFromToday(in: .seconds) }
 }
 
 // MARK: - Private properties
 private extension Date {
-    private enum CountdownComponents {
-        case day
-        case hour
-        case minute
-        case second
-    }
-
-    private func durationFromToday(in period: CountdownComponents) -> String {
+    func durationFromToday(in period: StyleElement) -> String {
         let total = Int(abs(self.timeIntervalSinceNow))
-        // 86400 = 60s * 60m * 24h
-        // 3600 = 60s * 60m
+        // 86_400 = 60s * 60m * 24h
+        // 3_600 = 60s * 60m
         let value: Int = switch period {
-        case .day: total / 86_400
-        case .hour: total % 86_400 / 3_600
-        case .minute: total % 3_600 / 60
-        case .second: total % 60
+        case .days:    total / 86_400
+        case .hours:   total % 86_400 / 3_600
+        case .minutes: total % 3_600 / 60
+        case .seconds: total % 60
         }
         return String(format: "%02d", value)
     }
