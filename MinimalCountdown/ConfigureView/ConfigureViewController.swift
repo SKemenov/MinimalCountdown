@@ -32,14 +32,23 @@ final class ConfigureViewController: NSViewController {
     private var styleSlider = NSSlider()
 
     // MARK: - Private properties
-    
-    private var screenSaverDefaults = ScreenSaverDefaults()
+
+    private let settingsManager: SettingsManager
+
+    // MARK: - Inits
+
+    init(settingsManager: SettingsManager) {
+        self.settingsManager = settingsManager
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Lifecycle
 
     override func loadView() {
-        let bundleIdentifier = Bundle.main.bundleIdentifier!
-        screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
         view = NSView(frame: NSMakeRect(0.0, 0.0, 390, 256))
         configureUI()
         configureConstraints()
@@ -55,12 +64,12 @@ private extension ConfigureViewController {
         colorPopupButton.removeAllItems()
         colorPopupButton.addItems(withTitles: Resources.colorNames)
 
-        colorPopupButton.selectItem(at: screenSaverDefaults.colorIndex)
-        styleSlider.integerValue = screenSaverDefaults.showElementsIndex
-        messageField.stringValue = screenSaverDefaults.messageString
-        messageCheckbox.state = !screenSaverDefaults.messageIsHidden ? .on : .off
-        dimCheckbox.state = !screenSaverDefaults.brightIsNormal ? .on : .off
-        datePicker.dateValue = screenSaverDefaults.targetDate
+        colorPopupButton.selectItem(withTitle: settingsManager.settings.color.name)
+        styleSlider.integerValue = settingsManager.settings.style.rawValue
+        messageField.stringValue = settingsManager.settings.message
+        messageCheckbox.state = settingsManager.settings.isMessageHidden ? .off : .on
+        dimCheckbox.state = settingsManager.settings.isBrightNormal ? .off : .on
+        datePicker.dateValue = settingsManager.settings.targetDate
 
         datePicker.minDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 365 * -1)
         datePicker.maxDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 365 * 1.5)
@@ -176,13 +185,16 @@ private extension ConfigureViewController {
     }
 
     func saveData() {
-        screenSaverDefaults.brightIsNormal = !(dimCheckbox.state.rawValue == 1 ? true : false)
-        screenSaverDefaults.messageIsHidden = !(messageCheckbox.state.rawValue == 1 ? true : false)
-        screenSaverDefaults.colorIndex = colorPopupButton.indexOfSelectedItem
-        screenSaverDefaults.showElementsIndex = styleSlider.integerValue
-        screenSaverDefaults.messageString = messageField.stringValue
-        screenSaverDefaults.targetDate = datePicker.dateValue
-        screenSaverDefaults.synchronize()
+        let settings = Settings(
+            targetDate: datePicker.dateValue,
+            color: AccentColor(colorPopupButton.indexOfSelectedItem),
+            backgroundColor: settingsManager.settings.backgroundColor,
+            style: StyleElement(styleSlider.integerValue),
+            message: messageField.stringValue,
+            isMessageHidden: messageCheckbox.state == .off,
+            isBrightNormal: dimCheckbox.state == .off
+        )
+        settingsManager.save(settings)
     }
 
     func closeSheet() {
