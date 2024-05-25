@@ -112,7 +112,7 @@ private extension MinimalCountdownView {
         [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, view) in
             view.digitsLabel.font = digitsFont
             view.descriptionLabel.font = textsFont
-            view.descriptionLabel.stringValue = Resources.elements[index].uppercased()
+            view.descriptionLabel.stringValue = StyleElement.allCases[index].name.uppercased()
             elementsStack.addArrangedSubview(view)
         }
 
