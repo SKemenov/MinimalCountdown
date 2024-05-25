@@ -9,8 +9,9 @@ import ScreenSaver
 final class MinimalCountdownView: ScreenSaverView {
 // MARK: - Private properties
 
-    lazy var sheetController: ConfigureSheetController = ConfigureSheetController()
-    private var screenSaverDefaults = ScreenSaverDefaults()
+    private let settingsManager: SettingsManager
+
+    lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
 
     private let daysView = ElementView()
     private let hoursView = ElementView()
@@ -44,15 +45,25 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     override init!(frame: NSRect, isPreview: Bool) {
+        let bundleId: String = Bundle.main.bundleIdentifier ?? Resources.subSystem
+        var stores: [LocalStore] = [FileStore()]
+        if let defaultsStore = DefaultsStore(bundleIdentifier: bundleId) {
+            stores.append(defaultsStore)
+        }
+        settingsManager = SettingsManager(stores: stores)
+
         super.init(frame: frame, isPreview: isPreview)
         let bundleIdentifier = Bundle.main.bundleIdentifier!
         screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
+        settingsManager.load()
         configureScene()
         animateOneFrame()
     }
 
     required init?(coder: NSCoder) {
+        settingsManager = SettingsManager(stores: [FileStore()])
         super.init(coder: coder)
+        settingsManager.load()
         configureScene()
     }
 
@@ -72,30 +83,19 @@ final class MinimalCountdownView: ScreenSaverView {
 
 private extension MinimalCountdownView {
     func configureScene() {
-        configureDefaults()
         configureUI()
         configureConstraints()
     }
 
     func updateScene() {
-        screenSaverDefaults.synchronize()
         updateColor()
         configureElements()
         updateTitle()
         updateTargetDate()
     }
 
-    func configureDefaults() {
-        if screenSaverDefaults.targetDate.timeIntervalSince1970 == 0.0 {
-            screenSaverDefaults.brightIsNormal = true
-            screenSaverDefaults.messageIsHidden = true
-            screenSaverDefaults.showElementsIndex = 3
-            screenSaverDefaults.targetDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 30)
-        }
-    }
-
     func configureBackground() {
-        Resources.backgroundColors[screenSaverDefaults.backgroundColorIndex].setFill()
+        settingsManager.settings.backgroundColor.color.setFill()
         NSBezierPath.fill(bounds)
     }
 
@@ -128,55 +128,49 @@ private extension MinimalCountdownView {
     }
 
     func updateTargetDate() {
-        daysView.digitsLabel.stringValue = screenSaverDefaults.targetDate.daysString
-        hoursView.digitsLabel.stringValue = screenSaverDefaults.targetDate.hoursString
-        minutesView.digitsLabel.stringValue = screenSaverDefaults.targetDate.minutesString
-        secondsView.digitsLabel.stringValue = screenSaverDefaults.targetDate.secondsString
+        daysView.digitsLabel.stringValue = settingsManager.settings.targetDate.daysString
+        hoursView.digitsLabel.stringValue = settingsManager.settings.targetDate.hoursString
+        minutesView.digitsLabel.stringValue = settingsManager.settings.targetDate.minutesString
+        secondsView.digitsLabel.stringValue = settingsManager.settings.targetDate.secondsString
     }
 
     func updateColor() {
         [daysView, hoursView, minutesView, secondsView].forEach { view in
-            view.digitsLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
-                screenSaverDefaults.brightIsNormal
-                ? .normalBright.digits
-                : .dimBright.digits
+            view.digitsLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+                settingsManager.settings.isBrightNormal ? .normalBright.digits : .dimBright.digits
             )
-            view.descriptionLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
-                screenSaverDefaults.brightIsNormal
-                ? .normalBright.texts
-                : .dimBright.texts
+            view.descriptionLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+                settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }
     }
 
     func updateTitle() {
-        messageLabel.isHidden = screenSaverDefaults.messageIsHidden
+        messageLabel.isHidden = settingsManager.settings.isMessageHidden
         if !messageLabel.isHidden {
-            let string = screenSaverDefaults.messageString.uppercased()
+            let string = settingsManager.settings.message.uppercased()
             let words = string.components(separatedBy: " ")
             let separator = string.count <= 20 ? "  " : "   "
             messageLabel.stringValue = words.joined(separator: separator)
-            messageLabel.textColor = Resources.colors[screenSaverDefaults.colorIndex].withAlphaComponent(
-                screenSaverDefaults.brightIsNormal
-                ? .normalBright.texts
-                : .dimBright.texts
+            messageLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+                settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }
     }
 
     func configureElements() {
-        switch Resources.ScreensaverState(rawValue: screenSaverDefaults.showElementsIndex) {
-        case .showDays:
+        switch settingsManager.settings.style {
+        case .days:
             daysView.isHidden = false
-            [hoursView, minutesView, secondsView].forEach{ $0.isHidden = true }
-        case .showDaysHours:
-            [daysView, hoursView].forEach{ $0.isHidden = false }
-            [minutesView, secondsView].forEach{ $0.isHidden = true }
-        case .showDaysHoursMinutes:
-            [daysView, hoursView, minutesView].forEach{ $0.isHidden = false }
-            [secondsView].forEach{ $0.isHidden = true }
-        default:
-            [daysView, hoursView, minutesView, secondsView].forEach{ $0.isHidden = false }
+            [hoursView, minutesView, secondsView].forEach { $0.isHidden = true }
+        case .hours:
+            [daysView, hoursView].forEach { $0.isHidden = false }
+            [minutesView, secondsView].forEach { $0.isHidden = true }
+        case .minutes:
+            [daysView, hoursView, minutesView].forEach { $0.isHidden = false }
+            secondsView.isHidden = true
+        case .seconds:
+            [daysView, hoursView, minutesView, secondsView].forEach { $0.isHidden = false }
         }
     }
 }
