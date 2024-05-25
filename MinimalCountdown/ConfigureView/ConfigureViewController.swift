@@ -10,14 +10,14 @@ import AppKit
 final class ConfigureViewController: NSViewController {
     // MARK: - UI element's properties
 
-    private let messageLabel = NSTextField(labelWithString: Resources.preferenceLabels[0])
-    private let colorLabel = NSTextField(labelWithString: Resources.preferenceLabels[1])
-    private let dateLabel = NSTextField(labelWithString: Resources.preferenceLabels[2])
-    private let styleLabel = NSTextField(labelWithString: Resources.preferenceLabels[3])
-    private let daysLabel = NSTextField(labelWithString: Resources.elements[0].capitalized)
-    private let hoursLabel = NSTextField(labelWithString: Resources.elements[1].capitalized)
-    private let minutesLabel = NSTextField(labelWithString: Resources.elements[2].capitalized)
-    private let secondsLabel = NSTextField(labelWithString: Resources.elements[3].capitalized)
+    private let messageLabel = NSTextField(labelWithString: Resources.Labels.MessageTitle)
+    private let colorLabel = NSTextField(labelWithString: Resources.Labels.ColorTitle)
+    private let dateLabel = NSTextField(labelWithString: Resources.Labels.DateTitle)
+    private let styleLabel = NSTextField(labelWithString: Resources.Labels.StyleTitle)
+    private let daysLabel = NSTextField(labelWithString: StyleElement.days.name)
+    private let hoursLabel = NSTextField(labelWithString: StyleElement.hours.name)
+    private let minutesLabel = NSTextField(labelWithString: StyleElement.minutes.name)
+    private let secondsLabel = NSTextField(labelWithString: StyleElement.seconds.name)
 
     private let okButton = NSButton()
     private let cancelButton = NSButton()
@@ -62,7 +62,7 @@ final class ConfigureViewController: NSViewController {
 private extension ConfigureViewController {
     func configureValues() {
         colorPopupButton.removeAllItems()
-        colorPopupButton.addItems(withTitles: Resources.colorNames)
+        colorPopupButton.addItems(withTitles: AccentColor.allCases.map { $0.name })
 
         colorPopupButton.selectItem(withTitle: settingsManager.settings.color.name)
         styleSlider.integerValue = settingsManager.settings.style.rawValue
@@ -96,15 +96,15 @@ private extension ConfigureViewController {
             checkbox.bezelStyle = .push
             checkbox.setButtonType(.switch)
         }
-        okButton.title = "OK"
+        okButton.title = Resources.Labels.OkButtonTitle // "OK"
         okButton.keyEquivalent = "\r"
         okButton.action = #selector(okButtonClicked)
 
-        cancelButton.title = "Cancel"
+        cancelButton.title = Resources.Labels.CancelButtonTitle // "Cancel"
         cancelButton.action = #selector(cancelButtonClicked)
 
         styleSlider.minValue = 0
-        styleSlider.maxValue = 3
+        styleSlider.maxValue = Double(StyleElement.allCases.count - 1)
         styleSlider.allowsTickMarkValuesOnly = true
         styleSlider.numberOfTickMarks = 4
         styleSlider.tickMarkPosition = .below
@@ -112,9 +112,9 @@ private extension ConfigureViewController {
         messageField.isEditable = true
         messageField.isSelectable = true
         messageField.becomeFirstResponder()
-        messageField.placeholderString = "Input your message here"
-        messageCheckbox.title = "Show the message"
-        dimCheckbox.title = "Dim the accent color"
+        messageField.placeholderString = Resources.Labels.messagePlaceholder // "Input your message here"
+        messageCheckbox.title = Resources.Labels.messageCheckboxTitle // "Show the message"
+        dimCheckbox.title = Resources.Labels.dimCheckboxTitle // "Dim the accent color"
 
         datePicker.datePickerStyle = .textField
         datePicker.presentsCalendarOverlay = true
