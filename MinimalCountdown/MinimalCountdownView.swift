@@ -53,8 +53,6 @@ final class MinimalCountdownView: ScreenSaverView {
         settingsManager = SettingsManager(stores: stores)
 
         super.init(frame: frame, isPreview: isPreview)
-        let bundleIdentifier = Bundle.main.bundleIdentifier!
-        screenSaverDefaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier)!
         settingsManager.load()
         configureScene()
         animateOneFrame()
