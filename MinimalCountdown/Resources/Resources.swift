@@ -9,6 +9,7 @@ import Foundation
 
 enum Resources {
     // MARK: - Dictionaries
+    static let subSystem = "MinimalCountdown"
 
     static let settingsFolderName = ".minimalCountdown"
     static let settingsFileName = "settings.json"
