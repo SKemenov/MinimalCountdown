@@ -2,14 +2,17 @@
 //  MinimalCountdownView.swift
 //  MinimalCountdown
 //
+//  Created by Sergey Kemenov
 //
 
 import ScreenSaver
+import OSLog
 
 final class MinimalCountdownView: ScreenSaverView {
-// MARK: - Private properties
+    // MARK: - Private properties
 
     private let settingsManager: SettingsManager
+    private let logger: Logger
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
 
@@ -45,10 +48,16 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     override init!(frame: NSRect, isPreview: Bool) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        let message: String = isPreview ? "screen saver" : "preview"
+        logger.log("Starting \(message, privacy: .public)")
+
         let bundleId: String = Bundle.main.bundleIdentifier ?? Resources.subSystem
         var stores: [LocalStore] = [FileStore()]
         if let defaultsStore = DefaultsStore(bundleIdentifier: bundleId) {
             stores.append(defaultsStore)
+        } else {
+            logger.error("DefaultsStore init failed for bundle: \(bundleId, privacy: .public), running without Defaults")
         }
         settingsManager = SettingsManager(stores: stores)
 
@@ -56,9 +65,13 @@ final class MinimalCountdownView: ScreenSaverView {
         settingsManager.load()
         configureScene()
         animateOneFrame()
+
+        logger.log("Init complete for \(message, privacy: .public)")
     }
 
     required init?(coder: NSCoder) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger.warning("init(coder:) used — DefaultsStore unavailable, using FileStore only")
         settingsManager = SettingsManager(stores: [FileStore()])
         super.init(coder: coder)
         settingsManager.load()
