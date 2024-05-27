@@ -65,6 +65,7 @@ final class MinimalCountdownView: ScreenSaverView {
         settingsManager.load()
         configureScene()
         animateOneFrame()
+        registerForScreensaverNotifications()
 
         logger.log("Init complete for \(message, privacy: .public)")
     }
@@ -93,6 +94,15 @@ final class MinimalCountdownView: ScreenSaverView {
 // MARK: - Private methods
 
 private extension MinimalCountdownView {
+    func registerForScreensaverNotifications() {
+        DistributedNotificationCenter.default().addObserver(
+            self,
+            selector: #selector(MinimalCountdownView.stopAnimation),
+            name: NSNotification.Name("com.apple.screensaver.willstop"),
+            object: nil
+        )
+    }
+
     func configureScene() {
         configureUI()
         configureConstraints()
