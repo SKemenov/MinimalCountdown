@@ -81,6 +81,18 @@ final class MinimalCountdownView: ScreenSaverView {
 
     // MARK: - Lifecycle
 
+    override func startAnimation() {
+        super.startAnimation()
+        var message: String = isPreview ? "Screen saver" : "Preview"
+        logger.log("\(message, privacy: .public) \(#function, privacy: .public)")
+    }
+
+    override func stopAnimation() {
+        super.stopAnimation()
+        var message: String = isPreview ? "Screen saver" : "Preview"
+        logger.log("\(message, privacy: .public) \(#function, privacy: .public)")
+    }
+
     override func draw(_ rect: NSRect) {
         configureBackground()
     }
