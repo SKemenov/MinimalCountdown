@@ -77,6 +77,11 @@ final class MinimalCountdownView: ScreenSaverView {
         configureScene()
     }
 
+    deinit {
+        let message: String = isPreview ? "screen saver" : "preview"
+        logger.log("Finished \(message, privacy: .public)")
+    }
+
     // MARK: - Lifecycle
 
     override func startAnimation() {
