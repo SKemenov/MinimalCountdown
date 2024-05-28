@@ -18,7 +18,8 @@ extension Date {
 // MARK: - Private properties
 private extension Date {
     func durationFromToday(in period: StyleElement) -> String {
-        let total = Int(abs(self.timeIntervalSinceNow))
+        // use ceil to fix double-zero issue
+        let total = Int(abs(ceil(self.timeIntervalSinceNow)))
         // 86_400 = 60s * 60m * 24h
         // 3_600 = 60s * 60m
         let value: Int = switch period {
