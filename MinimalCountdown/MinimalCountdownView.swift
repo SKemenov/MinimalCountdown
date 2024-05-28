@@ -33,13 +33,9 @@ final class MinimalCountdownView: ScreenSaverView {
 
     // MARK: - Public properties
 
-    override var hasConfigureSheet: Bool {
-        return true
-    }
+    override var hasConfigureSheet: Bool { true }
 
-    override var configureSheet: NSWindow? {
-        return sheetController.window
-    }
+    override var configureSheet: NSWindow? { sheetController.window }
 
     // MARK: - Inits
 
@@ -63,6 +59,8 @@ final class MinimalCountdownView: ScreenSaverView {
 
         super.init(frame: frame, isPreview: isPreview)
         settingsManager.load()
+
+        animationTimeInterval = 1.0
         configureScene()
         animateOneFrame()
         registerForScreensaverNotifications()
