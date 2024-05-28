@@ -138,8 +138,8 @@ private extension MinimalCountdownView {
     func configureUI() {
         [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 
-        let elementWidth = round(bounds.width / .elementsWithSpaces)
-        let digitsFont =  NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
+        let elementWidth = round(bounds.width / (isPreview ? (.elementsWithSpaces - 1) : .elementsWithSpaces))
+        let digitsFont = NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
         let textsFont = NSFont.systemFont(ofSize: elementWidth / 5, weight: .ultraLight)
 
         messageLabel.font = textsFont
@@ -186,7 +186,7 @@ private extension MinimalCountdownView {
         if !messageLabel.isHidden {
             let string = settingsManager.settings.message.uppercased()
             let words = string.components(separatedBy: " ")
-            let separator = string.count <= 20 ? "  " : "   "
+            let separator = string.count <= 30 ? "  " : "   "
             messageLabel.stringValue = words.joined(separator: separator)
             messageLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
