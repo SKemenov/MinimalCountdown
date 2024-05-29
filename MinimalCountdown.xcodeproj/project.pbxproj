@@ -20,6 +20,7 @@
 		E99BCAF22F746D250081CA5E /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF12F746D250081CA5E /* AccentColor.swift */; };
 		E99BCAF42F746D490081CA5E /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF32F746D490081CA5E /* BackgroundColor.swift */; };
 		E99BCAF62F746D880081CA5E /* StyleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF52F746D880081CA5E /* StyleElement.swift */; };
+		E99BCB152F75390E0081CA5E /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E99BCB142F75390E0081CA5E /* thumbnail.png */; };
 		E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */; };
 		E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BBA5482B931EEE008AEC40 /* Assets.xcassets */; };
 		E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */; };
@@ -47,6 +48,7 @@
 		E99BCAF12F746D250081CA5E /* AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColor.swift; sourceTree = "<group>"; };
 		E99BCAF32F746D490081CA5E /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		E99BCAF52F746D880081CA5E /* StyleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleElement.swift; sourceTree = "<group>"; };
+		E99BCB142F75390E0081CA5E /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalCountdownView.swift; sourceTree = "<group>"; };
 		E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimalCountdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BBA5482B931EEE008AEC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		E9E641C12B8CDB1700CD5D33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E99BCB142F75390E0081CA5E /* thumbnail.png */,
 				E99BCAF52F746D880081CA5E /* StyleElement.swift */,
 				E99BCAF32F746D490081CA5E /* BackgroundColor.swift */,
 				E99BCAF12F746D250081CA5E /* AccentColor.swift */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99BCB152F75390E0081CA5E /* thumbnail.png in Resources */,
 				E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
