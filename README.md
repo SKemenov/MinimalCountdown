@@ -47,10 +47,12 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 
 
 ## How to re-install
-1. Delete screen saver in `System Settings` (right-click && `Delete "MinimalCountdown"` && `Move to Trash`)
-2. Close `System Settings` window
-3. Restart WallpaperAgent `killall kill WallpaperAgent` via the Terminal (or just restart you computer)
-4. Install the new version of `MinimalCountdown.ssaver`
+1. Open `System Settings` → `Wallpaper` → `Screen Saver…` button (macOS Tahoe)
+   or `System Settings` → `Screen Saver` (macOS Ventura–Sequoia)
+2. Right-click MinimalCountdown → `Delete "MinimalCountdown"` → `Move to Trash`
+3. Close `System Settings`
+4. Run `killall WallpaperAgent` in Terminal (or just restart your computer)
+5. Install the new version of `MinimalCountdown.saver`
 
 
 
