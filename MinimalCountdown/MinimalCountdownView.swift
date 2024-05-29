@@ -91,9 +91,10 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     override func stopAnimation() {
-        super.stopAnimation()
-        var message: String = isPreview ? "Screen saver" : "Preview"
-        logger.log("\(message, privacy: .public) \(#function, privacy: .public)")
+        if !isPreview {
+            super.stopAnimation()
+            logger.log("Preview \(#function, privacy: .public)")
+        }
     }
 
     override func draw(_ rect: NSRect) {
