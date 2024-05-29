@@ -430,6 +430,7 @@
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MinimalCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
@@ -454,6 +455,7 @@
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MinimalCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
