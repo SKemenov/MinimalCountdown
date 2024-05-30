@@ -142,6 +142,16 @@ private extension MinimalCountdownView {
         let elementWidth = round(bounds.width / (isPreview ? (.elementsWithSpaces - 1) : .elementsWithSpaces))
         let digitsFont = NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
         let textsFont = NSFont.systemFont(ofSize: elementWidth / 5, weight: .ultraLight)
+        // need to check on other than Tahoe system
+//        let elementWidth = round(bounds.width / (isPreview ? (.elementsWithSpaces - 3) : .elementsWithSpaces))
+//        let digitsFont = NSFont.systemFont(
+//            ofSize: elementWidth,
+//            weight: isPreview ? .regular : .ultraLight
+//        ).monospacedNumbers
+//        let textsFont = NSFont.systemFont(
+//            ofSize: elementWidth / (isPreview ? 3 : 5),
+//            weight: isPreview ? .regular : .ultraLight
+//        )
 
         messageLabel.font = textsFont
         elementsStack.spacing = round(bounds.width * .elementsSpacingRatio)
@@ -210,4 +220,25 @@ private extension MinimalCountdownView {
             [daysView, hoursView, minutesView, secondsView].forEach { $0.isHidden = false }
         }
     }
+//    check on non-Tahoe platforms
+//    func configureElements() {
+//        if isPreview {
+//            [daysView, hoursView].forEach { $0.isHidden = true }
+//            [minutesView, secondsView].forEach { $0.isHidden = false }
+//        } else {
+//            switch settingsManager.settings.style {
+//            case .days:
+//                daysView.isHidden = false
+//                [hoursView, minutesView, secondsView].forEach { $0.isHidden = true }
+//            case .hours:
+//                [daysView, hoursView].forEach { $0.isHidden = false }
+//                [minutesView, secondsView].forEach { $0.isHidden = true }
+//            case .minutes:
+//                [daysView, hoursView, minutesView].forEach { $0.isHidden = false }
+//                secondsView.isHidden = true
+//            case .seconds:
+//                [daysView, hoursView, minutesView, secondsView].forEach { $0.isHidden = false }
+//            }
+//        }
+//    }
 }
