@@ -27,8 +27,15 @@ fi
 
 # Install a new version
 cp -R "$TARGET_BUILD_DIR/$WRAPPER_NAME" "$TARGET_COPY_PATH"
-if [ $? -ne 0 ]; then   # if cp failed                                                                                                
-  echo "Failed to copy new version" 
-  exit 1                                                                           
-fi    
+if [ $? -ne 0 ]; then   # if cp failed
+  echo "Failed to copy new version"
+  exit 1
+fi
 echo "$TARGET_COPY_PATH/$WRAPPER_NAME has been installed successfully"
+
+# Clear macOS screen saver thumbnail and metadata caches
+find /private/var/folders -maxdepth 6 \( \
+  -path "*/C/com.apple.wallpaper.caches" \
+  -o -path "*/C/com.apple.wallpaper.extension.legacy" \
+\) 2>/dev/null | xargs rm -rf
+echo "Screen saver caches cleared"
