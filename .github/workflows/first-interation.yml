@@ -1,0 +1,15 @@
+# GitHUb Action First Interaction
+
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Thank you for helping me in developing the Minimal Countdown screensaver 🙏'
+        pr-message: 'Thank you for helping me in building the awemsome Minimal Countdown screensaver 🙏'

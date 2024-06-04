@@ -3,11 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA000002AABB000000000001 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001AABB000000000001 /* Settings.swift */; };
+		AA000004AABB000000000001 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000003AABB000000000001 /* LocalStore.swift */; };
+		AA000006AABB000000000001 /* DefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000005AABB000000000001 /* DefaultsStore.swift */; };
+		AA000008AABB000000000001 /* FileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000007AABB000000000001 /* FileStore.swift */; };
+		AA00000AAABB000000000001 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000009AABB000000000001 /* SettingsManager.swift */; };
 		E9432EA42B948E1E00A5D823 /* NSTextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9432EA32B948E1E00A5D823 /* NSTextView+Extensions.swift */; };
+		E94C71512F757D2600E42ED1 /* JSONDecoder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C71502F757D2600E42ED1 /* JSONDecoder+Ext.swift */; };
+		E94C71532F757D4800E42ED1 /* JSONEncoder+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94C71522F757D4800E42ED1 /* JSONEncoder+Ext.swift */; };
+		E99BCAEE2F746CCE0081CA5E /* CaseNameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAED2F746CCE0081CA5E /* CaseNameable.swift */; };
+		E99BCAF02F746CFA0081CA5E /* SafeIntDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAEF2F746CFA0081CA5E /* SafeIntDecodable.swift */; };
+		E99BCAF22F746D250081CA5E /* AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF12F746D250081CA5E /* AccentColor.swift */; };
+		E99BCAF42F746D490081CA5E /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF32F746D490081CA5E /* BackgroundColor.swift */; };
+		E99BCAF62F746D880081CA5E /* StyleElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99BCAF52F746D880081CA5E /* StyleElement.swift */; };
+		E99BCB152F75390E0081CA5E /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = E99BCB142F75390E0081CA5E /* thumbnail.png */; };
 		E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */; };
 		E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BBA5482B931EEE008AEC40 /* Assets.xcassets */; };
 		E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */; };
@@ -22,7 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA000001AABB000000000001 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		AA000003AABB000000000001 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		AA000005AABB000000000001 /* DefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStore.swift; sourceTree = "<group>"; };
+		AA000007AABB000000000001 /* FileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStore.swift; sourceTree = "<group>"; };
+		AA000009AABB000000000001 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		E9432EA32B948E1E00A5D823 /* NSTextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+Extensions.swift"; sourceTree = "<group>"; };
+		E94C71502F757D2600E42ED1 /* JSONDecoder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Ext.swift"; sourceTree = "<group>"; };
+		E94C71522F757D4800E42ED1 /* JSONEncoder+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Ext.swift"; sourceTree = "<group>"; };
+		E99BCAED2F746CCE0081CA5E /* CaseNameable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseNameable.swift; sourceTree = "<group>"; };
+		E99BCAEF2F746CFA0081CA5E /* SafeIntDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeIntDecodable.swift; sourceTree = "<group>"; };
+		E99BCAF12F746D250081CA5E /* AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColor.swift; sourceTree = "<group>"; };
+		E99BCAF32F746D490081CA5E /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
+		E99BCAF52F746D880081CA5E /* StyleElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleElement.swift; sourceTree = "<group>"; };
+		E99BCB142F75390E0081CA5E /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 		E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimalCountdownView.swift; sourceTree = "<group>"; };
 		E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimalCountdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BBA5482B931EEE008AEC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +63,10 @@
 		E9E641C42B8CDD7800CD5D33 /* ConfigureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E99BCB192F7558250081CA5E /* Scripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scripts; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		E9B531982B854D60002A2B79 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -48,6 +78,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA00000BAABB000000000001 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AA000001AABB000000000001 /* Settings.swift */,
+				AA000003AABB000000000001 /* LocalStore.swift */,
+				AA000005AABB000000000001 /* DefaultsStore.swift */,
+				AA000007AABB000000000001 /* FileStore.swift */,
+				AA000009AABB000000000001 /* SettingsManager.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		E915580B2B94914C0010D67F /* ConfigureView */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +102,7 @@
 		E9B531912B854D60002A2B79 = {
 			isa = PBXGroup;
 			children = (
+				E99BCB192F7558250081CA5E /* Scripts */,
 				E9B5319D2B854D60002A2B79 /* MinimalCountdown */,
 				E9B5319C2B854D60002A2B79 /* Products */,
 			);
@@ -77,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E99F49042B8550BA00D8C1D7 /* MinimalCountdownView.swift */,
+				AA00000BAABB000000000001 /* Settings */,
 				E9E641C02B8CDAED00CD5D33 /* ElementView */,
 				E915580B2B94914C0010D67F /* ConfigureView */,
 				E9E641BF2B8CAD8400CD5D33 /* Extensions */,
@@ -88,6 +132,8 @@
 		E9E641BF2B8CAD8400CD5D33 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E94C71522F757D4800E42ED1 /* JSONEncoder+Ext.swift */,
+				E94C71502F757D2600E42ED1 /* JSONDecoder+Ext.swift */,
 				E9CCA68A2B88DFED00F5AA7F /* NSFont+Extensions.swift */,
 				E9CCA68C2B88E01600F5AA7F /* Date+Extensions.swift */,
 				E9E641BD2B8CAD5600CD5D33 /* CGFloat+Extensions.swift */,
@@ -109,6 +155,12 @@
 		E9E641C12B8CDB1700CD5D33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E99BCB142F75390E0081CA5E /* thumbnail.png */,
+				E99BCAF52F746D880081CA5E /* StyleElement.swift */,
+				E99BCAF32F746D490081CA5E /* BackgroundColor.swift */,
+				E99BCAF12F746D250081CA5E /* AccentColor.swift */,
+				E99BCAEF2F746CFA0081CA5E /* SafeIntDecodable.swift */,
+				E99BCAED2F746CCE0081CA5E /* CaseNameable.swift */,
 				E9CCA68E2B88E03500F5AA7F /* Resources.swift */,
 				E9BBA5482B931EEE008AEC40 /* Assets.xcassets */,
 			);
@@ -187,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99BCB152F75390E0081CA5E /* thumbnail.png in Resources */,
 				E9BBA5492B931EEE008AEC40 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,17 +273,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA000002AABB000000000001 /* Settings.swift in Sources */,
+				AA000004AABB000000000001 /* LocalStore.swift in Sources */,
+				AA000006AABB000000000001 /* DefaultsStore.swift in Sources */,
+				AA000008AABB000000000001 /* FileStore.swift in Sources */,
+				E99BCAF02F746CFA0081CA5E /* SafeIntDecodable.swift in Sources */,
+				E99BCAF62F746D880081CA5E /* StyleElement.swift in Sources */,
+				E94C71532F757D4800E42ED1 /* JSONEncoder+Ext.swift in Sources */,
+				AA00000AAABB000000000001 /* SettingsManager.swift in Sources */,
 				E9E641C32B8CDD0700CD5D33 /* ConfigureSheetController.swift in Sources */,
+				E99BCAF42F746D490081CA5E /* BackgroundColor.swift in Sources */,
+				E94C71512F757D2600E42ED1 /* JSONDecoder+Ext.swift in Sources */,
 				E9E641BE2B8CAD5600CD5D33 /* CGFloat+Extensions.swift in Sources */,
 				E99F49052B8550BA00D8C1D7 /* MinimalCountdownView.swift in Sources */,
 				E9CCA68F2B88E03500F5AA7F /* Resources.swift in Sources */,
 				E9CCA68B2B88DFED00F5AA7F /* NSFont+Extensions.swift in Sources */,
+				E99BCAEE2F746CCE0081CA5E /* CaseNameable.swift in Sources */,
 				E9E641C52B8CDD7800CD5D33 /* ConfigureViewController.swift in Sources */,
 				E9CCA6932B88E0AA00F5AA7F /* SSaverTextView.swift in Sources */,
 				E9CCA68D2B88E01600F5AA7F /* Date+Extensions.swift in Sources */,
 				E9432EA42B948E1E00A5D823 /* NSTextView+Extensions.swift in Sources */,
 				E9E2DDAF2B912216002A8C90 /* UserDefaults+Extensions.swift in Sources */,
 				E9CCA6912B88E06C00F5AA7F /* ElementView.swift in Sources */,
+				E99BCAF22F746D250081CA5E /* AccentColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +359,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -348,6 +414,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -362,6 +429,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimalCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
+				INFOPLIST_KEY_CFBundleName = "Minimal Countdown";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
@@ -385,6 +455,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3LKWW87KA9;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimalCountdown/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
+				INFOPLIST_KEY_CFBundleName = "Minimal Countdown";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";

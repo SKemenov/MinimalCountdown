@@ -2,13 +2,17 @@
 //  CGFloat+Extensions.swift
 //  MinimalCountdown
 //
-//  Created by Sergey Kemenov on 26.02.2024.
+//  Created by Sergey Kemenov
 //
 
 import AppKit
 
 extension CGFloat {
     // MARK: - Custom properties
+    /// CGFloat = (digits: 1.0, texts: 0.7)
+    static let normalBright = (digits: 1.0, texts: 0.7)
+    /// CGFloat = (digits: 0.8, texts: 0.5)
+    static let dimBright = (digits: 0.8, texts: 0.5)
 
     /// CGFloat = 7
     static let elementsWithSpaces: CGFloat = 7
@@ -16,10 +20,6 @@ extension CGFloat {
     static let elementsSpacingRatio: CGFloat = 0.04
     /// CGFloat = -8
     static let elementsVSpacing: CGFloat = -8
-    /// CGFloat = (digits: 1.0, texts: 0.7)
-    static let normalBright = (digits: 1.0, texts: 0.7)
-    /// CGFloat = (digits: 0.8, texts: 0.5)
-    static let dimBright = (digits: 0.8, texts: 0.5)
     /// CGFloat = 12
     static let space: CGFloat = 12
     /// CGFloat = 4
