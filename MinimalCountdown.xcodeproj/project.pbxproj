@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinimalCountdown.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BDA7822F8A922F00FB19A4 /* MinimalDevApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimalDevApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,15 +19,53 @@
 			);
 			target = E9B5319A2B854D60002A2B79 /* MinimalCountdown */;
 		};
+		E9BDA78E2F8A924100FB19A4 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ConfigureView/ConfigureSheetController.swift,
+				ConfigureView/ConfigureViewController.swift,
+				ElementView/ElementView.swift,
+				ElementView/SSaverTextView.swift,
+				"Extensions/CGFloat+Extensions.swift",
+				"Extensions/Date+Extensions.swift",
+				"Extensions/JSONDecoder+Ext.swift",
+				"Extensions/JSONEncoder+Ext.swift",
+				"Extensions/NSFont+Extensions.swift",
+				"Extensions/NSTextView+Extensions.swift",
+				"Extensions/UserDefaults+Extensions.swift",
+				MinimalCountdownView.swift,
+				Models/AccentColor.swift,
+				Models/BackgroundColor.swift,
+				Models/CaseNameable.swift,
+				Models/SafeIntDecodable.swift,
+				Models/Settings.swift,
+				Models/StyleElement.swift,
+				Resources/Assets.xcassets,
+				Resources/Resources.swift,
+				Settings/DefaultsStore.swift,
+				Settings/FileStore.swift,
+				Settings/LocalStore.swift,
+				Settings/SettingsManager.swift,
+			);
+			target = E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E91BED5B2F8A85D500463CA2 /* MinimalCountdown */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E91BED762F8A85D600463CA2 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MinimalCountdown; sourceTree = "<group>"; };
+		E91BED5B2F8A85D500463CA2 /* MinimalCountdown */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E91BED762F8A85D600463CA2 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, E9BDA78E2F8A924100FB19A4 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MinimalCountdown; sourceTree = "<group>"; };
 		E99BCB192F7558250081CA5E /* Scripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scripts; sourceTree = "<group>"; };
+		E9BDA7832F8A922F00FB19A4 /* MinimalDevApp */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MinimalDevApp; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E9B531982B854D60002A2B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDA77F2F8A922F00FB19A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +80,7 @@
 			children = (
 				E99BCB192F7558250081CA5E /* Scripts */,
 				E91BED5B2F8A85D500463CA2 /* MinimalCountdown */,
+				E9BDA7832F8A922F00FB19A4 /* MinimalDevApp */,
 				E9B5319C2B854D60002A2B79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */,
+				E9BDA7822F8A922F00FB19A4 /* MinimalDevApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +129,28 @@
 			productReference = E9B5319B2B854D60002A2B79 /* MinimalCountdown.saver */;
 			productType = "com.apple.product-type.bundle";
 		};
+		E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BDA78C2F8A923000FB19A4 /* Build configuration list for PBXNativeTarget "MinimalDevApp" */;
+			buildPhases = (
+				E9BDA77E2F8A922F00FB19A4 /* Sources */,
+				E9BDA77F2F8A922F00FB19A4 /* Frameworks */,
+				E9BDA7802F8A922F00FB19A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E9BDA7832F8A922F00FB19A4 /* MinimalDevApp */,
+			);
+			name = MinimalDevApp;
+			packageProductDependencies = (
+			);
+			productName = MinimalDevApp;
+			productReference = E9BDA7822F8A922F00FB19A4 /* MinimalDevApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,12 +158,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 2640;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					E9B5319A2B854D60002A2B79 = {
 						CreatedOnToolsVersion = 15.2;
 						LastSwiftMigration = 1520;
+					};
+					E9BDA7812F8A922F00FB19A4 = {
+						CreatedOnToolsVersion = 26.4;
 					};
 				};
 			};
@@ -119,12 +185,20 @@
 			projectRoot = "";
 			targets = (
 				E9B5319A2B854D60002A2B79 /* MinimalCountdown */,
+				E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E9B531992B854D60002A2B79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDA7802F8A922F00FB19A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -157,6 +231,13 @@
 
 /* Begin PBXSourcesBuildPhase section */
 		E9B531972B854D60002A2B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BDA77E2F8A922F00FB19A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,6 +415,75 @@
 			};
 			name = Release;
 		};
+		E9BDA78A2F8A923000FB19A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LKWW87KA9;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skemenov.MinimalDevApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9BDA78B2F8A923000FB19A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LKWW87KA9;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skemenov.MinimalDevApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -351,6 +501,15 @@
 			buildConfigurations = (
 				E9B531A52B854D60002A2B79 /* Debug */,
 				E9B531A62B854D60002A2B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9BDA78C2F8A923000FB19A4 /* Build configuration list for PBXNativeTarget "MinimalDevApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BDA78A2F8A923000FB19A4 /* Debug */,
+				E9BDA78B2F8A923000FB19A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
