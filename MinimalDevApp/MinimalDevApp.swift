@@ -13,7 +13,8 @@ struct MinimalDevApp: App {
 
     var body: some Scene {
         WindowGroup("MinimalCountdown Debug Preview") {
-            Text("MinimalCountdown Debug Preview")
+            ScreenSaverRepresentable()
+                .ignoresSafeArea()
         }
     }
 }
