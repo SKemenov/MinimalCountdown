@@ -14,16 +14,22 @@ final class FileStore: LocalStore {
     private let decoder: JSONDecoder
     private let logger: Logger
 
-    static let defaultURL: URL = shouldBeNonSandboxButRealHomeDirectory
-        .appendingPathComponent(Resources.settingsFolderName, isDirectory: true)
-        .appendingPathComponent(Resources.settingsFileName)
-
-    init(fileURL: URL = FileStore.defaultURL) {
+    init?(
+        supportDirectory: URL? = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
+    ) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        self.fileURL = fileURL
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
-        logger.log("Initialized with fileURL: \(fileURL.path, privacy: .public)")
+        if let supportDirectory {
+            fileURL = supportDirectory
+                .appending(component: Resources.subSystem, directoryHint: .isDirectory)
+                .appending(component: Resources.settingsFileName)
+            logger.log("FileStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
+        } else {
+            let path = supportDirectory?.absoluteString ?? ""
+            logger.error("Failed to create FileStore for supportDirectory: \(path, privacy: .public)")
+            return nil
+        }
     }
 
     func load() -> Settings? {
@@ -58,19 +64,4 @@ final class FileStore: LocalStore {
             return
         }
     }
-}
-
-extension FileStore {
-    /// Returns the real home directory, bypassing sandbox path redirection.
-    /// Screen savers run inside com.apple.ScreenSaver.Engine.legacyScreenSaver container,
-    /// so FileManager.homeDirectoryForCurrentUser returns the sandboxed path.
-    /// getpwuid reads from the system passwd database and is not affected by sandbox redirection.
-    static let shouldBeNonSandboxButRealHomeDirectory: URL = {
-        if let pwdb = getpwuid(getuid()), let homeDirectory = pwdb.pointee.pw_dir {
-            return URL(fileURLWithPath: String(cString: homeDirectory))
-        } else {
-            // fallback to the com.apple.ScreenSaver.Engine.legacyScreenSaver sandboxed path
-            return FileManager.default.homeDirectoryForCurrentUser
-        }
-    }()
 }
