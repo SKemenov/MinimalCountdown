@@ -45,15 +45,19 @@ final class MinimalCountdownView: ScreenSaverView {
 
     override init!(frame: NSRect, isPreview: Bool) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        let message: String = isPreview ? "screen saver" : "preview"
+        let message: String = isPreview ? "preview" : "screen saver"
         logger.log("Starting \(message, privacy: .public)")
 
-        let bundleId: String = Bundle.main.bundleIdentifier ?? Resources.subSystem
-        var stores: [LocalStore] = [FileStore()]
-        if let defaultsStore = DefaultsStore(bundleIdentifier: bundleId) {
+        var stores: [LocalStore] = []
+        if let fileStore = FileStore() {
+            stores.append(fileStore)
+        } else {
+            logger.error("FileStore init failed, running without settings file")
+        }
+        if let defaultsStore = DefaultsStore() {
             stores.append(defaultsStore)
         } else {
-            logger.error("DefaultsStore init failed for bundle: \(bundleId, privacy: .public), running without Defaults")
+            logger.error("DefaultsStore init failed, running without Defaults")
         }
         settingsManager = SettingsManager(stores: stores)
 
