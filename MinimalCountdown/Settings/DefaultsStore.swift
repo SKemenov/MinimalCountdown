@@ -12,7 +12,7 @@ final class DefaultsStore: LocalStore {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
 
-    init?(bundleIdentifier: String) {
+    init?(bundleIdentifier: String = Resources.subSystem) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         guard let defaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier) else {
             logger.error("Failed to create ScreenSaverDefaults for bundle: \(bundleIdentifier, privacy: .public)")
