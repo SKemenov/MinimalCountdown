@@ -74,11 +74,8 @@ final class MinimalCountdownView: ScreenSaverView {
 
     required init?(coder: NSCoder) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        logger.warning("init(coder:) used — DefaultsStore unavailable, using FileStore only")
-        settingsManager = SettingsManager(stores: [FileStore()])
-        super.init(coder: coder)
-        settingsManager.load()
-        configureScene()
+        logger.critical("init(coder:) not implemented, exiting")
+        fatalError("init(coder:) not implemented, exiting")
     }
 
     deinit {
