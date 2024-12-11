@@ -9,7 +9,7 @@ import Foundation
 import OSLog
 
 final class SettingsManager {
-    private(set) var settings: Settings
+    private(set) var settings: SaverSettings
     private let stores: [LocalStore]
     private let logger: Logger
 

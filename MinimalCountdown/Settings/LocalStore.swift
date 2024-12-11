@@ -8,6 +8,6 @@
 import Foundation
 
 protocol LocalStore {
-    func load() -> Settings?
-    func save(_ settings: Settings)
+    func load() -> SaverSettings?
+    func save(_ settings: SaverSettings)
 }

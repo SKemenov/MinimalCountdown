@@ -32,10 +32,10 @@ final class FileStore: LocalStore {
         }
     }
 
-    func load() -> Settings? {
+    func load() -> SaverSettings? {
         do {
             let data = try Data(contentsOf: fileURL)
-            let settings = try decoder.decode(Settings.self, from: data)
+            let settings = try decoder.decode(SaverSettings.self, from: data)
             logger.log("Loaded settings from file: \(self.fileURL.path, privacy: .public)")
             return settings
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
@@ -47,7 +47,7 @@ final class FileStore: LocalStore {
         }
     }
 
-    func save(_ settings: Settings) {
+    func save(_ settings: SaverSettings) {
         let directory = fileURL.deletingLastPathComponent()
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
