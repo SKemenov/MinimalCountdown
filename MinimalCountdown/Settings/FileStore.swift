@@ -20,6 +20,8 @@ final class FileStore: LocalStore {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
+        let directoryPath = supportDirectory?.path ?? "nil"
+        logger.log("\(directoryPath, privacy: .public)")
         if let supportDirectory {
             fileURL = supportDirectory
                 .appending(component: Resources.subSystem, directoryHint: .isDirectory)
