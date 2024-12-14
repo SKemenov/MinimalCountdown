@@ -133,7 +133,7 @@ private extension MinimalCountdownView {
     }
 
 //    func configureBackground() {
-//        settingsManager.settings.backgroundColor.color.setFill()
+//        settingsManager.settings.backgroundColor.nsColor.setFill()
 //        NSBezierPath.fill(bounds)
 //    }
 
@@ -160,7 +160,7 @@ private extension MinimalCountdownView {
         [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, view) in
             view.digitsLabel.font = digitsFont
             view.descriptionLabel.font = textsFont
-            view.descriptionLabel.stringValue = StyleElement.allCases[index].name.uppercased()
+            view.descriptionLabel.stringValue = StyleElement.allCases[index].label.uppercased()
             elementsStack.addArrangedSubview(view)
         }
 
@@ -184,10 +184,10 @@ private extension MinimalCountdownView {
 
     func updateColor() {
         [daysView, hoursView, minutesView, secondsView].forEach { view in
-            view.digitsLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            view.digitsLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.digits : .dimBright.digits
             )
-            view.descriptionLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            view.descriptionLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }
@@ -200,7 +200,7 @@ private extension MinimalCountdownView {
             let words = string.components(separatedBy: " ")
             let separator = string.count <= 30 ? "  " : "   "
             messageLabel.stringValue = words.joined(separator: separator)
-            messageLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            messageLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }
