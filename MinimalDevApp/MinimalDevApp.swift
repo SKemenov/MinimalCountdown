@@ -9,19 +9,12 @@ import SwiftUI
 
 @main
 struct MinimalDevApp: App {
+    @AppStorage("isAnimating") var isAnimating: Bool = false
     var body: some Scene {
-        WindowGroup("MinimalCountdown Debug Preview") {
-            ScreenSaverRepresentable()
-                .ignoresSafeArea()
+        WindowGroup("Minimal Countdown Preview") {
+            ScreenSaverRepresentable(isAnimating: $isAnimating)
         }
-        .commands {
-            CommandGroup(after: .appSettings) {
-                Button("Settings…") {
-                    appDelegate.openSettings()
-                }
-                .keyboardShortcut(",", modifiers: .command)
-            }
-        }
-    }
+        .windowResizability(.contentSize)
+     }
 }
 
