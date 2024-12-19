@@ -10,20 +10,25 @@ import ScreenSaver
 import OSLog
 
 struct ScreenSaverRepresentable: NSViewRepresentable {
+    @Binding var isAnimating: Bool
     private let logger: Logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
 
     func makeNSView(context: Context) -> MinimalCountdownView {
         logger.log("Creating SwiftUI wrapper for screensaver")
-        let view = MinimalCountdownView(frame: NSRect(x: 0, y: 0, width: 1280, height: 960), isPreview: false)!
+        let view = MinimalCountdownView(frame: NSRect(x: 0, y: 0, width: 1600, height: 960), isPreview: false)!
         view.autoresizingMask = [.width, .height]
-        view.startAnimation()
+        view.window?.title = "Minimal Countdown Preview"
 
-        // Drive animateOneFrame() manually since we're outside the screensaver engine
-        let timer = Timer.scheduledTimer(withTimeInterval: view.animationTimeInterval, repeats: true) { _ in
-            view.animateOneFrame()
+        if isAnimating {
+            view.startAnimation()
+            // Drive animateOneFrame() manually since we're outside the screensaver engine
+            let timer = Timer.scheduledTimer(withTimeInterval: view.animationTimeInterval, repeats: true) { _ in
+                view.animateOneFrame()
+            }
+            context.coordinator.timer = timer
         }
-        context.coordinator.timer = timer
-        logger.log("Created SwiftUI wrapper for NSView with frame [\(Int(view.frame.width))x\(Int(view.frame.height))]")
+        let frame = "\(Int(view.frame.width))x\(Int(view.frame.height))"
+        logger.log("Created SwiftUI wrapper for NSView with frame [\(frame)], and timer [\(isAnimating)]")
         return view
     }
 
