@@ -130,3 +130,12 @@ private extension ConfigurationView {
         return Text("\(iconText) \(option.name)").backgroundStyle(.secondary)
     }
 }
+
+#Preview("Light mode") {
+    ConfigurationView(settingsManager: SettingsManager(stores: []))
+        .preferredColorScheme(.light)
+}
+#Preview("Dark mode") {
+    ConfigurationView(settingsManager: SettingsManager(stores: []))
+        .preferredColorScheme(.dark)
+}
