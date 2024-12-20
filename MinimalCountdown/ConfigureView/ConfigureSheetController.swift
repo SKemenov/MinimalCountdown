@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import OSLog
 
 class ConfigureSheetController: NSObject {
 
     private(set) var hostingController: NSHostingController<ConfigurationView>?
     private(set) var window: NSWindow?
+    private let logger: Logger
 
     init(settingsManager: SettingsManager) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         super.init()
 
         let configView = ConfigurationView(settingsManager: settingsManager) { [weak self] in
@@ -26,12 +29,15 @@ class ConfigureSheetController: NSObject {
         window?.isReleasedWhenClosed = false
         window?.level = .floating
         window?.center()
+        logger.debug("Created ScreenSaver Preferences window")
     }
 
     private func closeSheet() {
         if let window, let sheetParent = window.sheetParent {
+            logger.debug("Closing ScreenSaver Preferences sheet")
             sheetParent.endSheet(window)
         } else {
+            logger.debug("Closing ScreenSaver Preferences window")
             window?.close()
         }
     }
