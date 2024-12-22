@@ -22,6 +22,8 @@
 		E9BDA78E2F8A924100FB19A4 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				ConfigureView/ColorPalettePicker.swift,
+				ConfigureView/ConfigurationView.swift,
 				ConfigureView/ConfigureSheetController.swift,
 				ConfigureView/ConfigureViewController.swift,
 				ElementView/ElementView.swift,
@@ -36,9 +38,9 @@
 				MinimalCountdownView.swift,
 				Models/AccentColor.swift,
 				Models/BackgroundColor.swift,
-				Models/CaseNameable.swift,
+				Models/ColorExtendable.swift,
 				Models/SafeIntDecodable.swift,
-				Models/Settings.swift,
+				Models/SaverSettings.swift,
 				Models/StyleElement.swift,
 				Resources/Assets.xcassets,
 				Resources/Resources.swift,
