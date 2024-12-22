@@ -81,6 +81,39 @@ private extension ConfigurationView {
                 Text("Bright colors")
                 Text("Make digits and text brighter")
             }
+
+            if let extra = settings.isExtra, extra == true {
+                if #available (macOS 15.0, *) {
+                    Picker("Background", selection: $settings.backgroundColor) {
+                        ForEach(BackgroundColor.allCases) { option in
+                            showColor(option)
+                                .disabled(option != .black)
+                        }
+                    } currentValueLabel: {
+                        showColor(settings.backgroundColor)
+                    }
+                    .disabled(true)
+                } else {
+                    Picker("Background", selection: $settings.backgroundColor) {
+                        ForEach(BackgroundColor.allCases) { option in
+                            showColor(option)
+                                .disabled(option != .black)
+                        }
+                    }
+                    .disabled(true)
+                }
+
+                Picker(selection: $settings.style) {
+                    Text("Glow").tag(0)
+                    Text("Shadow").tag(1)
+                    Text("None").tag(2)
+                } label: {
+                    Text("Additional effects")
+                    Text("Apply glow or shadow to digits and text")
+                }
+                .pickerStyle(.inline)
+                .disabled(true)
+            }
         }
     }
 
