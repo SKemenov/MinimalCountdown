@@ -24,6 +24,9 @@ struct MinimalDevApp: App {
         .windowResizability(.contentSize)
         .extraMenu($isAnimating)
 
+        Settings {
+            ConfigurationView(settingsManager: settingsManager)
+        }
     }
 }
 
