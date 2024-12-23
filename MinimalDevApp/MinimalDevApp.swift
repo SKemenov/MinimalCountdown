@@ -22,7 +22,8 @@ struct MinimalDevApp: App {
             ScreenSaverRepresentable(isAnimating: $isAnimating)
         }
         .windowResizability(.contentSize)
-     }
+        .extraMenu($isAnimating)
+
     }
 }
 
@@ -36,3 +37,15 @@ private extension MinimalDevApp {
     }
 }
 
+private extension Scene {
+    func extraMenu(_ isAnimating: Binding<Bool>) -> some Scene {
+        commands {
+            CommandMenu("Debug Options") {
+                Toggle(isOn: isAnimating) {
+                    Label("Run timer", systemImage: "timer")
+                }
+                .help("Run countdown in DevApp")
+            }
+        }
+    }
+}
