@@ -9,7 +9,7 @@ import Foundation
 import OSLog
 
 final class SettingsManager {
-    private(set) var settings: Settings
+    private(set) var settings: SaverSettings
     private let stores: [LocalStore]
     private let logger: Logger
 
@@ -33,10 +33,14 @@ final class SettingsManager {
             }
         }
         settings = .default
-        logger.log("No store had settings, using defaults")
+        logger.log("Store(s) had no settings, using .default value")
     }
 
-    func save(_ settings: Settings) {
+    func save(_ settings: SaverSettings) {
+        guard settings != self.settings else {
+            logger.log("No changes in settings, skipping save")
+            return
+        }
         self.settings = settings
         stores.forEach { $0.save(settings) }
         let message = "Settings saved to \(stores.count) store(s), targetDate: \(settings.targetDate)"

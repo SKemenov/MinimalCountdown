@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Settings: Codable {
+struct SaverSettings: Codable, Equatable, Hashable {
     var targetDate: Date
     var color: AccentColor
     var backgroundColor: BackgroundColor
@@ -15,15 +15,16 @@ struct Settings: Codable {
     var message: String
     var isMessageHidden: Bool
     var isBrightNormal: Bool
+    var isExtra: Bool?
 }
 
-extension Settings {
-    static let `default` = Settings(
+extension SaverSettings {
+    static let `default` = SaverSettings(
         targetDate: Date(timeIntervalSinceNow: 60 * 60 * 24 * 30),
         color: .white,
         backgroundColor: .black,
         style: .seconds,
-        message: "Check Minimal Countdown",
+        message: "",
         isMessageHidden: false,
         isBrightNormal: true
     )

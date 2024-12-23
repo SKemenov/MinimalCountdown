@@ -14,10 +14,10 @@ final class ConfigureViewController: NSViewController {
     private let colorLabel = NSTextField(labelWithString: Resources.Labels.ColorTitle)
     private let dateLabel = NSTextField(labelWithString: Resources.Labels.DateTitle)
     private let styleLabel = NSTextField(labelWithString: Resources.Labels.StyleTitle)
-    private let daysLabel = NSTextField(labelWithString: StyleElement.days.name)
-    private let hoursLabel = NSTextField(labelWithString: StyleElement.hours.name)
-    private let minutesLabel = NSTextField(labelWithString: StyleElement.minutes.name)
-    private let secondsLabel = NSTextField(labelWithString: StyleElement.seconds.name)
+    private let daysLabel = NSTextField(labelWithString: StyleElement.days.label)
+    private let hoursLabel = NSTextField(labelWithString: StyleElement.hours.label)
+    private let minutesLabel = NSTextField(labelWithString: StyleElement.minutes.label)
+    private let secondsLabel = NSTextField(labelWithString: StyleElement.seconds.label)
 
     private let okButton = NSButton()
     private let cancelButton = NSButton()
@@ -185,7 +185,7 @@ private extension ConfigureViewController {
     }
 
     func saveData() {
-        let settings = Settings(
+        let settings = SaverSettings(
             targetDate: datePicker.dateValue,
             color: AccentColor(colorPopupButton.indexOfSelectedItem),
             backgroundColor: settingsManager.settings.backgroundColor,

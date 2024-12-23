@@ -5,22 +5,40 @@
 //  Created by Sergey Kemenov
 //
 
-import AppKit
+import SwiftUI
+import OSLog
 
-final class ConfigureSheetController: NSObject {
-    var window: NSWindow!
+class ConfigureSheetController: NSObject {
+
+    private(set) var hostingController: NSHostingController<ConfigurationView>?
+    private(set) var window: NSWindow?
+    private let logger: Logger
 
     init(settingsManager: SettingsManager) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         super.init()
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 100, height: 100),
-            styleMask: [.closable, .titled],
-            backing: .buffered,
-            defer: false
-        )
-        window.center()
-        window.title = "configureSheet"
-        window.contentViewController = ConfigureViewController(settingsManager: settingsManager)
-        window.makeKeyAndOrderFront(nil)
+
+        let configView = ConfigurationView(settingsManager: settingsManager) { [weak self] in
+            self?.closeSheet()
+        }
+
+        hostingController = NSHostingController(rootView: configView)
+        window = NSWindow(contentViewController: hostingController!)
+        window?.title = "ScreenSaver Preferences"
+        window?.styleMask = [.titled, .closable]
+        window?.isReleasedWhenClosed = false
+        window?.level = .floating
+        window?.center()
+        logger.debug("Created ScreenSaver Preferences window")
+    }
+
+    private func closeSheet() {
+        if let window, let sheetParent = window.sheetParent {
+            logger.debug("Closing ScreenSaver Preferences sheet")
+            sheetParent.endSheet(window)
+        } else {
+            logger.debug("Closing ScreenSaver Preferences window")
+            window?.close()
+        }
     }
 }

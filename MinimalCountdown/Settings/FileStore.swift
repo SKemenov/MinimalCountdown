@@ -14,22 +14,30 @@ final class FileStore: LocalStore {
     private let decoder: JSONDecoder
     private let logger: Logger
 
-    static let defaultURL: URL = shouldBeNonSandboxButRealHomeDirectory
-        .appendingPathComponent(Resources.settingsFolderName, isDirectory: true)
-        .appendingPathComponent(Resources.settingsFileName)
-
-    init(fileURL: URL = FileStore.defaultURL) {
+    init?(
+        supportDirectory: URL? = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
+    ) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        self.fileURL = fileURL
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
-        logger.log("Initialized with fileURL: \(fileURL.path, privacy: .public)")
+        let directoryPath = supportDirectory?.path ?? "nil"
+        logger.log("\(directoryPath, privacy: .public)")
+        if let supportDirectory {
+            fileURL = supportDirectory
+                .appending(component: Resources.subSystem, directoryHint: .isDirectory)
+                .appending(component: Resources.settingsFileName)
+            logger.log("FileStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
+        } else {
+            let path = supportDirectory?.absoluteString ?? ""
+            logger.error("Failed to create FileStore for supportDirectory: \(path, privacy: .public)")
+            return nil
+        }
     }
 
-    func load() -> Settings? {
+    func load() -> SaverSettings? {
         do {
             let data = try Data(contentsOf: fileURL)
-            let settings = try decoder.decode(Settings.self, from: data)
+            let settings = try decoder.decode(SaverSettings.self, from: data)
             logger.log("Loaded settings from file: \(self.fileURL.path, privacy: .public)")
             return settings
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
@@ -41,7 +49,7 @@ final class FileStore: LocalStore {
         }
     }
 
-    func save(_ settings: Settings) {
+    func save(_ settings: SaverSettings) {
         let directory = fileURL.deletingLastPathComponent()
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
@@ -58,19 +66,4 @@ final class FileStore: LocalStore {
             return
         }
     }
-}
-
-extension FileStore {
-    /// Returns the real home directory, bypassing sandbox path redirection.
-    /// Screen savers run inside com.apple.ScreenSaver.Engine.legacyScreenSaver container,
-    /// so FileManager.homeDirectoryForCurrentUser returns the sandboxed path.
-    /// getpwuid reads from the system passwd database and is not affected by sandbox redirection.
-    static let shouldBeNonSandboxButRealHomeDirectory: URL = {
-        if let pwdb = getpwuid(getuid()), let homeDirectory = pwdb.pointee.pw_dir {
-            return URL(fileURLWithPath: String(cString: homeDirectory))
-        } else {
-            // fallback to the com.apple.ScreenSaver.Engine.legacyScreenSaver sandboxed path
-            return FileManager.default.homeDirectoryForCurrentUser
-        }
-    }()
 }

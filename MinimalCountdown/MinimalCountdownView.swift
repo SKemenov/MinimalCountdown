@@ -45,15 +45,19 @@ final class MinimalCountdownView: ScreenSaverView {
 
     override init!(frame: NSRect, isPreview: Bool) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        let message: String = isPreview ? "screen saver" : "preview"
+        let message: String = isPreview ? "preview" : "screen saver"
         logger.log("Starting \(message, privacy: .public)")
 
-        let bundleId: String = Bundle.main.bundleIdentifier ?? Resources.subSystem
-        var stores: [LocalStore] = [FileStore()]
-        if let defaultsStore = DefaultsStore(bundleIdentifier: bundleId) {
+        var stores: [LocalStore] = []
+        if let fileStore = FileStore() {
+            stores.append(fileStore)
+        } else {
+            logger.error("FileStore init failed, running without settings file")
+        }
+        if let defaultsStore = DefaultsStore() {
             stores.append(defaultsStore)
         } else {
-            logger.error("DefaultsStore init failed for bundle: \(bundleId, privacy: .public), running without Defaults")
+            logger.error("DefaultsStore init failed, running without Defaults")
         }
         settingsManager = SettingsManager(stores: stores)
 
@@ -70,11 +74,8 @@ final class MinimalCountdownView: ScreenSaverView {
 
     required init?(coder: NSCoder) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        logger.warning("init(coder:) used — DefaultsStore unavailable, using FileStore only")
-        settingsManager = SettingsManager(stores: [FileStore()])
-        super.init(coder: coder)
-        settingsManager.load()
-        configureScene()
+        logger.critical("init(coder:) not implemented, exiting")
+        fatalError("init(coder:) not implemented, exiting")
     }
 
     deinit {
@@ -132,7 +133,7 @@ private extension MinimalCountdownView {
     }
 
 //    func configureBackground() {
-//        settingsManager.settings.backgroundColor.color.setFill()
+//        settingsManager.settings.backgroundColor.nsColor.setFill()
 //        NSBezierPath.fill(bounds)
 //    }
 
@@ -159,7 +160,7 @@ private extension MinimalCountdownView {
         [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, view) in
             view.digitsLabel.font = digitsFont
             view.descriptionLabel.font = textsFont
-            view.descriptionLabel.stringValue = StyleElement.allCases[index].name.uppercased()
+            view.descriptionLabel.stringValue = StyleElement.allCases[index].label.uppercased()
             elementsStack.addArrangedSubview(view)
         }
 
@@ -183,10 +184,10 @@ private extension MinimalCountdownView {
 
     func updateColor() {
         [daysView, hoursView, minutesView, secondsView].forEach { view in
-            view.digitsLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            view.digitsLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.digits : .dimBright.digits
             )
-            view.descriptionLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            view.descriptionLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }
@@ -199,7 +200,7 @@ private extension MinimalCountdownView {
             let words = string.components(separatedBy: " ")
             let separator = string.count <= 30 ? "  " : "   "
             messageLabel.stringValue = words.joined(separator: separator)
-            messageLabel.textColor = settingsManager.settings.color.color.withAlphaComponent(
+            messageLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
                 settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
             )
         }

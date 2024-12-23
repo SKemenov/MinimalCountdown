@@ -12,7 +12,7 @@ final class DefaultsStore: LocalStore {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
 
-    init?(bundleIdentifier: String) {
+    init?(bundleIdentifier: String = Resources.subSystem) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         guard let defaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier) else {
             logger.error("Failed to create ScreenSaverDefaults for bundle: \(bundleIdentifier, privacy: .public)")
@@ -22,12 +22,12 @@ final class DefaultsStore: LocalStore {
         logger.log("Initialized with bundle: \(bundleIdentifier, privacy: .public)")
     }
 
-    func load() -> Settings? {
+    func load() -> SaverSettings? {
         guard defaults.targetDate.timeIntervalSince1970 != 0.0 else {
             logger.log("No saved settings in defaults (targetDate is zero)")
             return nil
         }
-        let settings = Settings(
+        let settings = SaverSettings(
             targetDate: defaults.targetDate,
             color: AccentColor(defaults.colorIndex),
             backgroundColor: BackgroundColor(defaults.backgroundColorIndex),
@@ -40,7 +40,7 @@ final class DefaultsStore: LocalStore {
         return settings
     }
 
-    func save(_ settings: Settings) {
+    func save(_ settings: SaverSettings) {
         defaults.messageIsHidden = settings.isMessageHidden
         defaults.brightIsNormal = settings.isBrightNormal
         defaults.colorIndex = settings.color.rawValue
