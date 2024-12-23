@@ -32,7 +32,9 @@ struct MinimalDevApp: App {
 
 private extension MinimalDevApp {
     static func createStores() -> [LocalStore] {
-        if let fileStore = FileStore(), let defaultsStore = DefaultsStore() {
+        let ssDirectory = "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Application Support"
+        let url = URL(filePath: ssDirectory, directoryHint: .isDirectory)
+        if let fileStore = FileStore(supportDirectory: url), let defaultsStore = DefaultsStore() {
             return [fileStore, defaultsStore]
         } else {
             return []
