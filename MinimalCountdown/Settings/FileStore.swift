@@ -59,7 +59,11 @@ final class FileStore: LocalStore {
 }
 
 extension FileStore {
+    // /Users/Shared is world-writable with sticky bit. The legacyScreenSaver.appex
+    // sandbox permits writes here but denies them under ~/Library/Application Support,
+    // so using a real-home helper (getpwuid) would still fail for the sandboxed saver.
+    // Both saver and DevApp resolve to /Users/Shared/MinimalCountdown/settings.json.
     static var defaultDirectory: URL {
-        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
+        URL(fileURLWithPath: "/Users/Shared", isDirectory: true)
     }
 }
