@@ -14,24 +14,14 @@ final class FileStore: LocalStore {
     private let decoder: JSONDecoder
     private let logger: Logger
 
-    init?(
-        supportDirectory: URL? = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
-    ) {
+    init(supportDirectory: URL = FileStore.defaultDirectory) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
-        let directoryPath = supportDirectory?.path ?? "nil"
-        logger.log("\(directoryPath, privacy: .public)")
-        if let supportDirectory {
-            fileURL = supportDirectory
-                .appending(component: Resources.subSystem, directoryHint: .isDirectory)
-                .appending(component: Resources.settingsFileName)
-            logger.log("FileStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
-        } else {
-            let path = supportDirectory?.absoluteString ?? ""
-            logger.error("Failed to create FileStore for supportDirectory: \(path, privacy: .public)")
-            return nil
-        }
+        fileURL = supportDirectory
+            .appending(component: Resources.subSystem, directoryHint: .isDirectory)
+            .appending(component: Resources.settingsFileName)
+        logger.log("FileStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
     }
 
     func load() -> SaverSettings? {
@@ -65,5 +55,12 @@ final class FileStore: LocalStore {
             logger.error("Failed to save settings to file: \(error)")
             return
         }
+    }
+}
+
+extension FileStore {
+    // Both saver and DevApp resolve to /Users/Shared/MinimalCountdown/settings.json.
+    static var defaultDirectory: URL {
+        URL(fileURLWithPath: "/Users/Shared", isDirectory: true)
     }
 }

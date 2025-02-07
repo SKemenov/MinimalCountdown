@@ -14,7 +14,7 @@ struct MinimalDevApp: App {
     @AppStorage("isAnimating") var isAnimating: Bool = false
 
     init() {
-        settingsManager = SettingsManager(stores: Self.createStores())
+        settingsManager = SettingsManager(stores: [FileStore()])
     }
 
     var body: some Scene {
@@ -26,18 +26,6 @@ struct MinimalDevApp: App {
 
         Settings {
             ConfigurationView(settingsManager: settingsManager)
-        }
-    }
-}
-
-private extension MinimalDevApp {
-    static func createStores() -> [LocalStore] {
-        let ssDirectory = "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Application Support"
-        let url = URL(filePath: ssDirectory, directoryHint: .isDirectory)
-        if let fileStore = FileStore(supportDirectory: url), let defaultsStore = DefaultsStore() {
-            return [fileStore, defaultsStore]
-        } else {
-            return []
         }
     }
 }
