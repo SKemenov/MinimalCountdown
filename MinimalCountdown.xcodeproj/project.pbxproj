@@ -30,6 +30,7 @@
 				ElementView/SSaverTextView.swift,
 				"Extensions/CGFloat+Extensions.swift",
 				"Extensions/Date+Extensions.swift",
+				"Extensions/Double+Ext.swift",
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
 				"Extensions/NSFont+Extensions.swift",
