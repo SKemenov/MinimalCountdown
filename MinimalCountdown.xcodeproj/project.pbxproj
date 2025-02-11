@@ -51,6 +51,7 @@
 				Settings/SettingsManager.swift,
 				Views/ElementView.swift,
 				Views/TextElementView.swift,
+				Views/TitleView.swift,
 			);
 			target = E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */;
 		};
