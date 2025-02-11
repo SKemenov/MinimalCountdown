@@ -49,6 +49,7 @@
 				Settings/FileStore.swift,
 				Settings/LocalStore.swift,
 				Settings/SettingsManager.swift,
+				Views/ElementView.swift,
 				Views/TextElementView.swift,
 			);
 			target = E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */;
