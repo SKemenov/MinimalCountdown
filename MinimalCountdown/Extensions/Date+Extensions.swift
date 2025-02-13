@@ -13,6 +13,12 @@ extension Date {
     func hoursString(relativeTo now: Date) -> String { self.duration(from: now, for: .hours) }
     func minutesString(relativeTo now: Date) -> String { self.duration(from: now, for: .minutes) }
     func secondsString(relativeTo now: Date) -> String { self.duration(from: now, for: .seconds) }
+
+    // MARK: - DatePicker and date verification components
+    func datesInBetween() -> ClosedRange<Date> { minDate ... maxDate }
+
+    var minDate: Date { self.farAvailableDate(isFuture: false) }
+    var maxDate: Date { self.farAvailableDate(isFuture: true) }
 }
 
 // MARK: - Private helpers
@@ -28,6 +34,10 @@ private extension Date {
             case .seconds: total % .oneMinute
         }
         return String(format: "%02d", elementDuration)
+    }
+    
+    func farAvailableDate(isFuture: Bool) -> Self {
+        Date(timeInterval: (isFuture ? .oneYearAndOneDay : -.oneYearAndOneDay), since: self)
     }
 }
 
