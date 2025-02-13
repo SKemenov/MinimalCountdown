@@ -5,7 +5,7 @@
 //  Created by Sergey Kemenov
 //
 
-import Foundation
+import SwiftUI
 
 struct SaverSettings: Codable, Equatable, Hashable {
     var targetDate: Date
@@ -16,6 +16,14 @@ struct SaverSettings: Codable, Equatable, Hashable {
     var isMessageHidden: Bool
     var isBrightNormal: Bool
     var isExtra: Bool?
+
+    var digitsColor: Color {
+        self.color.color.opacity(self.isBrightNormal ? .normalBright.digits : .dimBright.digits)
+    }
+
+    var textsColor: Color {
+        self.color.color.opacity(self.isBrightNormal ? .normalBright.texts : .dimBright.texts)
+    }
 }
 
 extension SaverSettings {

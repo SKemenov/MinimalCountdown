@@ -8,7 +8,6 @@
 import AppKit
 
 enum AccentColor: Int, CaseIterable, ColorExtendable, SafeIntDecodable {
-//enum AccentColor: Int, CaseIterable, ColorExtendable, SafeIntDecodable, Identifiable, Equatable, Hashable {
     case white = 0, red, pink, orange, yellow, green, mint, cyan, blue, indigo, purple
 
     // safe and un-optional, defaults to .white

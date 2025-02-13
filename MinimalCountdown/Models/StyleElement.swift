@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Enums
 
-enum StyleElement: Int, CaseIterable, Identifiable, SafeIntDecodable {
+enum StyleElement: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
     case days = 0, hours, minutes, seconds
 
     // safe and un-optional, defaults to .seconds (show all)
@@ -25,10 +25,16 @@ extension StyleElement {
         String(describing: self).uppercased()
     }
 
-    var menuLabel: String {
+    var string: String {
+        String(describing: self).capitalized
+    }
+
+    var appearanceLabel: String {
         switch self {
-            case .days: String(describing: self).capitalized
-            default: "+ " + String(describing: self).capitalized
+            case .days: Self.days.string
+            case .hours: [Self.days, Self.hours].map { $0.string }.formatted(.list(type: .and))
+            case .minutes: [Self.days, Self.hours, Self.minutes].map { $0.string }.formatted(.list(type: .and))
+            case .seconds: "All Elements"
         }
     }
 }
