@@ -49,6 +49,7 @@
 				Settings/FileStore.swift,
 				Settings/LocalStore.swift,
 				Settings/SettingsManager.swift,
+				Views/CountdownView.swift,
 				Views/ElementView.swift,
 				Views/TextElementView.swift,
 				Views/TitleView.swift,
