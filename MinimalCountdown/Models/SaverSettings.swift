@@ -28,7 +28,7 @@ struct SaverSettings: Codable, Equatable, Hashable {
 
 extension SaverSettings {
     static let `default` = SaverSettings(
-        targetDate: Date(timeIntervalSinceNow: 60 * 60 * 24 * 30),
+        targetDate: Date(timeIntervalSinceNow: .oneDay * 30),
         color: .white,
         backgroundColor: .black,
         style: .seconds,
@@ -37,3 +37,17 @@ extension SaverSettings {
         isBrightNormal: true
     )
 }
+
+#if DEBUG
+extension SaverSettings {
+    static let preview = SaverSettings(
+        targetDate: Date(timeIntervalSinceNow: .oneDay * 365),
+        color: .white,
+        backgroundColor: .black,
+        style: .days,
+        message: "See you soon",
+        isMessageHidden: false,
+        isBrightNormal: true
+    )
+}
+#endif
