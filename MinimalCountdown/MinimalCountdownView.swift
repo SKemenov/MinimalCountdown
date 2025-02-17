@@ -6,6 +6,7 @@
 //
 
 import ScreenSaver
+import SwiftUI
 import OSLog
 
 final class MinimalCountdownView: ScreenSaverView {
@@ -14,6 +15,7 @@ final class MinimalCountdownView: ScreenSaverView {
     private let settingsManager: SettingsManager
     private let logger: Logger
     private let clock = CountdownClock()
+    private var hostingView: NSHostingView<CountdownRootView>?
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
 
@@ -64,6 +66,7 @@ final class MinimalCountdownView: ScreenSaverView {
         configureScene()
         animateOneFrame()
 //        registerForScreensaverNotifications()
+        configureHostingView()
 
         logger.log("Init complete for \(message, privacy: .public)")
     }
@@ -166,10 +169,24 @@ private extension MinimalCountdownView {
     }
 
     func configureConstraints() {
+    func configureHostingView() {
+        let root = CountdownRootView(
+            clock: clock,
+            settingsManager: settingsManager,
+            isPreview: isPreview
+        )
+        let hosting = NSHostingView(rootView: root)
+        hosting.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(hosting)
         NSLayoutConstraint.activate([
             vStack.centerXAnchor.constraint(equalTo: centerXAnchor),
             vStack.centerYAnchor.constraint(equalTo: centerYAnchor)
+            hosting.leadingAnchor.constraint(equalTo: leadingAnchor),
+            hosting.trailingAnchor.constraint(equalTo: trailingAnchor),
+            hosting.topAnchor.constraint(equalTo: topAnchor),
+            hosting.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        hostingView = hosting
     }
 
     func updateTargetDate() {
