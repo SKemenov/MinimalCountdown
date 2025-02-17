@@ -13,6 +13,7 @@ final class MinimalCountdownView: ScreenSaverView {
 
     private let settingsManager: SettingsManager
     private let logger: Logger
+    private let clock = CountdownClock()
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
 
@@ -100,6 +101,7 @@ final class MinimalCountdownView: ScreenSaverView {
     override func animateOneFrame() {
         needsDisplay = true
         updateScene()
+        clock.now = Date()
     }
 }
 
