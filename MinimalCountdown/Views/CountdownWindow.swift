@@ -52,3 +52,14 @@ struct CountdownWindow: View {
     )
     .frame(width: 500, height: 300)
 }
+
+#if DEBUG
+#Preview("Days-only, dim, with message") {
+    CountdownWindow(
+        now: Date(),
+        settings: SaverSettings.preview,
+        isPreview: true
+    )
+    .frame(width: 500, height: 300)
+}
+#endif
