@@ -15,11 +15,17 @@ struct MinimalDevApp: App {
 
     init() {
         settingsManager = SettingsManager(stores: [FileStore()])
+        settingsManager.load()
     }
 
     var body: some Scene {
         WindowGroup("Minimal Countdown Preview") {
-            ScreenSaverRepresentable(isAnimating: $isAnimating)
+            PreviewWindow(
+                settingsManager: settingsManager,
+                isAnimating: $isAnimating,
+                isTestPreview: $isTestPreview
+            )
+            .frame(minWidth: 400, minHeight: 400)
         }
         .windowResizability(.contentSize)
         .extraMenu($isAnimating)
