@@ -66,16 +66,16 @@ private extension ColorPalettePicker {
         ZStack(alignment: .center) {
             Circle()
                 .foregroundStyle(current.color)
-                .frame(width: 20, height: 20)
+                .frame(width: .Sizes.colorSelector, height: .Sizes.colorSelector)
 
             if current.color == .white && current.color != selection.color {
                 Circle()
-                    .stroke(.secondary, lineWidth: 1)
-                    .frame(width: 20, height: 20)
+                    .stroke(.secondary, lineWidth: .Border.small)
+                    .frame(width: .Sizes.colorSelector, height: .Sizes.colorSelector)
             }
             Circle()
-                .stroke(current.color == selection.color ? Color.accentColor : .clear, lineWidth: 3)
-                .frame(width: 26, height: 26)
+                .stroke(current.color == selection.color ? Color.accentColor : .clear, lineWidth: .Border.medium)
+                .frame(width: .Sizes.colorSelector + .Spacing.small, height: .Sizes.colorSelector + .Spacing.small)
         }
     }
 
@@ -95,7 +95,7 @@ private extension ColorPalettePicker {
                     label: { createColorCircle(for: current) }
                 )
                 .buttonStyle(.plain)
-                .padding(.horizontal, 1)
+                .padding(.horizontal, .Spacing.xxSmall)
                 .contentShape(Rectangle())
                 .onHover { markedColor = $0 ? current : selection }
             }
@@ -116,23 +116,24 @@ private extension ColorPalettePicker {
 #Preview("Dynamic") {
     @State @Previewable var settingsColor = AccentColor.red
     ColorPalettePicker("Color", selection: $settingsColor)
-        .padding(8)
-        .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
-        .padding(8)
+        .padding(.Spacing.medium)
+        .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
+        .padding(.Spacing.medium)
+        .frame(width: .Sizes.settingsWidth)
 }
 
 #Preview("Accent Static") {
     let colors = AccentColor.allCases
-    VStack(alignment: .leading, spacing: 8) {
+    VStack(alignment: .leading, spacing: .Spacing.medium) {
         Text("Static").font(.headline)
         ForEach(colors) { current in
             ColorPalettePicker("Accent Color", selection: .constant(current))
         }
-        .padding(4)
-        .background(.quaternary, in: RoundedRectangle(cornerRadius: 8))
+        .padding(.Spacing.medium)
+        .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
     }
-    .padding(4)
-    .frame(width: 512, height: 760)
+    .padding(.Spacing.medium)
+    .frame(width: .Sizes.settingsWidth, height: 760)
 }
 
 //import SwiftUI
