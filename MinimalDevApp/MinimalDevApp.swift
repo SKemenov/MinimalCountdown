@@ -12,6 +12,7 @@ struct MinimalDevApp: App {
     private var settingsManager: SettingsManager
 
     @AppStorage("isAnimating") var isAnimating: Bool = false
+    @AppStorage("isTestPreview") var isTestPreview: Bool = false
 
     init() {
         settingsManager = SettingsManager(stores: [FileStore()])
@@ -28,7 +29,7 @@ struct MinimalDevApp: App {
             .frame(minWidth: 400, minHeight: 400)
         }
         .windowResizability(.contentSize)
-        .extraMenu($isAnimating)
+        .extraMenu(isAnimating: $isAnimating, isTestPreview: $isTestPreview)
 
         Settings {
             ConfigurationWindow(settingsManager: settingsManager)
@@ -37,13 +38,17 @@ struct MinimalDevApp: App {
 }
 
 private extension Scene {
-    func extraMenu(_ isAnimating: Binding<Bool>) -> some Scene {
+    func extraMenu(isAnimating: Binding<Bool>, isTestPreview: Binding<Bool>) -> some Scene {
         commands {
             CommandMenu("Debug Options") {
                 Toggle(isOn: isAnimating) {
                     Label("Run timer", systemImage: "timer")
                 }
                 .help("Run countdown in DevApp")
+                Toggle(isOn: isTestPreview) {
+                    Label("Show for Preview", systemImage: "repeat")
+                }
+                .help("Show countdown as for Preview in DevApp")
             }
         }
     }
