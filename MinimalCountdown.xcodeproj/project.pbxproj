@@ -24,7 +24,6 @@
 			membershipExceptions = (
 				ConfigureView/AppearancePicker.swift,
 				ConfigureView/ColorPalettePicker.swift,
-				ConfigureView/ConfigurationView.swift,
 				ConfigureView/ConfigurationWindow.swift,
 				ConfigureView/ConfigureSheetController.swift,
 				ConfigureView/ConfigureViewController.swift,

@@ -1,20 +1,23 @@
 //
-//  ConfigurationView.swift
+//  ConfigurationWindow.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
 //
 
-import SwiftUI
 import OSLog
+import SwiftUI
 
-struct ConfigurationView: View {
+struct ConfigurationWindow: View {
+    private enum FocusTarget: Hashable { case title }
+
     private let logger: Logger
     var settingsManager: SettingsManager
     var onClose: (() -> Void)?
 
     @State private var settings: SaverSettings
     @Environment(\.dismiss) private var dismiss
+    @FocusState private var focus: FocusTarget?
 
     init(settingsManager: SettingsManager, onClose: (() -> Void)? = nil) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
@@ -25,7 +28,7 @@ struct ConfigurationView: View {
     }
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             Form {
                 appearanceSection
                 dateSection
@@ -33,35 +36,34 @@ struct ConfigurationView: View {
                 titleSection
             }
             .formStyle(.grouped)
+            .onKeyPress(.return, action: saveByEnterKey)
 
             buttons
         }
-        .frame(width: 512, height: 740)
-        .onAppear(perform: onAppearAction)
+        .frame(width: 512, height: 740 + 48)
+        .task(setTitleFocused)
     }
 }
 
-private extension ConfigurationView {
+private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
-            Picker(selection: $settings.style) {
-                ForEach(StyleElement.allCases) {
-                    Text($0.menuLabel)
-                }
-            } label: {
-                Text("Appearance")
-            }
-            .pickerStyle(.palette)
+            AppearancePicker("Appearance", currentSettings: $settings)
         }
     }
 
     var dateSection: some View {
         Section("Date") {
-            DatePicker(selection: $settings.targetDate, displayedComponents: .date) {
+            DatePicker(
+                selection: $settings.targetDate,
+                in: Date.now.datesInBetween(),
+                displayedComponents: .date
+            ) {
                 Text("Day")
                 VStack(alignment: .leading) {
-                    Text("It can be any future date for Countdown Mode or any past date for Timer Mode. The available range of dates ​​is one year before the current date and one year after it.")
-                    Text("When the countdown reaches zero, it automatically switch to Timer Mode and start counting up again.")
+                    Text("It can be any future date for Timer Mode or any past date for Stopwatch Mode.")
+                    Text("The available range is two years from the current date.")
+                    Text("When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up.")
                 }
             }
             .datePickerStyle(.graphical)
@@ -120,6 +122,8 @@ private extension ConfigurationView {
     var titleSection: some View {
         Section("Title") {
             TextField("", text: $settings.message, prompt: Text("Add your message here"))
+                .focused($focus, equals: .title)
+
             Toggle(isOn: $settings.isMessageHidden) {
                 Text("Hide title")
                 Text("Even title is not empty")
@@ -139,10 +143,15 @@ private extension ConfigurationView {
         }
     }
 
-    func onAppearAction() {
-        logger.log("Open configuration sheet")
-        settingsManager.load()
-        settings = settingsManager.settings
+    func setTitleFocused() async {
+        try? await Task.sleep(for: .seconds(0.01))
+        focus = .title
+    }
+
+    @discardableResult
+    func saveByEnterKey() -> KeyPress.Result {
+        saveAndExit()
+        return .handled
     }
 
     func saveAndExit() {
@@ -165,10 +174,10 @@ private extension ConfigurationView {
 }
 
 #Preview("Light mode") {
-    ConfigurationView(settingsManager: SettingsManager(stores: []))
+    ConfigurationWindow(settingsManager: SettingsManager(stores: []))
         .preferredColorScheme(.light)
 }
 #Preview("Dark mode") {
-    ConfigurationView(settingsManager: SettingsManager(stores: []))
+    ConfigurationWindow(settingsManager: SettingsManager(stores: []))
         .preferredColorScheme(.dark)
 }

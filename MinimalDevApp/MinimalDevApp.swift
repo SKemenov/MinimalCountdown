@@ -31,7 +31,7 @@ struct MinimalDevApp: App {
         .extraMenu($isAnimating)
 
         Settings {
-            ConfigurationView(settingsManager: settingsManager)
+            ConfigurationWindow(settingsManager: settingsManager)
         }
     }
 }

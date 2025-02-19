@@ -10,7 +10,7 @@ import OSLog
 
 class ConfigureSheetController: NSObject {
 
-    private(set) var hostingController: NSHostingController<ConfigurationView>?
+    private(set) var hostingController: NSHostingController<ConfigurationWindow>?
     private(set) var window: NSWindow?
     private let logger: Logger
 
@@ -18,7 +18,7 @@ class ConfigureSheetController: NSObject {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         super.init()
 
-        let configView = ConfigurationView(settingsManager: settingsManager) { [weak self] in
+        let configView = ConfigurationWindow(settingsManager: settingsManager) { [weak self] in
             self?.closeSheet()
         }
 
