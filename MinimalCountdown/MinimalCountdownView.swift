@@ -6,6 +6,7 @@
 //
 
 import ScreenSaver
+import SwiftUI
 import OSLog
 
 final class MinimalCountdownView: ScreenSaverView {
@@ -13,23 +14,10 @@ final class MinimalCountdownView: ScreenSaverView {
 
     private let settingsManager: SettingsManager
     private let logger: Logger
+    private let clock = CountdownClock()
+    private var hostingView: NSHostingView<CountdownRootView>?
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
-
-    private let daysView = ElementView()
-    private let hoursView = ElementView()
-    private let minutesView = ElementView()
-    private let secondsView = ElementView()
-
-    private let messageLabel = SSaverTextView()
-
-    private let elementsStack = NSStackView()
-
-    private let vStack: NSStackView = {
-        let stack = NSStackView()
-        stack.orientation = .vertical
-        return stack
-    }()
 
     // MARK: - Public properties
 
@@ -60,9 +48,7 @@ final class MinimalCountdownView: ScreenSaverView {
         settingsManager.load()
 
         animationTimeInterval = 1.0
-        configureScene()
-        animateOneFrame()
-//        registerForScreensaverNotifications()
+        configureHostingView()
 
         logger.log("Init complete for \(message, privacy: .public)")
     }
@@ -80,161 +66,29 @@ final class MinimalCountdownView: ScreenSaverView {
 
     // MARK: - Lifecycle
 
-//    override func startAnimation() {
-//        super.startAnimation()
-//        let message: String = isPreview ? "Screen saver" : "Preview"
-//        logger.log("\(message, privacy: .public) \(#function, privacy: .public)")
-//    }
-//
-//    override func stopAnimation() {
-//        if !isPreview {
-//            super.stopAnimation()
-//            logger.log("Preview \(#function, privacy: .public)")
-//        }
-//    }
-//
-//    override func draw(_ rect: NSRect) {
-//        configureBackground()
-//    }
-
     override func animateOneFrame() {
-        needsDisplay = true
-        updateScene()
+        clock.now = Date()
     }
 }
 
 // MARK: - Private methods
 
 private extension MinimalCountdownView {
-//    func registerForScreensaverNotifications() {
-//        DistributedNotificationCenter.default().addObserver(
-//            self,
-//            selector: #selector(MinimalCountdownView.stopAnimation),
-//            name: NSNotification.Name("com.apple.screensaver.willstop"),
-//            object: nil
-//        )
-//    }
-
-    func configureScene() {
-        configureUI()
-        configureConstraints()
-    }
-
-    func updateScene() {
-        updateColor()
-        configureElements()
-        updateTitle()
-        updateTargetDate()
-    }
-
-//    func configureBackground() {
-//        settingsManager.settings.backgroundColor.nsColor.setFill()
-//        NSBezierPath.fill(bounds)
-//    }
-
-    func configureUI() {
-        [vStack, elementsStack].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
-
-        let elementWidth = round(bounds.width / (isPreview ? (.elementsWithSpaces - 1) : .elementsWithSpaces))
-        let digitsFont = NSFont.systemFont(ofSize: elementWidth, weight: .ultraLight).monospacedNumbers
-        let textsFont = NSFont.systemFont(ofSize: elementWidth / 5, weight: .ultraLight)
-        // need to check on other than Tahoe system
-//        let elementWidth = round(bounds.width / (isPreview ? (.elementsWithSpaces - 3) : .elementsWithSpaces))
-//        let digitsFont = NSFont.systemFont(
-//            ofSize: elementWidth,
-//            weight: isPreview ? .regular : .ultraLight
-//        ).monospacedNumbers
-//        let textsFont = NSFont.systemFont(
-//            ofSize: elementWidth / (isPreview ? 3 : 5),
-//            weight: isPreview ? .regular : .ultraLight
-//        )
-
-        messageLabel.font = textsFont
-        elementsStack.spacing = round(bounds.width * .elementsSpacingRatio)
-
-        [daysView, hoursView, minutesView, secondsView].enumerated().forEach { (index, view) in
-            view.digitsLabel.font = digitsFont
-            view.descriptionLabel.font = textsFont
-            view.descriptionLabel.stringValue = StyleElement.allCases[index].label.uppercased()
-            elementsStack.addArrangedSubview(view)
-        }
-
-        [messageLabel, elementsStack].forEach { vStack.addArrangedSubview($0) }
-        addSubview(vStack)
-    }
-
-    func configureConstraints() {
+    func configureHostingView() {
+        let root = CountdownRootView(
+            clock: clock,
+            settingsManager: settingsManager,
+            isPreview: isPreview
+        )
+        let hosting = NSHostingView(rootView: root)
+        hosting.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(hosting)
         NSLayoutConstraint.activate([
-            vStack.centerXAnchor.constraint(equalTo: centerXAnchor),
-            vStack.centerYAnchor.constraint(equalTo: centerYAnchor)
+            hosting.leadingAnchor.constraint(equalTo: leadingAnchor),
+            hosting.trailingAnchor.constraint(equalTo: trailingAnchor),
+            hosting.topAnchor.constraint(equalTo: topAnchor),
+            hosting.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        hostingView = hosting
     }
-
-    func updateTargetDate() {
-        daysView.digitsLabel.stringValue = settingsManager.settings.targetDate.daysString
-        hoursView.digitsLabel.stringValue = settingsManager.settings.targetDate.hoursString
-        minutesView.digitsLabel.stringValue = settingsManager.settings.targetDate.minutesString
-        secondsView.digitsLabel.stringValue = settingsManager.settings.targetDate.secondsString
-    }
-
-    func updateColor() {
-        [daysView, hoursView, minutesView, secondsView].forEach { view in
-            view.digitsLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
-                settingsManager.settings.isBrightNormal ? .normalBright.digits : .dimBright.digits
-            )
-            view.descriptionLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
-                settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
-            )
-        }
-    }
-
-    func updateTitle() {
-        messageLabel.isHidden = settingsManager.settings.isMessageHidden
-        if !messageLabel.isHidden {
-            let string = settingsManager.settings.message.uppercased()
-            let words = string.components(separatedBy: " ")
-            let separator = string.count <= 30 ? "  " : "   "
-            messageLabel.stringValue = words.joined(separator: separator)
-            messageLabel.textColor = settingsManager.settings.color.nsColor.withAlphaComponent(
-                settingsManager.settings.isBrightNormal ? .normalBright.texts : .dimBright.texts
-            )
-        }
-    }
-
-    func configureElements() {
-        switch settingsManager.settings.style {
-        case .days:
-            daysView.isHidden = false
-            [hoursView, minutesView, secondsView].forEach { $0.isHidden = true }
-        case .hours:
-            [daysView, hoursView].forEach { $0.isHidden = false }
-            [minutesView, secondsView].forEach { $0.isHidden = true }
-        case .minutes:
-            [daysView, hoursView, minutesView].forEach { $0.isHidden = false }
-            secondsView.isHidden = true
-        case .seconds:
-            [daysView, hoursView, minutesView, secondsView].forEach { $0.isHidden = false }
-        }
-    }
-//    check on non-Tahoe platforms
-//    func configureElements() {
-//        if isPreview {
-//            [daysView, hoursView].forEach { $0.isHidden = true }
-//            [minutesView, secondsView].forEach { $0.isHidden = false }
-//        } else {
-//            switch settingsManager.settings.style {
-//            case .days:
-//                daysView.isHidden = false
-//                [hoursView, minutesView, secondsView].forEach { $0.isHidden = true }
-//            case .hours:
-//                [daysView, hoursView].forEach { $0.isHidden = false }
-//                [minutesView, secondsView].forEach { $0.isHidden = true }
-//            case .minutes:
-//                [daysView, hoursView, minutesView].forEach { $0.isHidden = false }
-//                secondsView.isHidden = true
-//            case .seconds:
-//                [daysView, hoursView, minutesView, secondsView].forEach { $0.isHidden = false }
-//            }
-//        }
-//    }
 }

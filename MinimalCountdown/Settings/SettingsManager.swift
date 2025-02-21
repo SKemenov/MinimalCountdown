@@ -23,9 +23,7 @@ final class SettingsManager {
     func load() {
         for store in stores {
             if var loaded = store.load() {
-                let minDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 365 * -1)
-                let maxDate = Date(timeIntervalSinceNow: 60 * 60 * 24 * 365 * 1.5)
-                loaded.targetDate = max(minDate, min(loaded.targetDate, maxDate))
+                loaded.targetDate = max(Date.now.minDate, min(loaded.targetDate, Date.now.maxDate))
                 settings = loaded
                 let message = "Loaded from \(String(describing: type(of: store))), targetDate: \(loaded.targetDate)"
                 logger.log("\(message, privacy: .public)")

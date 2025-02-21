@@ -7,27 +7,45 @@
 
 import Foundation
 
-// MARK: - Custom properties
 extension Date {
-    var daysString: String { self.durationFromToday(in: .days) }
-    var hoursString: String { self.durationFromToday(in: .hours) }
-    var minutesString: String { self.durationFromToday(in: .minutes) }
-    var secondsString: String { self.durationFromToday(in: .seconds) }
+    // MARK: - Duration components relative to a reference `now` for target date
+    func daysString(relativeTo now: Date) -> String { self.duration(from: now, for: .days) }
+    func hoursString(relativeTo now: Date) -> String { self.duration(from: now, for: .hours) }
+    func minutesString(relativeTo now: Date) -> String { self.duration(from: now, for: .minutes) }
+    func secondsString(relativeTo now: Date) -> String { self.duration(from: now, for: .seconds) }
+
+    // MARK: - DatePicker and date verification components
+    func datesInBetween() -> ClosedRange<Date> { minDate ... maxDate }
+
+    var minDate: Date { self.farAvailableDate(isFuture: false) }
+    var maxDate: Date { self.farAvailableDate(isFuture: true) }
 }
 
-// MARK: - Private properties
+// MARK: - Private helpers
 private extension Date {
-    func durationFromToday(in period: StyleElement) -> String {
+    func duration(from now: Date, for element: StyleElement) -> String {
         // use ceil to fix double-zero issue
-        let total = Int(abs(ceil(self.timeIntervalSinceNow)))
-        // 86_400 = 60s * 60m * 24h
-        // 3_600 = 60s * 60m
-        let value: Int = switch period {
-        case .days:    total / 86_400
-        case .hours:   total % 86_400 / 3_600
-        case .minutes: total % 3_600 / 60
-        case .seconds: total % 60
+        let total = Int(abs(ceil(self.timeIntervalSince(now))))
+
+        let elementDuration: Int = switch element {
+            case .days: total / .oneDay
+            case .hours: total % .oneDay / .oneHour
+            case .minutes: total % .oneHour / .oneMinute
+            case .seconds: total % .oneMinute
         }
-        return String(format: "%02d", value)
+        return String(format: "%02d", elementDuration)
     }
+    
+    func farAvailableDate(isFuture: Bool) -> Self {
+        Date(timeInterval: (isFuture ? .oneYearAndOneDay : -.oneYearAndOneDay), since: self)
+    }
+}
+
+private extension Int {
+    /// Total seconds in one day: 86 400 = 60s * 60m * 24h
+    static let oneDay = 60 * 60 * 24
+    /// Total seconds in one hour: 3 600 = 60s * 60m
+    static let oneHour = 60 * 60
+    /// Total seconds in one minute: 60
+    static let oneMinute = 60
 }
