@@ -4,10 +4,13 @@ Minimal Countdown is a minimalistic countdown screen saver for macOS. Shows the 
 
 Last release notes [read here](https://github.com/SKemenov/MinimalCountdown/releases).
 
-![Screenshot](vendors/mc-screenshot-01s.png)
-![Screenshot](vendors/mc-screenshot-03s.png)
-![Screenshot](vendors/mc-screenshot-04s.png)
-![Screenshot](vendors/mc-screenshot-05s.png)
+<p align="center">
+  <img src="vendors/mc-screenshot-01s.png" width="24%"/> 
+  <img src="vendors/mc-screenshot-03s.png" width="24%"/> 
+  <img src="vendors/mc-screenshot-04s.png" width="24%"/> 
+  <img src="vendors/mc-screenshot-05s.png" width="24%"/> 
+</p>
+
 
 
 ## Features
@@ -38,7 +41,9 @@ Minimal Countdowns screen saver requires OS X Ventura or later.
 4. Enjoy it!
 
 ## Configurations
-![Configurations](vendors/mc-screenshot-02s.png)
+<p align="center">
+  <img src="vendors/mc-screenshot-02s.png" width="84%"/> 
+</p>
 
 
 ## How to re-install
