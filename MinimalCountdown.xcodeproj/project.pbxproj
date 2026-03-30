@@ -32,7 +32,6 @@
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
 				"Extensions/UserDefaults+Extensions.swift",
-				MinimalCountdownView.swift,
 				Models/AccentColor.swift,
 				Models/BackgroundColor.swift,
 				Models/ColorExtendable.swift,
