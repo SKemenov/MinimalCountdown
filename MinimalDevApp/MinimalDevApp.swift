@@ -9,30 +9,32 @@ import SwiftUI
 
 @main
 struct MinimalDevApp: App {
-    private var settingsManager: SettingsManager
+    @State private var settingsManager: SettingsManager
 
     @AppStorage("isAnimating") var isAnimating: Bool = false
     @AppStorage("isTestPreview") var isTestPreview: Bool = false
 
     init() {
-        settingsManager = SettingsManager(stores: [FileStore()])
+        let manager = SettingsManager(stores: [FileStore()])
+        _settingsManager = State(initialValue: manager)
         settingsManager.load()
     }
 
     var body: some Scene {
         WindowGroup("Minimal Countdown Preview") {
             PreviewWindow(
-                settingsManager: settingsManager,
                 isAnimating: $isAnimating,
                 isTestPreview: $isTestPreview
             )
             .frame(minWidth: 400, minHeight: 400)
+            .environment(settingsManager)
         }
         .windowResizability(.contentSize)
         .extraMenu(isAnimating: $isAnimating, isTestPreview: $isTestPreview)
 
         Settings {
-            ConfigurationWindow(settingsManager: settingsManager)
+            ConfigurationWindow()
+                .environment(settingsManager)
         }
     }
 }

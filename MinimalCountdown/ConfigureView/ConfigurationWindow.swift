@@ -12,23 +12,20 @@ struct ConfigurationWindow: View {
     private enum FocusTarget: Hashable { case title }
 
     private let logger: Logger
-    var settingsManager: SettingsManager
     var onClose: (() -> Void)?
 
-    @State private var settings: SaverSettings
+    @State private var settings: SaverSettings = .default
+    @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
     @FocusState private var focus: FocusTarget?
 
-    init(settingsManager: SettingsManager, onClose: (() -> Void)? = nil) {
+    init(onClose: (() -> Void)? = nil) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         self.onClose = onClose
-        settingsManager.load()
-        self.settingsManager = settingsManager
-        settings = settingsManager.settings
     }
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: .zero) {
             Form {
                 appearanceSection
                 dateSection
@@ -41,6 +38,7 @@ struct ConfigurationWindow: View {
             buttons
         }
         .frame(width: 512, height: 740 + 48)
+        .onAppear { settings = settingsManager.settings }
         .task(setTitleFocused)
     }
 }
@@ -174,10 +172,12 @@ private extension ConfigurationWindow {
 }
 
 #Preview("Light mode") {
-    ConfigurationWindow(settingsManager: SettingsManager(stores: []))
+    ConfigurationWindow()
+        .environment(SettingsManager(stores: []))
         .preferredColorScheme(.light)
 }
 #Preview("Dark mode") {
-    ConfigurationWindow(settingsManager: SettingsManager(stores: []))
+    ConfigurationWindow()
+        .environment(SettingsManager(stores: []))
         .preferredColorScheme(.dark)
 }

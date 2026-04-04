@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CountdownRootView: View {
     let clock: CountdownClock
-    let settingsManager: SettingsManager
     let isPreview: Bool
+
+    @Environment(SettingsManager.self) private var settingsManager
 
     var body: some View {
         CountdownWindow(

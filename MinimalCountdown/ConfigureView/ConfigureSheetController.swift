@@ -10,7 +10,7 @@ import OSLog
 
 class ConfigureSheetController: NSObject {
 
-    private(set) var hostingController: NSHostingController<ConfigurationWindow>?
+    private(set) var hostingController: NSHostingController<AnyView>?
     private(set) var window: NSWindow?
     private let logger: Logger
 
@@ -18,11 +18,12 @@ class ConfigureSheetController: NSObject {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         super.init()
 
-        let configView = ConfigurationWindow(settingsManager: settingsManager) { [weak self] in
+        let configView = ConfigurationWindow { [weak self] in
             self?.closeSheet()
         }
+        .environment(settingsManager)
 
-        hostingController = NSHostingController(rootView: configView)
+        hostingController = NSHostingController(rootView: AnyView(configView))
         window = NSWindow(contentViewController: hostingController!)
         window?.title = "ScreenSaver Preferences"
         window?.styleMask = [.titled, .closable]
