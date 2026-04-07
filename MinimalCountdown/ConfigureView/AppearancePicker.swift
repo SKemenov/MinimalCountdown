@@ -12,6 +12,7 @@ struct AppearancePicker: View {
     private let titleResource: LocalizedStringResource
     @Binding var currentSettings: SaverSettings
     private let contentStyles: [StyleType]
+    @State private var pickerNow: Date = Date()
 
     init(
         _ titleResource: LocalizedStringResource,
@@ -24,19 +25,17 @@ struct AppearancePicker: View {
     }
 
     var body: some View {
-        TimelineView(.periodic(from: .now, by: 1)) { context in
-            HStack(alignment: .top, spacing: .zero) {
-                pickerTitle
+        HStack(alignment: .top, spacing: .zero) {
+            pickerTitle
 
-                ForEach(contentStyles) { current in
-                    Button(
-                        action: { changeSelection(to: current) },
-                        label: { createAppearance(for: current, in: context) }
-                    )
-                    .buttonStyle(.plain)
-                    .padding(.horizontal, .Spacing.xxSmall)
-                    .contentShape(Rectangle())
-                }
+            ForEach(contentStyles) { current in
+                Button(
+                    action: { changeSelection(to: current) },
+                    label: { createAppearance(for: current) }
+                )
+                .buttonStyle(.plain)
+                .padding(.horizontal, .Spacing.xxSmall)
+                .contentShape(Rectangle())
             }
         }
     }
@@ -55,14 +54,14 @@ private extension AppearancePicker {
         withAnimation { currentSettings.style = selected }
     }
 
-    func createAppearance(for style: StyleElement, in context: TimelineViewDefaultContext) -> some View {
+    func createAppearance(for style: StyleElement) -> some View {
         var styleSettings = currentSettings
         styleSettings.style = style
 
         return VStack(alignment: .center, spacing: .Spacing.xSmall) {
             ZStack(alignment: .center) {
                 showSelection(for: style)
-                showCountdownView(settings: styleSettings, in: context)
+                showCountdownView(settings: styleSettings)
             }
             appearanceLabel(for: style)
         }
@@ -74,9 +73,9 @@ private extension AppearancePicker {
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
     }
 
-    func showCountdownView(settings: SaverSettings, in context: TimelineViewDefaultContext) -> some View {
+    func showCountdownView(settings: SaverSettings) -> some View {
         CountdownWindow(
-            now: context.date,
+            now: pickerNow,
             settings: settings,
             isPreview: true
         )
