@@ -69,7 +69,7 @@ private extension AppearancePicker {
 
     func showSelection(for style: StyleElement) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(style.id == currentSettings.style.id ? Color.accentColor : .clear, lineWidth: .Border.medium)
+            .stroke(style == currentSettings.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
     }
 
@@ -90,8 +90,8 @@ private extension AppearancePicker {
                 .font(.caption)
                 .lineLimit(3)
                 .multilineTextAlignment(.center)
-                .fontWeight(style.id == currentSettings.style.id ? .bold : .regular)
-                .foregroundStyle(style.id == currentSettings.style.id ? .primary : .secondary)
+                .fontWeight(style == currentSettings.style ? .bold : .regular)
+                .foregroundStyle(style == currentSettings.style ? .primary : .secondary)
         }
     }
 }
