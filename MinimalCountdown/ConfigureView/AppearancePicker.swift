@@ -25,29 +25,44 @@ struct AppearancePicker: View {
     }
 
     var body: some View {
-        HStack(alignment: .top, spacing: .zero) {
-            pickerTitle
+        VStack(alignment: .leading, spacing: .Spacing.xSmall) {
+            Text(titleResource)
 
-            ForEach(contentStyles) { current in
-                Button(
-                    action: { changeSelection(to: current) },
-                    label: { createAppearance(for: current) }
-                )
-                .buttonStyle(.plain)
-                .padding(.horizontal, .Spacing.xxSmall)
-                .contentShape(Rectangle())
+            HStack(alignment: .top, spacing: .zero) {
+                pickerLabel
+                pickerButtons
             }
         }
     }
 }
 
 private extension AppearancePicker {
-    var pickerTitle: some View {
-        HStack(spacing: .zero) {
-            Text(titleResource)
-            Spacer()
+    var pickerLabel: some View {
+        VStack(alignment: .leading, spacing: .Spacing.xxSmall) {
+            ForEach(contentStyles) { style in
+                Text(style.appearanceLabel)
+                    .font(.caption)
+                    .fontWeight(isActive(style) ? .bold : .regular)
+                    .foregroundStyle(isActive(style) ? .secondary : .tertiary)
+            }
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    var pickerButtons: some View {
+        ForEach(contentStyles) { current in
+            Button(
+                action: { changeSelection(to: current) },
+                label: { createAppearance(for: current) }
+            )
+            .buttonStyle(.plain)
+            .padding(.horizontal, .Spacing.xxSmall)
+            .contentShape(Rectangle())
+        }
+    }
+
+    func isActive(_ style: StyleElement) -> Bool {
+        style.rawValue <= currentSettings.style.rawValue
     }
 
     func changeSelection(to selected: StyleType) {
@@ -58,12 +73,9 @@ private extension AppearancePicker {
         var styleSettings = currentSettings
         styleSettings.style = style
 
-        return VStack(alignment: .center, spacing: .Spacing.xSmall) {
-            ZStack(alignment: .center) {
-                showSelection(for: style)
-                showCountdownView(settings: styleSettings)
-            }
-            appearanceLabel(for: style)
+        return ZStack(alignment: .center) {
+            showSelection(for: style)
+            showCountdownView(settings: styleSettings)
         }
     }
 
@@ -82,17 +94,6 @@ private extension AppearancePicker {
         .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
         .background(settings.backgroundColor.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
-    }
-
-    func appearanceLabel(for style: StyleElement) -> some View {
-        HStack(alignment: .center) {
-            Text(style.appearanceLabel)
-                .font(.caption)
-                .lineLimit(3)
-                .multilineTextAlignment(.center)
-                .fontWeight(style == currentSettings.style ? .bold : .regular)
-                .foregroundStyle(style == currentSettings.style ? .primary : .secondary)
-        }
     }
 }
 
