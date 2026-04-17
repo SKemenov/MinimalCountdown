@@ -25,10 +25,6 @@ extension StyleElement {
         String(describing: self).uppercased()
     }
 
-    var string: String {
-        String(describing: self).capitalized
-    }
-
     var appearanceLabel: String {
         (self == .days ? String(describing: self) : "+ " + String(describing: self))
             .capitalized
