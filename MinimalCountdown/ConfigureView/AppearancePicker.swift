@@ -12,6 +12,7 @@ struct AppearancePicker: View {
     private let titleResource: LocalizedStringResource
     @Binding var currentSettings: SaverSettings
     private let contentStyles: [StyleType]
+    @State private var pickerNow: Date = Date()
 
     init(
         _ titleResource: LocalizedStringResource,
@@ -24,76 +25,75 @@ struct AppearancePicker: View {
     }
 
     var body: some View {
-        TimelineView(.periodic(from: .now, by: 1)) { context in
-            HStack(alignment: .top, spacing: .zero) {
-                pickerTitle
+        VStack(alignment: .leading, spacing: .Spacing.xSmall) {
+            Text(titleResource)
 
-                ForEach(contentStyles) { current in
-                    Button(
-                        action: { changeSelection(to: current) },
-                        label: { createAppearance(for: current, in: context) }
-                    )
-                    .buttonStyle(.plain)
-                    .padding(.horizontal, .Spacing.xxSmall)
-                    .contentShape(Rectangle())
-                }
+            HStack(alignment: .top, spacing: .zero) {
+                pickerLabel
+                pickerButtons
             }
         }
     }
 }
 
 private extension AppearancePicker {
-    var pickerTitle: some View {
-        HStack(spacing: .zero) {
-            Text(titleResource)
-            Spacer()
+    var pickerLabel: some View {
+        VStack(alignment: .leading, spacing: .Spacing.xxSmall) {
+            ForEach(contentStyles) { style in
+                Text(style.appearanceLabel)
+                    .font(.caption)
+                    .fontWeight(isActive(style) ? .bold : .regular)
+                    .foregroundStyle(isActive(style) ? .secondary : .tertiary)
+            }
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    var pickerButtons: some View {
+        ForEach(contentStyles) { current in
+            Button(
+                action: { changeSelection(to: current) },
+                label: { createAppearance(for: current) }
+            )
+            .buttonStyle(.plain)
+            .padding(.horizontal, .Spacing.xxSmall)
+            .contentShape(Rectangle())
+        }
+    }
+
+    func isActive(_ style: StyleElement) -> Bool {
+        style.rawValue <= currentSettings.style.rawValue
     }
 
     func changeSelection(to selected: StyleType) {
         withAnimation { currentSettings.style = selected }
     }
 
-    func createAppearance(for style: StyleElement, in context: TimelineViewDefaultContext) -> some View {
+    func createAppearance(for style: StyleElement) -> some View {
         var styleSettings = currentSettings
         styleSettings.style = style
 
-        return VStack(alignment: .center, spacing: .Spacing.xSmall) {
-            ZStack(alignment: .center) {
-                showSelection(for: style)
-                showCountdownView(settings: styleSettings, in: context)
-            }
-            appearanceLabel(for: style)
+        return ZStack(alignment: .center) {
+            showSelection(for: style)
+            showCountdownView(settings: styleSettings)
         }
     }
 
     func showSelection(for style: StyleElement) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(style.id == currentSettings.style.id ? Color.accentColor : .clear, lineWidth: .Border.medium)
+            .stroke(style == currentSettings.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
     }
 
-    func showCountdownView(settings: SaverSettings, in context: TimelineViewDefaultContext) -> some View {
+    func showCountdownView(settings: SaverSettings) -> some View {
         CountdownWindow(
-            now: context.date,
+            now: pickerNow,
             settings: settings,
             isPreview: true
         )
         .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
         .background(settings.backgroundColor.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
-    }
-
-    func appearanceLabel(for style: StyleElement) -> some View {
-        HStack(alignment: .center) {
-            Text(style.appearanceLabel)
-                .font(.caption)
-                .lineLimit(3)
-                .multilineTextAlignment(.center)
-                .fontWeight(style.id == currentSettings.style.id ? .bold : .regular)
-                .foregroundStyle(style.id == currentSettings.style.id ? .primary : .secondary)
-        }
     }
 }
 

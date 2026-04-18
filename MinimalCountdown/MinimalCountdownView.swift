@@ -15,7 +15,7 @@ final class MinimalCountdownView: ScreenSaverView {
     private let settingsManager: SettingsManager
     private let logger: Logger
     private let clock = CountdownClock()
-    private var hostingView: NSHostingView<CountdownRootView>?
+    private var hostingView: NSHostingView<AnyView>?
 
     lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
 
@@ -75,12 +75,9 @@ final class MinimalCountdownView: ScreenSaverView {
 
 private extension MinimalCountdownView {
     func configureHostingView() {
-        let root = CountdownRootView(
-            clock: clock,
-            settingsManager: settingsManager,
-            isPreview: isPreview
-        )
-        let hosting = NSHostingView(rootView: root)
+        let root = CountdownRootView(clock: clock, isPreview: isPreview)
+            .environment(settingsManager)
+        let hosting = NSHostingView(rootView: AnyView(root))
         hosting.translatesAutoresizingMaskIntoConstraints = false
         addSubview(hosting)
         NSLayoutConstraint.activate([

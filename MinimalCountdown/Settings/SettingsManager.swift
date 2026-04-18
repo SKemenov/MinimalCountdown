@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Observation
 import OSLog
 
+@Observable
 final class SettingsManager {
     private(set) var settings: SaverSettings
     private let stores: [LocalStore]
