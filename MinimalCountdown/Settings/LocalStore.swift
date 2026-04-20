@@ -9,7 +9,7 @@ import Foundation
 
 protocol LocalStore {
     func load() -> SaverSettings?
-    func save(_ settings: SaverSettings)
+    func save(_ settings: SaverSettings) throws
 }
 
 enum LocalStoreError: Error, LocalizedError {

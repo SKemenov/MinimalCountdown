@@ -40,7 +40,7 @@ final class DefaultsStore: LocalStore {
         return settings
     }
 
-    func save(_ settings: SaverSettings) {
+    func save(_ settings: SaverSettings) throws {
         defaults.messageIsHidden = settings.isMessageHidden
         defaults.brightIsNormal = settings.isBrightNormal
         defaults.colorIndex = settings.color.rawValue
@@ -48,7 +48,11 @@ final class DefaultsStore: LocalStore {
         defaults.showElementsIndex = settings.style.rawValue
         defaults.messageString = settings.message
         defaults.targetDate = settings.targetDate
-        defaults.synchronize()
+        guard defaults.synchronize() else {
+            let caughtError = LocalStoreError.defaultsSyncFailed
+            logger.error("\(caughtError.logDescription, privacy: .public)")
+            throw caughtError
+        }
         logger.log("Saved settings to defaults, targetDate: \(settings.targetDate, privacy: .public)")
     }
 }

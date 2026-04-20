@@ -39,21 +39,32 @@ final class FileStore: LocalStore {
         }
     }
 
-    func save(_ settings: SaverSettings) {
+    func save(_ settings: SaverSettings) throws {
         let directory = fileURL.deletingLastPathComponent()
         do {
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         } catch {
-            logger.error("Failed to create directory \(directory.path, privacy: .public): \(error)")
-            return
+            let caughtError = LocalStoreError.directoryUnavailable(url: directory, underlying: error)
+            logger.error("\(caughtError.logDescription, privacy: .public)")
+            throw caughtError
         }
+
+        let data: Data
         do {
-            let data = try encoder.encode(settings)
+            data = try encoder.encode(settings)
+        } catch {
+            let caughtError = LocalStoreError.encodingFailed(underlying: error)
+            logger.error("\(caughtError.logDescription, privacy: .public)")
+            throw caughtError
+        }
+
+        do {
             try data.write(to: fileURL, options: .atomic)
             logger.log("Saved settings to file: \(self.fileURL.path, privacy: .public)")
         } catch {
-            logger.error("Failed to save settings to file: \(error)")
-            return
+            let caughtError = LocalStoreError.writeFailed(url: fileURL, underlying: error)
+            logger.error("\(caughtError.logDescription, privacy: .public)")
+            throw caughtError
         }
     }
 }
@@ -61,6 +72,6 @@ final class FileStore: LocalStore {
 extension FileStore {
     // Both saver and DevApp resolve to /Users/Shared/MinimalCountdown/settings.json.
     static var defaultDirectory: URL {
-        URL(fileURLWithPath: "/Users/Shared", isDirectory: true)
+        URL.userDirectory.appending(component: "Shared", directoryHint: .isDirectory)
     }
 }

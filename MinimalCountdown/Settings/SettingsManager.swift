@@ -42,7 +42,7 @@ final class SettingsManager {
             return
         }
         self.settings = settings
-        stores.forEach { $0.save(settings) }
+        stores.forEach { try? $0.save(settings) }
         let message = "Settings saved to \(stores.count) store(s), targetDate: \(settings.targetDate)"
         logger.log("\(message, privacy: .public)")
     }
