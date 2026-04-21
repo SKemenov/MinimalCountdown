@@ -47,3 +47,8 @@ final class SettingsManager {
         logger.log("\(message, privacy: .public)")
     }
 }
+
+struct SaveAllStoresFailedError: Error, LocalizedError {
+    let failures: [(storeLabel: String, error: Error)]
+    var errorDescription: String? { Resources.savingError }
+}
