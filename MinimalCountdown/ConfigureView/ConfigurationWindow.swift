@@ -154,7 +154,7 @@ private extension ConfigurationWindow {
 
     func saveAndExit() {
         logger.log("Saving and closing configuration sheet")
-        settingsManager.save(settings)
+        try? settingsManager.save(settings)
         if let onClose {
             logger.log("Run onClose callback to close configuration sheet")
             onClose()

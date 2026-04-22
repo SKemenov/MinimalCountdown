@@ -36,14 +36,35 @@ final class SettingsManager {
         logger.log("Store(s) had no settings, using .default value")
     }
 
-    func save(_ settings: SaverSettings) {
+    func save(_ settings: SaverSettings) throws {
         guard settings != self.settings else {
             logger.log("No changes in settings, skipping save")
             return
         }
-        self.settings = settings
-        stores.forEach { try? $0.save(settings) }
-        let message = "Settings saved to \(stores.count) store(s), targetDate: \(settings.targetDate)"
+
+        var successes = 0
+        var failures: [(storeLabel: String, error: Error)] = []
+        for store in stores {
+            let label = String(describing: type(of: store))
+            do {
+                try store.save(settings)
+                successes += 1
+                logger.log("Saved to \(label, privacy: .public)")
+            } catch {
+                failures.append((label, error))
+                logger.error("Failed to save to \(label, privacy: .public): \(error, privacy: .public)")
+            }
+        }
+
+        if successes > 0 {
+            self.settings = settings
+        }
+
+        if failures.count == stores.count {
+            throw SaveAllStoresFailedError(failures: failures)
+        }
+
+        let message = "Saved (successes: \(successes), failures: \(failures.count)), targetDate: \(settings.targetDate)"
         logger.log("\(message, privacy: .public)")
     }
 }
