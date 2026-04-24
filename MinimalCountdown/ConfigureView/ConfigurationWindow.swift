@@ -171,13 +171,16 @@ private extension ConfigurationWindow {
     }
 }
 
+#if DEBUG
 #Preview("Light mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: []))
+        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
         .preferredColorScheme(.light)
 }
+
 #Preview("Dark mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: []))
+        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
         .preferredColorScheme(.dark)
 }
+#endif
