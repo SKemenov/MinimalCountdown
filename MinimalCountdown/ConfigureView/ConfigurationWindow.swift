@@ -152,9 +152,7 @@ private extension ConfigurationWindow {
         return .handled
     }
 
-    func saveAndExit() {
-        logger.log("Saving and closing configuration sheet")
-        try? settingsManager.save(settings)
+    func exitSettings() {
         if let onClose {
             logger.log("Run onClose callback to close configuration sheet")
             onClose()
@@ -162,6 +160,12 @@ private extension ConfigurationWindow {
             logger.log("Dismiss SwiftUI window")
             dismiss()
         }
+    }
+
+    func saveAndExit() {
+        logger.log("Saving and closing configuration sheet")
+        try? settingsManager.save(settings)
+        exitSettings()
     }
 
     func showColor(_ option: BackgroundColor) -> some View {
