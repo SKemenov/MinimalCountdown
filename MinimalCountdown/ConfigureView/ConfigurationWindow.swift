@@ -223,4 +223,17 @@ private extension ConfigurationWindow {
         .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
         .preferredColorScheme(.dark)
 }
+
+private extension ConfigurationWindow {
+    init(onClose: (() -> Void)? = nil, previewError: String?) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        self.onClose = onClose
+        _saveError = State(initialValue: previewError)
+    }
+}
+
+#Preview("Save failed") {
+    ConfigurationWindow(previewError: Resources.savingError)
+        .environment(SettingsManager(stores: [InMemoryMockStore(shouldFail: true)]))
+}
 #endif
