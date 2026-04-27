@@ -42,6 +42,7 @@
 				Resources/Resources.swift,
 				Settings/DefaultsStore.swift,
 				Settings/FileStore.swift,
+				Settings/InMemoryMockStore.swift,
 				Settings/LocalStore.swift,
 				Settings/SettingsManager.swift,
 				Views/CountdownView.swift,

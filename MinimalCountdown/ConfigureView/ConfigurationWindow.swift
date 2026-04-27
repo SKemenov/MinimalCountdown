@@ -15,6 +15,8 @@ struct ConfigurationWindow: View {
     var onClose: (() -> Void)?
 
     @State private var settings: SaverSettings = .default
+    @State private var saveError: String?
+    @State private var dismissTask: Task<Void, Never>?
     @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
     @FocusState private var focus: FocusTarget?
@@ -35,10 +37,21 @@ struct ConfigurationWindow: View {
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
 
+            if let saveError {
+                Text(saveError)
+                    .foregroundStyle(.red)
+                    .font(.callout)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                    .padding(.vertical, 4)
+                    .transition(.asymmetric(insertion: .opacity, removal: .identity))
+            }
+
             buttons
         }
         .frame(width: 512, height: 740 + 48)
-        .onAppear { settings = settingsManager.settings }
+        .animation(.default, value: saveError)
+        .onAppear(perform: prepareForDisplay)
         .task(setTitleFocused)
     }
 }
@@ -141,6 +154,13 @@ private extension ConfigurationWindow {
         }
     }
 
+    func prepareForDisplay() {
+        settings = settingsManager.settings
+        saveError = nil
+        dismissTask?.cancel()
+        dismissTask = nil
+    }
+
     func setTitleFocused() async {
         try? await Task.sleep(for: .seconds(0.01))
         focus = .title
@@ -152,15 +172,35 @@ private extension ConfigurationWindow {
         return .handled
     }
 
-    func saveAndExit() {
-        logger.log("Saving and closing configuration sheet")
-        settingsManager.save(settings)
+    func exitSettings() {
         if let onClose {
             logger.log("Run onClose callback to close configuration sheet")
             onClose()
         } else {
             logger.log("Dismiss SwiftUI window")
             dismiss()
+        }
+    }
+
+    func saveAndExit() {
+        if saveError != nil {
+            logger.log("Close clicked while banner shown — cancelling dismiss timer and exiting")
+            dismissTask?.cancel()
+            exitSettings()
+            return
+        }
+        logger.log("Saving and closing configuration sheet")
+        do {
+            try settingsManager.save(settings)
+            exitSettings()
+        } catch {
+            logger.error("Save failed: \(error.localizedDescription, privacy: .public)")
+            saveError = error.localizedDescription
+            dismissTask = Task { @MainActor in
+                try? await Task.sleep(for: .seconds(4))
+                guard !Task.isCancelled else { return }
+                exitSettings()
+            }
         }
     }
 
@@ -171,13 +211,29 @@ private extension ConfigurationWindow {
     }
 }
 
+#if DEBUG
 #Preview("Light mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: []))
+        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
         .preferredColorScheme(.light)
 }
+
 #Preview("Dark mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: []))
+        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
         .preferredColorScheme(.dark)
 }
+
+private extension ConfigurationWindow {
+    init(onClose: (() -> Void)? = nil, previewError: String?) {
+        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        self.onClose = onClose
+        _saveError = State(initialValue: previewError)
+    }
+}
+
+#Preview("Save failed") {
+    ConfigurationWindow(previewError: Resources.savingError)
+        .environment(SettingsManager(stores: [InMemoryMockStore(shouldFail: true)]))
+}
+#endif
