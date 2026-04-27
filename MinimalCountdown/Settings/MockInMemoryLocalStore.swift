@@ -1,5 +1,5 @@
 //
-//  InMemoryMockStore.swift
+//  MockInMemoryLocalStore.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -8,7 +8,7 @@
 #if DEBUG
 import Foundation
 
-final class InMemoryMockStore: LocalStore {
+final class MockInMemoryLocalStore: LocalStore {
     private var storedSettings: SaverSettings?
     private let shouldFail: Bool
 
@@ -26,6 +26,6 @@ final class InMemoryMockStore: LocalStore {
 }
 
 struct MockSaveError: Error, LocalizedError {
-    var errorDescription: String? { "InMemoryMockStore simulated failure" }
+    var errorDescription: String? { "MockInMemoryLocalStore simulated failure" }
 }
 #endif
