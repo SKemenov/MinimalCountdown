@@ -5,31 +5,31 @@
 //  Created by Sergey Kemenov
 //
 
-import AppKit
+import SwiftUI
 
 enum AccentColor: Int, CaseIterable, ColorExtendable, SafeIntDecodable {
     case white = 0, red, pink, orange, yellow, green, mint, cyan, blue, indigo, purple
 
     // safe and un-optional, defaults to .white
     init(_ rawValue: Int) {
-        self = AccentColor(rawValue: rawValue) ?? .white
+        self = .init(rawValue: rawValue) ?? .white
     }
 }
 
 extension AccentColor {
-    var nsColor: NSColor {
+    var color: Color {
         switch self {
             case .white: .white
-            case .red: .systemRed
-            case .pink: .systemPink
-            case .orange: .systemOrange
-            case .yellow: .systemYellow
-            case .green: .systemGreen
-            case .mint: .systemMint
+            case .red: .red
+            case .pink: .pink
+            case .orange: .orange
+            case .yellow: .yellow
+            case .green: .green
+            case .mint: .mint
             case .cyan: .cyan
-            case .blue: .systemBlue
-            case .indigo: .systemIndigo
-            case .purple: .systemPurple
+            case .blue: .blue
+            case .indigo: .indigo
+            case .purple: .purple
         }
     }
 
