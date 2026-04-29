@@ -11,7 +11,7 @@ struct SaverSettings: Codable, Equatable, Hashable {
     var targetDate: Date
     var color: AccentColor
     var backgroundColor: BackgroundColor
-    var style: StyleElement
+    var style: AppearanceStyle
     var message: String
     var isMessageHidden: Bool
     var isBrightNormal: Bool

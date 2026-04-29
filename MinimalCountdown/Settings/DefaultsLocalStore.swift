@@ -31,7 +31,7 @@ final class DefaultsLocalStore: LocalStore {
             targetDate: defaults.targetDate,
             color: AccentColor(defaults.colorIndex),
             backgroundColor: BackgroundColor(defaults.backgroundColorIndex),
-            style: StyleElement(defaults.showElementsIndex),
+            style: AppearanceStyle(defaults.showElementsIndex),
             message: defaults.messageString,
             isMessageHidden: defaults.messageIsHidden,
             isBrightNormal: defaults.brightIsNormal

@@ -1,5 +1,5 @@
 //
-//  StyleElement.swift
+//  AppearanceStyle.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -9,16 +9,16 @@ import Foundation
 
 // MARK: - Enums
 
-enum StyleElement: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
+enum AppearanceStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
     case days = 0, hours, minutes, seconds
 
     // safe and un-optional, defaults to .seconds (show all)
     init(_ rawValue: Int) {
-        self = StyleElement(rawValue: rawValue) ?? .seconds
+        self = .init(rawValue: rawValue) ?? .seconds
     }
 }
 
-extension StyleElement {
+extension AppearanceStyle {
     var id: Self { self }
     
     var label: String {
