@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Enums
 
-enum AppearanceStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
+enum AppearanceStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Comparable, Hashable {
     case days = 0, hours, minutes, seconds
 
     // safe and un-optional, defaults to .seconds (show all)
@@ -20,13 +20,22 @@ enum AppearanceStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatab
 
 extension AppearanceStyle {
     var id: Self { self }
-    
+
+    static func < (lhs: AppearanceStyle, rhs: AppearanceStyle) -> Bool {
+        lhs.rawValue < rhs.rawValue
+    }
+
     var label: String {
         String(describing: self).uppercased()
     }
 
-    var appearanceLabel: String {
+    var appearanceActive: String {
         (self == .days ? String(describing: self) : "+ " + String(describing: self))
+            .capitalized
+    }
+
+    var appearanceInactive: String {
+        (self == .days ? String(describing: self) : "   " + String(describing: self)) // triple spaces
             .capitalized
     }
 }

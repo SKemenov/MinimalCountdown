@@ -40,9 +40,8 @@ private extension AppearancePicker {
     var pickerLabel: some View {
         VStack(alignment: .leading, spacing: .Spacing.xxSmall) {
             ForEach(contentStyles) { style in
-                Text(style.appearanceLabel)
+                Text(isActive(style) ? style.appearanceActive : style.appearanceInactive)
                     .font(.caption)
-                    .fontWeight(isActive(style) ? .bold : .regular)
                     .foregroundStyle(isActive(style) ? .secondary : .tertiary)
             }
         }
@@ -62,7 +61,7 @@ private extension AppearancePicker {
     }
 
     func isActive(_ style: StyleType) -> Bool {
-        style.rawValue <= currentSettings.style.rawValue
+        style <= currentSettings.style
     }
 
     func changeSelection(to selected: StyleType) {
