@@ -32,7 +32,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                titleSection
+                titleAndLabelsSection
             }
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
@@ -130,7 +130,7 @@ private extension ConfigurationWindow {
         }
     }
 
-    var titleSection: some View {
+    var titleAndLabelsSection: some View {
         Section("Title") {
             TextField("", text: $settings.message, prompt: Text("Add your message here"))
                 .focused($focus, equals: .title)
