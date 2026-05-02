@@ -15,7 +15,6 @@ struct SaverSettings: Codable, Equatable, Hashable {
     var message: String
     var isMessageHidden: Bool
     var isBrightNormal: Bool
-    var isExtra: Bool?
 
     var digitsColor: Color {
         self.color.color.opacity(self.isBrightNormal ? .normalBright.digits : .dimBright.digits)
