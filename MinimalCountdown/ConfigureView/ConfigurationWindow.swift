@@ -60,6 +60,8 @@ private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
             AppearancePicker("Appearance", currentSettings: $settings)
+            Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
+                .subtitleFont
         }
     }
 
@@ -169,6 +171,15 @@ private extension ConfigurationWindow {
                 exitSettings()
             }
         }
+    }
+}
+
+private extension View {
+    var subtitleFont: some View {
+        self
+            .font(.caption)
+            .foregroundStyle(.secondary)
+            .multilineTextAlignment(.leading)
     }
 }
 
