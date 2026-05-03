@@ -1,5 +1,5 @@
 //
-//  DefaultsStore.swift
+//  DefaultsLocalStore.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -8,7 +8,7 @@
 import OSLog
 import ScreenSaver
 
-final class DefaultsStore: LocalStore {
+final class DefaultsLocalStore: LocalStore {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
 
@@ -31,7 +31,7 @@ final class DefaultsStore: LocalStore {
             targetDate: defaults.targetDate,
             color: AccentColor(defaults.colorIndex),
             backgroundColor: BackgroundColor(defaults.backgroundColorIndex),
-            style: StyleElement(defaults.showElementsIndex),
+            style: AppearanceStyle(defaults.showElementsIndex),
             message: defaults.messageString,
             isMessageHidden: defaults.messageIsHidden,
             isBrightNormal: defaults.brightIsNormal

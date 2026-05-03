@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppearancePicker: View {
-    typealias StyleType = StyleElement
+    typealias StyleType = AppearanceStyle
     private let titleResource: LocalizedStringResource
     @Binding var currentSettings: SaverSettings
     private let contentStyles: [StyleType]
@@ -40,9 +40,8 @@ private extension AppearancePicker {
     var pickerLabel: some View {
         VStack(alignment: .leading, spacing: .Spacing.xxSmall) {
             ForEach(contentStyles) { style in
-                Text(style.appearanceLabel)
+                Text(isActive(style) ? style.appearanceActive : style.appearanceInactive)
                     .font(.caption)
-                    .fontWeight(isActive(style) ? .bold : .regular)
                     .foregroundStyle(isActive(style) ? .secondary : .tertiary)
             }
         }
@@ -61,15 +60,15 @@ private extension AppearancePicker {
         }
     }
 
-    func isActive(_ style: StyleElement) -> Bool {
-        style.rawValue <= currentSettings.style.rawValue
+    func isActive(_ style: StyleType) -> Bool {
+        style <= currentSettings.style
     }
 
     func changeSelection(to selected: StyleType) {
         withAnimation { currentSettings.style = selected }
     }
 
-    func createAppearance(for style: StyleElement) -> some View {
+    func createAppearance(for style: StyleType) -> some View {
         var styleSettings = currentSettings
         styleSettings.style = style
 
@@ -79,7 +78,7 @@ private extension AppearancePicker {
         }
     }
 
-    func showSelection(for style: StyleElement) -> some View {
+    func showSelection(for style: StyleType) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
             .stroke(style == currentSettings.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)

@@ -1,5 +1,5 @@
 //
-//  FileStore.swift
+//  FileLocalStore.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -8,20 +8,20 @@
 import Foundation
 import OSLog
 
-final class FileStore: LocalStore {
+final class FileLocalStore: LocalStore {
     private let fileURL: URL
     private let encoder: JSONEncoder
     private let decoder: JSONDecoder
     private let logger: Logger
 
-    init(supportDirectory: URL = FileStore.defaultDirectory) {
+    init(supportDirectory: URL = FileLocalStore.defaultDirectory) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
         fileURL = supportDirectory
             .appending(component: Resources.subSystem, directoryHint: .isDirectory)
             .appending(component: Resources.settingsFileName)
-        logger.log("FileStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
+        logger.log("FileLocalStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
     }
 
     func load() -> SaverSettings? {
@@ -69,7 +69,7 @@ final class FileStore: LocalStore {
     }
 }
 
-extension FileStore {
+extension FileLocalStore {
     // Both saver and DevApp resolve to /Users/Shared/MinimalCountdown/settings.json.
     static var defaultDirectory: URL {
         URL.userDirectory.appending(component: "Shared", directoryHint: .isDirectory)

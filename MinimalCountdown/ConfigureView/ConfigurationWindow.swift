@@ -32,7 +32,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                titleSection
+                titleAndLabelsSection
             }
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
@@ -60,6 +60,8 @@ private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
             AppearancePicker("Appearance", currentSettings: $settings)
+            Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
+                .subtitleFont
         }
     }
 
@@ -94,43 +96,10 @@ private extension ConfigurationWindow {
                 Text("Bright colors")
                 Text("Make digits and text brighter")
             }
-
-            if let extra = settings.isExtra, extra == true {
-                if #available (macOS 15.0, *) {
-                    Picker("Background", selection: $settings.backgroundColor) {
-                        ForEach(BackgroundColor.allCases) { option in
-                            showColor(option)
-                                .disabled(option != .black)
-                        }
-                    } currentValueLabel: {
-                        showColor(settings.backgroundColor)
-                    }
-                    .disabled(true)
-                } else {
-                    Picker("Background", selection: $settings.backgroundColor) {
-                        ForEach(BackgroundColor.allCases) { option in
-                            showColor(option)
-                                .disabled(option != .black)
-                        }
-                    }
-                    .disabled(true)
-                }
-
-                Picker(selection: $settings.style) {
-                    Text("Glow").tag(0)
-                    Text("Shadow").tag(1)
-                    Text("None").tag(2)
-                } label: {
-                    Text("Additional effects")
-                    Text("Apply glow or shadow to digits and text")
-                }
-                .pickerStyle(.inline)
-                .disabled(true)
-            }
         }
     }
 
-    var titleSection: some View {
+    var titleAndLabelsSection: some View {
         Section("Title") {
             TextField("", text: $settings.message, prompt: Text("Add your message here"))
                 .focused($focus, equals: .title)
@@ -203,24 +172,27 @@ private extension ConfigurationWindow {
             }
         }
     }
+}
 
-    func showColor(_ option: BackgroundColor) -> some View {
-        let icon = Image(systemName: "circle.fill")
-        let iconText = Text(icon).foregroundStyle(option.color)
-        return Text("\(iconText) \(option.name)").backgroundStyle(.secondary)
+private extension View {
+    var subtitleFont: some View {
+        self
+            .font(.caption)
+            .foregroundStyle(.secondary)
+            .multilineTextAlignment(.leading)
     }
 }
 
 #if DEBUG
 #Preview("Light mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
+        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [InMemoryMockStore(initial: .preview)]))
+        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
         .preferredColorScheme(.dark)
 }
 
@@ -234,6 +206,6 @@ private extension ConfigurationWindow {
 
 #Preview("Save failed") {
     ConfigurationWindow(previewError: Resources.savingError)
-        .environment(SettingsManager(stores: [InMemoryMockStore(shouldFail: true)]))
+        .environment(SettingsManager(stores: [MockInMemoryLocalStore(shouldFail: true)]))
 }
 #endif

@@ -23,7 +23,7 @@ extension Date {
 
 // MARK: - Private helpers
 private extension Date {
-    func duration(from now: Date, for element: StyleElement) -> String {
+    func duration(from now: Date, for element: AppearanceStyle) -> String {
         // use ceil to fix double-zero issue
         let total = Int(abs(ceil(self.timeIntervalSince(now))))
 

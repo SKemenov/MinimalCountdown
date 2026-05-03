@@ -32,16 +32,16 @@ struct CountdownView: View {
 }
 
 private extension CountdownView {
-    var visibleElements: [StyleElement] {
+    var visibleElements: [AppearanceStyle] {
         switch settings.style {
             case .days: [.days]
             case .hours: [.days, .hours]
             case .minutes: [.days, .hours, .minutes]
-            case .seconds: StyleElement.allCases
+            case .seconds: AppearanceStyle.allCases
         }
     }
 
-    func digits(for style: StyleElement) -> String {
+    func digits(for style: AppearanceStyle) -> String {
         switch style {
             case .days: settings.targetDate.daysString(relativeTo: now)
             case .hours: settings.targetDate.hoursString(relativeTo: now)

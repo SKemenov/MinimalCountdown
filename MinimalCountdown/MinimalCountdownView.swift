@@ -36,11 +36,11 @@ final class MinimalCountdownView: ScreenSaverView {
         let message: String = isPreview ? "preview" : "screen saver"
         logger.log("Starting \(message, privacy: .public)")
 
-        var stores: [LocalStore] = [FileStore()]
-        if let defaultsStore = DefaultsStore() {
+        var stores: [LocalStore] = [FileLocalStore()]
+        if let defaultsStore = DefaultsLocalStore() {
             stores.append(defaultsStore)
         } else {
-            logger.error("DefaultsStore init failed, running without Defaults")
+            logger.error("DefaultsLocalStore init failed, running without Defaults")
         }
         settingsManager = SettingsManager(stores: stores)
 
