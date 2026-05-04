@@ -61,16 +61,16 @@ private extension AppearancePicker {
     }
 
     func isActive(_ style: StyleType) -> Bool {
-        style <= currentSettings.style
+        style <= currentSettings.appearance.style
     }
 
     func changeSelection(to selected: StyleType) {
-        withAnimation { currentSettings.style = selected }
+        withAnimation { currentSettings.appearance.style = selected }
     }
 
     func createAppearance(for style: StyleType) -> some View {
         var styleSettings = currentSettings
-        styleSettings.style = style
+        styleSettings.appearance.style = style
 
         return ZStack(alignment: .center) {
             showSelection(for: style)
@@ -80,7 +80,7 @@ private extension AppearancePicker {
 
     func showSelection(for style: StyleType) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(style == currentSettings.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
+            .stroke(style == currentSettings.appearance.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
     }
 
@@ -92,7 +92,7 @@ private extension AppearancePicker {
         )
         .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
-        .background(settings.backgroundColor.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
+        .background(settings.theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
     }
 }
 

@@ -15,7 +15,7 @@ struct CountdownWindow: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                settings.backgroundColor.color
+                settings.theme.background.color
                     .ignoresSafeArea()
 
                 VStack(spacing: .zero) {

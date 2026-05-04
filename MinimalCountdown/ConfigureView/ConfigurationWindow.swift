@@ -68,7 +68,7 @@ private extension ConfigurationWindow {
     var dateSection: some View {
         Section("Date") {
             DatePicker(
-                selection: $settings.targetDate,
+                selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
                 displayedComponents: .date
             ) {
@@ -80,7 +80,7 @@ private extension ConfigurationWindow {
                 }
             }
             .datePickerStyle(.graphical)
-            DatePicker(selection: $settings.targetDate, displayedComponents: .hourAndMinute) {
+            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
                 Text("Time")
                 Text("By default it will be set to midnight")
             }
@@ -90,9 +90,12 @@ private extension ConfigurationWindow {
     
     var themeSection: some View {
         Section("Theme") {
-            ColorPalettePicker("Color", selection: $settings.color)
+            ColorPalettePicker("Color", selection: $settings.theme.accent)
 
-            Toggle(isOn: $settings.isBrightNormal) {
+            Toggle(isOn: Binding(
+                get: { settings.theme.brightness == .normal },
+                set: { settings.theme.brightness = $0 ? .normal : .dim }
+            )) {
                 Text("Bright colors")
                 Text("Make digits and text brighter")
             }
@@ -101,10 +104,10 @@ private extension ConfigurationWindow {
 
     var titleAndLabelsSection: some View {
         Section("Title") {
-            TextField("", text: $settings.message, prompt: Text("Add your message here"))
+            TextField("", text: $settings.title.text, prompt: Text("Add your message here"))
                 .focused($focus, equals: .title)
 
-            Toggle(isOn: $settings.isMessageHidden) {
+            Toggle(isOn: $settings.title.isHidden) {
                 Text("Hide title")
                 Text("Even title is not empty")
             }

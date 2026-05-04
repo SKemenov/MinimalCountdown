@@ -15,7 +15,7 @@ struct TitleView: View {
             TextElementView(
                 text: formattedMessage,
                 size: textSize,
-                color: settings.textsColor,
+                color: settings.theme.textsColor,
                 weight: .thin
             )
         }
@@ -23,10 +23,10 @@ struct TitleView: View {
 }
 
 private extension TitleView {
-    var isTitleNeeding: Bool { !settings.isMessageHidden && !settings.message.isEmpty }
+    var isTitleNeeding: Bool { !settings.title.isHidden && !settings.title.text.isEmpty }
 
     var formattedMessage: String {
-        let string = settings.message.uppercased()
+        let string = settings.title.text.uppercased()
         let words = string.components(separatedBy: " ")
         let separator = string.count <= 30 ? "  " : "   "
         return words.joined(separator: separator)

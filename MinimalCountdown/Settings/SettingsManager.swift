@@ -24,10 +24,9 @@ final class SettingsManager {
 
     func load() {
         for store in stores {
-            if var loaded = store.load() {
-                loaded.targetDate = max(Date.now.minDate, min(loaded.targetDate, Date.now.maxDate))
-                settings = loaded
-                let message = "Loaded from \(String(describing: type(of: store))), targetDate: \(loaded.targetDate)"
+            if let loaded = store.load() {
+                settings = loaded.normalized
+                let message = "Loaded from \(String(describing: type(of: store))), schedule.target: \(settings.schedule.target)"
                 logger.log("\(message, privacy: .public)")
                 return
             }
@@ -64,7 +63,7 @@ final class SettingsManager {
             throw SaveAllStoresFailedError(failures: failures)
         }
 
-        let message = "Saved (successes: \(successes), failures: \(failures.count)), targetDate: \(settings.targetDate)"
+        let message = "Saved (successes: \(successes), failures: \(failures.count)), schedule.target: \(settings.schedule.target)"
         logger.log("\(message, privacy: .public)")
     }
 }
