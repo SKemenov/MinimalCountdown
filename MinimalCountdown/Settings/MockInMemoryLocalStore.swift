@@ -8,7 +8,7 @@
 #if DEBUG
 import Foundation
 
-final class MockInMemoryLocalStore: LocalStore {
+final class MockInMemoryLocalStore: SettingsSaver {
     private var storedSettings: SaverSettings?
     private let shouldFail: Bool
 

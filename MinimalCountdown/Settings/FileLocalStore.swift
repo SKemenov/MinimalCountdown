@@ -8,7 +8,7 @@
 import Foundation
 import OSLog
 
-final class FileLocalStore: LocalStore {
+final class FileLocalStore: SettingsSaver {
     private let fileURL: URL
     private let encoder: JSONEncoder
     private let decoder: JSONDecoder

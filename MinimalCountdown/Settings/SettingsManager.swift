@@ -12,10 +12,10 @@ import OSLog
 @Observable
 final class SettingsManager {
     private(set) var settings: SaverSettings
-    private let stores: [LocalStore]
+    private let stores: [SettingsSaver]
     private let logger: Logger
 
-    init(stores: [LocalStore]) {
+    init(stores: [SettingsSaver]) {
         logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
         self.stores = stores
         settings = .default

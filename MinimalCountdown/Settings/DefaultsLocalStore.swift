@@ -8,7 +8,7 @@
 import OSLog
 import ScreenSaver
 
-final class DefaultsLocalStore: LocalStore {
+final class DefaultsLocalStore: SettingsLoader {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
 
@@ -45,21 +45,5 @@ final class DefaultsLocalStore: LocalStore {
         )
         logger.log("Loaded settings from defaults, schedule.target: \(settings.schedule.target, privacy: .public)")
         return settings
-    }
-
-    func save(_ settings: SaverSettings) throws {
-        defaults.messageIsHidden = settings.title.isHidden
-        defaults.brightIsNormal = settings.theme.brightness == .normal
-        defaults.colorIndex = settings.theme.accent.rawValue
-        defaults.backgroundColorIndex = settings.theme.background.rawValue
-        defaults.showElementsIndex = settings.appearance.style.rawValue
-        defaults.messageString = settings.title.text
-        defaults.targetDate = settings.schedule.target
-        guard defaults.synchronize() else {
-            let caughtError = LocalStoreError.defaultsSyncFailed
-            logger.error("\(caughtError.logDescription, privacy: .public)")
-            throw caughtError
-        }
-        logger.log("Saved settings to defaults, schedule.target: \(settings.schedule.target, privacy: .public)")
     }
 }
