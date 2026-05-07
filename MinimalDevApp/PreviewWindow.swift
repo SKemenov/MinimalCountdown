@@ -36,7 +36,7 @@ struct PreviewWindow: View {
         isAnimating: .constant(true),
         isTestPreview: .constant(false)
     )
-    .environment(SettingsManager(stores: []))
+    .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
 }
 
 #Preview("Static") {
@@ -44,5 +44,5 @@ struct PreviewWindow: View {
         isAnimating: .constant(false),
         isTestPreview: .constant(false)
     )
-    .environment(SettingsManager(stores: []))
+    .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
 }

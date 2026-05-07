@@ -189,13 +189,13 @@ private extension View {
 #if DEBUG
 #Preview("Light mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.dark)
 }
 
@@ -209,6 +209,6 @@ private extension ConfigurationWindow {
 
 #Preview("Save failed") {
     ConfigurationWindow(previewError: Resources.savingError)
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(shouldFail: true)]))
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(shouldFail: true)))
 }
 #endif

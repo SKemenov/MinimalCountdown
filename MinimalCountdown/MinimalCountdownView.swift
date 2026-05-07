@@ -37,7 +37,7 @@ final class MinimalCountdownView: ScreenSaverView {
         logger.log("Starting \(message, privacy: .public)")
 
         // DefaultsLocalStore fallback temporarily dropped — restored via MigratingLoader in commit 8.
-        settingsManager = SettingsManager(stores: [FileLocalStore()])
+        settingsManager = SettingsManager(saver: FileLocalStore())
 
         super.init(frame: frame, isPreview: isPreview)
         settingsManager.load()
