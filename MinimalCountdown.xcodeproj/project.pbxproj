@@ -52,6 +52,7 @@
 				Settings/DefaultsLocalStore.swift,
 				Settings/FileLocalStore.swift,
 				Settings/LocalStoreError.swift,
+				Settings/MigratingLoader.swift,
 				Settings/MockInMemoryLocalStore.swift,
 				Settings/SettingsLoader.swift,
 				Settings/SettingsManager.swift,
