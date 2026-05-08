@@ -59,7 +59,7 @@ struct ConfigurationWindow: View {
 private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
-            AppearancePicker("Appearance", currentSettings: $settings)
+            AppearancePicker("Appearance", selection: $settings.appearance, theme: settings.theme)
             Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
                 .subtitleFont
         }
