@@ -204,16 +204,4 @@ private extension View {
         .preferredColorScheme(.dark)
 }
 
-private extension ConfigurationWindow {
-    init(onClose: (() -> Void)? = nil, previewError: String?) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        self.onClose = onClose
-        _saveError = State(initialValue: previewError)
-    }
-}
-
-#Preview("Save failed") {
-    ConfigurationWindow(previewError: Resources.savingError)
-        .environment(SettingsManager(saver: MockInMemoryLocalStore(shouldFail: true)))
-}
 #endif
