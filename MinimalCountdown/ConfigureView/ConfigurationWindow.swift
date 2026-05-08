@@ -37,15 +37,7 @@ struct ConfigurationWindow: View {
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
 
-            if let saveError {
-                Text(saveError)
-                    .foregroundStyle(.red)
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                    .padding(.vertical, 4)
-                    .transition(.asymmetric(insertion: .opacity, removal: .identity))
-            }
+            errorMessage
 
             buttons
         }
@@ -59,7 +51,7 @@ struct ConfigurationWindow: View {
 private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
-            AppearancePicker("Appearance", selection: $settings.appearance, theme: settings.theme)
+            AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
             Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
                 .subtitleFont
         }
@@ -115,6 +107,19 @@ private extension ConfigurationWindow {
         }
     }
 
+    @ViewBuilder
+    var errorMessage: some View {
+        if let saveError {
+            Text(saveError)
+                .foregroundStyle(.red)
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                .padding(.vertical, 4)
+                .transition(.asymmetric(insertion: .opacity, removal: .identity))
+        }
+    }
+
     var buttons: some View {
         HStack {
             Spacer()
@@ -155,7 +160,7 @@ private extension ConfigurationWindow {
     }
 
     func saveAndExit() {
-        if saveError != nil {
+        guard saveError == nil else {
             logger.log("Close clicked while banner shown — cancelling dismiss timer and exiting")
             dismissTask?.cancel()
             exitSettings()

@@ -11,19 +11,19 @@ struct AppearancePicker: View {
     typealias StyleType = AppearanceStyle
     private let titleResource: LocalizedStringResource
     private let contentStyles: [StyleType]
-    private let theme: Theme
+    private let settings: SaverSettings
     @Binding var selection: Appearance
     @State private var pickerNow: Date = Date()
 
     init(
         _ titleResource: LocalizedStringResource,
         selection: Binding<Appearance>,
-        theme: Theme,
+        in settings: SaverSettings,
         for contentStyles: [StyleType] = StyleType.allCases
     ) {
         self.titleResource = titleResource
         self._selection = selection
-        self.theme = theme
+        self.settings = settings
         self.contentStyles = contentStyles
     }
 
@@ -87,28 +87,24 @@ private extension AppearancePicker {
     func showCountdownView(for style: StyleType) -> some View {
         CountdownWindow(
             now: pickerNow,
-            settings: miniSettings(for: style),
+            settings: makeSettings(for: style),
             isPreview: true
         )
         .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
-        .background(theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
+        .background(settings.theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
     }
 
-    func miniSettings(for style: StyleType) -> SaverSettings {
-        SaverSettings(
-            appearance: .init(style: style, isLabelHidden: selection.isLabelHidden),
-            schedule: SaverSettings.default.schedule,
-            theme: theme,
-            typography: SaverSettings.default.typography,
-            title: SaverSettings.default.title
-        )
+    func makeSettings(for style: StyleType) -> SaverSettings {
+        var appearanceSettings = settings
+        appearanceSettings.appearance.style = style
+        return appearanceSettings
     }
 }
 
 #Preview("Dynamic") {
     @State @Previewable var settings = SaverSettings.default
-    AppearancePicker("Appearance", selection: $settings.appearance, theme: settings.theme)
+    AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
         .padding(.Spacing.medium)
         .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
         .padding(.Spacing.medium)

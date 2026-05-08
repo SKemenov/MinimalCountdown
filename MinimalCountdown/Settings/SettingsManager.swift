@@ -21,7 +21,9 @@ final class SettingsManager {
         self.loader = loader ?? saver
         self.settings = .default
         self.logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        logger.log("Initialized with loader: \(String(describing: type(of: self.loader)), privacy: .public)")
+        logger.log(
+            "SettingsManager initialized with loader: \(String(describing: type(of: self.loader)), privacy: .public)"
+        )
     }
 
     func load() {
