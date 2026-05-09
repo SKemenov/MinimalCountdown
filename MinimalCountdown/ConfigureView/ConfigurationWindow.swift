@@ -85,8 +85,8 @@ private extension ConfigurationWindow {
             ColorPalettePicker("Color", selection: $settings.theme.accent)
 
             Toggle(isOn: Binding(
-                get: { settings.theme.brightness == .normal },
-                set: { settings.theme.brightness = $0 ? .normal : .dim }
+                get: { settings.theme.brightness == .high },
+                set: { settings.theme.brightness = $0 ? .high : .medium }
             )) {
                 Text("Bright colors")
                 Text("Make digits and text brighter")

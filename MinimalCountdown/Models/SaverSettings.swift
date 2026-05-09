@@ -33,7 +33,7 @@ extension SaverSettings {
         theme: .init(
             accent: .white,
             background: .black,
-            brightness: .normal,
+            brightness: .high,
             effect: .none,
             effectColor: .white
         ),
@@ -50,7 +50,7 @@ extension SaverSettings {
         theme: .init(
             accent: .white,
             background: .black,
-            brightness: .normal,
+            brightness: .high,
             effect: .none,
             effectColor: .white
         ),
