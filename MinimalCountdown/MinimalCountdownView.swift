@@ -36,13 +36,15 @@ final class MinimalCountdownView: ScreenSaverView {
         let message: String = isPreview ? "preview" : "screen saver"
         logger.log("Starting \(message, privacy: .public)")
 
-        var stores: [LocalStore] = [FileLocalStore()]
-        if let defaultsStore = DefaultsLocalStore() {
-            stores.append(defaultsStore)
+        let file = FileLocalStore()
+        let loader: SettingsLoader
+        if let defaults = DefaultsLocalStore() {
+            loader = MigratingLoader(saver: file, fallback: defaults)
         } else {
-            logger.error("DefaultsLocalStore init failed, running without Defaults")
+            logger.error("DefaultsLocalStore init failed, running without v1 fallback")
+            loader = file
         }
-        settingsManager = SettingsManager(stores: stores)
+        settingsManager = SettingsManager(saver: file, loader: loader)
 
         super.init(frame: frame, isPreview: isPreview)
         settingsManager.load()

@@ -15,7 +15,7 @@ struct MinimalDevApp: App {
     @AppStorage("isTestPreview") var isTestPreview: Bool = false
 
     init() {
-        let manager = SettingsManager(stores: [FileLocalStore()])
+        let manager = SettingsManager(saver: FileLocalStore())
         _settingsManager = State(initialValue: manager)
         settingsManager.load()
     }

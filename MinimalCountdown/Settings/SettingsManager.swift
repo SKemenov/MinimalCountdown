@@ -12,64 +12,38 @@ import OSLog
 @Observable
 final class SettingsManager {
     private(set) var settings: SaverSettings
-    private let stores: [LocalStore]
+    private let saver: SettingsSaver
+    private let loader: SettingsLoader
     private let logger: Logger
 
-    init(stores: [LocalStore]) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        self.stores = stores
-        settings = .default
-        logger.log("Initialized with \(stores.count, privacy: .public) store(s)")
+    init(saver: SettingsSaver, loader: SettingsLoader? = nil) {
+        self.saver = saver
+        self.loader = loader ?? saver
+        self.settings = .default
+        self.logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger.log(
+            "SettingsManager initialized with loader: \(String(describing: type(of: self.loader)), privacy: .public)"
+        )
     }
 
     func load() {
-        for store in stores {
-            if var loaded = store.load() {
-                loaded.targetDate = max(Date.now.minDate, min(loaded.targetDate, Date.now.maxDate))
-                settings = loaded
-                let message = "Loaded from \(String(describing: type(of: store))), targetDate: \(loaded.targetDate)"
-                logger.log("\(message, privacy: .public)")
-                return
-            }
-        }
-        settings = .default
-        logger.log("Store(s) had no settings, using .default value")
+        settings = loader.load()?.normalized ?? .default
+        logger.log("Loaded settings, schedule.target: \(self.settings.schedule.target, privacy: .public)")
     }
 
     func save(_ settings: SaverSettings) throws {
         guard settings != self.settings else {
-            logger.log("No changes in settings, skipping save")
+            logger.log("No changes, skipping save")
             return
         }
-
-        var successes = 0
-        var failures: [(storeLabel: String, error: Error)] = []
-        for store in stores {
-            let label = String(describing: type(of: store))
-            do {
-                try store.save(settings)
-                successes += 1
-                logger.log("Saved to \(label, privacy: .public)")
-            } catch {
-                failures.append((label, error))
-                logger.error("Failed to save to \(label, privacy: .public): \(error, privacy: .public)")
-            }
-        }
-
-        if successes > 0 {
+        do {
+            try saver.save(settings)
             self.settings = settings
+            logger.log("Saved settings, schedule.target: \(settings.schedule.target, privacy: .public)")
+        } catch {
+            let detail = (error as? LocalStoreError)?.logDescription ?? error.localizedDescription
+            logger.error("Save failed: \(detail, privacy: .public)")
+            throw error
         }
-
-        if failures.count == stores.count {
-            throw SaveAllStoresFailedError(failures: failures)
-        }
-
-        let message = "Saved (successes: \(successes), failures: \(failures.count)), targetDate: \(settings.targetDate)"
-        logger.log("\(message, privacy: .public)")
     }
-}
-
-struct SaveAllStoresFailedError: Error, LocalizedError {
-    let failures: [(storeLabel: String, error: Error)]
-    var errorDescription: String? { Resources.savingError }
 }

@@ -1,52 +1,61 @@
 //
-//  Settings.swift
+//  SaverSettings.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
 //
 
-import SwiftUI
+import Foundation
 
 struct SaverSettings: Codable, Equatable, Hashable {
-    var targetDate: Date
-    var color: AccentColor
-    var backgroundColor: BackgroundColor
-    var style: AppearanceStyle
-    var message: String
-    var isMessageHidden: Bool
-    var isBrightNormal: Bool
+    static let currentVersion = 2
 
-    var digitsColor: Color {
-        self.color.color.opacity(self.isBrightNormal ? .normalBright.digits : .dimBright.digits)
-    }
+    var version: Int = Self.currentVersion
+    var appearance: Appearance
+    var schedule: Schedule
+    var theme: Theme
+    var typography: Typography
+    var title: Title
+}
 
-    var textsColor: Color {
-        self.color.color.opacity(self.isBrightNormal ? .normalBright.texts : .dimBright.texts)
+extension SaverSettings {
+    var normalized: SaverSettings {
+        var copy = self
+        copy.schedule.target = max(Date.now.minDate, min(copy.schedule.target, Date.now.maxDate))
+        return copy
     }
 }
 
 extension SaverSettings {
     static let `default` = SaverSettings(
-        targetDate: Date(timeIntervalSinceNow: .oneDay * 30),
-        color: .white,
-        backgroundColor: .black,
-        style: .seconds,
-        message: "",
-        isMessageHidden: false,
-        isBrightNormal: true
+        appearance: .init(style: .seconds, isLabelHidden: false),
+        schedule: .init(target: Date(timeIntervalSinceNow: .oneDay * 30)),
+        theme: .init(
+            accent: .white,
+            background: .black,
+            brightness: .normal,
+            effect: .none,
+            effectColor: .white
+        ),
+        typography: .init(weight: .ultraLight, isRounded: false),
+        title: .init(text: "", isHidden: true)
     )
 }
 
 #if DEBUG
 extension SaverSettings {
     static let preview = SaverSettings(
-        targetDate: Date(timeIntervalSinceNow: .oneDay * 365),
-        color: .white,
-        backgroundColor: .black,
-        style: .days,
-        message: "See you soon",
-        isMessageHidden: false,
-        isBrightNormal: true
+        appearance: .init(style: .days, isLabelHidden: false),
+        schedule: .init(target: Date(timeIntervalSinceNow: .oneDay * 365)),
+        theme: .init(
+            accent: .white,
+            background: .black,
+            brightness: .normal,
+            effect: .none,
+            effectColor: .white
+        ),
+        typography: .init(weight: .ultraLight, isRounded: false),
+        title: .init(text: "See you soon", isHidden: false)
     )
 }
 #endif

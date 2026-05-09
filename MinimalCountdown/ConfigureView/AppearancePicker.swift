@@ -10,17 +10,20 @@ import SwiftUI
 struct AppearancePicker: View {
     typealias StyleType = AppearanceStyle
     private let titleResource: LocalizedStringResource
-    @Binding var currentSettings: SaverSettings
     private let contentStyles: [StyleType]
+    private let settings: SaverSettings
+    @Binding var selection: Appearance
     @State private var pickerNow: Date = Date()
 
     init(
         _ titleResource: LocalizedStringResource,
-        currentSettings: Binding<SaverSettings>,
+        selection: Binding<Appearance>,
+        in settings: SaverSettings,
         for contentStyles: [StyleType] = StyleType.allCases
     ) {
         self.titleResource = titleResource
-        self._currentSettings = currentSettings
+        self._selection = selection
+        self.settings = settings
         self.contentStyles = contentStyles
     }
 
@@ -61,44 +64,47 @@ private extension AppearancePicker {
     }
 
     func isActive(_ style: StyleType) -> Bool {
-        style <= currentSettings.style
+        style <= selection.style
     }
 
     func changeSelection(to selected: StyleType) {
-        withAnimation { currentSettings.style = selected }
+        withAnimation { selection.style = selected }
     }
 
     func createAppearance(for style: StyleType) -> some View {
-        var styleSettings = currentSettings
-        styleSettings.style = style
-
-        return ZStack(alignment: .center) {
+        ZStack(alignment: .center) {
             showSelection(for: style)
-            showCountdownView(settings: styleSettings)
+            showCountdownView(for: style)
         }
     }
 
     func showSelection(for style: StyleType) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(style == currentSettings.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
+            .stroke(style == selection.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
             .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
     }
 
-    func showCountdownView(settings: SaverSettings) -> some View {
+    func showCountdownView(for style: StyleType) -> some View {
         CountdownWindow(
             now: pickerNow,
-            settings: settings,
+            settings: makeSettings(for: style),
             isPreview: true
         )
         .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
-        .background(settings.backgroundColor.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
+        .background(settings.theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
+    }
+
+    func makeSettings(for style: StyleType) -> SaverSettings {
+        var appearanceSettings = settings
+        appearanceSettings.appearance.style = style
+        return appearanceSettings
     }
 }
 
 #Preview("Dynamic") {
     @State @Previewable var settings = SaverSettings.default
-    AppearancePicker("Appearance", currentSettings: $settings)
+    AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
         .padding(.Spacing.medium)
         .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
         .padding(.Spacing.medium)

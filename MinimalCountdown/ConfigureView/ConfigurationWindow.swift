@@ -37,15 +37,7 @@ struct ConfigurationWindow: View {
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
 
-            if let saveError {
-                Text(saveError)
-                    .foregroundStyle(.red)
-                    .font(.callout)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal)
-                    .padding(.vertical, 4)
-                    .transition(.asymmetric(insertion: .opacity, removal: .identity))
-            }
+            errorMessage
 
             buttons
         }
@@ -59,7 +51,7 @@ struct ConfigurationWindow: View {
 private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
-            AppearancePicker("Appearance", currentSettings: $settings)
+            AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
             Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
                 .subtitleFont
         }
@@ -68,7 +60,7 @@ private extension ConfigurationWindow {
     var dateSection: some View {
         Section("Date") {
             DatePicker(
-                selection: $settings.targetDate,
+                selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
                 displayedComponents: .date
             ) {
@@ -80,7 +72,7 @@ private extension ConfigurationWindow {
                 }
             }
             .datePickerStyle(.graphical)
-            DatePicker(selection: $settings.targetDate, displayedComponents: .hourAndMinute) {
+            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
                 Text("Time")
                 Text("By default it will be set to midnight")
             }
@@ -90,9 +82,12 @@ private extension ConfigurationWindow {
     
     var themeSection: some View {
         Section("Theme") {
-            ColorPalettePicker("Color", selection: $settings.color)
+            ColorPalettePicker("Color", selection: $settings.theme.accent)
 
-            Toggle(isOn: $settings.isBrightNormal) {
+            Toggle(isOn: Binding(
+                get: { settings.theme.brightness == .normal },
+                set: { settings.theme.brightness = $0 ? .normal : .dim }
+            )) {
                 Text("Bright colors")
                 Text("Make digits and text brighter")
             }
@@ -101,14 +96,27 @@ private extension ConfigurationWindow {
 
     var titleAndLabelsSection: some View {
         Section("Title") {
-            TextField("", text: $settings.message, prompt: Text("Add your message here"))
+            TextField("", text: $settings.title.text, prompt: Text("Add your message here"))
                 .focused($focus, equals: .title)
 
-            Toggle(isOn: $settings.isMessageHidden) {
+            Toggle(isOn: $settings.title.isHidden) {
                 Text("Hide title")
                 Text("Even title is not empty")
             }
             .help("Hide title, even it's not empty")
+        }
+    }
+
+    @ViewBuilder
+    var errorMessage: some View {
+        if let saveError {
+            Text(saveError)
+                .foregroundStyle(.red)
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                .padding(.vertical, 4)
+                .transition(.asymmetric(insertion: .opacity, removal: .identity))
         }
     }
 
@@ -152,7 +160,7 @@ private extension ConfigurationWindow {
     }
 
     func saveAndExit() {
-        if saveError != nil {
+        guard saveError == nil else {
             logger.log("Close clicked while banner shown — cancelling dismiss timer and exiting")
             dismissTask?.cancel()
             exitSettings()
@@ -186,26 +194,14 @@ private extension View {
 #if DEBUG
 #Preview("Light mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark mode") {
     ConfigurationWindow()
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(initial: .preview)]))
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.dark)
 }
 
-private extension ConfigurationWindow {
-    init(onClose: (() -> Void)? = nil, previewError: String?) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
-        self.onClose = onClose
-        _saveError = State(initialValue: previewError)
-    }
-}
-
-#Preview("Save failed") {
-    ConfigurationWindow(previewError: Resources.savingError)
-        .environment(SettingsManager(stores: [MockInMemoryLocalStore(shouldFail: true)]))
-}
 #endif

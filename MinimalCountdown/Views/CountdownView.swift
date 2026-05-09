@@ -23,8 +23,8 @@ struct CountdownView: View {
                     digits: digits(for: style),
                     label: style.label,
                     size: windowWidth.calculateSize(for: .digits, isPreview: isPreview),
-                    digitsColor: settings.digitsColor,
-                    textsColor: settings.textsColor
+                    digitsColor: settings.theme.digitsColor,
+                    textsColor: settings.theme.textsColor
                 )
             }
         }
@@ -33,7 +33,7 @@ struct CountdownView: View {
 
 private extension CountdownView {
     var visibleElements: [AppearanceStyle] {
-        switch settings.style {
+        switch settings.appearance.style {
             case .days: [.days]
             case .hours: [.days, .hours]
             case .minutes: [.days, .hours, .minutes]
@@ -43,10 +43,10 @@ private extension CountdownView {
 
     func digits(for style: AppearanceStyle) -> String {
         switch style {
-            case .days: settings.targetDate.daysString(relativeTo: now)
-            case .hours: settings.targetDate.hoursString(relativeTo: now)
-            case .minutes: settings.targetDate.minutesString(relativeTo: now)
-            case .seconds: settings.targetDate.secondsString(relativeTo: now)
+            case .days: settings.schedule.target.daysString(relativeTo: now)
+            case .hours: settings.schedule.target.hoursString(relativeTo: now)
+            case .minutes: settings.schedule.target.minutesString(relativeTo: now)
+            case .seconds: settings.schedule.target.secondsString(relativeTo: now)
         }
     }
 }

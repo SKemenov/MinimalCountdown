@@ -8,7 +8,7 @@
 import OSLog
 import ScreenSaver
 
-final class DefaultsLocalStore: LocalStore {
+final class DefaultsLocalStore: SettingsLoader {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
 
@@ -28,31 +28,22 @@ final class DefaultsLocalStore: LocalStore {
             return nil
         }
         let settings = SaverSettings(
-            targetDate: defaults.targetDate,
-            color: AccentColor(defaults.colorIndex),
-            backgroundColor: BackgroundColor(defaults.backgroundColorIndex),
-            style: AppearanceStyle(defaults.showElementsIndex),
-            message: defaults.messageString,
-            isMessageHidden: defaults.messageIsHidden,
-            isBrightNormal: defaults.brightIsNormal
+            appearance: .init(
+                style: AppearanceStyle(defaults.showElementsIndex),
+                isLabelHidden: false
+            ),
+            schedule: .init(target: defaults.targetDate),
+            theme: .init(
+                accent: AccentColor(defaults.colorIndex),
+                background: BackgroundColor(defaults.backgroundColorIndex),
+                brightness: defaults.brightIsNormal ? .normal : .dim,
+                effect: .none,
+                effectColor: .white
+            ),
+            typography: .init(weight: .ultraLight, isRounded: false),
+            title: .init(text: defaults.messageString, isHidden: defaults.messageIsHidden)
         )
-        logger.log("Loaded settings from defaults, targetDate: \(settings.targetDate, privacy: .public)")
+        logger.log("Loaded settings from defaults, schedule.target: \(settings.schedule.target, privacy: .public)")
         return settings
-    }
-
-    func save(_ settings: SaverSettings) throws {
-        defaults.messageIsHidden = settings.isMessageHidden
-        defaults.brightIsNormal = settings.isBrightNormal
-        defaults.colorIndex = settings.color.rawValue
-        defaults.backgroundColorIndex = settings.backgroundColor.rawValue
-        defaults.showElementsIndex = settings.style.rawValue
-        defaults.messageString = settings.message
-        defaults.targetDate = settings.targetDate
-        guard defaults.synchronize() else {
-            let caughtError = LocalStoreError.defaultsSyncFailed
-            logger.error("\(caughtError.logDescription, privacy: .public)")
-            throw caughtError
-        }
-        logger.log("Saved settings to defaults, targetDate: \(settings.targetDate, privacy: .public)")
     }
 }
