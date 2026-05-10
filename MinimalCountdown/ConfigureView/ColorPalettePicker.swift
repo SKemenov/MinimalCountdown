@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ColorPalettePicker: View {
     typealias ColorType = AccentColor
-    private let titleResource: LocalizedStringResource
+    private let titleResource: String
     @Binding var selection: ColorType
     @State private var markedColor: ColorType
     private let contentColors: [ColorType]
 
     init(
-        _ titleResource: LocalizedStringResource,
+        _ titleResource: String,
         selection: Binding<ColorType>,
         for contentColors: [ColorType] = ColorType.allCases
     ) {
