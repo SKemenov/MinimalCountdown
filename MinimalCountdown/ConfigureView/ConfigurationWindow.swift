@@ -51,38 +51,38 @@ struct ConfigurationWindow: View {
 private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section() {
-            AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
-            Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
+            AppearancePicker(Resources.Copy.Appearance.title, selection: $settings.appearance, in: settings)
+            Text(Resources.Copy.Appearance.previewHint)
                 .subtitleFont
         }
     }
 
     var dateSection: some View {
-        Section("Date") {
+        Section(Resources.Copy.Date.title) {
             DatePicker(
                 selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
                 displayedComponents: .date
             ) {
-                Text("Day")
+                Text(Resources.Copy.Date.day)
                 VStack(alignment: .leading) {
-                    Text("It can be any future date for Timer Mode or any past date for Stopwatch Mode.")
-                    Text("The available range is two years from the current date.")
-                    Text("When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up.")
+                    Text(Resources.Copy.Date.dayHint1)
+                    Text(Resources.Copy.Date.dayHint2)
+                    Text(Resources.Copy.Date.dayHint3)
                 }
             }
             .datePickerStyle(.graphical)
             DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
-                Text("Time")
-                Text("By default it will be set to midnight")
+                Text(Resources.Copy.Date.time)
+                Text(Resources.Copy.Date.timeHint)
             }
         }
     }
 
     
     var themeSection: some View {
-        Section("Theme") {
-            ColorPalettePicker("Color", selection: $settings.theme.accent)
+        Section(Resources.Copy.Theme.title) {
+            ColorPalettePicker(Resources.Copy.Theme.color, selection: $settings.theme.accent)
 
             Toggle(isOn: Binding(
                 get: { settings.theme.brightness == .high },
@@ -95,15 +95,15 @@ private extension ConfigurationWindow {
     }
 
     var titleAndLabelsSection: some View {
-        Section("Title") {
-            TextField("", text: $settings.title.text, prompt: Text("Add your message here"))
+        Section(Resources.Copy.Title.title) {
+            TextField("", text: $settings.title.text, prompt: Text(Resources.Copy.Title.messagePrompt))
                 .focused($focus, equals: .title)
 
             Toggle(isOn: $settings.title.isHidden) {
-                Text("Hide title")
-                Text("Even title is not empty")
+                Text(Resources.Copy.Title.hideTitle)
+                Text(Resources.Copy.Title.hideTitleHint)
             }
-            .help("Hide title, even it's not empty")
+            .help(Resources.Copy.Title.hideTitleHint)
         }
     }
 
@@ -124,7 +124,7 @@ private extension ConfigurationWindow {
         HStack {
             Spacer()
             Button(action: saveAndExit) {
-                Text("Close")
+                Text(Resources.Copy.Buttons.close)
             }
             .buttonStyle(.borderedProminent)
             .padding()
