@@ -83,14 +83,7 @@ private extension ConfigurationWindow {
     var themeSection: some View {
         Section(Resources.Copy.Theme.title) {
             ColorPalettePicker(Resources.Copy.Theme.color, selection: $settings.theme.accent)
-
-            Toggle(isOn: Binding(
-                get: { settings.theme.brightness == .high },
-                set: { settings.theme.brightness = $0 ? .high : .medium }
-            )) {
-                Text("Bright colors")
-                Text("Make digits and text brighter")
-            }
+            BrightnessPicker(Resources.Copy.Theme.brightness, selection: $settings.theme.brightness)
         }
     }
 
