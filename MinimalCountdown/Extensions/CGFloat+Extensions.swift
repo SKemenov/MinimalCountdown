@@ -44,26 +44,23 @@ extension CGFloat {
     }
 
     // MARK: - View elements helpers
-    enum Elements { case digits, labels, title, spacing }
 
-    static func calcElements(_ isPreview: Bool) -> Self {
-        .elementsWithSpaces - (isPreview ? 1 : 0)
+    /// Baseline digits font size derived from the window width. Subtracts one element slot in preview thumbnails
+    /// so the small canvas reads with a slightly larger relative font.
+    func digitsSize(isPreview: Bool) -> CGFloat {
+        self / (.elementsWithSpaces - (isPreview ? 1 : 0))
     }
 
-    func calculateSize(for element: Elements, isPreview: Bool) -> CGFloat {
-        switch element {
-            case .digits: self / .calcElements(isPreview)
-            case .labels: self / .calcElements(isPreview) / 5
-            case .title: self / .calcElements(isPreview) / 4
-            case .spacing: self * .elementsSpacingRatio
-        }
-    }
+    /// Label text size relative to the digits baseline.
+    static let labelsToDigitsRatio: CGFloat = 1.0 / 5.0
+    /// Title text size relative to the digits baseline.
+    static let titleToDigitsRatio:  CGFloat = 1.0 / 4.0
+    /// Inter-element spacing as a fraction of window width.
+    static let elementsSpacingRatio: CGFloat = 0.04
 }
 
 // MARK: - Private properties
 private extension CGFloat {
     /// CGFloat = 7: Max 4 elements, add one more for each side and one more again for all spacing between elements
     static let elementsWithSpaces: CGFloat = 7 // 4 + 2 + 1
-    /// CGFloat = 0.04
-    static let elementsSpacingRatio: CGFloat = 0.04
 }

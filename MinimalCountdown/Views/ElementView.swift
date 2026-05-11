@@ -17,11 +17,11 @@ struct ElementView: View {
     var body: some View {
         VStack(spacing: .zero) {
             TextElementView(text: digits, size: size, color: digitsColor, weight: .thin)
-            TextElementView(text: label, size: textsSize, color: textsColor)
+            TextElementView(text: label, size: labelTextSize, color: textsColor)
         }
     }
 
-    var textsSize: CGFloat { size / 5 }
+    var labelTextSize: CGFloat { size * .labelsToDigitsRatio }
 }
 
 #Preview {

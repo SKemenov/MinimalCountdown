@@ -10,19 +10,16 @@ import SwiftUI
 struct CountdownView: View {
     let now: Date
     let settings: SaverSettings
-    let windowWidth: CGFloat
-    var isPreview: Bool = false
+    let digitsSize: CGFloat
+    let spacing: CGFloat
 
     var body: some View {
-        HStack(
-            alignment: .top,
-            spacing: windowWidth.calculateSize(for: .spacing, isPreview: isPreview)
-        ) {
+        HStack(alignment: .top, spacing: spacing) {
             ForEach(visibleElements) { style in
                 ElementView(
                     digits: digits(for: style),
                     label: style.label,
-                    size: windowWidth.calculateSize(for: .digits, isPreview: isPreview),
+                    size: digitsSize,
                     digitsColor: settings.theme.digitsColor,
                     textsColor: settings.theme.textsColor
                 )
@@ -52,6 +49,12 @@ private extension CountdownView {
 }
 
 #Preview {
-    CountdownView(now: Date(), settings: SaverSettings.default, windowWidth: 500)
-        .frame(width: 500, height: 300)
+    let windowWidth: CGFloat = 500
+    CountdownView(
+        now: Date(),
+        settings: SaverSettings.default,
+        digitsSize: windowWidth.digitsSize(isPreview: false),
+        spacing: windowWidth * .elementsSpacingRatio
+    )
+    .frame(width: windowWidth, height: 300)
 }
