@@ -20,6 +20,7 @@ struct CountdownView: View {
                     digits: digits(for: style),
                     label: style.label,
                     size: digitsSize,
+                    isLabelHidden: settings.appearance.isLabelHidden,
                     digitsColor: settings.theme.digitsColor,
                     textsColor: settings.theme.textsColor
                 )

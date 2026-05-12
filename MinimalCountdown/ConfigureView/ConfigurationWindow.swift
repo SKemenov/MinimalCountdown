@@ -32,7 +32,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                titleAndLabelsSection
+                titleSection
             }
             .formStyle(.grouped)
             .onKeyPress(.return, action: saveByEnterKey)
@@ -50,8 +50,13 @@ struct ConfigurationWindow: View {
 
 private extension ConfigurationWindow {
     var appearanceSection: some View {
-        Section() {
-            AppearancePicker(Resources.Copy.Appearance.title, selection: $settings.appearance, in: settings)
+        Section(Resources.Copy.Appearance.title) {
+            AppearancePicker(Resources.Copy.Appearance.style, selection: $settings.appearance, in: settings)
+            Toggle(isOn: $settings.appearance.isLabelHidden) {
+                Text(Resources.Copy.Appearance.hideLabels)
+                Text(Resources.Copy.Appearance.hideLabelsHint)
+            }
+            .help(Resources.Copy.Appearance.hideLabelsHint)
             Text(Resources.Copy.Appearance.previewHint)
                 .subtitleFont
         }
@@ -87,7 +92,7 @@ private extension ConfigurationWindow {
         }
     }
 
-    var titleAndLabelsSection: some View {
+    var titleSection: some View {
         Section(Resources.Copy.Title.title) {
             TextField("", text: $settings.title.text, prompt: Text(Resources.Copy.Title.messagePrompt))
                 .focused($focus, equals: .title)
