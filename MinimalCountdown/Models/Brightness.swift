@@ -8,7 +8,7 @@
 import Foundation
 
 enum Brightness: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
-    case high = 0, medium, low
+    case low = 0, medium, high
 
     // safe and un-optional, defaults to .high
     init(_ rawValue: Int) {
@@ -20,7 +20,8 @@ extension Brightness {
     var id: Self { self }
 
     var label: String { String(describing: self).capitalized }
-    var iconName: String { "dial.\(self)" }
+
+    var sliderValue: Double { Double(rawValue) }
 
     var digitsOpacity: Double {
         switch self {

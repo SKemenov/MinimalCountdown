@@ -23,7 +23,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ConfigureView/AppearancePicker.swift,
-				ConfigureView/BrightnessPicker.swift,
+				ConfigureView/BrightnessSlider.swift,
 				ConfigureView/ColorPalettePicker.swift,
 				ConfigureView/ConfigurationWindow.swift,
 				ConfigureView/ConfigureSheetController.swift,

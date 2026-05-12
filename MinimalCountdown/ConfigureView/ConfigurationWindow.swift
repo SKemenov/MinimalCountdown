@@ -70,6 +70,7 @@ private extension ConfigurationWindow {
                 Text(Resources.Copy.Date.timeHint)
             }
             .help(Resources.Copy.Date.timeHint)
+
             DatePicker(
                 selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
@@ -90,7 +91,7 @@ private extension ConfigurationWindow {
     var themeSection: some View {
         Section(Resources.Copy.Theme.title) {
             ColorPalettePicker(Resources.Copy.Theme.color, selection: $settings.theme.accent)
-            BrightnessPicker(Resources.Copy.Theme.brightness, selection: $settings.theme.brightness)
+            BrightnessSlider(Resources.Copy.Theme.brightness, selection: $settings.theme.brightness)
         }
     }
 
