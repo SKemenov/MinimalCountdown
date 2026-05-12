@@ -35,6 +35,7 @@ struct ConfigurationWindow: View {
                 titleSection
             }
             .formStyle(.grouped)
+            .animation(.default, value: settings)
             .onKeyPress(.return, action: saveByEnterKey)
 
             errorMessage
@@ -64,6 +65,11 @@ private extension ConfigurationWindow {
 
     var dateSection: some View {
         Section(Resources.Copy.Date.title) {
+            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
+                Text(Resources.Copy.Date.time)
+                Text(Resources.Copy.Date.timeHint)
+            }
+            .help(Resources.Copy.Date.timeHint)
             DatePicker(
                 selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
@@ -77,10 +83,6 @@ private extension ConfigurationWindow {
                 }
             }
             .datePickerStyle(.graphical)
-            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
-                Text(Resources.Copy.Date.time)
-                Text(Resources.Copy.Date.timeHint)
-            }
         }
     }
 
@@ -130,7 +132,9 @@ private extension ConfigurationWindow {
     }
 
     func prepareForDisplay() {
-        settings = settingsManager.settings
+        withAnimation(.none) {
+            settings = settingsManager.settings
+        }
         saveError = nil
         dismissTask?.cancel()
         dismissTask = nil
