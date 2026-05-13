@@ -51,36 +51,38 @@ struct ConfigurationWindow: View {
 
 private extension ConfigurationWindow {
     var appearanceSection: some View {
-        Section(Resources.Copy.Appearance.title) {
-            AppearancePicker(Resources.Copy.Appearance.style, selection: $settings.appearance, in: settings)
+        Section(Resources.Appearance.title) {
+            AppearancePicker(Resources.Appearance.style, selection: $settings.appearance, in: settings)
+
             Toggle(isOn: $settings.appearance.isLabelHidden) {
-                Text(Resources.Copy.Appearance.hideLabels)
-                Text(Resources.Copy.Appearance.hideLabelsHint)
+                Text(Resources.Appearance.hideLabels)
+                Text(Resources.Appearance.hideLabelsHint)
             }
-            .help(Resources.Copy.Appearance.hideLabelsHint)
-            Text(Resources.Copy.Appearance.previewHint)
+            .help(Resources.Appearance.hideLabelsHint)
+
+            Text(Resources.Appearance.previewHint)
                 .subtitleFont
         }
     }
 
     var dateSection: some View {
-        Section(Resources.Copy.Date.title) {
+        Section(Resources.Date.title) {
             DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
-                Text(Resources.Copy.Date.time)
-                Text(Resources.Copy.Date.timeHint)
+                Text(Resources.Date.time)
+                Text(Resources.Date.timeHint)
             }
-            .help(Resources.Copy.Date.timeHint)
+            .help(Resources.Date.timeHint)
 
             DatePicker(
                 selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
                 displayedComponents: .date
             ) {
-                Text(Resources.Copy.Date.day)
+                Text(Resources.Date.day)
                 VStack(alignment: .leading) {
-                    Text(Resources.Copy.Date.dayHint1)
-                    Text(Resources.Copy.Date.dayHint2)
-                    Text(Resources.Copy.Date.dayHint3)
+                    Text(Resources.Date.dayHint1)
+                    Text(Resources.Date.dayHint2)
+                    Text(Resources.Date.dayHint3)
                 }
             }
             .datePickerStyle(.graphical)
@@ -89,22 +91,22 @@ private extension ConfigurationWindow {
 
     
     var themeSection: some View {
-        Section(Resources.Copy.Theme.title) {
-            ColorPalettePicker(Resources.Copy.Theme.color, selection: $settings.theme.accent)
-            BrightnessSlider(Resources.Copy.Theme.brightness, selection: $settings.theme.brightness)
+        Section(Resources.Theme.title) {
+            ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
+            BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
         }
     }
 
     var titleSection: some View {
-        Section(Resources.Copy.Title.title) {
-            TextField("", text: $settings.title.text, prompt: Text(Resources.Copy.Title.messagePrompt))
+        Section(Resources.Title.title) {
+            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.messagePrompt))
                 .focused($focus, equals: .title)
 
             Toggle(isOn: $settings.title.isHidden) {
-                Text(Resources.Copy.Title.hideTitle)
-                Text(Resources.Copy.Title.hideTitleHint)
+                Text(Resources.Title.hideTitle)
+                Text(Resources.Title.hideTitleHint)
             }
-            .help(Resources.Copy.Title.hideTitleHint)
+            .help(Resources.Title.hideTitleHint)
         }
     }
 
@@ -125,7 +127,7 @@ private extension ConfigurationWindow {
         HStack {
             Spacer()
             Button(action: saveAndExit) {
-                Text(Resources.Copy.Buttons.close)
+                Text(Resources.Buttons.close)
             }
             .buttonStyle(.borderedProminent)
             .padding()

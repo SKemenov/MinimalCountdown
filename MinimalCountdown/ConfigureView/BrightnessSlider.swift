@@ -48,7 +48,7 @@ private extension BrightnessSlider {
 
 #Preview("Dynamic") {
     @State @Previewable var brightness: Brightness = .medium
-    BrightnessSlider(Resources.Copy.Theme.brightness, selection: $brightness)
+    BrightnessSlider(Resources.Theme.brightness, selection: $brightness)
         .padding(.Spacing.medium)
         .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
         .padding(.Spacing.medium)
