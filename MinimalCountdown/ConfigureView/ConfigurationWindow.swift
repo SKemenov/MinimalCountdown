@@ -9,7 +9,6 @@ import OSLog
 import SwiftUI
 
 struct ConfigurationWindow: View {
-    private enum FocusTarget: Hashable { case title }
 
     private let logger: Logger
     var onClose: (() -> Void)?
@@ -19,7 +18,6 @@ struct ConfigurationWindow: View {
     @State private var dismissTask: Task<Void, Never>?
     @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
-    @FocusState private var focus: FocusTarget?
 
     init(onClose: (() -> Void)? = nil) {
         logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
@@ -45,7 +43,6 @@ struct ConfigurationWindow: View {
         .frame(width: 512, height: 740 + 48)
         .animation(.default, value: saveError)
         .onAppear(perform: prepareForDisplay)
-        .task(setTitleFocused)
     }
 }
 
@@ -103,7 +100,6 @@ private extension ConfigurationWindow {
     var titleSection: some View {
         Section(Resources.Title.title) {
             TextField("", text: $settings.title.text, prompt: Text(Resources.Title.messagePrompt))
-                .focused($focus, equals: .title)
 
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)
@@ -145,11 +141,6 @@ private extension ConfigurationWindow {
         saveError = nil
         dismissTask?.cancel()
         dismissTask = nil
-    }
-
-    func setTitleFocused() async {
-        try? await Task.sleep(for: .seconds(0.01))
-        focus = .title
     }
 
     @discardableResult
