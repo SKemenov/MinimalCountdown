@@ -20,7 +20,7 @@ final class SettingsManager {
         self.saver = saver
         self.loader = loader ?? saver
         self.settings = .default
-        self.logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        self.logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         logger.log(
             "SettingsManager initialized with loader: \(String(describing: type(of: self.loader)), privacy: .public)"
         )

@@ -15,7 +15,7 @@ class ConfigureSheetController: NSObject {
     private let logger: Logger
 
     init(settingsManager: SettingsManager) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         super.init()
 
         let configView = ConfigurationWindow { [weak self] in

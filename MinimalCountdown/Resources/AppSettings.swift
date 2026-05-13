@@ -1,0 +1,13 @@
+//
+//  AppSettings.swift
+//  MinimalCountdown
+//
+//  Created by Sergey Kemenov
+//
+
+import Foundation
+
+enum AppSettings {
+    static let subSystem = "MinimalCountdown"
+    static let settingsFileName = "settings.json"
+}

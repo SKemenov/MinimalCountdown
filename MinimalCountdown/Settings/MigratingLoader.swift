@@ -16,7 +16,7 @@ struct MigratingLoader: SettingsLoader {
     init(saver: SettingsSaver, fallback: SettingsLoader) {
         self.saver = saver
         self.fallback = fallback
-        self.logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        self.logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
     }
 
     func load() -> SaverSettings? {

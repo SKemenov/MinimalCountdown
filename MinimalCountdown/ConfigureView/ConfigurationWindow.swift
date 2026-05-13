@@ -22,7 +22,7 @@ struct ConfigurationWindow: View {
     @FocusState private var focus: FocusTarget?
 
     init(onClose: (() -> Void)? = nil) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         self.onClose = onClose
     }
 

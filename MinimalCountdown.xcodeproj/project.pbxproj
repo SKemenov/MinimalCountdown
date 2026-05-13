@@ -48,6 +48,7 @@
 				Models/Theme.swift,
 				Models/Title.swift,
 				Models/Typography.swift,
+				Resources/AppSettings.swift,
 				Resources/Assets.xcassets,
 				Resources/Resources.swift,
 				Settings/DefaultsLocalStore.swift,
