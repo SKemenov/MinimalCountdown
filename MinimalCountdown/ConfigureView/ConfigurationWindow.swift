@@ -57,6 +57,7 @@ private extension ConfigurationWindow {
             Toggle(isOn: $settings.appearance.isLabelHidden) {
                 Text(Resources.Appearance.hideLabels)
                 Text(Resources.Appearance.hideLabelsHint)
+                    .subtitleFont
             }
             .help(Resources.Appearance.hideLabelsHint)
 
@@ -70,6 +71,7 @@ private extension ConfigurationWindow {
             DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
                 Text(Resources.Date.time)
                 Text(Resources.Date.timeHint)
+                    .subtitleFont
             }
             .help(Resources.Date.timeHint)
 
@@ -84,6 +86,7 @@ private extension ConfigurationWindow {
                     Text(Resources.Date.dayHint2)
                     Text(Resources.Date.dayHint3)
                 }
+                .subtitleFont
             }
             .datePickerStyle(.graphical)
         }
@@ -105,6 +108,7 @@ private extension ConfigurationWindow {
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)
                 Text(Resources.Title.hideTitleHint)
+                    .subtitleFont
             }
             .help(Resources.Title.hideTitleHint)
         }
@@ -184,15 +188,6 @@ private extension ConfigurationWindow {
                 exitSettings()
             }
         }
-    }
-}
-
-private extension View {
-    var subtitleFont: some View {
-        self
-            .font(.caption)
-            .foregroundStyle(.secondary)
-            .multilineTextAlignment(.leading)
     }
 }
 

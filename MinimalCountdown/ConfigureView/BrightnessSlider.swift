@@ -31,8 +31,7 @@ struct BrightnessSlider: View {
             }
 
             Text(selection.label)
-                .font(.caption)
-                .foregroundStyle(.secondary)
+                .subtitleFont
         }
     }
 }

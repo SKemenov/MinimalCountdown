@@ -33,6 +33,7 @@
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
 				"Extensions/UserDefaults+Extensions.swift",
+				"Extensions/View+Ext.swift",
 				Models/AccentColor.swift,
 				Models/Appearance.swift,
 				Models/AppearanceStyle.swift,
