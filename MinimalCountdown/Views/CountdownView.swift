@@ -22,7 +22,9 @@ struct CountdownView: View {
                     size: digitsSize,
                     isLabelHidden: settings.appearance.isLabelHidden,
                     digitsColor: settings.theme.digitsColor,
-                    textsColor: settings.theme.textsColor
+                    textsColor: settings.theme.textsColor,
+                    digitsWeight: settings.typography.weight.swiftUIWeight,
+                    digitsDesign: settings.typography.isRounded ? .rounded : .default
                 )
             }
         }

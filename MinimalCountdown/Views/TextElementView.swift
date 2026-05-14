@@ -12,10 +12,11 @@ struct TextElementView: View {
     let size: CGFloat
     let color: Color
     var weight: Font.Weight = .ultraLight
+    var design: Font.Design = .default
 
     var body: some View {
         Text(text)
-            .font(.system(size: size, weight: weight))
+            .font(.system(size: size, weight: weight, design: design))
             .monospacedDigit()
             .foregroundStyle(color)
             .lineLimit(1)
@@ -25,5 +26,5 @@ struct TextElementView: View {
 
 #Preview {
     TextElementView(text: "42", size: 180, color: .white)
-    TextElementView(text: "42", size: 180, color: .white)
+    TextElementView(text: "42", size: 180, color: .white, weight: .heavy, design: .rounded)
 }
