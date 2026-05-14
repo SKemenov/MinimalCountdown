@@ -14,20 +14,20 @@ struct CountdownWindow: View {
 
     var body: some View {
         GeometryReader { geo in
+            let digitsSize = geo.size.width.digitsSize(isPreview: isPreview)
+            let spacing = geo.size.width * .elementsSpacingRatio
+
             ZStack {
                 settings.theme.background.color
                     .ignoresSafeArea()
 
                 VStack(spacing: .zero) {
-                    TitleView(
-                        settings: settings,
-                        textSize: geo.size.width.calculateSize(for: .title, isPreview: isPreview)
-                    )
+                    TitleView(settings: settings, digitsSize: digitsSize)
                     CountdownView(
                         now: now,
                         settings: settings,
-                        windowWidth: geo.size.width,
-                        isPreview: isPreview
+                        digitsSize: digitsSize,
+                        spacing: spacing
                     )
                 }
                 .frame(width: geo.size.width, height: geo.size.height)

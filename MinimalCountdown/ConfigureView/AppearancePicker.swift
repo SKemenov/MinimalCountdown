@@ -9,14 +9,14 @@ import SwiftUI
 
 struct AppearancePicker: View {
     typealias StyleType = AppearanceStyle
-    private let titleResource: LocalizedStringResource
+    private let titleResource: String
     private let contentStyles: [StyleType]
     private let settings: SaverSettings
     @Binding var selection: Appearance
     @State private var pickerNow: Date = Date()
 
     init(
-        _ titleResource: LocalizedStringResource,
+        _ titleResource: String,
         selection: Binding<Appearance>,
         in settings: SaverSettings,
         for contentStyles: [StyleType] = StyleType.allCases

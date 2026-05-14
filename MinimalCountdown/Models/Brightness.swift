@@ -8,17 +8,34 @@
 import Foundation
 
 enum Brightness: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
-    case normal = 0, dim
+    case low = 0, medium, high
 
-    // safe and un-optional, defaults to .normal
+    // safe and un-optional, defaults to .high
     init(_ rawValue: Int) {
-        self = .init(rawValue: rawValue) ?? .normal
+        self = .init(rawValue: rawValue) ?? .high
     }
 }
 
 extension Brightness {
     var id: Self { self }
 
-    var digitsOpacity: Double { self == .normal ? 1.0 : 0.8 }
-    var textsOpacity: Double  { self == .normal ? 0.7 : 0.5 }
+    var label: String { String(describing: self).capitalized }
+
+    var sliderValue: Double { Double(rawValue) }
+
+    var digitsOpacity: Double {
+        switch self {
+            case .high:   1.0
+            case .medium: 0.85
+            case .low:    0.7
+        }
+    }
+
+    var textsOpacity: Double {
+        switch self {
+            case .high:   0.85
+            case .medium: 0.7
+            case .low:    0.55
+        }
+    }
 }

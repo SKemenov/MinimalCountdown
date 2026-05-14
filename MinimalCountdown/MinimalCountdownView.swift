@@ -32,7 +32,7 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     override init!(frame: NSRect, isPreview: Bool) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         let message: String = isPreview ? "preview" : "screen saver"
         logger.log("Starting \(message, privacy: .public)")
 
@@ -56,7 +56,7 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     required init?(coder: NSCoder) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         logger.critical("init(coder:) not implemented, exiting")
         fatalError("init(coder:) not implemented, exiting")
     }

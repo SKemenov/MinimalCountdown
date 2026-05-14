@@ -11,17 +11,20 @@ struct ElementView: View {
     let digits: String
     let label: String
     let size: CGFloat
+    let isLabelHidden: Bool
     let digitsColor: Color
     let textsColor: Color
 
     var body: some View {
         VStack(spacing: .zero) {
             TextElementView(text: digits, size: size, color: digitsColor, weight: .thin)
-            TextElementView(text: label, size: textsSize, color: textsColor)
+            if !isLabelHidden {
+                TextElementView(text: label, size: labelTextSize, color: textsColor)
+            }
         }
     }
 
-    var textsSize: CGFloat { size / 5 }
+    var labelTextSize: CGFloat { size * .labelsToDigitsRatio }
 }
 
 #Preview {
@@ -29,6 +32,7 @@ struct ElementView: View {
         digits: "42",
         label: "DAYS",
         size: 180,
+        isLabelHidden: false,
         digitsColor: .white,
         textsColor: .white.opacity(0.7),
     )

@@ -23,6 +23,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				ConfigureView/AppearancePicker.swift,
+				ConfigureView/BrightnessSlider.swift,
 				ConfigureView/ColorPalettePicker.swift,
 				ConfigureView/ConfigurationWindow.swift,
 				ConfigureView/ConfigureSheetController.swift,
@@ -32,6 +33,7 @@
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
 				"Extensions/UserDefaults+Extensions.swift",
+				"Extensions/View+Ext.swift",
 				Models/AccentColor.swift,
 				Models/Appearance.swift,
 				Models/AppearanceStyle.swift,
@@ -47,6 +49,7 @@
 				Models/Theme.swift,
 				Models/Title.swift,
 				Models/Typography.swift,
+				Resources/AppSettings.swift,
 				Resources/Assets.xcassets,
 				Resources/Resources.swift,
 				Settings/DefaultsLocalStore.swift,

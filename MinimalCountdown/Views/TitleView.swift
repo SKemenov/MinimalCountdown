@@ -9,12 +9,13 @@ import SwiftUI
 
 struct TitleView: View {
     let settings: SaverSettings
-    let textSize: CGFloat
+    let digitsSize: CGFloat
+
     var body: some View {
         if isTitleNeeding {
             TextElementView(
                 text: formattedMessage,
-                size: textSize,
+                size: titleSize,
                 color: settings.theme.textsColor,
                 weight: .thin
             )
@@ -23,6 +24,8 @@ struct TitleView: View {
 }
 
 private extension TitleView {
+    var titleSize: CGFloat { digitsSize * .titleToDigitsRatio }
+
     var isTitleNeeding: Bool { !settings.title.isHidden && !settings.title.text.isEmpty }
 
     var formattedMessage: String {
@@ -35,7 +38,7 @@ private extension TitleView {
 
 #if DEBUG
 #Preview {
-    TitleView(settings: SaverSettings.preview, textSize: 50)
+    TitleView(settings: SaverSettings.preview, digitsSize: 200)
         .frame(width: 500, height: 300)
 }
 #endif

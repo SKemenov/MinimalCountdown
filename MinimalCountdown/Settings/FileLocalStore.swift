@@ -15,12 +15,12 @@ final class FileLocalStore: SettingsSaver {
     private let logger: Logger
 
     init(supportDirectory: URL = FileLocalStore.defaultDirectory) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         encoder = JSONEncoder.saverEncoder()
         decoder = JSONDecoder.saverDecoder()
         fileURL = supportDirectory
-            .appending(component: Resources.subSystem, directoryHint: .isDirectory)
-            .appending(component: Resources.settingsFileName)
+            .appending(component: AppSettings.subSystem, directoryHint: .isDirectory)
+            .appending(component: AppSettings.settingsFileName)
         logger.log("FileLocalStore initialized with fileURL: \(self.fileURL.path, privacy: .public)")
     }
 

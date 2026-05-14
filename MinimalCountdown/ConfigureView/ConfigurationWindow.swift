@@ -9,7 +9,6 @@ import OSLog
 import SwiftUI
 
 struct ConfigurationWindow: View {
-    private enum FocusTarget: Hashable { case title }
 
     private let logger: Logger
     var onClose: (() -> Void)?
@@ -19,10 +18,9 @@ struct ConfigurationWindow: View {
     @State private var dismissTask: Task<Void, Never>?
     @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
-    @FocusState private var focus: FocusTarget?
 
     init(onClose: (() -> Void)? = nil) {
-        logger = Logger(subsystem: Resources.subSystem, category: String(describing: Self.self))
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         self.onClose = onClose
     }
 
@@ -32,9 +30,10 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                titleAndLabelsSection
+                titleSection
             }
             .formStyle(.grouped)
+            .animation(.default, value: settings)
             .onKeyPress(.return, action: saveByEnterKey)
 
             errorMessage
@@ -44,66 +43,70 @@ struct ConfigurationWindow: View {
         .frame(width: 512, height: 740 + 48)
         .animation(.default, value: saveError)
         .onAppear(perform: prepareForDisplay)
-        .task(setTitleFocused)
     }
 }
 
 private extension ConfigurationWindow {
     var appearanceSection: some View {
-        Section() {
-            AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
-            Text("Close this window and click Preview to see all the changes in detail in full screen mode.")
+        Section(Resources.Appearance.title) {
+            AppearancePicker(Resources.Appearance.style, selection: $settings.appearance, in: settings)
+
+            Toggle(isOn: $settings.appearance.isLabelHidden) {
+                Text(Resources.Appearance.hideLabels)
+                Text(Resources.Appearance.hideLabelsHint)
+                    .subtitleFont
+            }
+            .help(Resources.Appearance.hideLabelsHint)
+
+            Text(Resources.Appearance.previewHint)
                 .subtitleFont
         }
     }
 
     var dateSection: some View {
-        Section("Date") {
+        Section(Resources.Date.title) {
+            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
+                Text(Resources.Date.time)
+                Text(Resources.Date.timeHint)
+                    .subtitleFont
+            }
+            .help(Resources.Date.timeHint)
+
             DatePicker(
                 selection: $settings.schedule.target,
                 in: Date.now.datesInBetween(),
                 displayedComponents: .date
             ) {
-                Text("Day")
+                Text(Resources.Date.day)
                 VStack(alignment: .leading) {
-                    Text("It can be any future date for Timer Mode or any past date for Stopwatch Mode.")
-                    Text("The available range is two years from the current date.")
-                    Text("When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up.")
+                    Text(Resources.Date.dayHint1)
+                    Text(Resources.Date.dayHint2)
+                    Text(Resources.Date.dayHint3)
                 }
+                .subtitleFont
             }
             .datePickerStyle(.graphical)
-            DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
-                Text("Time")
-                Text("By default it will be set to midnight")
-            }
         }
     }
 
     
     var themeSection: some View {
-        Section("Theme") {
-            ColorPalettePicker("Color", selection: $settings.theme.accent)
-
-            Toggle(isOn: Binding(
-                get: { settings.theme.brightness == .normal },
-                set: { settings.theme.brightness = $0 ? .normal : .dim }
-            )) {
-                Text("Bright colors")
-                Text("Make digits and text brighter")
-            }
+        Section(Resources.Theme.title) {
+            ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
+            BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
         }
     }
 
-    var titleAndLabelsSection: some View {
-        Section("Title") {
-            TextField("", text: $settings.title.text, prompt: Text("Add your message here"))
-                .focused($focus, equals: .title)
+    var titleSection: some View {
+        Section(Resources.Title.title) {
+            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.messagePrompt))
 
             Toggle(isOn: $settings.title.isHidden) {
-                Text("Hide title")
-                Text("Even title is not empty")
+                Text(Resources.Title.hideTitle)
+                Text(Resources.Title.hideTitleHint)
+                    .subtitleFont
             }
-            .help("Hide title, even it's not empty")
+            .help(Resources.Title.hideTitleHint)
         }
     }
 
@@ -124,7 +127,7 @@ private extension ConfigurationWindow {
         HStack {
             Spacer()
             Button(action: saveAndExit) {
-                Text("Close")
+                Text(Resources.Buttons.close)
             }
             .buttonStyle(.borderedProminent)
             .padding()
@@ -132,15 +135,12 @@ private extension ConfigurationWindow {
     }
 
     func prepareForDisplay() {
-        settings = settingsManager.settings
+        withAnimation(.none) {
+            settings = settingsManager.settings
+        }
         saveError = nil
         dismissTask?.cancel()
         dismissTask = nil
-    }
-
-    func setTitleFocused() async {
-        try? await Task.sleep(for: .seconds(0.01))
-        focus = .title
     }
 
     @discardableResult
@@ -179,15 +179,6 @@ private extension ConfigurationWindow {
                 exitSettings()
             }
         }
-    }
-}
-
-private extension View {
-    var subtitleFont: some View {
-        self
-            .font(.caption)
-            .foregroundStyle(.secondary)
-            .multilineTextAlignment(.leading)
     }
 }
 

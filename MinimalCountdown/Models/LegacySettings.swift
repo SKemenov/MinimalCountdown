@@ -45,7 +45,7 @@ extension LegacySettings.V1 {
             theme: .init(
                 accent: color,
                 background: backgroundColor,
-                brightness: isBrightNormal ? .normal : .dim,
+                brightness: isBrightNormal ? .high : .medium,
                 effect: .none,
                 effectColor: .white
             ),
