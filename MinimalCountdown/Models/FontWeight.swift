@@ -32,4 +32,9 @@ extension FontWeight {
             case .black: .black
         }
     }
+
+    var label: String {
+        (self == .ultraLight ? "Ultra Light" : String(describing: self))
+            .capitalized
+    }
 }

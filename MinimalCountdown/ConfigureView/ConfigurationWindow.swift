@@ -30,6 +30,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
+                fontSection
                 titleSection
             }
             .formStyle(.grouped)
@@ -40,7 +41,7 @@ struct ConfigurationWindow: View {
 
             buttons
         }
-        .frame(width: 512, height: 740 + 48)
+        .frame(width: 512, height: 860 + 48)
         .animation(.default, value: saveError)
         .onAppear(perform: prepareForDisplay)
     }
@@ -94,6 +95,28 @@ private extension ConfigurationWindow {
         Section(Resources.Theme.title) {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
+        }
+    }
+
+    var fontSection: some View {
+        Section(Resources.Font.title) {
+            Picker(selection: $settings.typography.weight) {
+                ForEach(FontWeight.allCases) { weight in
+                    Text(weight.label).tag(weight)
+                }
+            } label: {
+                Text(Resources.Font.weight)
+                Text(Resources.Font.weightHint)
+                    .subtitleFont
+            }
+            .help(Resources.Font.weightHint)
+
+            Toggle(isOn: $settings.typography.isRounded) {
+                Text(Resources.Font.rounded)
+                Text(Resources.Font.roundedHint)
+                    .subtitleFont
+            }
+            .help(Resources.Font.roundedHint)
         }
     }
 
