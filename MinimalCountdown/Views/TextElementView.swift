@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct TextElementView: View {
-    let text: String
-    let size: CGFloat
-    let color: Color
-    var weight: Font.Weight = .ultraLight
+    let element: UIModel.TextElement
 
     var body: some View {
-        Text(text)
-            .font(.system(size: size, weight: weight))
+        Text(element.text)
+            .font(.system(size: element.size, weight: element.weight, design: element.design))
             .monospacedDigit()
-            .foregroundStyle(color)
+            .foregroundStyle(element.color)
             .lineLimit(1)
             .minimumScaleFactor(0.5)
     }
 }
 
 #Preview {
-    TextElementView(text: "42", size: 180, color: .white)
-    TextElementView(text: "42", size: 180, color: .white)
+    TextElementView(element: .init(text: "42", size: 180, color: .white))
+    TextElementView(element: .init(text: "42", size: 180, color: .white, weight: .heavy, design: .rounded))
 }

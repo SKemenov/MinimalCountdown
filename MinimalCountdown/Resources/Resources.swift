@@ -33,6 +33,14 @@ enum Resources {
         static let brightness = "Brightness"
     }
 
+    enum Font {
+        static let title = "Font"
+        static let weight = "Weight"
+        static let weightHint = "Sets the digit thickness from Ultra Light to Black."
+        static let rounded = "Rounded"
+        static let roundedHint = "Renders the digits with the SF Rounded design."
+    }
+
     enum Title {
         static let title = "Title"
         static let messagePrompt = "Add your message here"

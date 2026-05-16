@@ -8,37 +8,25 @@
 import SwiftUI
 
 struct TitleView: View {
-    let settings: SaverSettings
-    let digitsSize: CGFloat
+    let element: UIModel.TextElement
 
     var body: some View {
-        if isTitleNeeding {
-            TextElementView(
-                text: formattedMessage,
-                size: titleSize,
-                color: settings.theme.textsColor,
-                weight: .thin
-            )
+        if !element.text.isEmpty {
+            TextElementView(element: element)
         }
-    }
-}
-
-private extension TitleView {
-    var titleSize: CGFloat { digitsSize * .titleToDigitsRatio }
-
-    var isTitleNeeding: Bool { !settings.title.isHidden && !settings.title.text.isEmpty }
-
-    var formattedMessage: String {
-        let string = settings.title.text.uppercased()
-        let words = string.components(separatedBy: " ")
-        let separator = string.count <= 30 ? "  " : "   "
-        return words.joined(separator: separator)
     }
 }
 
 #if DEBUG
 #Preview {
-    TitleView(settings: SaverSettings.preview, digitsSize: 200)
-        .frame(width: 500, height: 300)
+    TitleView(
+        element: .init(
+            text: UIModel.formattedTitle(SaverSettings.preview.title),
+            size: 200 * .titleToDigitsRatio,
+            color: UIModel.RenderSettings(.preview).textsColor,
+            weight: .thin
+        )
+    )
+    .frame(width: 500, height: 300)
 }
 #endif
