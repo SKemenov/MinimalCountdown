@@ -13,21 +13,31 @@ struct CountdownWindow: View {
     var isPreview: Bool = false
 
     var body: some View {
+        let render = UIModel.RenderSettings(settings)
+        let titleText = UIModel.formattedTitle(settings.title)
+
         GeometryReader { geo in
             let digitsSize = geo.size.width.digitsSize(isPreview: isPreview)
-            let spacing = geo.size.width * .elementsSpacingRatio
 
             ZStack {
                 settings.theme.background.color
                     .ignoresSafeArea()
 
                 VStack(spacing: .zero) {
-                    TitleView(settings: settings, digitsSize: digitsSize)
+                    TitleView(
+                        element: .init(
+                            text: titleText,
+                            size: digitsSize * .titleToDigitsRatio,
+                            color: render.textsColor,
+                            weight: .thin
+                        )
+                    )
                     CountdownView(
                         now: now,
                         settings: settings,
+                        render: render,
                         digitsSize: digitsSize,
-                        spacing: spacing
+                        spacing: geo.size.width * .elementsSpacingRatio
                     )
                 }
                 .frame(width: geo.size.width, height: geo.size.height)

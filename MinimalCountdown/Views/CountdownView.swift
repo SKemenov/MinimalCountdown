@@ -10,6 +10,7 @@ import SwiftUI
 struct CountdownView: View {
     let now: Date
     let settings: SaverSettings
+    let render: UIModel.RenderSettings
     let digitsSize: CGFloat
     let spacing: CGFloat
 
@@ -17,14 +18,12 @@ struct CountdownView: View {
         HStack(alignment: .top, spacing: spacing) {
             ForEach(visibleElements) { style in
                 ElementView(
-                    digits: digits(for: style),
-                    label: style.label,
-                    size: digitsSize,
-                    isLabelHidden: settings.appearance.isLabelHidden,
-                    digitsColor: settings.theme.digitsColor,
-                    textsColor: settings.theme.textsColor,
-                    digitsWeight: settings.typography.weight.swiftUIWeight,
-                    digitsDesign: settings.typography.isRounded ? .rounded : .default
+                    element: .init(
+                        digits: digits(for: style),
+                        label: style.label,
+                        size: digitsSize,
+                        render: render
+                    )
                 )
             }
         }
@@ -56,6 +55,7 @@ private extension CountdownView {
     CountdownView(
         now: Date(),
         settings: SaverSettings.default,
+        render: .init(.default),
         digitsSize: windowWidth.digitsSize(isPreview: false),
         spacing: windowWidth * .elementsSpacingRatio
     )

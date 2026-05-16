@@ -5,7 +5,7 @@
 //  Created by Sergey Kemenov
 //
 
-import SwiftUI
+import Foundation
 
 struct Theme: Codable, Equatable, Hashable {
     var accent: AccentColor
@@ -13,9 +13,4 @@ struct Theme: Codable, Equatable, Hashable {
     var brightness: Brightness
     var effect: EffectStyle
     var effectColor: AccentColor
-}
-
-extension Theme {
-    var digitsColor: Color { accent.color.opacity(brightness.digitsOpacity) }
-    var textsColor: Color  { accent.color.opacity(brightness.textsOpacity)  }
 }
