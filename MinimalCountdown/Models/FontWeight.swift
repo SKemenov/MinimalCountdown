@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum FontWeight: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
+enum FontWeight: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable, Comparable {
     case ultraLight = 0, thin, light, regular, medium, semibold, bold, heavy, black
 
     // safe and un-optional, defaults to .ultraLight
@@ -18,6 +18,10 @@ enum FontWeight: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, H
 
 extension FontWeight {
     var id: Self { self }
+
+    static func < (lhs: FontWeight, rhs: FontWeight) -> Bool {
+        lhs.rawValue < rhs.rawValue
+    }
 
     var swiftUIWeight: Font.Weight {
         switch self {

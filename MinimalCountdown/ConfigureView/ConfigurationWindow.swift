@@ -95,6 +95,27 @@ private extension ConfigurationWindow {
         Section(Resources.Theme.title) {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
+
+            Picker(selection: $settings.theme.effect) {
+                ForEach(EffectStyle.allCases) { effect in
+                    Label(effect.label, systemImage: effect.icon).tag(effect)
+                }
+            } label: {
+                Text(Resources.Theme.effect)
+                Text(Resources.Theme.effectHint)
+                    .subtitleFont
+            }
+            .help(Resources.Theme.effectHint)
+
+            if settings.theme.effect == .shadow {
+                Picker(selection: $settings.theme.effectColor) {
+                    ForEach(AccentColor.allCases) { color in
+                        showColor(color).tag(color)
+                    }
+                } label: {
+                    Text(Resources.Theme.effectColor)
+                }
+            }
         }
     }
 
@@ -108,6 +129,10 @@ private extension ConfigurationWindow {
                 Text(Resources.Font.weight)
                 Text(Resources.Font.weightHint)
                     .subtitleFont
+                if let weightWarning {
+                    Text(weightWarning)
+                        .subtitleFont
+                }
             }
             .help(Resources.Font.weightHint)
 
@@ -115,6 +140,10 @@ private extension ConfigurationWindow {
                 Text(Resources.Font.rounded)
                 Text(Resources.Font.roundedHint)
                     .subtitleFont
+                if let roundedWarning {
+                    Text(roundedWarning)
+                        .subtitleFont
+                }
             }
             .help(Resources.Font.roundedHint)
         }
@@ -155,6 +184,33 @@ private extension ConfigurationWindow {
             .buttonStyle(.borderedProminent)
             .padding()
         }
+    }
+
+    /// Effect-driven font warnings, shown on the Font controls the user would adjust.
+    var weightWarning: String? {
+        let weight = settings.typography.weight
+        if settings.theme.effect == .shadow, weight >= .thin {
+            return Resources.Theme.shadowWeightWarning
+        }
+        if settings.theme.effect == .innerShadow, weight < .regular {
+            return Resources.Theme.innerShadowWeightWarning
+        }
+        return nil
+    }
+
+    var roundedWarning: String? {
+        settings.theme.effect == .blur && !settings.typography.isRounded
+            ? Resources.Theme.blurRoundedWarning
+            : nil
+    }
+
+    /// `● Name` row for a color Picker. An AttributedString keeps the dot's color in the
+    /// pop-up menu (a Label/Image icon renders monochrome there); the name stays default-colored.
+    func showColor(_ option: any ColorExtendable) -> some View {
+        var row = AttributedString("●  ")
+        row.foregroundColor = option.color
+        row.append(AttributedString(option.name))
+        return Text(row)
     }
 
     func prepareForDisplay() {
