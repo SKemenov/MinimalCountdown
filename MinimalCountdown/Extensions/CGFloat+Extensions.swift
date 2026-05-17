@@ -57,6 +57,21 @@ extension CGFloat {
     static let titleToDigitsRatio:  CGFloat = 1.0 / 4.0
     /// Inter-element spacing as a fraction of window width.
     static let elementsSpacingRatio: CGFloat = 0.04
+
+    // MARK: - Effect radii (Phase 9) — fractions of the digit font size
+
+    /// Glow (shadow / backlight) — tight core layer, stacked twice for density.
+    static let glowCoreRatio: CGFloat = 0.035
+    /// Glow (shadow / backlight) — wider spread layer.
+    static let glowSpreadRatio: CGFloat = 0.06
+    /// Blur effect — blur radius applied to the digits.
+    static let blurRatio: CGFloat = 0.06
+    /// Blur effect — tight glow core layer.
+    static let blurGlowCoreRatio: CGFloat = 0.08
+    /// Blur effect — wider glow spread layer.
+    static let blurGlowSpreadRatio: CGFloat = 0.13
+    /// Inner shadow (innerShadow) — layer radius, stacked three times.
+    static let innerShadowRatio: CGFloat = 0.02
 }
 
 // MARK: - Private properties
