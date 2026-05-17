@@ -13,8 +13,10 @@ struct ElementView: View {
     var body: some View {
         VStack(spacing: .zero) {
             TextElementView(element: digitElement)
+                .digitEffect(element.render, size: element.size)
             if let labelElement {
                 TextElementView(element: labelElement)
+                    .foregroundStyle(labelElement.color)
             }
         }
     }
@@ -32,8 +34,7 @@ private extension ElementView {
     }
 
     var labelElement: UIModel.TextElement? {
-        guard !element.render.isLabelHidden else { return nil }
-        return .init(
+        element.render.isLabelHidden ? nil : .init(
             text: element.label,
             size: element.size * .labelsToDigitsRatio,
             color: element.render.textsColor
