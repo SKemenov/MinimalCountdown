@@ -26,18 +26,18 @@ extension View {
 
             case .glow:
                 foregroundStyle(render.digitsColor)
-                    .glow(render.effectGlow, size: size)
+                    .glow(render.effectGlowColor, size: size)
 
             case .backlight:
                 foregroundStyle(Color.black)
-                    .glow(render.effectGlow, size: size)
+                    .glow(render.effectGlowColor, size: size)
 
             case .blur:
                 foregroundStyle(render.digitsColor)
-                    .blurGlow(render.effectGlow, size: size)
+                    .blurGlow(render.effectGlowColor, size: size)
 
             case .innerGlow:
-                foregroundStyle(innerGlow(render.effectGlow, size: size))
+                foregroundStyle(innerGlow(render.effectGlowColor, size: size))
         }
     }
 

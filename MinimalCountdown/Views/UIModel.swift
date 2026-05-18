@@ -15,7 +15,7 @@ enum UIModel {
         let digitsDesign: Font.Design
         let isLabelHidden: Bool
         let effect: EffectStyle
-        let effectGlow: Color
+        let effectGlowColor: Color
 
         init(_ settings: SaverSettings) {
             let theme = settings.theme
@@ -25,8 +25,9 @@ enum UIModel {
             digitsDesign = settings.typography.isRounded ? .rounded : .default
             isLabelHidden = settings.appearance.isLabelHidden
             effect = theme.effect
-            // Glow at full strength (no brightness dim): effectColor for glow, accent otherwise.
-            effectGlow = (theme.effect == .glow ? theme.effectColor : theme.accent).color
+            // Glow dimmed by brightness, matching the digit fill: effectColor for glow, accent otherwise.
+            effectGlowColor = (theme.effect == .glow ? theme.effectColor : theme.accent)
+                .color.opacity(theme.brightness.digitsOpacity)
         }
     }
 
