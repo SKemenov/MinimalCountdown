@@ -98,7 +98,7 @@ private extension ConfigurationWindow {
 
             Picker(selection: $settings.theme.effect) {
                 ForEach(EffectStyle.allCases) { effect in
-                    Label(effect.label, systemImage: effect.icon).tag(effect)
+                    Text(effect.label).tag(effect)
                 }
             } label: {
                 Text(Resources.Theme.effect)
