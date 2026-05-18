@@ -51,27 +51,29 @@ extension CGFloat {
         self / (.elementsWithSpaces - (isPreview ? 1 : 0))
     }
 
-    /// Label text size relative to the digits baseline.
+    /// Label text size relative to the digits baseline. CGFloat = 1.0 / 5.0
     static let labelsToDigitsRatio: CGFloat = 1.0 / 5.0
-    /// Title text size relative to the digits baseline.
-    static let titleToDigitsRatio:  CGFloat = 1.0 / 4.0
-    /// Inter-element spacing as a fraction of window width.
+    /// Title text size relative to the digits baseline. CGFloat = 1.0 / 4.0
+    static let titleToDigitsRatio: CGFloat = 1.0 / 4.0
+    /// Inter-element spacing as a fraction of window width. CGFloat = 0.04
     static let elementsSpacingRatio: CGFloat = 0.04
 
     // MARK: - Effect radii (Phase 9) — fractions of the digit font size
 
-    /// Glow (shadow / backlight) — tight core layer, stacked twice for density.
-    static let glowCoreRatio: CGFloat = 0.035
-    /// Glow (shadow / backlight) — wider spread layer.
+    /// Glow (shadow / backlight) — tight core layer, stacked twice for density. CGFloat = 0.035
+    static let glowCoreRatio: CGFloat = 0.015
+    /// Glow (shadow / backlight) — wider spread layer. CGFloat = 0.06
     static let glowSpreadRatio: CGFloat = 0.06
-    /// Blur effect — blur radius applied to the digits.
-    static let blurRatio: CGFloat = 0.06
-    /// Blur effect — tight glow core layer.
-    static let blurGlowCoreRatio: CGFloat = 0.08
-    /// Blur effect — wider glow spread layer.
-    static let blurGlowSpreadRatio: CGFloat = 0.13
-    /// Inner shadow (innerShadow) — layer radius, stacked three times.
-    static let innerShadowRatio: CGFloat = 0.02
+    /// Blur effect — blur radius applied to the digits. CGFloat = 0.06
+    static let blurRatio: CGFloat = 0.03
+//    /// Blur effect — tight glow core layer. CGFloat = 0.08
+//    static let blurGlowCoreRatio: CGFloat = 0.08
+//    /// Blur effect — wider glow spread layer. CGFloat = 0.13
+//    static let blurGlowSpreadRatio: CGFloat = 0.13
+    /// Inner shadow (innerShadow) — layer radius. CGFloat = 0.01
+    static let innerShadowRatio: CGFloat = 0.01
+    /// Inner shadow (innerShadow) — wider spread layer. CGFloat = 0.03
+    static let innerShadowSpreadRatio: CGFloat = 0.02
 }
 
 // MARK: - Private properties

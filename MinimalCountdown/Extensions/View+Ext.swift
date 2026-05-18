@@ -23,36 +23,52 @@ extension View {
         switch render.effect {
             case .none:
                 foregroundStyle(render.digitsColor)
+
             case .shadow:
                 foregroundStyle(render.digitsColor)
                     .glow(render.effectGlow, size: size)
+
             case .backlight:
                 foregroundStyle(Color.black)
                     .glow(render.effectGlow, size: size)
+
             case .blur:
                 foregroundStyle(render.digitsColor)
-                    .blur(radius: size * .blurRatio)
                     .blurGlow(render.effectGlow, size: size)
+
             case .innerShadow:
-                foregroundStyle(
-                    Color.black
-                        .shadow(.inner(color: render.effectGlow, radius: size * .innerShadowRatio))
-                        .shadow(.inner(color: render.effectGlow, radius: size * .innerShadowRatio))
-                        .shadow(.inner(color: render.effectGlow, radius: size * .innerShadowRatio))
-                )
+                foregroundStyle(innerGlow(render.effectGlow, size: size))
         }
     }
 
-    /// Dense, compressed colored glow — two tight core layers + a wider spread.
+    /// Dense, compressed colored glow — few tight core layers + a wider spread.
     private func glow(_ color: Color, size: CGFloat) -> some View {
-        shadow(color: color, radius: size * .glowCoreRatio)
+        self
+            .shadow(color: color, radius: size * .glowCoreRatio)
+            .shadow(color: color, radius: size * .glowCoreRatio)
+            .shadow(color: color, radius: size * .glowCoreRatio)
             .shadow(color: color, radius: size * .glowCoreRatio)
             .shadow(color: color, radius: size * .glowSpreadRatio)
     }
 
     /// Wider glow used behind blurred digits.
     private func blurGlow(_ color: Color, size: CGFloat) -> some View {
-        shadow(color: color, radius: size * .blurGlowCoreRatio)
-            .shadow(color: color, radius: size * .blurGlowSpreadRatio)
+        self
+            .blur(radius: size * .blurRatio)
+            .shadow(color: color, radius: size * .glowCoreRatio)
+            .shadow(color: color, radius: size * .glowSpreadRatio)
+    }
+
+    /// Sharp edges with inner glow.
+    private func innerGlow(_ color: Color, size: CGFloat) -> some ShapeStyle {
+        Color.black
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowSpreadRatio))
+            .shadow(.inner(color: color, radius: size * .innerShadowSpreadRatio))
     }
 }
