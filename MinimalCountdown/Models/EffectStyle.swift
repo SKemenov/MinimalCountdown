@@ -8,7 +8,7 @@
 import Foundation
 
 enum EffectStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
-    case none = 0, shadow, innerShadow, backlight, blur
+    case none = 0, glow, innerGlow, backlight, blur
 
     // safe and un-optional, defaults to .none
     init(_ rawValue: Int) {
@@ -20,15 +20,15 @@ extension EffectStyle {
     var id: Self { self }
 
     var label: String {
-        (self == .innerShadow ? "Inner Shadow" : String(describing: self)).capitalized
+        (self == .innerGlow ? "Inner Glow" : String(describing: self)).capitalized
     }
 
     /// SF Symbol for the Effect picker rows — easy to swap.
     var icon: String {
         switch self {
             case .none: "nosign"
-            case .shadow: "circle.dotted"
-            case .innerShadow: "circle.inset.filled"
+            case .glow: "circle.dotted"
+            case .innerGlow: "circle.inset.filled"
             case .backlight: "sun.max.fill"
             case .blur: "drop.fill"
         }

@@ -107,7 +107,7 @@ private extension ConfigurationWindow {
             }
             .help(Resources.Theme.effectHint)
 
-            if settings.theme.effect == .shadow {
+            if settings.theme.effect == .glow {
                 Picker(selection: $settings.theme.effectColor) {
                     ForEach(AccentColor.allCases) { color in
                         showColor(color).tag(color)
@@ -189,11 +189,11 @@ private extension ConfigurationWindow {
     /// Effect-driven font warnings, shown on the Font controls the user would adjust.
     var weightWarning: String? {
         let weight = settings.typography.weight
-        if settings.theme.effect == .shadow, weight >= .thin {
-            return Resources.Theme.shadowWeightWarning
+        if settings.theme.effect == .glow, weight >= .bold {
+            return Resources.Theme.glowWeightWarning
         }
-        if settings.theme.effect == .innerShadow, weight < .regular {
-            return Resources.Theme.innerShadowWeightWarning
+        if settings.theme.effect == .innerGlow, weight < .regular {
+            return Resources.Theme.innerGlowWeightWarning
         }
         return nil
     }

@@ -15,16 +15,16 @@ extension View {
             .multilineTextAlignment(.leading)
     }
 
-    /// Applies the digit `EffectStyle` from `RenderSettings`: fill + glow / blur / inner shadow.
+    /// Applies the digit `EffectStyle` from `RenderSettings`: fill + glow / blur / inner glow.
     /// Digits only — the parent owns `foregroundStyle` so each effect fully controls the fill.
-    /// `backlight` and `innerShadow` always fill with black so the digit body reads on any background.
+    /// `backlight` and `innerGlow` always fill with black so the digit body reads on any background.
     @ViewBuilder
     func digitEffect(_ render: UIModel.RenderSettings, size: CGFloat) -> some View {
         switch render.effect {
             case .none:
                 foregroundStyle(render.digitsColor)
 
-            case .shadow:
+            case .glow:
                 foregroundStyle(render.digitsColor)
                     .glow(render.effectGlow, size: size)
 
@@ -36,7 +36,7 @@ extension View {
                 foregroundStyle(render.digitsColor)
                     .blurGlow(render.effectGlow, size: size)
 
-            case .innerShadow:
+            case .innerGlow:
                 foregroundStyle(innerGlow(render.effectGlow, size: size))
         }
     }
@@ -62,13 +62,13 @@ extension View {
     /// Sharp edges with inner glow.
     private func innerGlow(_ color: Color, size: CGFloat) -> some ShapeStyle {
         Color.black
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowSpreadRatio))
-            .shadow(.inner(color: color, radius: size * .innerShadowSpreadRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowSpreadRatio))
+            .shadow(.inner(color: color, radius: size * .innerGlowSpreadRatio))
     }
 }

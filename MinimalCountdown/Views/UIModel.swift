@@ -25,8 +25,8 @@ enum UIModel {
             digitsDesign = settings.typography.isRounded ? .rounded : .default
             isLabelHidden = settings.appearance.isLabelHidden
             effect = theme.effect
-            // Glow at full strength (no brightness dim): effectColor for shadow, accent otherwise.
-            effectGlow = (theme.effect == .shadow ? theme.effectColor : theme.accent).color
+            // Glow at full strength (no brightness dim): effectColor for glow, accent otherwise.
+            effectGlow = (theme.effect == .glow ? theme.effectColor : theme.accent).color
         }
     }
 
