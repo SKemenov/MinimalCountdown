@@ -11,7 +11,6 @@ import Foundation
 enum Resources {
     enum Appearance {
         static let title = "Appearance"
-        static let style = "Style"
         static let hideLabels = "Hide labels"
         static let hideLabelsHint = "Show only digits, no DAYS / HOURS / etc."
         static let previewHint = "Close this window and click Preview to see all the changes in detail in full screen mode."

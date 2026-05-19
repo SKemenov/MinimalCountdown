@@ -35,12 +35,8 @@ extension CGFloat {
     enum Sizes {
         /// CGFloat = 512 for Settings window width
         static let settingsWidth: CGFloat = 512
-        /// CGFloat = 72 for each appearance width
-        static let appearanceWidth: CGFloat = 72
-        /// CGFloat = 40 for each appearance height
-        static let appearanceHeight: CGFloat = 40
-        /// CGFloat = 24 extra preview width for the tile-style appearance picker
-        static let appearanceTileExtraWidth: CGFloat = 24
+        /// CGFloat = 36 for each appearance tile height
+        static let appearanceHeight: CGFloat = 36
         /// CGFloat = 20 for color selector's icons
         static let colorSelector: CGFloat = 20
     }

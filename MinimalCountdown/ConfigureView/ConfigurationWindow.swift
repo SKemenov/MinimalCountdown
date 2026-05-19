@@ -50,7 +50,7 @@ struct ConfigurationWindow: View {
 private extension ConfigurationWindow {
     var appearanceSection: some View {
         Section(Resources.Appearance.title) {
-            AppearancePicker(Resources.Appearance.style, selection: $settings.appearance, in: settings)
+            AppearancePicker(selection: $settings.appearance, in: settings)
 
             Toggle(isOn: $settings.appearance.isLabelHidden) {
                 Text(Resources.Appearance.hideLabels)
