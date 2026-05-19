@@ -9,102 +9,105 @@ import SwiftUI
 
 struct AppearancePicker: View {
     typealias StyleType = AppearanceStyle
-    private let titleResource: String
     private let contentStyles: [StyleType]
     private let settings: SaverSettings
     @Binding var selection: Appearance
     @State private var pickerNow: Date = Date()
+    @State private var markedStyle: StyleType
 
     init(
-        _ titleResource: String,
         selection: Binding<Appearance>,
         in settings: SaverSettings,
         for contentStyles: [StyleType] = StyleType.allCases
     ) {
-        self.titleResource = titleResource
         self._selection = selection
         self.settings = settings
         self.contentStyles = contentStyles
+        self.markedStyle = selection.wrappedValue.style
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: .Spacing.xSmall) {
-            Text(titleResource)
+        HStack(alignment: .top, spacing: .zero) {
+            ForEach(contentStyles) { style in
+                VStack(alignment: .center, spacing: .Spacing.xSmall) {
+                    Button(
+                        action: { changeSelection(to: style) },
+                        label: { createAppearance(for: style) }
+                    )
+                    .buttonStyle(.plain)
+                    .padding(.horizontal, .Spacing.xxSmall)
 
-            HStack(alignment: .top, spacing: .zero) {
-                pickerLabel
-                pickerButtons
+                    showLabel(for: style)
+                }
+                .contentShape(Rectangle())
+                .onHover { markedStyle = $0 ? style : selection.style }
             }
         }
+        .onAppear { withAnimation(.none) { markedStyle = selection.style } }
     }
 }
 
 private extension AppearancePicker {
-    var pickerLabel: some View {
-        VStack(alignment: .leading, spacing: .Spacing.xxSmall) {
-            ForEach(contentStyles) { style in
-                Text(isActive(style) ? style.appearanceActive : style.appearanceInactive)
-                    .font(.caption)
-                    .foregroundStyle(isActive(style) ? .secondary : .tertiary)
-            }
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
-
-    var pickerButtons: some View {
-        ForEach(contentStyles) { current in
-            Button(
-                action: { changeSelection(to: current) },
-                label: { createAppearance(for: current) }
-            )
-            .buttonStyle(.plain)
-            .padding(.horizontal, .Spacing.xxSmall)
-            .contentShape(Rectangle())
-        }
-    }
-
-    func isActive(_ style: StyleType) -> Bool {
-        style <= selection.style
+    func isHover(_ style: StyleType) -> Bool {
+        style <= markedStyle
     }
 
     func changeSelection(to selected: StyleType) {
-        withAnimation { selection.style = selected }
+        selection.style = selected
     }
 
     func createAppearance(for style: StyleType) -> some View {
-        ZStack(alignment: .center) {
+        var styleSettings = settings
+        styleSettings.appearance.style = style
+
+        return ZStack(alignment: .center) {
             showSelection(for: style)
-            showCountdownView(for: style)
+            showCountdownView(settings: styleSettings)
         }
+    }
+
+    func showLabel(for style: StyleType) -> some View {
+        Text(isHover(style) ? style.appearanceActive : style.appearanceInactive)
+            .font(.callout)
+            .fontWeight(isHover(style) ? .medium : .regular)
+            .foregroundStyle(isHover(style) ? .primary : .secondary)
     }
 
     func showSelection(for style: StyleType) -> some View {
         RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(style == selection.style ? Color.accentColor : .clear, lineWidth: .Border.medium)
-            .frame(width: .Sizes.appearanceWidth + .Spacing.xLarge, height: .Sizes.appearanceHeight + .Spacing.xLarge)
+            .stroke(
+                selectBorderColor(for: style),
+                lineWidth: .Border.medium
+            )
+            .frame(height: .Sizes.appearanceHeight + .Spacing.medium)
     }
 
-    func showCountdownView(for style: StyleType) -> some View {
+    func selectBorderColor(for style: StyleType) -> Color {
+        if style == selection.style {
+            return Color.accentColor
+        } else if style == markedStyle {
+            return .secondary
+        } else {
+            return .clear
+        }
+    }
+
+    func showCountdownView(settings: SaverSettings) -> some View {
         CountdownWindow(
             now: pickerNow,
-            settings: makeSettings(for: style),
+            settings: settings,
             isPreview: true
         )
-        .frame(width: .Sizes.appearanceWidth, height: .Sizes.appearanceHeight)
         .padding(.Spacing.small)
+        .frame(height: .Sizes.appearanceHeight)
         .background(settings.theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
-    }
-
-    func makeSettings(for style: StyleType) -> SaverSettings {
-        var appearanceSettings = settings
-        appearanceSettings.appearance.style = style
-        return appearanceSettings
+        .padding(.horizontal, .Spacing.xSmall)
     }
 }
 
 #Preview("Dynamic") {
     @State @Previewable var settings = SaverSettings.default
-    AppearancePicker("Appearance", selection: $settings.appearance, in: settings)
+    AppearancePicker(selection: $settings.appearance, in: settings)
         .padding(.Spacing.medium)
         .background(.quaternary, in: RoundedRectangle(cornerRadius: .Spacing.medium))
         .padding(.Spacing.medium)
