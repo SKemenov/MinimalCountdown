@@ -39,6 +39,8 @@ extension CGFloat {
         static let appearanceWidth: CGFloat = 72
         /// CGFloat = 40 for each appearance height
         static let appearanceHeight: CGFloat = 40
+        /// CGFloat = 24 extra preview width for the tile-style appearance picker
+        static let appearanceTileExtraWidth: CGFloat = 24
         /// CGFloat = 20 for color selector's icons
         static let colorSelector: CGFloat = 20
     }
