@@ -31,6 +31,12 @@ enum Resources {
         static let title = "Theme"
         static let color = "Color"
         static let brightness = "Brightness"
+        static let effect = "Effect"
+        static let effectHint = "Adds a glow, inner glow, backlight, or blur to the digits."
+        static let effectColor = "Effect Color"
+        static let glowWeightWarning = "⚠️ Looks better at lighter weights."
+        static let innerGlowWeightWarning = "⚠️ Looks better at Regular weight or higher."
+        static let blurRoundedWarning = "⚠️ Looks better with Rounded enabled."
     }
 
     enum Font {

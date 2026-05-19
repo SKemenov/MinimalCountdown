@@ -8,7 +8,7 @@
 import Foundation
 
 enum EffectStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
-    case none = 0, shadow, innerShadow, backlight, blur
+    case none = 0, glow, innerGlow, backlight, blur
 
     // safe and un-optional, defaults to .none
     init(_ rawValue: Int) {
@@ -18,4 +18,8 @@ enum EffectStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, 
 
 extension EffectStyle {
     var id: Self { self }
+
+    var label: String {
+        (self == .innerGlow ? "Inner Glow" : String(describing: self)).capitalized
+    }
 }

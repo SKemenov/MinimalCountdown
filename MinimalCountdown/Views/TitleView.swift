@@ -13,6 +13,7 @@ struct TitleView: View {
     var body: some View {
         if !element.text.isEmpty {
             TextElementView(element: element)
+                .foregroundStyle(element.color)
         }
     }
 }
