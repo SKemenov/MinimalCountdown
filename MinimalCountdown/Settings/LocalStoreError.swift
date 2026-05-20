@@ -23,5 +23,5 @@ enum LocalStoreError: Error, LocalizedError {
         }
     }
 
-    var errorDescription: String? { Resources.Errors.saving }
+    var errorDescription: String? { String(localized: Resources.Errors.saving) }
 }

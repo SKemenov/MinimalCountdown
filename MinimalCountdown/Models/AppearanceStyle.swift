@@ -26,7 +26,7 @@ extension AppearanceStyle {
     }
 
     /// Base word only — views own the presentation transform (`.textCase(.uppercase)` on-screen).
-    var label: String {
+    var label: LocalizedStringResource {
         switch self {
             case .days: Resources.Labels.AppearanceStyle.days
             case .hours: Resources.Labels.AppearanceStyle.hours

@@ -19,7 +19,7 @@ enum EffectStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, 
 extension EffectStyle {
     var id: Self { self }
 
-    var label: String {
+    var label: LocalizedStringResource {
         switch self {
             case .none: Resources.Labels.EffectStyle.none
             case .glow: Resources.Labels.EffectStyle.glow

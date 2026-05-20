@@ -37,7 +37,7 @@ extension FontWeight {
         }
     }
 
-    var label: String {
+    var label: LocalizedStringResource {
         switch self {
             case .ultraLight: Resources.Labels.FontWeight.ultraLight
             case .thin: Resources.Labels.FontWeight.thin

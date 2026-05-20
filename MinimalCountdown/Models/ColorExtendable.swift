@@ -8,7 +8,7 @@
 import SwiftUI
 
 protocol ColorExtendable: Identifiable, Equatable, Hashable {
-    var name: String { get }
+    var label: LocalizedStringResource { get }
     var color: Color { get }
     var id: Int { get }
 }
@@ -16,9 +16,5 @@ protocol ColorExtendable: Identifiable, Equatable, Hashable {
 extension ColorExtendable {
     public static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
-    }
-
-    var name: String {
-        String(describing: self).capitalized
     }
 }

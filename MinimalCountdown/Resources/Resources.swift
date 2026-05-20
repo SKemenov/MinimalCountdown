@@ -7,108 +7,147 @@
 
 import Foundation
 
-// MARK: - Localization properties
+private final class BundleToken {}
+
+extension LocalizedStringResource.BundleDescription {
+    /// Anchors `LocalizedStringResource` lookups to *this* bundle. Inside a `.saver`, `Bundle.main`
+    /// is the host app (System Settings), so the default `.main` resolution silently falls back to
+    /// the development-language key. `BundleToken` compiles into each target, so `.forClass` resolves
+    /// to the saver bundle in the saver and the app bundle in DevApp.
+    static let app = LocalizedStringResource.BundleDescription.forClass(BundleToken.self)
+}
+
+// MARK: - Localized UI strings
 enum Resources {
     /// Single source of truth for strings that used to be derived inline via `String(describing:)`.
-    /// Mirrors the model enums; `Phase 10` converts these to `LocalizedStringResource`.
+    /// Mirrors the model enums.
     enum Labels {
         enum AppearanceStyle {
-            static let days = "Days"
-            static let hours = "Hours"
-            static let minutes = "Minutes"
-            static let seconds = "Seconds"
+            static let days = LocalizedStringResource("Days", bundle: .app)
+            static let hours = LocalizedStringResource("Hours", bundle: .app)
+            static let minutes = LocalizedStringResource("Minutes", bundle: .app)
+            static let seconds = LocalizedStringResource("Seconds", bundle: .app)
         }
 
         enum Brightness {
-            static let low = "Low"
-            static let medium = "Medium"
-            static let high = "High"
+            static let low = LocalizedStringResource("Low", bundle: .app)
+            static let medium = LocalizedStringResource("Medium", bundle: .app)
+            static let high = LocalizedStringResource("High", bundle: .app)
         }
 
         enum FontWeight {
-            static let ultraLight = "Ultra Light"
-            static let thin = "Thin"
-            static let light = "Light"
-            static let regular = "Regular"
-            static let medium = "Medium"
-            static let semibold = "Semibold"
-            static let bold = "Bold"
-            static let heavy = "Heavy"
-            static let black = "Black"
+            static let ultraLight = LocalizedStringResource("Ultra Light", bundle: .app)
+            static let thin = LocalizedStringResource("Thin", bundle: .app)
+            static let light = LocalizedStringResource("Light", bundle: .app)
+            static let regular = LocalizedStringResource("Regular", bundle: .app)
+            static let medium = LocalizedStringResource("Medium", bundle: .app)
+            static let semibold = LocalizedStringResource("Semibold", bundle: .app)
+            static let bold = LocalizedStringResource("Bold", bundle: .app)
+            static let heavy = LocalizedStringResource("Heavy", bundle: .app)
+            static let black = LocalizedStringResource("Black", bundle: .app)
         }
 
         enum EffectStyle {
-            static let none = "None"
-            static let glow = "Glow"
-            static let innerGlow = "Inner Glow"
-            static let backlight = "Backlight"
-            static let blur = "Blur"
+            static let none = LocalizedStringResource("None", bundle: .app)
+            static let glow = LocalizedStringResource("Glow", bundle: .app)
+            static let innerGlow = LocalizedStringResource("Inner Glow", bundle: .app)
+            static let backlight = LocalizedStringResource("Backlight", bundle: .app)
+            static let blur = LocalizedStringResource("Blur", bundle: .app)
         }
 
         enum AccentColor {
-            static let white = "White"
-            static let red = "Red"
-            static let pink = "Pink"
-            static let orange = "Orange"
-            static let yellow = "Yellow"
-            static let green = "Green"
-            static let mint = "Mint"
-            static let cyan = "Cyan"
-            static let blue = "Blue"
-            static let indigo = "Indigo"
-            static let purple = "Purple"
+            static let white = LocalizedStringResource("White", bundle: .app)
+            static let red = LocalizedStringResource("Red", bundle: .app)
+            static let pink = LocalizedStringResource("Pink", bundle: .app)
+            static let orange = LocalizedStringResource("Orange", bundle: .app)
+            static let yellow = LocalizedStringResource("Yellow", bundle: .app)
+            static let green = LocalizedStringResource("Green", bundle: .app)
+            static let mint = LocalizedStringResource("Mint", bundle: .app)
+            static let cyan = LocalizedStringResource("Cyan", bundle: .app)
+            static let blue = LocalizedStringResource("Blue", bundle: .app)
+            static let indigo = LocalizedStringResource("Indigo", bundle: .app)
+            static let purple = LocalizedStringResource("Purple", bundle: .app)
+        }
+
+        enum BackgroundColor {
+            static let black = LocalizedStringResource("Black", bundle: .app)
+            static let white = LocalizedStringResource("White", bundle: .app)
         }
     }
 
     enum Appearance {
-        static let title = "Appearance"
-        static let hideLabels = "Hide labels"
-        static let hideLabelsHint = "Show only digits, no DAYS / HOURS / etc."
-        static let previewHint = "Close this window and click Preview to see all the changes in detail in full screen mode."
+        static let title = LocalizedStringResource("Appearance", bundle: .app)
+        static let hideLabels = LocalizedStringResource("Hide labels", bundle: .app)
+        static let hideLabelsHint = LocalizedStringResource("Show only digits, no DAYS / HOURS / etc.", bundle: .app)
+        static let previewHint = LocalizedStringResource(
+            "Close this window and click Preview to see all the changes in detail in full screen mode.",
+            bundle: .app
+        )
     }
 
     enum Date {
-        static let title = "Date"
-        static let day = "Day"
-        static let dayHint1 = "It can be any future date for Timer Mode or any past date for Stopwatch Mode."
-        static let dayHint2 = "The available range is two years from the current date."
-        static let dayHint3 = "When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up."
-        static let time = "Time"
-        static let timeHint = "By default it will be set to midnight"
+        static let title = LocalizedStringResource("Date", bundle: .app)
+        static let day = LocalizedStringResource("Day", bundle: .app)
+        static let dayHint1 = LocalizedStringResource(
+            "It can be any future date for Timer Mode or any past date for Stopwatch Mode.",
+            bundle: .app
+        )
+        static let dayHint2 = LocalizedStringResource(
+            "The available range is two years from the current date.",
+            bundle: .app
+        )
+        static let dayHint3 = LocalizedStringResource(
+            "When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up.",
+            bundle: .app
+        )
+        static let time = LocalizedStringResource("Time", bundle: .app)
+        static let timeHint = LocalizedStringResource("By default it will be set to midnight", bundle: .app)
     }
 
     enum Theme {
-        static let title = "Theme"
-        static let color = "Color"
-        static let brightness = "Brightness"
-        static let effect = "Effect"
-        static let effectHint = "Adds a glow, inner glow, backlight, or blur to the digits."
-        static let effectColor = "Effect Color"
-        static let glowWeightWarning = "⚠️ Looks better at lighter weights."
-        static let innerGlowWeightWarning = "⚠️ Looks better at Regular weight or higher."
-        static let blurRoundedWarning = "⚠️ Looks better with Rounded enabled."
+        static let title = LocalizedStringResource("Theme", bundle: .app)
+        static let color = LocalizedStringResource("Color", bundle: .app)
+        static let brightness = LocalizedStringResource("Brightness", bundle: .app)
+        static let effect = LocalizedStringResource("Effect", bundle: .app)
+        static let effectHint = LocalizedStringResource(
+            "Adds a glow, inner glow, backlight, or blur to the digits.",
+            bundle: .app
+        )
+        static let effectColor = LocalizedStringResource("Effect Color", bundle: .app)
+        static let glowWeightWarning = LocalizedStringResource("⚠️ Looks better at lighter weights.", bundle: .app)
+        static let innerGlowWeightWarning = LocalizedStringResource(
+            "⚠️ Looks better at Regular weight or higher.",
+            bundle: .app
+        )
+        static let blurRoundedWarning = LocalizedStringResource("⚠️ Looks better with Rounded enabled.", bundle: .app)
     }
 
     enum Font {
-        static let title = "Font"
-        static let weight = "Weight"
-        static let weightHint = "Sets the digit thickness from Ultra Light to Black."
-        static let rounded = "Rounded"
-        static let roundedHint = "Renders the digits with the SF Rounded design."
+        static let title = LocalizedStringResource("Font", bundle: .app)
+        static let weight = LocalizedStringResource("Weight", bundle: .app)
+        static let weightHint = LocalizedStringResource(
+            "Sets the digit thickness from Ultra Light to Black.",
+            bundle: .app
+        )
+        static let rounded = LocalizedStringResource("Rounded", bundle: .app)
+        static let roundedHint = LocalizedStringResource("Renders the digits with the SF Rounded design.", bundle: .app)
     }
 
     enum Title {
-        static let title = "Title"
-        static let messagePrompt = "Add your message here"
-        static let hideTitle = "Hide title"
-        static let hideTitleHint = "Even title is not empty"
+        static let title = LocalizedStringResource("Title", bundle: .app)
+        static let messagePrompt = LocalizedStringResource("Add your message here", bundle: .app)
+        static let hideTitle = LocalizedStringResource("Hide title", bundle: .app)
+        static let hideTitleHint = LocalizedStringResource("Even title is not empty", bundle: .app)
     }
 
     enum Errors {
-        static let saving = "Could not save settings. Try restarting, reinstalling the saver, or filing an issue."
+        static let saving = LocalizedStringResource(
+            "Could not save settings. Try restarting, reinstalling the saver, or filing an issue.",
+            bundle: .app
+        )
     }
 
     enum Buttons {
-        static let close = "Close"
+        static let close = LocalizedStringResource("Close", bundle: .app)
     }
 }

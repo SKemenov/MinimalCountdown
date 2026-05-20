@@ -33,7 +33,7 @@ extension AccentColor {
         }
     }
 
-    var name: String {
+    var label: LocalizedStringResource {
         switch self {
             case .white: Resources.Labels.AccentColor.white
             case .red: Resources.Labels.AccentColor.red

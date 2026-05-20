@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct BrightnessSlider: View {
-    private let titleResource: String
+    private let titleResource: LocalizedStringResource
     @Binding var selection: Brightness
 
-    init(_ titleResource: String, selection: Binding<Brightness>) {
+    init(_ titleResource: LocalizedStringResource, selection: Binding<Brightness>) {
         self.titleResource = titleResource
         self._selection = selection
     }

@@ -19,7 +19,7 @@ enum Brightness: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, H
 extension Brightness {
     var id: Self { self }
 
-    var label: String {
+    var label: LocalizedStringResource {
         switch self {
             case .low: Resources.Labels.Brightness.low
             case .medium: Resources.Labels.Brightness.medium
