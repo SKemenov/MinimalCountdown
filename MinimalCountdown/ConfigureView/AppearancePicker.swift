@@ -67,7 +67,7 @@ private extension AppearancePicker {
     }
 
     func showLabel(for style: StyleType) -> some View {
-        Text(isHover(style) ? style.appearanceActive : style.appearanceInactive)
+        Text(style.label)
             .font(.callout)
             .fontWeight(isHover(style) ? .medium : .regular)
             .foregroundStyle(isHover(style) ? .primary : .secondary)

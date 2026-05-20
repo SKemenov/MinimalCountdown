@@ -20,6 +20,12 @@ extension EffectStyle {
     var id: Self { self }
 
     var label: String {
-        (self == .innerGlow ? "Inner Glow" : String(describing: self)).capitalized
+        switch self {
+            case .none: Resources.Labels.EffectStyle.none
+            case .glow: Resources.Labels.EffectStyle.glow
+            case .innerGlow: Resources.Labels.EffectStyle.innerGlow
+            case .backlight: Resources.Labels.EffectStyle.backlight
+            case .blur: Resources.Labels.EffectStyle.blur
+        }
     }
 }

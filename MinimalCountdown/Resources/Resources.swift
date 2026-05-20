@@ -9,6 +9,57 @@ import Foundation
 
 // MARK: - Localization properties
 enum Resources {
+    /// Single source of truth for strings that used to be derived inline via `String(describing:)`.
+    /// Mirrors the model enums; `Phase 10` converts these to `LocalizedStringResource`.
+    enum Labels {
+        enum AppearanceStyle {
+            static let days = "Days"
+            static let hours = "Hours"
+            static let minutes = "Minutes"
+            static let seconds = "Seconds"
+        }
+
+        enum Brightness {
+            static let low = "Low"
+            static let medium = "Medium"
+            static let high = "High"
+        }
+
+        enum FontWeight {
+            static let ultraLight = "Ultra Light"
+            static let thin = "Thin"
+            static let light = "Light"
+            static let regular = "Regular"
+            static let medium = "Medium"
+            static let semibold = "Semibold"
+            static let bold = "Bold"
+            static let heavy = "Heavy"
+            static let black = "Black"
+        }
+
+        enum EffectStyle {
+            static let none = "None"
+            static let glow = "Glow"
+            static let innerGlow = "Inner Glow"
+            static let backlight = "Backlight"
+            static let blur = "Blur"
+        }
+
+        enum AccentColor {
+            static let white = "White"
+            static let red = "Red"
+            static let pink = "Pink"
+            static let orange = "Orange"
+            static let yellow = "Yellow"
+            static let green = "Green"
+            static let mint = "Mint"
+            static let cyan = "Cyan"
+            static let blue = "Blue"
+            static let indigo = "Indigo"
+            static let purple = "Purple"
+        }
+    }
+
     enum Appearance {
         static let title = "Appearance"
         static let hideLabels = "Hide labels"

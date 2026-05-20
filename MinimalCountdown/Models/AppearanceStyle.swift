@@ -25,17 +25,13 @@ extension AppearanceStyle {
         lhs.rawValue < rhs.rawValue
     }
 
+    /// Base word only — views own the presentation transform (`.textCase(.uppercase)` on-screen).
     var label: String {
-        String(describing: self).uppercased()
-    }
-
-    var appearanceActive: String {
-        (self == .days ? String(describing: self) : "+ " + String(describing: self))
-            .capitalized
-    }
-
-    var appearanceInactive: String {
-        (self == .days ? String(describing: self) : "   " + String(describing: self)) // triple spaces
-            .capitalized
+        switch self {
+            case .days: Resources.Labels.AppearanceStyle.days
+            case .hours: Resources.Labels.AppearanceStyle.hours
+            case .minutes: Resources.Labels.AppearanceStyle.minutes
+            case .seconds: Resources.Labels.AppearanceStyle.seconds
+        }
     }
 }

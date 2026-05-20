@@ -17,6 +17,7 @@ struct ElementView: View {
             if let labelElement {
                 TextElementView(element: labelElement)
                     .foregroundStyle(labelElement.color)
+                    .textCase(.uppercase)
             }
         }
     }

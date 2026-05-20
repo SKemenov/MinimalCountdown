@@ -33,5 +33,21 @@ extension AccentColor {
         }
     }
 
+    var name: String {
+        switch self {
+            case .white: Resources.Labels.AccentColor.white
+            case .red: Resources.Labels.AccentColor.red
+            case .pink: Resources.Labels.AccentColor.pink
+            case .orange: Resources.Labels.AccentColor.orange
+            case .yellow: Resources.Labels.AccentColor.yellow
+            case .green: Resources.Labels.AccentColor.green
+            case .mint: Resources.Labels.AccentColor.mint
+            case .cyan: Resources.Labels.AccentColor.cyan
+            case .blue: Resources.Labels.AccentColor.blue
+            case .indigo: Resources.Labels.AccentColor.indigo
+            case .purple: Resources.Labels.AccentColor.purple
+        }
+    }
+
     var id: Int { self.rawValue }
 }
