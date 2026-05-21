@@ -96,7 +96,8 @@ private extension ConfigurationWindow {
 
 
     var themeSection: some View {
-        Section {
+        let effects = EffectStyle.allCases.filter { $0 != .none }.map { String(localized: $0.label).lowercased() }
+        return Section {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
 
@@ -106,10 +107,13 @@ private extension ConfigurationWindow {
                 }
             } label: {
                 Text(Resources.Theme.effect)
-                Text(Resources.Theme.effectHint)
+                HStack(spacing: .Spacing.xxSmall) {
+                    Text(Resources.Theme.effectHint)
+                    Text(effects, format: .list(type: .or))
+                }
                     .subtitleFont
             }
-            .help(Text(Resources.Theme.effectHint))
+            .help("\(Text(Resources.Theme.effectHint)) \(Text(effects, format: .list(type: .or)))")
 
             if settings.theme.effect == .glow {
                 Picker(selection: $settings.theme.effectColor) {
@@ -159,7 +163,7 @@ private extension ConfigurationWindow {
 
     var titleSection: some View {
         Section {
-            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.messagePrompt))
+            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.titlePrompt))
 
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)

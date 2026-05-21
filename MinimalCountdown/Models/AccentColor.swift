@@ -35,17 +35,17 @@ extension AccentColor {
 
     var label: LocalizedStringResource {
         switch self {
-            case .white: Resources.Labels.AccentColor.white
-            case .red: Resources.Labels.AccentColor.red
-            case .pink: Resources.Labels.AccentColor.pink
-            case .orange: Resources.Labels.AccentColor.orange
-            case .yellow: Resources.Labels.AccentColor.yellow
-            case .green: Resources.Labels.AccentColor.green
-            case .mint: Resources.Labels.AccentColor.mint
-            case .cyan: Resources.Labels.AccentColor.cyan
-            case .blue: Resources.Labels.AccentColor.blue
-            case .indigo: Resources.Labels.AccentColor.indigo
-            case .purple: Resources.Labels.AccentColor.purple
+            case .white: Resources.Labels.ColorExtendable.white
+            case .red: Resources.Labels.ColorExtendable.red
+            case .pink: Resources.Labels.ColorExtendable.pink
+            case .orange: Resources.Labels.ColorExtendable.orange
+            case .yellow: Resources.Labels.ColorExtendable.yellow
+            case .green: Resources.Labels.ColorExtendable.green
+            case .mint: Resources.Labels.ColorExtendable.mint
+            case .cyan: Resources.Labels.ColorExtendable.cyan
+            case .blue: Resources.Labels.ColorExtendable.blue
+            case .indigo: Resources.Labels.ColorExtendable.indigo
+            case .purple: Resources.Labels.ColorExtendable.purple
         }
     }
 

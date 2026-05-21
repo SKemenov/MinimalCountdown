@@ -26,8 +26,8 @@ extension BackgroundColor {
 
     var label: LocalizedStringResource {
         switch self {
-            case .black: Resources.Labels.BackgroundColor.black
-            case .white: Resources.Labels.BackgroundColor.white
+            case .black: Resources.Labels.ColorExtendable.black
+            case .white: Resources.Labels.ColorExtendable.white
         }
     }
 
