@@ -51,6 +51,7 @@
 				Models/Typography.swift,
 				Resources/AppSettings.swift,
 				Resources/Assets.xcassets,
+				Resources/Localizable.xcstrings,
 				Resources/Resources.swift,
 				Settings/DefaultsLocalStore.swift,
 				Settings/FileLocalStore.swift,
@@ -326,6 +327,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
@@ -381,6 +383,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "Minimal Countdown";
 				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};

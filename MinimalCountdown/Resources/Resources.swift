@@ -35,16 +35,19 @@ enum Resources {
             static let high = LocalizedStringResource("High", bundle: .app)
         }
 
+        // Symbolic keys (with in-code `defaultValue` for the English source) so the weight labels
+        // don't share a catalog entry with Brightness ("Medium") or BackgroundColor ("Black") —
+        // their Russian forms differ (feminine, agreeing with "Толщина").
         enum FontWeight {
-            static let ultraLight = LocalizedStringResource("Ultra Light", bundle: .app)
-            static let thin = LocalizedStringResource("Thin", bundle: .app)
-            static let light = LocalizedStringResource("Light", bundle: .app)
-            static let regular = LocalizedStringResource("Regular", bundle: .app)
-            static let medium = LocalizedStringResource("Medium", bundle: .app)
-            static let semibold = LocalizedStringResource("Semibold", bundle: .app)
-            static let bold = LocalizedStringResource("Bold", bundle: .app)
-            static let heavy = LocalizedStringResource("Heavy", bundle: .app)
-            static let black = LocalizedStringResource("Black", bundle: .app)
+            static let ultraLight = LocalizedStringResource("Weight.ultraLight", defaultValue: "Ultra Light", bundle: .app)
+            static let thin = LocalizedStringResource("Weight.thin", defaultValue: "Thin", bundle: .app)
+            static let light = LocalizedStringResource("Weight.light", defaultValue: "Light", bundle: .app)
+            static let regular = LocalizedStringResource("Weight.regular", defaultValue: "Regular", bundle: .app)
+            static let medium = LocalizedStringResource("Weight.medium", defaultValue: "Medium", bundle: .app)
+            static let semibold = LocalizedStringResource("Weight.semibold", defaultValue: "Semibold", bundle: .app)
+            static let bold = LocalizedStringResource("Weight.bold", defaultValue: "Bold", bundle: .app)
+            static let heavy = LocalizedStringResource("Weight.heavy", defaultValue: "Heavy", bundle: .app)
+            static let black = LocalizedStringResource("Weight.black", defaultValue: "Black", bundle: .app)
         }
 
         enum EffectStyle {
@@ -115,14 +118,14 @@ enum Resources {
         static let blurRoundedWarning = LocalizedStringResource("⚠️ Looks better with Rounded enabled.", bundle: .app)
     }
 
-    enum Font {
-        static let title = LocalizedStringResource("Font", bundle: .app)
+    enum Digits {
+        static let title = LocalizedStringResource("Digits", bundle: .app)
         static let weight = LocalizedStringResource("Weight", bundle: .app)
         static let weightHint = LocalizedStringResource(
             "Sets the digit thickness from Ultra Light to Black.",
             bundle: .app
         )
-        static let rounded = LocalizedStringResource("Rounded", bundle: .app)
+        static let rounded = LocalizedStringResource("Round digits", bundle: .app)
         static let roundedHint = LocalizedStringResource("Renders the digits with the Rounded design.", bundle: .app)
     }
 

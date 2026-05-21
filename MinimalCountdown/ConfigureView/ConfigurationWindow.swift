@@ -30,7 +30,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                fontSection
+                digitsSection
                 titleSection
             }
             .formStyle(.grouped)
@@ -85,6 +85,7 @@ private extension ConfigurationWindow {
                     Text(Resources.Date.dayHint1)
                     Text(Resources.Date.dayHint2)
                     Text(Resources.Date.dayHint3)
+                        .lineLimit(5)
                 }
                 .subtitleFont
             }
@@ -96,8 +97,7 @@ private extension ConfigurationWindow {
 
 
     var themeSection: some View {
-        let effects = EffectStyle.allCases.filter { $0 != .none }.map { String(localized: $0.label).lowercased() }
-        return Section {
+        Section {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
 
@@ -107,13 +107,10 @@ private extension ConfigurationWindow {
                 }
             } label: {
                 Text(Resources.Theme.effect)
-                HStack(spacing: .Spacing.xxSmall) {
-                    Text(Resources.Theme.effectHint)
-                    Text(effects, format: .list(type: .or))
-                }
+                Text(UIModel.effectsHint)
                     .subtitleFont
             }
-            .help("\(Text(Resources.Theme.effectHint)) \(Text(effects, format: .list(type: .or)))")
+            .help(UIModel.effectsHint)
 
             if settings.theme.effect == .glow {
                 Picker(selection: $settings.theme.effectColor) {
@@ -129,35 +126,35 @@ private extension ConfigurationWindow {
         }
     }
 
-    var fontSection: some View {
+    var digitsSection: some View {
         Section {
             Picker(selection: $settings.typography.weight) {
                 ForEach(FontWeight.allCases) { weight in
                     Text(weight.label).tag(weight)
                 }
             } label: {
-                Text(Resources.Font.weight)
-                Text(Resources.Font.weightHint)
+                Text(Resources.Digits.weight)
+                Text(Resources.Digits.weightHint)
                     .subtitleFont
                 if let weightWarning {
                     Text(weightWarning)
                         .subtitleFont
                 }
             }
-            .help(Text(Resources.Font.weightHint))
+            .help(Text(Resources.Digits.weightHint))
 
             Toggle(isOn: $settings.typography.isRounded) {
-                Text(Resources.Font.rounded)
-                Text(Resources.Font.roundedHint)
+                Text(Resources.Digits.rounded)
+                Text(Resources.Digits.roundedHint)
                     .subtitleFont
                 if let roundedWarning {
                     Text(roundedWarning)
                         .subtitleFont
                 }
             }
-            .help(Text(Resources.Font.roundedHint))
+            .help(Text(Resources.Digits.roundedHint))
         } header: {
-            Text(Resources.Font.title)
+            Text(Resources.Digits.title)
         }
     }
 
