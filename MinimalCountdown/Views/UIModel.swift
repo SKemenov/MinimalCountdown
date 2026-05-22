@@ -53,4 +53,14 @@ enum UIModel {
         let separator = string.count <= 30 ? "  " : "   "
         return words.joined(separator: separator)
     }
+
+    /// Effect-section subtitle/tooltip: the base hint + a localized "or"-list of the available
+    /// effect names (lowercased).
+    static var effectsHint: String {
+        let effectNames = EffectStyle.allCases
+            .filter { $0 != .none }
+            .map { String(localized: $0.label).lowercased() }
+            .formatted(.list(type: .or))
+        return "\(String(localized: Resources.Theme.effectHint)) \(effectNames)"
+    }
 }

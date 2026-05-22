@@ -37,8 +37,17 @@ extension FontWeight {
         }
     }
 
-    var label: String {
-        (self == .ultraLight ? "Ultra Light" : String(describing: self))
-            .capitalized
+    var label: LocalizedStringResource {
+        switch self {
+            case .ultraLight: Resources.Labels.FontWeight.ultraLight
+            case .thin: Resources.Labels.FontWeight.thin
+            case .light: Resources.Labels.FontWeight.light
+            case .regular: Resources.Labels.FontWeight.regular
+            case .medium: Resources.Labels.FontWeight.medium
+            case .semibold: Resources.Labels.FontWeight.semibold
+            case .bold: Resources.Labels.FontWeight.bold
+            case .heavy: Resources.Labels.FontWeight.heavy
+            case .black: Resources.Labels.FontWeight.black
+        }
     }
 }

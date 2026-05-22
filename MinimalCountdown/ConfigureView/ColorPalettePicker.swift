@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ColorPalettePicker: View {
     typealias ColorType = AccentColor
-    private let titleResource: String
+    private let titleResource: LocalizedStringResource
     @Binding var selection: ColorType
     @State private var markedColor: ColorType
     private let contentColors: [ColorType]
 
     init(
-        _ titleResource: String,
+        _ titleResource: LocalizedStringResource,
         selection: Binding<ColorType>,
         for contentColors: [ColorType] = ColorType.allCases
     ) {
@@ -105,7 +105,7 @@ private extension ColorPalettePicker {
     var colorName: some View {
         HStack {
             createSpace(for: markedColor, isBefore: true)
-            Text(markedColor.name)
+            Text(markedColor.label)
                 .font(.caption)
                 .foregroundStyle(.secondary)
             createSpace(for: markedColor, isBefore: false)

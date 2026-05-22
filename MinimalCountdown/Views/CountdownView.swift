@@ -20,7 +20,7 @@ struct CountdownView: View {
                 ElementView(
                     element: .init(
                         digits: digits(for: style),
-                        label: style.label,
+                        label: String(localized: style.label),
                         size: digitsSize,
                         render: render
                     )

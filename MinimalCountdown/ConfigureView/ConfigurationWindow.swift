@@ -30,7 +30,7 @@ struct ConfigurationWindow: View {
                 appearanceSection
                 dateSection
                 themeSection
-                fontSection
+                digitsSection
                 titleSection
             }
             .formStyle(.grouped)
@@ -49,7 +49,7 @@ struct ConfigurationWindow: View {
 
 private extension ConfigurationWindow {
     var appearanceSection: some View {
-        Section(Resources.Appearance.title) {
+        Section {
             AppearancePicker(selection: $settings.appearance, in: settings)
 
             Toggle(isOn: $settings.appearance.isLabelHidden) {
@@ -57,21 +57,23 @@ private extension ConfigurationWindow {
                 Text(Resources.Appearance.hideLabelsHint)
                     .subtitleFont
             }
-            .help(Resources.Appearance.hideLabelsHint)
+            .help(Text(Resources.Appearance.hideLabelsHint))
 
             Text(Resources.Appearance.previewHint)
                 .subtitleFont
+        } header: {
+            Text(Resources.Appearance.title)
         }
     }
 
     var dateSection: some View {
-        Section(Resources.Date.title) {
+        Section {
             DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
                 Text(Resources.Date.time)
                 Text(Resources.Date.timeHint)
                     .subtitleFont
             }
-            .help(Resources.Date.timeHint)
+            .help(Text(Resources.Date.timeHint))
 
             DatePicker(
                 selection: $settings.schedule.target,
@@ -83,16 +85,19 @@ private extension ConfigurationWindow {
                     Text(Resources.Date.dayHint1)
                     Text(Resources.Date.dayHint2)
                     Text(Resources.Date.dayHint3)
+                        .lineLimit(5)
                 }
                 .subtitleFont
             }
             .datePickerStyle(.graphical)
+        } header: {
+            Text(Resources.Date.title)
         }
     }
 
-    
+
     var themeSection: some View {
-        Section(Resources.Theme.title) {
+        Section {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
 
@@ -102,10 +107,10 @@ private extension ConfigurationWindow {
                 }
             } label: {
                 Text(Resources.Theme.effect)
-                Text(Resources.Theme.effectHint)
+                Text(UIModel.effectsHint)
                     .subtitleFont
             }
-            .help(Resources.Theme.effectHint)
+            .help(UIModel.effectsHint)
 
             if settings.theme.effect == .glow {
                 Picker(selection: $settings.theme.effectColor) {
@@ -116,49 +121,55 @@ private extension ConfigurationWindow {
                     Text(Resources.Theme.effectColor)
                 }
             }
+        } header: {
+            Text(Resources.Theme.title)
         }
     }
 
-    var fontSection: some View {
-        Section(Resources.Font.title) {
+    var digitsSection: some View {
+        Section {
             Picker(selection: $settings.typography.weight) {
                 ForEach(FontWeight.allCases) { weight in
                     Text(weight.label).tag(weight)
                 }
             } label: {
-                Text(Resources.Font.weight)
-                Text(Resources.Font.weightHint)
+                Text(Resources.Digits.weight)
+                Text(Resources.Digits.weightHint)
                     .subtitleFont
                 if let weightWarning {
                     Text(weightWarning)
                         .subtitleFont
                 }
             }
-            .help(Resources.Font.weightHint)
+            .help(Text(Resources.Digits.weightHint))
 
             Toggle(isOn: $settings.typography.isRounded) {
-                Text(Resources.Font.rounded)
-                Text(Resources.Font.roundedHint)
+                Text(Resources.Digits.rounded)
+                Text(Resources.Digits.roundedHint)
                     .subtitleFont
                 if let roundedWarning {
                     Text(roundedWarning)
                         .subtitleFont
                 }
             }
-            .help(Resources.Font.roundedHint)
+            .help(Text(Resources.Digits.roundedHint))
+        } header: {
+            Text(Resources.Digits.title)
         }
     }
 
     var titleSection: some View {
-        Section(Resources.Title.title) {
-            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.messagePrompt))
+        Section {
+            TextField(text: $settings.title.text, prompt: Text(Resources.Title.titlePrompt)) { Text(verbatim: "") }
 
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)
                 Text(Resources.Title.hideTitleHint)
                     .subtitleFont
             }
-            .help(Resources.Title.hideTitleHint)
+            .help(Text(Resources.Title.hideTitleHint))
+        } header: {
+            Text(Resources.Title.title)
         }
     }
 
@@ -187,7 +198,7 @@ private extension ConfigurationWindow {
     }
 
     /// Effect-driven font warnings, shown on the Font controls the user would adjust.
-    var weightWarning: String? {
+    var weightWarning: LocalizedStringResource? {
         let weight = settings.typography.weight
         if settings.theme.effect == .glow, weight >= .bold {
             return Resources.Theme.glowWeightWarning
@@ -198,18 +209,18 @@ private extension ConfigurationWindow {
         return nil
     }
 
-    var roundedWarning: String? {
+    var roundedWarning: LocalizedStringResource? {
         settings.theme.effect == .blur && !settings.typography.isRounded
             ? Resources.Theme.blurRoundedWarning
             : nil
     }
 
-    /// `● Name` row for a color Picker. An AttributedString keeps the dot's color in the
-    /// pop-up menu (a Label/Image icon renders monochrome there); the name stays default-colored.
+    /// `● Label` row for a color Picker. An AttributedString keeps the dot's color in the
+    /// pop-up menu (a Label/Image icon renders monochrome there); the label stays default-colored.
     func showColor(_ option: any ColorExtendable) -> some View {
         var row = AttributedString("●  ")
         row.foregroundColor = option.color
-        row.append(AttributedString(option.name))
+        row.append(AttributedString(localized: option.label))
         return Text(row)
     }
 

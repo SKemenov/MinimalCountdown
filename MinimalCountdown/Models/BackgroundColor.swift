@@ -24,5 +24,12 @@ extension BackgroundColor {
         }
     }
 
+    var label: LocalizedStringResource {
+        switch self {
+            case .black: Resources.Labels.ColorExtendable.black
+            case .white: Resources.Labels.ColorExtendable.white
+        }
+    }
+
     var id: Int { self.rawValue }
 }

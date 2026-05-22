@@ -19,23 +19,29 @@ enum Brightness: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, H
 extension Brightness {
     var id: Self { self }
 
-    var label: String { String(describing: self).capitalized }
+    var label: LocalizedStringResource {
+        switch self {
+            case .low: Resources.Labels.Brightness.low
+            case .medium: Resources.Labels.Brightness.medium
+            case .high: Resources.Labels.Brightness.high
+        }
+    }
 
     var sliderValue: Double { Double(rawValue) }
 
     var digitsOpacity: Double {
         switch self {
-            case .high:   1.0
+            case .high: 1.0
             case .medium: 0.85
-            case .low:    0.7
+            case .low: 0.7
         }
     }
 
     var textsOpacity: Double {
         switch self {
-            case .high:   0.85
+            case .high: 0.85
             case .medium: 0.7
-            case .low:    0.55
+            case .low: 0.55
         }
     }
 }

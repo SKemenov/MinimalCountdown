@@ -21,7 +21,7 @@ struct MinimalDevApp: App {
     }
 
     var body: some Scene {
-        WindowGroup("Minimal Countdown Preview") {
+        WindowGroup(Text(verbatim: "Minimal Countdown Preview")) {
             PreviewWindow(
                 isAnimating: $isAnimating,
                 isTestPreview: $isTestPreview
@@ -42,15 +42,24 @@ struct MinimalDevApp: App {
 private extension Scene {
     func extraMenu(isAnimating: Binding<Bool>, isTestPreview: Binding<Bool>) -> some Scene {
         commands {
-            CommandMenu("Debug Options") {
+            CommandMenu(Text(verbatim: "Debug Options")) {
                 Toggle(isOn: isAnimating) {
-                    Label("Run timer", systemImage: "timer")
+                    Label {
+                        Text(verbatim: "Run timer")
+                    } icon: {
+                        Image(systemName: "timer")
+                    }
                 }
-                .help("Run countdown in DevApp")
+                .help(Text(verbatim: "Run countdown in DevApp"))
                 Toggle(isOn: isTestPreview) {
-                    Label("Show for Preview", systemImage: "repeat")
+                    Label {
+                        Text(verbatim: "Show for Preview")
+                    } icon: {
+                        Image(systemName: "repeat")
+                    }
+
                 }
-                .help("Show countdown as for Preview in DevApp")
+                .help(Text(verbatim: "Show countdown as for Preview in DevApp"))
             }
         }
     }

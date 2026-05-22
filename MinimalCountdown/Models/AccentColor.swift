@@ -33,5 +33,21 @@ extension AccentColor {
         }
     }
 
+    var label: LocalizedStringResource {
+        switch self {
+            case .white: Resources.Labels.ColorExtendable.white
+            case .red: Resources.Labels.ColorExtendable.red
+            case .pink: Resources.Labels.ColorExtendable.pink
+            case .orange: Resources.Labels.ColorExtendable.orange
+            case .yellow: Resources.Labels.ColorExtendable.yellow
+            case .green: Resources.Labels.ColorExtendable.green
+            case .mint: Resources.Labels.ColorExtendable.mint
+            case .cyan: Resources.Labels.ColorExtendable.cyan
+            case .blue: Resources.Labels.ColorExtendable.blue
+            case .indigo: Resources.Labels.ColorExtendable.indigo
+            case .purple: Resources.Labels.ColorExtendable.purple
+        }
+    }
+
     var id: Int { self.rawValue }
 }
