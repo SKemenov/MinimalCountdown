@@ -160,7 +160,7 @@ private extension ConfigurationWindow {
 
     var titleSection: some View {
         Section {
-            TextField("", text: $settings.title.text, prompt: Text(Resources.Title.titlePrompt))
+            TextField(text: $settings.title.text, prompt: Text(Resources.Title.titlePrompt)) { Text(verbatim: "") }
 
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)

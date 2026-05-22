@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-      "shouldTranslate" : false
-    },
     "⚠️ Looks better at lighter weights." : {
       "localizations" : {
         "de" : {
@@ -292,9 +289,6 @@
         }
       }
     },
-    "Debug Options" : {
-      "shouldTranslate" : false
-    },
     "Defaults to midnight." : {
       "localizations" : {
         "de" : {
@@ -551,9 +545,6 @@
         }
       }
     },
-    "Minimal Countdown Preview" : {
-      "shouldTranslate" : false
-    },
     "Mint" : {
       "localizations" : {
         "de" : {
@@ -698,12 +689,6 @@
         }
       }
     },
-    "Run countdown in DevApp" : {
-      "shouldTranslate" : false
-    },
-    "Run timer" : {
-      "shouldTranslate" : false
-    },
     "Seconds" : {
       "localizations" : {
         "de" : {
@@ -735,12 +720,6 @@
           }
         }
       }
-    },
-    "Show countdown as for Preview in DevApp" : {
-      "shouldTranslate" : false
-    },
-    "Show for Preview" : {
-      "shouldTranslate" : false
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
