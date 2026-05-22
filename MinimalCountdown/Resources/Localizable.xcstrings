@@ -6,6 +6,12 @@
     },
     "⚠️ Looks better at lighter weights." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Sieht bei dünneren Stärken besser aus."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -16,6 +22,12 @@
     },
     "⚠️ Looks better at Regular weight or higher." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Sieht bei Stärke „Normal“ oder höher besser aus."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -26,6 +38,12 @@
     },
     "⚠️ Looks better with Rounded enabled." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Sieht mit aktivierter Rundung besser aus."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -36,6 +54,12 @@
     },
     "Adds an effect to the digits:" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fügt den Ziffern einen Effekt hinzu:"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -46,6 +70,12 @@
     },
     "Appearance" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Darstellung"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -56,6 +86,12 @@
     },
     "Backlight" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hintergrundbeleuchtung"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -66,6 +102,12 @@
     },
     "Black" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwarz"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -76,6 +118,12 @@
     },
     "Blue" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blau"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -86,6 +134,12 @@
     },
     "Blur" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unschärfe"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -96,6 +150,12 @@
     },
     "Brightness" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helligkeit"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -106,6 +166,12 @@
     },
     "Close" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -116,6 +182,12 @@
     },
     "Close this window and click Preview to see all the changes in detail, full-screen." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen Sie dieses Fenster und klicken Sie auf „Vorschau“, um alle Änderungen im Vollbildmodus zu sehen."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -126,6 +198,12 @@
     },
     "Color" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -136,6 +214,12 @@
     },
     "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen konnten nicht gespeichert werden. Schließen Sie die Einstellungen und öffnen Sie sie erneut, starten Sie Ihren Mac neu oder installieren Sie den Bildschirmschoner neu."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -146,6 +230,12 @@
     },
     "Cyan" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cyan"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -156,6 +246,12 @@
     },
     "Date" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datum"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -166,6 +262,12 @@
     },
     "Day" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -176,6 +278,12 @@
     },
     "Days" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tage"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -189,6 +297,12 @@
     },
     "Defaults to midnight." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standardmäßig Mitternacht."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -199,6 +313,12 @@
     },
     "Digits" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziffern"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -209,6 +329,12 @@
     },
     "Effect" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effekt"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -219,6 +345,12 @@
     },
     "Effect Color" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effektfarbe"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -229,6 +361,12 @@
     },
     "Glow" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leuchten"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -239,6 +377,12 @@
     },
     "Green" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grün"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -249,6 +393,12 @@
     },
     "Hide labels" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beschriftungen ausblenden"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -259,6 +409,12 @@
     },
     "Hide title" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel ausblenden"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -269,6 +425,12 @@
     },
     "Hides the title even when it isn't empty." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blendet den Titel aus, auch wenn er nicht leer ist."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -279,6 +441,12 @@
     },
     "High" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoch"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -289,6 +457,12 @@
     },
     "Hours" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stunden"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +473,12 @@
     },
     "Indigo" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indigo"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -309,6 +489,12 @@
     },
     "Inner Glow" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inneres Leuchten"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -319,6 +505,12 @@
     },
     "It can be any future date for Timer Mode or any past date for Stopwatch Mode." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es kann ein beliebiges zukünftiges Datum für den Timer-Modus oder ein vergangenes Datum für den Stoppuhr-Modus sein."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -329,6 +521,12 @@
     },
     "Low" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niedrig"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +537,12 @@
     },
     "Medium" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittel"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -352,6 +556,12 @@
     },
     "Mint" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minze"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -362,6 +572,12 @@
     },
     "Minutes" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minuten"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -372,6 +588,12 @@
     },
     "None" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keiner"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -382,6 +604,12 @@
     },
     "Orange" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orange"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -392,6 +620,12 @@
     },
     "Pink" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rosa"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -402,6 +636,12 @@
     },
     "Purple" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Violett"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -412,6 +652,12 @@
     },
     "Red" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rot"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -422,6 +668,12 @@
     },
     "Renders the digits with the Rounded design." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stellt die Ziffern im abgerundeten Design dar."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -432,6 +684,12 @@
     },
     "Round digits" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziffern runden"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -448,6 +706,12 @@
     },
     "Seconds" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekunden"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -458,6 +722,12 @@
     },
     "Sets the digit thickness from Ultra Light to Black." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legt die Stärke der Ziffern von Ultraleicht bis Schwarz fest."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -474,6 +744,12 @@
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur Ziffern anzeigen, ohne Beschriftungen darunter."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -484,6 +760,12 @@
     },
     "The available range is one year before and after the current date." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der verfügbare Bereich beträgt ein Jahr vor und nach dem aktuellen Datum."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -494,6 +776,12 @@
     },
     "Theme" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thema"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -504,6 +792,12 @@
     },
     "Think of a cool idea for a screen saver title and write it here" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denken Sie sich einen coolen Titel für den Bildschirmschoner aus und schreiben Sie ihn hier"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -514,6 +808,12 @@
     },
     "Time" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uhrzeit"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -524,6 +824,12 @@
     },
     "Title" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titel"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -534,6 +840,12 @@
     },
     "Weight" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stärke"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -545,6 +857,12 @@
     "Weight.black" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwarz"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -562,6 +880,12 @@
     "Weight.bold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fett"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -579,6 +903,12 @@
     "Weight.heavy" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schwer"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -596,6 +926,12 @@
     "Weight.light" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leicht"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -613,6 +949,12 @@
     "Weight.medium" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mittel"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -630,6 +972,12 @@
     "Weight.regular" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normal"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -647,6 +995,12 @@
     "Weight.semibold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halbfett"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -664,6 +1018,12 @@
     "Weight.thin" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dünn"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -681,6 +1041,12 @@
     "Weight.ultraLight" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultraleicht"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -697,6 +1063,12 @@
     },
     "When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up." : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn der Countdown null erreicht, wechselt er automatisch in den Stoppuhr-Modus und zählt aufwärts."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -707,6 +1079,12 @@
     },
     "White" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiß"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -717,6 +1095,12 @@
     },
     "Yellow" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gelb"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
