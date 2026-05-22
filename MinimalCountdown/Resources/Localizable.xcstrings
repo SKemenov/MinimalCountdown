@@ -15,6 +15,12 @@
             "value" : "⚠️ Se ve mejor con grosores más finos."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Plus joli avec des épaisseurs plus fines."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -35,6 +41,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Se ve mejor con el grosor Normal o superior."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Plus joli à l’épaisseur Normale ou supérieure."
           }
         },
         "ru" : {
@@ -59,6 +71,12 @@
             "value" : "⚠️ Se ve mejor con el redondeado activado."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Plus joli avec l’arrondi activé."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -79,6 +97,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añade un efecto a los dígitos:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoute un effet aux chiffres :"
           }
         },
         "ru" : {
@@ -103,6 +127,12 @@
             "value" : "Aspecto"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apparence"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -123,6 +153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retroiluminación"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rétroéclairage"
           }
         },
         "ru" : {
@@ -147,6 +183,12 @@
             "value" : "Negro"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noir"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -167,6 +209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azul"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bleu"
           }
         },
         "ru" : {
@@ -191,6 +239,12 @@
             "value" : "Desenfoque"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flou"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,6 +265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brillo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luminosité"
           }
         },
         "ru" : {
@@ -235,6 +295,12 @@
             "value" : "Cerrar"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -255,6 +321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cierra esta ventana y haz clic en «Previsualizar» para ver todos los cambios en pantalla completa."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermez cette fenêtre et cliquez sur « Aperçu » pour voir tous les changements en détail, en plein écran."
           }
         },
         "ru" : {
@@ -279,6 +351,12 @@
             "value" : "Color"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleur"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
           }
         },
         "ru" : {
@@ -323,6 +407,12 @@
             "value" : "Cian"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cyan"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -343,6 +433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fecha"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
           }
         },
         "ru" : {
@@ -367,6 +463,12 @@
             "value" : "Día"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jour"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -387,6 +489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Días"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jours"
           }
         },
         "ru" : {
@@ -411,6 +519,12 @@
             "value" : "Por defecto, medianoche."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minuit par défaut."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -431,6 +545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dígitos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chiffres"
           }
         },
         "ru" : {
@@ -455,6 +575,12 @@
             "value" : "Efecto"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effet"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -475,6 +601,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Color del efecto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleur de l’effet"
           }
         },
         "ru" : {
@@ -499,6 +631,12 @@
             "value" : "Resplandor"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lueur"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -519,6 +657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verde"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vert"
           }
         },
         "ru" : {
@@ -543,6 +687,12 @@
             "value" : "Ocultar etiquetas"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masquer les étiquettes"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -563,6 +713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ocultar título"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masquer le titre"
           }
         },
         "ru" : {
@@ -587,6 +743,12 @@
             "value" : "Oculta el título aunque no esté vacío."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masque le titre même lorsqu’il n’est pas vide."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -607,6 +769,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alto"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Élevée"
           }
         },
         "ru" : {
@@ -631,6 +799,12 @@
             "value" : "Horas"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heures"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -651,6 +825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Índigo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indigo"
           }
         },
         "ru" : {
@@ -675,6 +855,12 @@
             "value" : "Resplandor interior"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lueur intérieure"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -695,6 +881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Puede ser cualquier fecha futura para el modo Temporizador o cualquier fecha pasada para el modo Cronómetro."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il peut s’agir de n’importe quelle date future pour le mode Minuteur ou de n’importe quelle date passée pour le mode Chronomètre."
           }
         },
         "ru" : {
@@ -719,6 +911,12 @@
             "value" : "Bajo"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faible"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -739,6 +937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Medio"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moyenne"
           }
         },
         "ru" : {
@@ -763,6 +967,12 @@
             "value" : "Menta"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menthe"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -783,6 +993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minutos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minutes"
           }
         },
         "ru" : {
@@ -807,6 +1023,12 @@
             "value" : "Ninguno"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -827,6 +1049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naranja"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orange"
           }
         },
         "ru" : {
@@ -851,6 +1079,12 @@
             "value" : "Rosa"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rose"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -871,6 +1105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morado"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Violet"
           }
         },
         "ru" : {
@@ -895,6 +1135,12 @@
             "value" : "Rojo"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rouge"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -915,6 +1161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muestra los dígitos con el diseño Redondeado."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiche les chiffres avec le style arrondi."
           }
         },
         "ru" : {
@@ -939,6 +1191,12 @@
             "value" : "Redondear dígitos"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arrondir les chiffres"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -959,6 +1217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Segundos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secondes"
           }
         },
         "ru" : {
@@ -983,6 +1247,12 @@
             "value" : "Define el grosor de los dígitos, de Ultrafino a Negro."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définit l’épaisseur des chiffres, d’Ultrafine à Noire."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1003,6 +1273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostrar solo los dígitos, sin etiquetas debajo."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher uniquement les chiffres, sans étiquettes en dessous."
           }
         },
         "ru" : {
@@ -1027,6 +1303,12 @@
             "value" : "El intervalo disponible es de un año antes y después de la fecha actual."
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La plage disponible est d’un an avant et après la date actuelle."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1047,6 +1329,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tema"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thème"
           }
         },
         "ru" : {
@@ -1071,6 +1359,12 @@
             "value" : "Piensa en una genial idea para el título y escríbelo aquí"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trouvez un titre sympa pour l’économiseur d’écran et écrivez-le ici"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1091,6 +1385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hora"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heure"
           }
         },
         "ru" : {
@@ -1115,6 +1415,12 @@
             "value" : "Título"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titre"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1135,6 +1441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grosor"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Épaisseur"
           }
         },
         "ru" : {
@@ -1166,6 +1478,12 @@
             "value" : "Negro"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noire"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1193,6 +1511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Negrito"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grasse"
           }
         },
         "ru" : {
@@ -1224,6 +1548,12 @@
             "value" : "Grueso"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lourde"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1251,6 +1581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ligero"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Légère"
           }
         },
         "ru" : {
@@ -1282,6 +1618,12 @@
             "value" : "Medio"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moyenne"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1309,6 +1651,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Normal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Normale"
           }
         },
         "ru" : {
@@ -1340,6 +1688,12 @@
             "value" : "Seminegrito"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demi-grasse"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1367,6 +1721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fino"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fine"
           }
         },
         "ru" : {
@@ -1398,6 +1758,12 @@
             "value" : "Ultrafino"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ultrafine"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1418,6 +1784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cuando la cuenta atrás llega a cero, cambia automáticamente al modo Cronómetro y empieza a contar hacia arriba."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lorsque le compte à rebours atteint zéro, il passe automatiquement en mode Chronomètre et commence à compter le temps écoulé."
           }
         },
         "ru" : {
@@ -1442,6 +1814,12 @@
             "value" : "Blanco"
           }
         },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blanc"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1462,6 +1840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amarillo"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jaune"
           }
         },
         "ru" : {
