@@ -1049,6 +1049,9 @@
         }
       }
     },
+    "Numerals" : {
+
+    },
     "Orange" : {
       "localizations" : {
         "de" : {
@@ -1275,6 +1278,9 @@
           }
         }
       }
+    },
+    "Sets the numerals used for the digits. Automatic follows your system's region." : {
+
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
