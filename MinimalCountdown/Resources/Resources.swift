@@ -137,7 +137,7 @@ enum Resources {
         static let roundedHint = LocalizedStringResource("Renders the digits with the Rounded design.", bundle: .app)
         static let numerals = LocalizedStringResource("Numerals", bundle: .app)
         static let numeralsHint = LocalizedStringResource(
-            "Sets the numerals used for the digits. Automatic follows your system's region.",
+            "Sets the numeral system used for the digits. Automatic follows your Mac's region.",
             bundle: .app
         )
     }

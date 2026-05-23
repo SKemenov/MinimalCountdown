@@ -142,10 +142,60 @@
       }
     },
     "Arabic" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Árabes"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Арабские"
+          }
+        }
+      }
     },
     "Automatic" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatique"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматически"
+          }
+        }
+      }
     },
     "Backlight" : {
       "localizations" : {
@@ -540,7 +590,32 @@
       }
     },
     "Devanagari" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деванагари"
+          }
+        }
+      }
     },
     "Digits" : {
       "localizations" : {
@@ -907,7 +982,32 @@
       }
     },
     "Latin" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lateinisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latinos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latins"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Латинские"
+          }
+        }
+      }
     },
     "Low" : {
       "localizations" : {
@@ -1050,7 +1150,32 @@
       }
     },
     "Numerals" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Números"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numéros"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Числа"
+          }
+        }
+      }
     },
     "Orange" : {
       "localizations" : {
@@ -1081,7 +1206,32 @@
       }
     },
     "Persian" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persas"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persans"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Персидские"
+          }
+        }
+      }
     },
     "Pink" : {
       "localizations" : {
@@ -1279,8 +1429,33 @@
         }
       }
     },
-    "Sets the numerals used for the digits. Automatic follows your system's region." : {
-
+    "Sets the numeral system used for the digits. Automatic follows your Mac's region." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legt das Zahlensystem für die Ziffern fest. Automatisch folgt der Region des Mac."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Define los números usados para los dígitos. Automático sigue la región del Mac."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définit le système de numération utilisé pour les chiffres. Automatique suit la région du Mac."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задаёт систему счисления для цифр. Автоматически следует региону Mac."
+          }
+        }
+      }
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
