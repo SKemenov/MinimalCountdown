@@ -41,12 +41,13 @@ private extension CountdownView {
     }
 
     func digits(for style: AppearanceStyle) -> String {
-        switch style {
-            case .days: settings.schedule.target.daysString(relativeTo: now)
-            case .hours: settings.schedule.target.hoursString(relativeTo: now)
-            case .minutes: settings.schedule.target.minutesString(relativeTo: now)
-            case .seconds: settings.schedule.target.secondsString(relativeTo: now)
+        let value = switch style {
+            case .days: settings.schedule.target.days(relativeTo: now)
+            case .hours: settings.schedule.target.hours(relativeTo: now)
+            case .minutes: settings.schedule.target.minutes(relativeTo: now)
+            case .seconds: settings.schedule.target.seconds(relativeTo: now)
         }
+        return UIModel.formattedDigits(value, in: render.digitLocale)
     }
 }
 

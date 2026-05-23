@@ -16,8 +16,9 @@ enum UIModel {
         let isLabelHidden: Bool
         let effect: EffectStyle
         let effectGlowColor: Color
+        let digitLocale: Locale
 
-        init(_ settings: SaverSettings) {
+        init(_ settings: SaverSettings, locale: Locale = .autoupdatingCurrent) {
             let theme = settings.theme
             digitsColor = theme.accent.color.opacity(theme.brightness.digitsOpacity)
             textsColor = theme.accent.color.opacity(theme.brightness.textsOpacity)
@@ -28,6 +29,13 @@ enum UIModel {
             // Glow dimmed by brightness, matching the digit fill: effectColor for glow, accent otherwise.
             effectGlowColor = (theme.effect == .glow ? theme.effectColor : theme.accent)
                 .color.opacity(theme.brightness.digitsOpacity)
+
+            // Numerals: an explicit pick overrides; `.automatic` falls back to the locale's own
+            // numbering system (UAE → Latin, Egypt → Arabic).
+            let numbering = settings.typography.numeralSystem.numberingSystem ?? locale.numberingSystem
+            var components = Locale.Components(locale: locale)
+            components.numberingSystem = numbering
+            digitLocale = Locale(components: components)
         }
     }
 
@@ -52,6 +60,12 @@ enum UIModel {
         let words = string.components(separatedBy: " ")
         let separator = string.count <= 30 ? "  " : "   "
         return words.joined(separator: separator)
+    }
+
+    /// Countdown digit string: zero-padded (min 2, grows for 3-digit day counts) and rendered
+    /// in `locale`'s numeral system (the resolved `RenderSettings.digitLocale`).
+    static func formattedDigits(_ value: Int, in locale: Locale) -> String {
+        value.formatted(.number.precision(.integerLength(2...)).grouping(.never).locale(locale))
     }
 
     /// Effect-section subtitle/tooltip: the base hint + a localized "or"-list of the available

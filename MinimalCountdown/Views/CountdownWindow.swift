@@ -12,8 +12,10 @@ struct CountdownWindow: View {
     let settings: SaverSettings
     var isPreview: Bool = false
 
+    @Environment(\.locale) private var locale
+
     var body: some View {
-        let render = UIModel.RenderSettings(settings)
+        let render = UIModel.RenderSettings(settings, locale: locale)
         let titleText = UIModel.formattedTitle(settings.title)
 
         GeometryReader { geo in
@@ -43,6 +45,9 @@ struct CountdownWindow: View {
                 .frame(width: geo.size.width, height: geo.size.height)
             }
         }
+        // The countdown is a clock/number — keep it left-to-right even under an RTL (Arabic) locale
+        // (HIG: don't reverse the digits in a number). The settings window still mirrors normally.
+        .environment(\.layoutDirection, .leftToRight)
     }
 }
 
