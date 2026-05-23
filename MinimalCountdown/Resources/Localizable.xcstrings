@@ -3,6 +3,12 @@
   "strings" : {
     "⚠️ Looks better at lighter weights." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل مع أوزان أخف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -31,6 +37,12 @@
     },
     "⚠️ Looks better at Regular weight or higher." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل مع وزن «عادي» أو أعلى."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +71,12 @@
     },
     "⚠️ Looks better with Rounded enabled." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل عند تفعيل التدوير."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -87,6 +105,12 @@
     },
     "Adds an effect to the digits:" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يضيف تأثيراً على الأرقام:"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -115,6 +139,12 @@
     },
     "Appearance" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المظهر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -143,6 +173,12 @@
     },
     "Arabic" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -171,6 +207,12 @@
     },
     "Automatic" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تلقائي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -199,6 +241,12 @@
     },
     "Backlight" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضاءة خلفية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -227,6 +275,12 @@
     },
     "Black" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسود"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -255,6 +309,12 @@
     },
     "Blue" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أزرق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -283,6 +343,12 @@
     },
     "Blur" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمويه"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -311,6 +377,12 @@
     },
     "Brightness" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السطوع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -339,6 +411,12 @@
     },
     "Close" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -367,6 +445,12 @@
     },
     "Close this window and click Preview to see all the changes in detail, full-screen." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أغلق هذه النافذة وانقر على «معاينة» لرؤية جميع التغييرات بالتفصيل على الشاشة الكاملة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -395,6 +479,12 @@
     },
     "Color" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللون"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -423,6 +513,12 @@
     },
     "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -451,6 +547,12 @@
     },
     "Cyan" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سماوي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -479,6 +581,12 @@
     },
     "Date" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -507,6 +615,12 @@
     },
     "Day" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اليوم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -535,6 +649,12 @@
     },
     "Days" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أيام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -563,6 +683,12 @@
     },
     "Defaults to midnight." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الافتراضي: منتصف الليل."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -591,6 +717,12 @@
     },
     "Devanagari" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ديفاناغاري"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -619,6 +751,12 @@
     },
     "Digits" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -647,6 +785,12 @@
     },
     "Effect" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التأثير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -675,6 +819,12 @@
     },
     "Effect Color" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لون التأثير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -703,6 +853,12 @@
     },
     "Glow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توهج"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -731,6 +887,12 @@
     },
     "Green" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أخضر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -759,6 +921,12 @@
     },
     "Hide labels" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء التسميات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -787,6 +955,12 @@
     },
     "Hide title" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء العنوان"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -815,6 +989,12 @@
     },
     "Hides the title even when it isn't empty." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يخفي العنوان حتى لو لم يكن فارغاً."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -843,6 +1023,12 @@
     },
     "High" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -871,6 +1057,12 @@
     },
     "Hours" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -899,6 +1091,12 @@
     },
     "Indigo" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نيلي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -927,6 +1125,12 @@
     },
     "Inner Glow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توهج داخلي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -955,6 +1159,12 @@
     },
     "It can be any future date for Timer Mode or any past date for Stopwatch Mode." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن أن يكون أي تاريخ مستقبلي لوضع المؤقت أو أي تاريخ ماضٍ لوضع ساعة الإيقاف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -983,6 +1193,12 @@
     },
     "Latin" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاتينية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1011,6 +1227,12 @@
     },
     "Low" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منخفض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1039,6 +1261,12 @@
     },
     "Medium" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1067,6 +1295,12 @@
     },
     "Mint" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعناعي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1095,6 +1329,12 @@
     },
     "Minutes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دقائق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1123,6 +1363,12 @@
     },
     "None" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1151,6 +1397,12 @@
     },
     "Numerals" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعداد"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1179,6 +1431,12 @@
     },
     "Orange" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برتقالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1207,6 +1465,12 @@
     },
     "Persian" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فارسية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1235,6 +1499,12 @@
     },
     "Pink" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وردي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1263,6 +1533,12 @@
     },
     "Purple" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بنفسجي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1291,6 +1567,12 @@
     },
     "Red" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أحمر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1319,6 +1601,12 @@
     },
     "Renders the digits with the Rounded design." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يعرض الأرقام بالتصميم المُدوّر."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1347,6 +1635,12 @@
     },
     "Round digits" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدوير الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1375,6 +1669,12 @@
     },
     "Seconds" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثوانٍ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1403,6 +1703,12 @@
     },
     "Sets the digit thickness from Ultra Light to Black." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحدّد سُمك الأرقام من رفيع جداً إلى أسود."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1431,6 +1737,12 @@
     },
     "Sets the numeral system used for the digits. Automatic follows your Mac's region." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحدّد نظام الأعداد المُستخدم للأرقام. يتبع الوضع التلقائي منطقة الـ Mac."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1459,6 +1771,12 @@
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الأرقام فقط، بدون تسميات أسفلها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1487,6 +1805,12 @@
     },
     "The available range is one year before and after the current date." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النطاق المتاح هو سنة واحدة قبل وبعد التاريخ الحالي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1515,6 +1839,12 @@
     },
     "Theme" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السمة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1543,6 +1873,12 @@
     },
     "Think of a cool idea for a screen saver title and write it here" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فكّر في فكرة رائعة لعنوان شاشة التوقف واكتبها هنا"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1571,6 +1907,12 @@
     },
     "Time" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1599,6 +1941,12 @@
     },
     "Title" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العنوان"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1627,6 +1975,12 @@
     },
     "Weight" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السمك"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1656,6 +2010,12 @@
     "Weight.black" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسود"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1691,6 +2051,12 @@
     "Weight.bold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عريض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1726,6 +2092,12 @@
     "Weight.heavy" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثقيل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1761,6 +2133,12 @@
     "Weight.light" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خفيف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1796,6 +2174,12 @@
     "Weight.medium" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1831,6 +2215,12 @@
     "Weight.regular" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عادي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1866,6 +2256,12 @@
     "Weight.semibold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شبه عريض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1901,6 +2297,12 @@
     "Weight.thin" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفيع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1936,6 +2338,12 @@
     "Weight.ultraLight" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفيع جداً"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1970,6 +2378,12 @@
     },
     "When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما يصل العد التنازلي إلى الصفر، يتحول تلقائياً إلى وضع ساعة الإيقاف ويبدأ العد التصاعدي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1998,6 +2412,12 @@
     },
     "White" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أبيض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2026,6 +2446,12 @@
     },
     "Yellow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أصفر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
