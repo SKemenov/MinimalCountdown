@@ -141,6 +141,12 @@
         }
       }
     },
+    "Arabic" : {
+
+    },
+    "Automatic" : {
+
+    },
     "Backlight" : {
       "localizations" : {
         "de" : {
@@ -533,6 +539,9 @@
         }
       }
     },
+    "Devanagari" : {
+
+    },
     "Digits" : {
       "localizations" : {
         "de" : {
@@ -897,6 +906,9 @@
         }
       }
     },
+    "Latin" : {
+
+    },
     "Low" : {
       "localizations" : {
         "de" : {
@@ -1064,6 +1076,9 @@
           }
         }
       }
+    },
+    "Persian" : {
+
     },
     "Pink" : {
       "localizations" : {

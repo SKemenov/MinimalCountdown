@@ -43,6 +43,7 @@
 				Models/EffectStyle.swift,
 				Models/FontWeight.swift,
 				Models/LegacySettings.swift,
+				Models/NumeralSystem.swift,
 				Models/SafeIntDecodable.swift,
 				Models/SaverSettings.swift,
 				Models/Schedule.swift,
