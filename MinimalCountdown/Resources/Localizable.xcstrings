@@ -27,6 +27,12 @@
             "value" : "⚠️ Plus joli avec des épaisseurs plus fines."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם עוביים דקים יותר."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +65,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Plus joli à l’épaisseur Normale ou supérieure."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם עובי «רגיל» ומעלה."
           }
         },
         "ru" : {
@@ -95,6 +107,12 @@
             "value" : "⚠️ Plus joli avec l’arrondi activé."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם העיגול מופעל."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,6 +145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoute un effet aux chiffres :"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מוסיף אפקט לספרות:"
           }
         },
         "ru" : {
@@ -163,6 +187,12 @@
             "value" : "Apparence"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מראה"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -195,6 +225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arabes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערבי"
           }
         },
         "ru" : {
@@ -231,6 +267,12 @@
             "value" : "Automatique"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אוטומטי"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -263,6 +305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rétroéclairage"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תאורה אחורית"
           }
         },
         "ru" : {
@@ -299,6 +347,12 @@
             "value" : "Noir"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחור"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -331,6 +385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bleu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כחול"
           }
         },
         "ru" : {
@@ -367,6 +427,12 @@
             "value" : "Flou"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טשטוש"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -399,6 +465,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luminosité"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בהירות"
           }
         },
         "ru" : {
@@ -435,6 +507,12 @@
             "value" : "Fermer"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -467,6 +545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fermez cette fenêtre et cliquez sur « Aperçu » pour voir tous les changements en détail, en plein écran."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור חלון זה ולחץ על «תצוגה מקדימה» כדי לראות את כל השינויים במסך מלא."
           }
         },
         "ru" : {
@@ -503,6 +587,12 @@
             "value" : "Couleur"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צבע"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -535,6 +625,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
           }
         },
         "ru" : {
@@ -571,6 +667,12 @@
             "value" : "Cyan"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ציאן"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -603,6 +705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Date"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תאריך"
           }
         },
         "ru" : {
@@ -639,6 +747,12 @@
             "value" : "Jour"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יום"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -671,6 +785,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jours"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ימים"
           }
         },
         "ru" : {
@@ -707,6 +827,12 @@
             "value" : "Minuit par défaut."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברירת מחדל: חצות."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -739,6 +865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Devanagari"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דוונגרי"
           }
         },
         "ru" : {
@@ -775,6 +907,12 @@
             "value" : "Chiffres"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספרות"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -807,6 +945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Effet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפקט"
           }
         },
         "ru" : {
@@ -843,6 +987,12 @@
             "value" : "Couleur de l’effet"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צבע האפקט"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -875,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lueur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זוהר"
           }
         },
         "ru" : {
@@ -911,6 +1067,12 @@
             "value" : "Vert"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ירוק"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -943,6 +1105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masquer les étiquettes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסתר תוויות"
           }
         },
         "ru" : {
@@ -979,6 +1147,12 @@
             "value" : "Masquer le titre"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסתר כותרת"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1011,6 +1185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masque le titre même lorsqu’il n’est pas vide."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסתיר את הכותרת גם כשהיא לא ריקה."
           }
         },
         "ru" : {
@@ -1047,6 +1227,12 @@
             "value" : "Élevée"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גבוה"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1079,6 +1265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heures"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שעות"
           }
         },
         "ru" : {
@@ -1115,6 +1307,12 @@
             "value" : "Indigo"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אינדיגו"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1147,6 +1345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lueur intérieure"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זוהר פנימי"
           }
         },
         "ru" : {
@@ -1183,6 +1387,12 @@
             "value" : "Il peut s’agir de n’importe quelle date future pour le mode Minuteur ou de n’importe quelle date passée pour le mode Chronomètre."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יכול להיות כל תאריך עתידי למצב טיימר או כל תאריך עבר למצב שעון עצר."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1215,6 +1425,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latins"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לטיני"
           }
         },
         "ru" : {
@@ -1251,6 +1467,12 @@
             "value" : "Faible"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נמוך"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1283,6 +1505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moyenne"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני"
           }
         },
         "ru" : {
@@ -1319,6 +1547,12 @@
             "value" : "Menthe"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנטה"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1351,6 +1585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minutes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דקות"
           }
         },
         "ru" : {
@@ -1387,6 +1627,12 @@
             "value" : "Aucun"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ללא"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1419,6 +1665,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Numéros"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספרות"
           }
         },
         "ru" : {
@@ -1455,6 +1707,12 @@
             "value" : "Orange"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כתום"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1487,6 +1745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Persans"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרסי"
           }
         },
         "ru" : {
@@ -1523,6 +1787,12 @@
             "value" : "Rose"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ורוד"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1555,6 +1825,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Violet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגול"
           }
         },
         "ru" : {
@@ -1591,6 +1867,12 @@
             "value" : "Rouge"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אדום"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1623,6 +1905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Affiche les chiffres avec le style arrondi."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מציג את הספרות בעיצוב המעוגל."
           }
         },
         "ru" : {
@@ -1659,6 +1947,12 @@
             "value" : "Arrondir les chiffres"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עיגול ספרות"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1691,6 +1985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שניות"
           }
         },
         "ru" : {
@@ -1727,6 +2027,12 @@
             "value" : "Définit l’épaisseur des chiffres, d’Ultrafine à Noire."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מגדיר את עובי הספרות מבהיר במיוחד לשחור."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1759,6 +2065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Définit le système de numération utilisé pour les chiffres. Automatique suit la région du Mac."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קובע את מערכת הספרות המשמשת את האותיות. אוטומטי עוקב אחר אזור ה-Mac שלך."
           }
         },
         "ru" : {
@@ -1795,6 +2107,12 @@
             "value" : "Afficher uniquement les chiffres, sans étiquettes en dessous."
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הצג רק ספרות, ללא תוויות מתחת."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1827,6 +2145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La plage disponible est d’un an avant et après la date actuelle."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הטווח הזמין הוא שנה אחת לפני ואחרי התאריך הנוכחי."
           }
         },
         "ru" : {
@@ -1863,6 +2187,12 @@
             "value" : "Thème"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערכת נושא"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1895,6 +2225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trouvez un titre sympa pour l’économiseur d’écran et écrivez-le ici"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חשוב על רעיון מגניב לכותרת שומר המסך וכתוב אותו כאן"
           }
         },
         "ru" : {
@@ -1931,6 +2267,12 @@
             "value" : "Heure"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שעה"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1965,6 +2307,12 @@
             "value" : "Titre"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כותרת"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1997,6 +2345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Épaisseur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עובי"
           }
         },
         "ru" : {
@@ -2040,6 +2394,12 @@
             "value" : "Noire"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחור"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2079,6 +2439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grasse"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מודגש"
           }
         },
         "ru" : {
@@ -2122,6 +2488,12 @@
             "value" : "Lourde"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כבד"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2161,6 +2533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Légère"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קל"
           }
         },
         "ru" : {
@@ -2204,6 +2582,12 @@
             "value" : "Moyenne"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2243,6 +2627,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Normale"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רגיל"
           }
         },
         "ru" : {
@@ -2286,6 +2676,12 @@
             "value" : "Demi-grasse"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני-מודגש"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2325,6 +2721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fine"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דק"
           }
         },
         "ru" : {
@@ -2368,6 +2770,12 @@
             "value" : "Ultrafine"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דק במיוחד"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2400,6 +2808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lorsque le compte à rebours atteint zéro, il passe automatiquement en mode Chronomètre et commence à compter le temps écoulé."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כאשר הספירה לאחור מגיעה לאפס, הוא עובר אוטומטית למצב שעון עצר ומתחיל לספור כלפי מעלה."
           }
         },
         "ru" : {
@@ -2436,6 +2850,12 @@
             "value" : "Blanc"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לבן"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2468,6 +2888,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jaune"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צהוב"
           }
         },
         "ru" : {
