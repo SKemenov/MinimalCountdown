@@ -206,6 +206,7 @@
 				ar,
 				he,
 				fa,
+				hi,
 			);
 			mainGroup = E9B531912B854D60002A2B79;
 			productRefGroup = E9B5319C2B854D60002A2B79 /* Products */;

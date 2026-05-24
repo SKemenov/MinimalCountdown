@@ -39,6 +39,12 @@
             "value" : "⚠️ נראה טוב יותר עם עוביים דקים יותר."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ हल्की मोटाई में बेहतर दिखता है।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -83,6 +89,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ נראה טוב יותר עם עובי «רגיל» ומעלה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ «नियमित» या उससे अधिक मोटाई में बेहतर दिखता है।"
           }
         },
         "ru" : {
@@ -131,6 +143,12 @@
             "value" : "⚠️ נראה טוב יותר עם העיגול מופעל."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ गोलाकार सक्षम होने पर बेहतर दिखता है।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -175,6 +193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מוסיף אפקט לספרות:"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों में प्रभाव जोड़ता है:"
           }
         },
         "ru" : {
@@ -223,6 +247,12 @@
             "value" : "מראה"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिखावट"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -267,6 +297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ערבי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबी"
           }
         },
         "ru" : {
@@ -315,6 +351,12 @@
             "value" : "אוטומטי"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्वचालित"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -359,6 +401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "תאורה אחורית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बैकलाइट"
           }
         },
         "ru" : {
@@ -407,6 +455,12 @@
             "value" : "שחור"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "काला"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -451,6 +505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "כחול"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीला"
           }
         },
         "ru" : {
@@ -499,6 +559,12 @@
             "value" : "טשטוש"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "धुंधला"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -543,6 +609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "בהירות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चमक"
           }
         },
         "ru" : {
@@ -591,6 +663,12 @@
             "value" : "סגור"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"बंद करें"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -635,6 +713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "סגור חלון זה ולחץ על «תצוגה מקדימה» כדי לראות את כל השינויים במסך מלא."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस विंडो को बंद करें और «पूर्वावलोकन» पर क्लिक करें ताकि सभी बदलाव पूर्ण स्क्रीन पर देख सकें।"
           }
         },
         "ru" : {
@@ -683,6 +767,12 @@
             "value" : "צבע"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रंग"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -727,6 +817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
           }
         },
         "ru" : {
@@ -775,6 +871,12 @@
             "value" : "ציאן"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सियान"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -819,6 +921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "תאריך"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तारीख"
           }
         },
         "ru" : {
@@ -867,6 +975,12 @@
             "value" : "יום"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिन"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -911,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ימים"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिन"
           }
         },
         "ru" : {
@@ -959,6 +1079,12 @@
             "value" : "ברירת מחדל: חצות."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डिफ़ॉल्ट: मध्यरात्रि।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1003,6 +1129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "דוונגרי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "देवनागरी"
           }
         },
         "ru" : {
@@ -1051,6 +1183,12 @@
             "value" : "ספרות"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंक"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1095,6 +1233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "אפקט"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाव"
           }
         },
         "ru" : {
@@ -1143,6 +1287,12 @@
             "value" : "צבע האפקט"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाव का रंग"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1187,6 +1337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "זוהר"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चमक"
           }
         },
         "ru" : {
@@ -1235,6 +1391,12 @@
             "value" : "ירוק"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हरा"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1279,6 +1441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "הסתר תוויות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेबल छुपाएं"
           }
         },
         "ru" : {
@@ -1327,6 +1495,12 @@
             "value" : "הסתר כותרת"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक छुपाएं"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1371,6 +1545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מסתיר את הכותרת גם כשהיא לא ריקה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक को तब भी छुपाता है जब वह खाली न हो।"
           }
         },
         "ru" : {
@@ -1419,6 +1599,12 @@
             "value" : "גבוה"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उच्च"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1463,6 +1649,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שעות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "घंटे"
           }
         },
         "ru" : {
@@ -1511,6 +1703,12 @@
             "value" : "אינדיגו"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इंडिगो"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1555,6 +1753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "זוהר פנימי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आंतरिक चमक"
           }
         },
         "ru" : {
@@ -1603,6 +1807,12 @@
             "value" : "יכול להיות כל תאריך עתידי למצב טיימר או כל תאריך עבר למצב שעון עצר."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "टाइमर मोड के लिए कोई भी भविष्य की तारीख या स्टॉपवॉच मोड के लिए कोई भी पिछली तारीख हो सकती है।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1647,6 +1857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "לטיני"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैटिन"
           }
         },
         "ru" : {
@@ -1695,6 +1911,12 @@
             "value" : "נמוך"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कम"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1739,6 +1961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "בינוני"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम"
           }
         },
         "ru" : {
@@ -1787,6 +2015,12 @@
             "value" : "מנטה"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुदीना"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1831,6 +2065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "דקות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मिनट"
           }
         },
         "ru" : {
@@ -1879,6 +2119,12 @@
             "value" : "ללא"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कोई नहीं"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1923,6 +2169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ספרות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंक प्रणाली"
           }
         },
         "ru" : {
@@ -1971,6 +2223,12 @@
             "value" : "כתום"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नारंगी"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2015,6 +2273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "פרסי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फारसी"
           }
         },
         "ru" : {
@@ -2063,6 +2327,12 @@
             "value" : "ורוד"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुलाबी"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2107,6 +2377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "סגול"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बैंगनी"
           }
         },
         "ru" : {
@@ -2155,6 +2431,12 @@
             "value" : "אדום"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लाल"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2199,6 +2481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מציג את הספרות בעיצוב המעוגל."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों को गोल डिज़ाइन में दिखाता है।"
           }
         },
         "ru" : {
@@ -2247,6 +2535,12 @@
             "value" : "עיגול ספרות"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों को गोल करें"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2291,6 +2585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "שניות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेकंड"
           }
         },
         "ru" : {
@@ -2339,6 +2639,12 @@
             "value" : "מגדיר את עובי הספרות מבהיר במיוחד לשחור."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डिजिट्स की मोटाई अल्ट्रा लाइट से ब्लैक तक सेट करता है।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2383,6 +2689,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "קובע את מערכת הספרות המשמשת את האותיות. אוטומטי עוקב אחר אזור ה-Mac שלך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों के लिए उपयोग की जाने वाली अंक प्रणाली सेट करता है। स्वचालित आपके Mac के क्षेत्र का अनुसरण करता है।"
           }
         },
         "ru" : {
@@ -2431,6 +2743,12 @@
             "value" : "הצג רק ספרות, ללא תוויות מתחת."
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "केवल अंक दिखाएं, नीचे कोई लेबल नहीं।"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2475,6 +2793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "הטווח הזמין הוא שנה אחת לפני ואחרי התאריך הנוכחי."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपलब्ध सीमा वर्तमान तारीख से एक वर्ष पहले और बाद की है।"
           }
         },
         "ru" : {
@@ -2523,6 +2847,12 @@
             "value" : "ערכת נושא"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "थीम"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2567,6 +2897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "חשוב על רעיון מגניב לכותרת שומר המסך וכתוב אותו כאן"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्क्रीन सेवर के लिए एक शानदार शीर्षक का विचार करें और यहां लिखें"
           }
         },
         "ru" : {
@@ -2615,6 +2951,12 @@
             "value" : "שעה"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "समय"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2661,6 +3003,12 @@
             "value" : "כותרת"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2705,6 +3053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "עובי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मोटाई"
           }
         },
         "ru" : {
@@ -2760,6 +3114,12 @@
             "value" : "שחור"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "काला (मोटाई)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2811,6 +3171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מודגש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मोटा"
           }
         },
         "ru" : {
@@ -2866,6 +3232,12 @@
             "value" : "כבד"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भारी"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2917,6 +3289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "קל"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हल्का"
           }
         },
         "ru" : {
@@ -2972,6 +3350,12 @@
             "value" : "בינוני"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम (मोटाई)"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3023,6 +3407,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "רגיל"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नियमित"
           }
         },
         "ru" : {
@@ -3078,6 +3468,12 @@
             "value" : "בינוני-מודגש"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अर्ध मोटा"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3129,6 +3525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "דק"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पतला"
           }
         },
         "ru" : {
@@ -3184,6 +3586,12 @@
             "value" : "דק במיוחד"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अति पतला"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3228,6 +3636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "כאשר הספירה לאחור מגיעה לאפס, הוא עובר אוטומטית למצב שעון עצר ומתחיל לספור כלפי מעלה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जब काउंटडाउन शून्य पर पहुंचे, तो यह स्वचालित रूप से स्टॉपवॉच मोड में बदल जाता है और ऊपर की ओर गिनना शुरू कर देता है।"
           }
         },
         "ru" : {
@@ -3276,6 +3690,12 @@
             "value" : "לבן"
           }
         },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सफेद"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3320,6 +3740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "צהוב"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पीला"
           }
         },
         "ru" : {
