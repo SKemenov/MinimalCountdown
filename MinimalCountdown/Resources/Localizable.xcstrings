@@ -21,6 +21,12 @@
             "value" : "⚠️ Se ve mejor con grosores más finos."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با ضخامت‌های نازک‌تر بهتر به نظر می‌رسد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -59,6 +65,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Se ve mejor con el grosor Normal o superior."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با ضخامت «معمولی» یا بیشتر بهتر به نظر می‌رسد."
           }
         },
         "fr" : {
@@ -101,6 +113,12 @@
             "value" : "⚠️ Se ve mejor con el redondeado activado."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با فعال بودن گرد کردن بهتر به نظر می‌رسد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -139,6 +157,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Añade un efecto a los dígitos:"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلوه‌ای به ارقام اضافه می‌کند:"
           }
         },
         "fr" : {
@@ -181,6 +205,12 @@
             "value" : "Aspecto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ظاهر"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -219,6 +249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Árabes"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربی"
           }
         },
         "fr" : {
@@ -261,6 +297,12 @@
             "value" : "Automático"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خودکار"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -299,6 +341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retroiluminación"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نور پس‌زمینه"
           }
         },
         "fr" : {
@@ -341,6 +389,12 @@
             "value" : "Negro"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -379,6 +433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Azul"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آبی"
           }
         },
         "fr" : {
@@ -421,6 +481,12 @@
             "value" : "Desenfoque"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاری"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -459,6 +525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brillo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روشنایی"
           }
         },
         "fr" : {
@@ -501,6 +573,12 @@
             "value" : "Cerrar"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بستن"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -539,6 +617,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cierra esta ventana y haz clic en «Previsualizar» para ver todos los cambios en pantalla completa."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این پنجره را ببند و روی «پیش‌نمایش» کلیک کن تا تمام تغییرات را در حالت تمام‌صفحه ببینی."
           }
         },
         "fr" : {
@@ -581,6 +665,12 @@
             "value" : "Color"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -619,6 +709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
           }
         },
         "fr" : {
@@ -661,6 +757,12 @@
             "value" : "Cian"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فیروزه‌ای"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -699,6 +801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fecha"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاریخ"
           }
         },
         "fr" : {
@@ -741,6 +849,12 @@
             "value" : "Día"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -779,6 +893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Días"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روزها"
           }
         },
         "fr" : {
@@ -821,6 +941,12 @@
             "value" : "Por defecto, medianoche."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پیش‌فرض: نیمه‌شب."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -859,6 +985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Devanagari"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دواناگری"
           }
         },
         "fr" : {
@@ -901,6 +1033,12 @@
             "value" : "Dígitos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارقام"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -939,6 +1077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Efecto"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلوه"
           }
         },
         "fr" : {
@@ -981,6 +1125,12 @@
             "value" : "Color del efecto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ جلوه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1019,6 +1169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resplandor"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درخشش"
           }
         },
         "fr" : {
@@ -1061,6 +1217,12 @@
             "value" : "Verde"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سبز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1099,6 +1261,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ocultar etiquetas"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن برچسب‌ها"
           }
         },
         "fr" : {
@@ -1141,6 +1309,12 @@
             "value" : "Ocultar título"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن عنوان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1179,6 +1353,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oculta el título aunque no esté vacío."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان را حتی وقتی خالی نیست پنهان می‌کند."
           }
         },
         "fr" : {
@@ -1221,6 +1401,12 @@
             "value" : "Alto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زیاد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1259,6 +1445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Horas"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعت‌ها"
           }
         },
         "fr" : {
@@ -1301,6 +1493,12 @@
             "value" : "Índigo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نیلی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1339,6 +1537,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Resplandor interior"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درخشش داخلی"
           }
         },
         "fr" : {
@@ -1381,6 +1585,12 @@
             "value" : "Puede ser cualquier fecha futura para el modo Temporizador o cualquier fecha pasada para el modo Cronómetro."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "می‌تواند هر تاریخ آینده برای حالت تایمر یا هر تاریخ گذشته برای حالت کرونومتر باشد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1419,6 +1629,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Latinos"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاتین"
           }
         },
         "fr" : {
@@ -1461,6 +1677,12 @@
             "value" : "Bajo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1499,6 +1721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Medio"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
           }
         },
         "fr" : {
@@ -1541,6 +1769,12 @@
             "value" : "Menta"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعناعی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1579,6 +1813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minutos"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دقیقه‌ها"
           }
         },
         "fr" : {
@@ -1621,6 +1861,12 @@
             "value" : "Ninguno"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هیچ"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1659,6 +1905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Números"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیستم ارقام"
           }
         },
         "fr" : {
@@ -1701,6 +1953,12 @@
             "value" : "Naranja"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نارنجی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1739,6 +1997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Persas"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فارسی"
           }
         },
         "fr" : {
@@ -1781,6 +2045,12 @@
             "value" : "Rosa"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورتی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1819,6 +2089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Morado"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بنفش"
           }
         },
         "fr" : {
@@ -1861,6 +2137,12 @@
             "value" : "Rojo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قرمز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1899,6 +2181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muestra los dígitos con el diseño Redondeado."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارقام را با طراحی گرد نمایش می‌دهد."
           }
         },
         "fr" : {
@@ -1941,6 +2229,12 @@
             "value" : "Redondear dígitos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گرد کردن ارقام"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1979,6 +2273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Segundos"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثانیه‌ها"
           }
         },
         "fr" : {
@@ -2021,6 +2321,12 @@
             "value" : "Define el grosor de los dígitos, de Ultrafino a Negro."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخامت ارقام را از خیلی روشن تا مشکی تنظیم می‌کند."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2059,6 +2365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Define los números usados para los dígitos. Automático sigue la región del Mac."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیستم ارقام مورد استفاده برای ارقام را تنظیم می‌کند. خودکار از منطقه مک شما پیروی می‌کند."
           }
         },
         "fr" : {
@@ -2101,6 +2413,12 @@
             "value" : "Mostrar solo los dígitos, sin etiquetas debajo."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فقط ارقام را نمایش بده، بدون برچسب زیر آن‌ها."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2139,6 +2457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "El intervalo disponible es de un año antes y después de la fecha actual."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محدوده موجود یک سال قبل و بعد از تاریخ فعلی است."
           }
         },
         "fr" : {
@@ -2181,6 +2505,12 @@
             "value" : "Tema"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2219,6 +2549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Piensa en una genial idea para el título y escríbelo aquí"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یک ایده عالی برای عنوان محافظ صفحه فکر کن و اینجا بنویس"
           }
         },
         "fr" : {
@@ -2261,6 +2597,12 @@
             "value" : "Hora"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زمان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2301,6 +2643,12 @@
             "value" : "Título"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2339,6 +2687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grosor"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخامت"
           }
         },
         "fr" : {
@@ -2388,6 +2742,12 @@
             "value" : "Negro"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2433,6 +2793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Negrito"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخیم"
           }
         },
         "fr" : {
@@ -2482,6 +2848,12 @@
             "value" : "Grueso"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنگین"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2527,6 +2899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ligero"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سبک"
           }
         },
         "fr" : {
@@ -2576,6 +2954,12 @@
             "value" : "Medio"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2621,6 +3005,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Normal"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معمولی"
           }
         },
         "fr" : {
@@ -2670,6 +3060,12 @@
             "value" : "Seminegrito"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نیمه‌ضخیم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2715,6 +3111,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fino"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نازک"
           }
         },
         "fr" : {
@@ -2764,6 +3166,12 @@
             "value" : "Ultrafino"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بسیار نازک"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2802,6 +3210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cuando la cuenta atrás llega a cero, cambia automáticamente al modo Cronómetro y empieza a contar hacia arriba."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقتی شمارش معکوس به صفر برسد، به طور خودکار به حالت کرونومتر تغییر می‌کند و شروع به شمارش رو به بالا می‌کند."
           }
         },
         "fr" : {
@@ -2844,6 +3258,12 @@
             "value" : "Blanco"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سفید"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2882,6 +3302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Amarillo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زرد"
           }
         },
         "fr" : {
