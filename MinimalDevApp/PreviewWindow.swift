@@ -11,6 +11,7 @@ struct PreviewWindow: View {
     @Binding var isAnimating: Bool
     @Binding var isTestPreview: Bool
     @Environment(SettingsManager.self) private var settingsManager
+    @Environment(\.locale) private var locale
 
     var body: some View {
         if isAnimating {
@@ -18,6 +19,7 @@ struct PreviewWindow: View {
                 CountdownWindow(
                     now: context.date,
                     settings: settingsManager.settings,
+                    locale: locale,
                     isPreview: isTestPreview
                 )
             }
@@ -25,6 +27,7 @@ struct PreviewWindow: View {
             CountdownWindow(
                 now: Date(),
                 settings: settingsManager.settings,
+                locale: locale,
                 isPreview: isTestPreview
             )
         }
