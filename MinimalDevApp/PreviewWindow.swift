@@ -34,18 +34,24 @@ struct PreviewWindow: View {
     }
 }
 
+#if DEBUG
 #Preview("Animated") {
+    @State @Previewable var manager = SettingsManager(saver: MockInMemoryLocalStore(initial: .preview))
     PreviewWindow(
         isAnimating: .constant(true),
         isTestPreview: .constant(false)
     )
-    .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
+    .environment(manager)
+    .onAppear(perform: manager.load)
 }
 
 #Preview("Static") {
+    @State @Previewable var manager = SettingsManager(saver: MockInMemoryLocalStore(initial: .preview))
     PreviewWindow(
         isAnimating: .constant(false),
         isTestPreview: .constant(false)
     )
-    .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
+    .environment(manager)
+    .onAppear(perform: manager.load)
 }
+#endif

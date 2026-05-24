@@ -37,7 +37,7 @@ extension SaverSettings {
             effect: .none,
             effectColor: .white
         ),
-        typography: .init(weight: .ultraLight, isRounded: false),
+        typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
         title: .init(text: "", isHidden: true)
     )
 }
@@ -45,7 +45,7 @@ extension SaverSettings {
 #if DEBUG
 extension SaverSettings {
     static let preview = SaverSettings(
-        appearance: .init(style: .days, isLabelHidden: false),
+        appearance: .init(style: .seconds, isLabelHidden: false),
         schedule: .init(target: Date(timeIntervalSinceNow: .oneDay * 365)),
         theme: .init(
             accent: .white,
@@ -54,7 +54,7 @@ extension SaverSettings {
             effect: .none,
             effectColor: .white
         ),
-        typography: .init(weight: .ultraLight, isRounded: false),
+        typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
         title: .init(text: "See you soon", isHidden: false)
     )
 }
