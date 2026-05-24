@@ -50,6 +50,12 @@
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится на тонких начертаниях."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ लघु-स्थौल्येषु श्रेष्ठं दृश्यते।"
+          }
         }
       }
     },
@@ -94,13 +100,19 @@
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "⚠️ «नियमित» या उससे अधिक मोटाई में बेहतर दिखता है।"
+            "value" : "⚠️ नियमित या उससे अधिक मोटाई में बेहतर दिखता है।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится при толщине Обычная или жирнее."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ «सामान्य» स्थौल्यात् ऊर्ध्वं श्रेष्ठं दृश्यते।"
           }
         }
       }
@@ -154,6 +166,12 @@
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится со скруглением."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ वृत्ताकार-सक्षमे श्रेष्ठं दृश्यते।"
+          }
         }
       }
     },
@@ -205,6 +223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавляет эффект к цифрам:"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्केषु प्रभावं योजयति:"
           }
         }
       }
@@ -258,6 +282,12 @@
             "state" : "translated",
             "value" : "Оформление"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रूपम्"
+          }
         }
       }
     },
@@ -309,6 +339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Арабские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबी"
           }
         }
       }
@@ -362,6 +398,12 @@
             "state" : "translated",
             "value" : "Автоматически"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्वचालितम्"
+          }
         }
       }
     },
@@ -413,6 +455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подсветка"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पृष्ठप्रकाशः"
           }
         }
       }
@@ -466,6 +514,12 @@
             "state" : "translated",
             "value" : "Чёрный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कृष्णः"
+          }
         }
       }
     },
@@ -517,6 +571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Синий"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीलः"
           }
         }
       }
@@ -570,6 +630,12 @@
             "state" : "translated",
             "value" : "Размытие"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अस्पष्टता"
+          }
         }
       }
     },
@@ -621,6 +687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Яркость"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रकाशः"
           }
         }
       }
@@ -674,6 +746,12 @@
             "state" : "translated",
             "value" : "Закрыть"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पिधानम्"
+          }
         }
       }
     },
@@ -725,6 +803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Закройте это окно и нажмите «Просмотр», чтобы в полноэкранном режиме увидеть все изменения."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इदं विण्डो पिधाय «पूर्वावलोकन» नुद «सर्वाणि परिवर्तनानि पूर्णपटले द्रष्टुं»।"
           }
         }
       }
@@ -778,6 +862,12 @@
             "state" : "translated",
             "value" : "Цвет"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वर्णः"
+          }
         }
       }
     },
@@ -829,6 +919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
           }
         }
       }
@@ -882,6 +978,12 @@
             "state" : "translated",
             "value" : "Голубой"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीलहरितः"
+          }
         }
       }
     },
@@ -933,6 +1035,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дата"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तिथिः"
           }
         }
       }
@@ -986,6 +1094,12 @@
             "state" : "translated",
             "value" : "День"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिनम्"
+          }
         }
       }
     },
@@ -1037,6 +1151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дни"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिनानि"
           }
         }
       }
@@ -1090,6 +1210,12 @@
             "state" : "translated",
             "value" : "По умолчанию — полночь."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पूर्वनिर्धारितम्: मध्यरात्रिः।"
+          }
         }
       }
     },
@@ -1141,6 +1267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Деванагари"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "देवनागरी"
           }
         }
       }
@@ -1194,6 +1326,12 @@
             "state" : "translated",
             "value" : "Цифры"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्काः"
+          }
         }
       }
     },
@@ -1245,6 +1383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Эффект"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभावः"
           }
         }
       }
@@ -1298,6 +1442,12 @@
             "state" : "translated",
             "value" : "Цвет эффекта"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाववर्णः"
+          }
         }
       }
     },
@@ -1349,6 +1499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Свечение"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाः"
           }
         }
       }
@@ -1402,6 +1558,12 @@
             "state" : "translated",
             "value" : "Зелёный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हरितः"
+          }
         }
       }
     },
@@ -1453,6 +1615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скрыть подписи"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेबलानि गोपय"
           }
         }
       }
@@ -1506,6 +1674,12 @@
             "state" : "translated",
             "value" : "Скрыть заголовок"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकं गोपय"
+          }
         }
       }
     },
@@ -1557,6 +1731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скрывает заголовок, даже если он не пустой."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकं गोपयति यद्यपि तत् रिक्तं नास्ति।"
           }
         }
       }
@@ -1610,6 +1790,12 @@
             "state" : "translated",
             "value" : "Высокая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उच्चम्"
+          }
         }
       }
     },
@@ -1661,6 +1847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Часы"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "घण्टाः"
           }
         }
       }
@@ -1714,6 +1906,12 @@
             "state" : "translated",
             "value" : "Индиго"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इन्दिगो"
+          }
         }
       }
     },
@@ -1765,6 +1963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Внутреннее свечение"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आन्तरिकप्रभाः"
           }
         }
       }
@@ -1818,6 +2022,12 @@
             "state" : "translated",
             "value" : "Это может быть любая будущая дата для режима таймера или любая прошедшая — для режима секундомера."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "टाइमर-मोडस्य कृते भविष्यतिथिः वा स्टॉपवॉच-मोडस्य कृते अतीततिथिः भवितुं शक्यते।"
+          }
         }
       }
     },
@@ -1869,6 +2079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Латинские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैटिन्"
           }
         }
       }
@@ -1922,6 +2138,12 @@
             "state" : "translated",
             "value" : "Низкая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अल्पम्"
+          }
         }
       }
     },
@@ -1973,6 +2195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Средняя"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम्"
           }
         }
       }
@@ -2026,6 +2254,12 @@
             "state" : "translated",
             "value" : "Мятный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुदीना"
+          }
         }
       }
     },
@@ -2077,6 +2311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Минуты"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "निमेषाः"
           }
         }
       }
@@ -2130,6 +2370,12 @@
             "state" : "translated",
             "value" : "Нет"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "न किमपि"
+          }
         }
       }
     },
@@ -2181,6 +2427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Числа"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कप्रणाली"
           }
         }
       }
@@ -2234,6 +2486,12 @@
             "state" : "translated",
             "value" : "Оранжевый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नारङ्गः"
+          }
         }
       }
     },
@@ -2285,6 +2543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Персидские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फारसी"
           }
         }
       }
@@ -2338,6 +2602,12 @@
             "state" : "translated",
             "value" : "Розовый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुलाबी"
+          }
         }
       }
     },
@@ -2389,6 +2659,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фиолетовый"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीललोहितः"
           }
         }
       }
@@ -2442,6 +2718,12 @@
             "state" : "translated",
             "value" : "Красный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रक्तः"
+          }
         }
       }
     },
@@ -2493,6 +2775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отображает цифры со скруглённым начертанием."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कान् वृत्ताकार-डिज़ाइन-रूपेण दर्शयति।"
           }
         }
       }
@@ -2546,6 +2834,12 @@
             "state" : "translated",
             "value" : "Скруглять цифры"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कानां वृत्ताकारः"
+          }
         }
       }
     },
@@ -2597,6 +2891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Секунды"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्षणाः"
           }
         }
       }
@@ -2650,6 +2950,12 @@
             "state" : "translated",
             "value" : "Задаёт толщину цифр от сверхтонкой до чёрной."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अत्यन्तं सूक्ष्मतः कृष्णपर्यन्तं अङ्कानां स्थूलतां निर्धारयति।"
+          }
         }
       }
     },
@@ -2701,6 +3007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Задаёт систему счисления для цифр. Автоматически следует региону Mac."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कानां कृते प्रयुक्तां अङ्कप्रणालीं निर्धारयति। स्वचालितं भवतः Mac-क्षेत्रस्य अनुसरणं करोति।"
           }
         }
       }
@@ -2754,6 +3066,12 @@
             "state" : "translated",
             "value" : "Показывать только цифры, без подписей под ними."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "केवलम् अङ्कान् दर्शय, अधः किमपि लेबलं नास्ति।"
+          }
         }
       }
     },
@@ -2805,6 +3123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Доступный диапазон — один год до и после текущей даты."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
           }
         }
       }
@@ -2858,6 +3182,12 @@
             "state" : "translated",
             "value" : "Тема"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "विषयः"
+          }
         }
       }
     },
@@ -2909,6 +3239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Придумайте классный заголовок для заставки и напишите его здесь"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्क्रीनसेवर-शीर्षकस्य कृते उत्तमं विचारं चिन्तय तत्र लिख।"
           }
         }
       }
@@ -2962,6 +3298,12 @@
             "state" : "translated",
             "value" : "Время"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कालः"
+          }
         }
       }
     },
@@ -3014,6 +3356,12 @@
             "state" : "translated",
             "value" : "Заголовок"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकम्"
+          }
         }
       }
     },
@@ -3065,6 +3413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Толщина цифр"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्थौल्यम्"
           }
         }
       }
@@ -3125,6 +3479,12 @@
             "state" : "translated",
             "value" : "Чёрная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कृष्णः"
+          }
         }
       }
     },
@@ -3183,6 +3543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Жирная"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्थूलः"
           }
         }
       }
@@ -3243,6 +3609,12 @@
             "state" : "translated",
             "value" : "Сверхжирная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुरुः"
+          }
         }
       }
     },
@@ -3301,6 +3673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Светлая"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लघुः"
           }
         }
       }
@@ -3361,6 +3739,12 @@
             "state" : "translated",
             "value" : "Средняя"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यमः"
+          }
         }
       }
     },
@@ -3419,6 +3803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Обычная"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सामान्यः"
           }
         }
       }
@@ -3479,6 +3869,12 @@
             "state" : "translated",
             "value" : "Полужирная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अर्धस्थूलः"
+          }
         }
       }
     },
@@ -3537,6 +3933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Тонкая"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सूक्ष्मः"
           }
         }
       }
@@ -3597,6 +3999,12 @@
             "state" : "translated",
             "value" : "Сверхтонкая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अतिसूक्ष्मः"
+          }
         }
       }
     },
@@ -3648,6 +4056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Когда отсчёт достигает нуля, автоматически включается режим секундомера и он начинает идти вперёд."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यदा गणना शून्यं प्राप्नोति, तदा स्वयमेव स्टॉपवॉच-मोडं प्राप्नोति ऊर्ध्वं गणयितुं च आरभते।"
           }
         }
       }
@@ -3701,6 +4115,12 @@
             "state" : "translated",
             "value" : "Белый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "श्वेतः"
+          }
         }
       }
     },
@@ -3752,6 +4172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Жёлтый"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पीतः"
           }
         }
       }
