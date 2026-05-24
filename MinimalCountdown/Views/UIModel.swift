@@ -17,6 +17,7 @@ enum UIModel {
         let effect: EffectStyle
         let effectGlowColor: Color
         let digitLocale: Locale
+        let isNeedFixLabelSize: Bool
 
         init(_ settings: SaverSettings, locale: Locale = .autoupdatingCurrent) {
             let theme = settings.theme
@@ -36,7 +37,10 @@ enum UIModel {
             var components = Locale.Components(locale: locale)
             components.numberingSystem = numbering
             digitLocale = Locale(components: components)
+            isNeedFixLabelSize = !nonCapitalizedLanguages.map { $0.contains(locale.identifier.lowercased()) }.isEmpty
         }
+
+        private let nonCapitalizedLanguages = ["ar", "he", "fa"]
     }
 
     struct Element {
@@ -60,12 +64,6 @@ enum UIModel {
         let words = string.components(separatedBy: " ")
         let separator = string.count <= 30 ? "  " : "   "
         return words.joined(separator: separator)
-    }
-
-    static func labelSize(for element: Element) -> CGFloat {
-        let localeId = element.render.digitLocale.identifier.lowercased()
-        let isNeedFixSize = localeId.contains("ar") || localeId.contains("he")
-        return element.size * (isNeedFixSize ? .nonLatinLabelsToDigitsRatio : .labelsToDigitsRatio)
     }
 
     /// Countdown digit string: zero-padded (min 2, grows for 3-digit day counts) and rendered
