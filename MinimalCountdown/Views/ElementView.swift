@@ -37,7 +37,7 @@ private extension ElementView {
     var labelElement: UIModel.TextElement? {
         element.render.isLabelHidden ? nil : .init(
             text: element.label,
-            size: element.size * .labelsToDigitsRatio,
+            size: UIModel.labelSize(for: element),
             color: element.render.textsColor
         )
     }

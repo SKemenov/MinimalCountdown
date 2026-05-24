@@ -62,6 +62,12 @@ enum UIModel {
         return words.joined(separator: separator)
     }
 
+    static func labelSize(for element: Element) -> CGFloat {
+        let localeId = element.render.digitLocale.identifier.lowercased()
+        let isNeedFixSize = localeId.contains("ar") || localeId.contains("he")
+        return element.size * (isNeedFixSize ? .nonLatinLabelsToDigitsRatio : .labelsToDigitsRatio)
+    }
+
     /// Countdown digit string: zero-padded (min 2, grows for 3-digit day counts) and rendered
     /// in `locale`'s numeral system (the resolved `RenderSettings.digitLocale`).
     static func formattedDigits(_ value: Int, in locale: Locale) -> String {

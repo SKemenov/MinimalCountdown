@@ -51,6 +51,8 @@ extension CGFloat {
 
     /// Label text size relative to the digits baseline. CGFloat = 1.0 / 5.0
     static let labelsToDigitsRatio: CGFloat = 1.0 / 5.0
+   /// Non Latin label text size relative to the digits baseline. CGFloat = 1.0 / 3.8
+    static let nonLatinLabelsToDigitsRatio: CGFloat = 1.0 / 3.8
     /// Title text size relative to the digits baseline. CGFloat = 1.0 / 4.0
     static let titleToDigitsRatio: CGFloat = 1.0 / 4.0
     /// Inter-element spacing as a fraction of window width. CGFloat = 0.04
