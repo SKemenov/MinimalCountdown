@@ -3,6 +3,12 @@
   "strings" : {
     "⚠️ Looks better at lighter weights." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل مع أوزان أخف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -15,10 +21,28 @@
             "value" : "⚠️ Se ve mejor con grosores más finos."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با ضخامت‌های نازک‌تر بهتر به نظر می‌رسد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Plus joli avec des épaisseurs plus fines."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם עוביים דקים יותר."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ हल्की मोटाई में बेहतर दिखता है।"
           }
         },
         "ru" : {
@@ -26,11 +50,23 @@
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится на тонких начертаниях."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ लघु-स्थौल्येषु श्रेष्ठं दृश्यते।"
+          }
         }
       }
     },
     "⚠️ Looks better at Regular weight or higher." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل مع وزن «عادي» أو أعلى."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,10 +79,28 @@
             "value" : "⚠️ Se ve mejor con el grosor Normal o superior."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با ضخامت «معمولی» یا بیشتر بهتر به نظر می‌رسد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Plus joli à l’épaisseur Normale ou supérieure."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם עובי «רגיל» ומעלה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ नियमित या उससे अधिक मोटाई में बेहतर दिखता है।"
           }
         },
         "ru" : {
@@ -54,11 +108,23 @@
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится при толщине Обычная или жирнее."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ «सामान्य» स्थौल्यात् ऊर्ध्वं श्रेष्ठं दृश्यते।"
+          }
         }
       }
     },
     "⚠️ Looks better with Rounded enabled." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ يبدو أفضل عند تفعيل التدوير."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -71,10 +137,28 @@
             "value" : "⚠️ Se ve mejor con el redondeado activado."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ با فعال بودن گرد کردن بهتر به نظر می‌رسد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "⚠️ Plus joli avec l’arrondi activé."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ נראה טוב יותר עם העיגול מופעל."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ गोलाकार सक्षम होने पर बेहतर दिखता है।"
           }
         },
         "ru" : {
@@ -82,11 +166,23 @@
             "state" : "translated",
             "value" : "⚠️ Лучше смотрится со скруглением."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ वृत्ताकार-सक्षमे श्रेष्ठं दृश्यते।"
+          }
         }
       }
     },
     "Adds an effect to the digits:" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يضيف تأثيراً على الأرقام:"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -99,10 +195,28 @@
             "value" : "Añade un efecto a los dígitos:"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلوه‌ای به ارقام اضافه می‌کند:"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajoute un effet aux chiffres :"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מוסיף אפקט לספרות:"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों में प्रभाव जोड़ता है:"
           }
         },
         "ru" : {
@@ -110,11 +224,23 @@
             "state" : "translated",
             "value" : "Добавляет эффект к цифрам:"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्केषु प्रभावं योजयति:"
+          }
         }
       }
     },
     "Appearance" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المظهر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,10 +253,28 @@
             "value" : "Aspecto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ظاهر"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apparence"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מראה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिखावट"
           }
         },
         "ru" : {
@@ -138,11 +282,139 @@
             "state" : "translated",
             "value" : "Оформление"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रूपम्"
+          }
+        }
+      }
+    },
+    "Arabic" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Árabes"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערבי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Арабские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबी"
+          }
+        }
+      }
+    },
+    "Automatic" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تلقائي"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خودکار"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatique"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אוטומטי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्वचालित"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автоматически"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्वचालितम्"
+          }
         }
       }
     },
     "Backlight" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضاءة خلفية"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -155,10 +427,28 @@
             "value" : "Retroiluminación"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نور پس‌زمینه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rétroéclairage"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תאורה אחורית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बैकलाइट"
           }
         },
         "ru" : {
@@ -166,11 +456,23 @@
             "state" : "translated",
             "value" : "Подсветка"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पृष्ठप्रकाशः"
+          }
         }
       }
     },
     "Black" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسود"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -183,10 +485,28 @@
             "value" : "Negro"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noir"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחור"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "काला"
           }
         },
         "ru" : {
@@ -194,11 +514,23 @@
             "state" : "translated",
             "value" : "Чёрный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कृष्णः"
+          }
         }
       }
     },
     "Blue" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أزرق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -211,10 +543,28 @@
             "value" : "Azul"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آبی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bleu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כחול"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीला"
           }
         },
         "ru" : {
@@ -222,11 +572,23 @@
             "state" : "translated",
             "value" : "Синий"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीलः"
+          }
         }
       }
     },
     "Blur" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تمويه"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -239,10 +601,28 @@
             "value" : "Desenfoque"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاری"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Flou"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "טשטוש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "धुंधला"
           }
         },
         "ru" : {
@@ -250,11 +630,23 @@
             "state" : "translated",
             "value" : "Размытие"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अस्पष्टता"
+          }
         }
       }
     },
     "Brightness" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السطوع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -267,10 +659,28 @@
             "value" : "Brillo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روشنایی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luminosité"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בהירות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चमक"
           }
         },
         "ru" : {
@@ -278,11 +688,23 @@
             "state" : "translated",
             "value" : "Яркость"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रकाशः"
+          }
         }
       }
     },
     "Close" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -295,10 +717,28 @@
             "value" : "Cerrar"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بستن"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fermer"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"बंद करें"
           }
         },
         "ru" : {
@@ -306,11 +746,23 @@
             "state" : "translated",
             "value" : "Закрыть"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पिधानम्"
+          }
         }
       }
     },
     "Close this window and click Preview to see all the changes in detail, full-screen." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أغلق هذه النافذة وانقر على «معاينة» لرؤية جميع التغييرات بالتفصيل على الشاشة الكاملة."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -323,10 +775,28 @@
             "value" : "Cierra esta ventana y haz clic en «Previsualizar» para ver todos los cambios en pantalla completa."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "این پنجره را ببند و روی «پیش‌نمایش» کلیک کن تا تمام تغییرات را در حالت تمام‌صفحه ببینی."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fermez cette fenêtre et cliquez sur « Aperçu » pour voir tous les changements en détail, en plein écran."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגור חלון זה ולחץ על «תצוגה מקדימה» כדי לראות את כל השינויים במסך מלא."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस विंडो को बंद करें और «पूर्वावलोकन» पर क्लिक करें ताकि सभी बदलाव पूर्ण स्क्रीन पर देख सकें।"
           }
         },
         "ru" : {
@@ -334,11 +804,23 @@
             "state" : "translated",
             "value" : "Закройте это окно и нажмите «Просмотр», чтобы в полноэкранном режиме увидеть все изменения."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इदं विण्डो पिधाय «पूर्वावलोकन» नुद «सर्वाणि परिवर्तनानि पूर्णपटले द्रष्टुं»।"
+          }
         }
       }
     },
     "Color" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللون"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -351,10 +833,28 @@
             "value" : "Color"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couleur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צבע"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रंग"
           }
         },
         "ru" : {
@@ -362,11 +862,23 @@
             "state" : "translated",
             "value" : "Цвет"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "वर्णः"
+          }
         }
       }
     },
     "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -379,10 +891,28 @@
             "value" : "No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
           }
         },
         "ru" : {
@@ -390,11 +920,23 @@
             "state" : "translated",
             "value" : "Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
+          }
         }
       }
     },
     "Cyan" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سماوي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -407,10 +949,28 @@
             "value" : "Cian"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فیروزه‌ای"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cyan"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ציאן"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सियान"
           }
         },
         "ru" : {
@@ -418,11 +978,23 @@
             "state" : "translated",
             "value" : "Голубой"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीलहरितः"
+          }
         }
       }
     },
     "Date" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -435,10 +1007,28 @@
             "value" : "Fecha"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاریخ"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Date"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "תאריך"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तारीख"
           }
         },
         "ru" : {
@@ -446,11 +1036,23 @@
             "state" : "translated",
             "value" : "Дата"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "तिथिः"
+          }
         }
       }
     },
     "Day" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اليوم"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -463,10 +1065,28 @@
             "value" : "Día"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jour"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिन"
           }
         },
         "ru" : {
@@ -474,11 +1094,23 @@
             "state" : "translated",
             "value" : "День"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिनम्"
+          }
         }
       }
     },
     "Days" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أيام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -491,10 +1123,28 @@
             "value" : "Días"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روزها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jours"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ימים"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिन"
           }
         },
         "ru" : {
@@ -502,11 +1152,23 @@
             "state" : "translated",
             "value" : "Дни"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "दिनानि"
+          }
         }
       }
     },
     "Defaults to midnight." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الافتراضي: منتصف الليل."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -519,10 +1181,28 @@
             "value" : "Por defecto, medianoche."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پیش‌فرض: نیمه‌شب."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minuit par défaut."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ברירת מחדל: חצות."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डिफ़ॉल्ट: मध्यरात्रि।"
           }
         },
         "ru" : {
@@ -530,11 +1210,81 @@
             "state" : "translated",
             "value" : "По умолчанию — полночь."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पूर्वनिर्धारितम्: मध्यरात्रिः।"
+          }
+        }
+      }
+    },
+    "Devanagari" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ديفاناغاري"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دواناگری"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devanagari"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דוונגרי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "देवनागरी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Деванагари"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "देवनागरी"
+          }
         }
       }
     },
     "Digits" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -547,10 +1297,28 @@
             "value" : "Dígitos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارقام"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chiffres"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספרות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंक"
           }
         },
         "ru" : {
@@ -558,11 +1326,23 @@
             "state" : "translated",
             "value" : "Цифры"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्काः"
+          }
         }
       }
     },
     "Effect" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التأثير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -575,10 +1355,28 @@
             "value" : "Efecto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جلوه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Effet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אפקט"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाव"
           }
         },
         "ru" : {
@@ -586,11 +1384,23 @@
             "state" : "translated",
             "value" : "Эффект"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभावः"
+          }
         }
       }
     },
     "Effect Color" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لون التأثير"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -603,10 +1413,28 @@
             "value" : "Color del efecto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رنگ جلوه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Couleur de l’effet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צבע האפקט"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाव का रंग"
           }
         },
         "ru" : {
@@ -614,11 +1442,23 @@
             "state" : "translated",
             "value" : "Цвет эффекта"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाववर्णः"
+          }
         }
       }
     },
     "Glow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توهج"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -631,10 +1471,28 @@
             "value" : "Resplandor"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درخشش"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lueur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זוהר"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "चमक"
           }
         },
         "ru" : {
@@ -642,11 +1500,23 @@
             "state" : "translated",
             "value" : "Свечение"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "प्रभाः"
+          }
         }
       }
     },
     "Green" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أخضر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -659,10 +1529,28 @@
             "value" : "Verde"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سبز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vert"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ירוק"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हरा"
           }
         },
         "ru" : {
@@ -670,11 +1558,23 @@
             "state" : "translated",
             "value" : "Зелёный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हरितः"
+          }
         }
       }
     },
     "Hide labels" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء التسميات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -687,10 +1587,28 @@
             "value" : "Ocultar etiquetas"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن برچسب‌ها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masquer les étiquettes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסתר תוויות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेबल छुपाएं"
           }
         },
         "ru" : {
@@ -698,11 +1616,23 @@
             "state" : "translated",
             "value" : "Скрыть подписи"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लेबलानि गोपय"
+          }
         }
       }
     },
     "Hide title" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء العنوان"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -715,10 +1645,28 @@
             "value" : "Ocultar título"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنهان کردن عنوان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masquer le titre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הסתר כותרת"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक छुपाएं"
           }
         },
         "ru" : {
@@ -726,11 +1674,23 @@
             "state" : "translated",
             "value" : "Скрыть заголовок"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकं गोपय"
+          }
         }
       }
     },
     "Hides the title even when it isn't empty." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يخفي العنوان حتى لو لم يكن فارغاً."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -743,10 +1703,28 @@
             "value" : "Oculta el título aunque no esté vacío."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان را حتی وقتی خالی نیست پنهان می‌کند."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Masque le titre même lorsqu’il n’est pas vide."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מסתיר את הכותרת גם כשהיא לא ריקה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक को तब भी छुपाता है जब वह खाली न हो।"
           }
         },
         "ru" : {
@@ -754,11 +1732,23 @@
             "state" : "translated",
             "value" : "Скрывает заголовок, даже если он не пустой."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकं गोपयति यद्यपि तत् रिक्तं नास्ति।"
+          }
         }
       }
     },
     "High" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -771,10 +1761,28 @@
             "value" : "Alto"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زیاد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Élevée"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גבוה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उच्च"
           }
         },
         "ru" : {
@@ -782,11 +1790,23 @@
             "state" : "translated",
             "value" : "Высокая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उच्चम्"
+          }
         }
       }
     },
     "Hours" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعات"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -799,10 +1819,28 @@
             "value" : "Horas"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعت‌ها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heures"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שעות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "घंटे"
           }
         },
         "ru" : {
@@ -810,11 +1848,23 @@
             "state" : "translated",
             "value" : "Часы"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "घण्टाः"
+          }
         }
       }
     },
     "Indigo" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نيلي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -827,10 +1877,28 @@
             "value" : "Índigo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نیلی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Indigo"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אינדיגו"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इंडिगो"
           }
         },
         "ru" : {
@@ -838,11 +1906,23 @@
             "state" : "translated",
             "value" : "Индиго"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इन्दिगो"
+          }
         }
       }
     },
     "Inner Glow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توهج داخلي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -855,10 +1935,28 @@
             "value" : "Resplandor interior"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "درخشش داخلی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lueur intérieure"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "זוהר פנימי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आंतरिक चमक"
           }
         },
         "ru" : {
@@ -866,11 +1964,23 @@
             "state" : "translated",
             "value" : "Внутреннее свечение"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आन्तरिकप्रभाः"
+          }
         }
       }
     },
     "It can be any future date for Timer Mode or any past date for Stopwatch Mode." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن أن يكون أي تاريخ مستقبلي لوضع المؤقت أو أي تاريخ ماضٍ لوضع ساعة الإيقاف."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -883,10 +1993,28 @@
             "value" : "Puede ser cualquier fecha futura para el modo Temporizador o cualquier fecha pasada para el modo Cronómetro."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "می‌تواند هر تاریخ آینده برای حالت تایمر یا هر تاریخ گذشته برای حالت کرونومتر باشد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Il peut s’agir de n’importe quelle date future pour le mode Minuteur ou de n’importe quelle date passée pour le mode Chronomètre."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "יכול להיות כל תאריך עתידי למצב טיימר או כל תאריך עבר למצב שעון עצר."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "टाइमर मोड के लिए कोई भी भविष्य की तारीख या स्टॉपवॉच मोड के लिए कोई भी पिछली तारीख हो सकती है।"
           }
         },
         "ru" : {
@@ -894,11 +2022,81 @@
             "state" : "translated",
             "value" : "Это может быть любая будущая дата для режима таймера или любая прошедшая — для режима секундомера."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "टाइमर-मोडस्य कृते भविष्यतिथिः वा स्टॉपवॉच-मोडस्य कृते अतीततिथिः भवितुं शक्यते।"
+          }
+        }
+      }
+    },
+    "Latin" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاتينية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lateinisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latinos"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لاتین"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latins"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לטיני"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैटिन"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Латинские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लैटिन्"
+          }
         }
       }
     },
     "Low" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "منخفض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -911,10 +2109,28 @@
             "value" : "Bajo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "کم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Faible"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "נמוך"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कम"
           }
         },
         "ru" : {
@@ -922,11 +2138,23 @@
             "state" : "translated",
             "value" : "Низкая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अल्पम्"
+          }
         }
       }
     },
     "Medium" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -939,10 +2167,28 @@
             "value" : "Medio"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moyenne"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम"
           }
         },
         "ru" : {
@@ -950,11 +2196,23 @@
             "state" : "translated",
             "value" : "Средняя"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम्"
+          }
         }
       }
     },
     "Mint" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعناعي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -967,10 +2225,28 @@
             "value" : "Menta"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعناعی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menthe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מנטה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुदीना"
           }
         },
         "ru" : {
@@ -978,11 +2254,23 @@
             "state" : "translated",
             "value" : "Мятный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पुदीना"
+          }
         }
       }
     },
     "Minutes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دقائق"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -995,10 +2283,28 @@
             "value" : "Minutos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دقیقه‌ها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minutes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דקות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मिनट"
           }
         },
         "ru" : {
@@ -1006,11 +2312,23 @@
             "state" : "translated",
             "value" : "Минуты"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "निमेषाः"
+          }
         }
       }
     },
     "None" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1023,10 +2341,28 @@
             "value" : "Ninguno"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هیچ"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aucun"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ללא"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कोई नहीं"
           }
         },
         "ru" : {
@@ -1034,11 +2370,81 @@
             "state" : "translated",
             "value" : "Нет"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "न किमपि"
+          }
+        }
+      }
+    },
+    "Numerals" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعداد"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zahlen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Números"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیستم ارقام"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numéros"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספרות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंक प्रणाली"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Числа"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कप्रणाली"
+          }
         }
       }
     },
     "Orange" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "برتقالي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1051,10 +2457,28 @@
             "value" : "Naranja"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نارنجی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orange"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כתום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नारंगी"
           }
         },
         "ru" : {
@@ -1062,11 +2486,81 @@
             "state" : "translated",
             "value" : "Оранжевый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नारङ्गः"
+          }
+        }
+      }
+    },
+    "Persian" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فارسية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persisch"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persas"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فارسی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persans"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרסי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फारसी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Персидские"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फारसी"
+          }
         }
       }
     },
     "Pink" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وردي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1079,10 +2573,28 @@
             "value" : "Rosa"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "صورتی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rose"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ורוד"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुलाबी"
           }
         },
         "ru" : {
@@ -1090,11 +2602,23 @@
             "state" : "translated",
             "value" : "Розовый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुलाबी"
+          }
         }
       }
     },
     "Purple" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بنفسجي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1107,10 +2631,28 @@
             "value" : "Morado"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بنفش"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Violet"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סגול"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "बैंगनी"
           }
         },
         "ru" : {
@@ -1118,11 +2660,23 @@
             "state" : "translated",
             "value" : "Фиолетовый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नीललोहितः"
+          }
         }
       }
     },
     "Red" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أحمر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1135,10 +2689,28 @@
             "value" : "Rojo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قرمز"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rouge"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אדום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लाल"
           }
         },
         "ru" : {
@@ -1146,11 +2718,23 @@
             "state" : "translated",
             "value" : "Красный"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रक्तः"
+          }
         }
       }
     },
     "Renders the digits with the Rounded design." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يعرض الأرقام بالتصميم المُدوّر."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1163,10 +2747,28 @@
             "value" : "Muestra los dígitos con el diseño Redondeado."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارقام را با طراحی گرد نمایش می‌دهد."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Affiche les chiffres avec le style arrondi."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מציג את הספרות בעיצוב המעוגל."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों को गोल डिज़ाइन में दिखाता है।"
           }
         },
         "ru" : {
@@ -1174,11 +2776,23 @@
             "state" : "translated",
             "value" : "Отображает цифры со скруглённым начертанием."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कान् वृत्ताकार-डिज़ाइन-रूपेण दर्शयति।"
+          }
         }
       }
     },
     "Round digits" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تدوير الأرقام"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1191,10 +2805,28 @@
             "value" : "Redondear dígitos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گرد کردن ارقام"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Arrondir les chiffres"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עיגול ספרות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों को गोल करें"
           }
         },
         "ru" : {
@@ -1202,11 +2834,23 @@
             "state" : "translated",
             "value" : "Скруглять цифры"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कानां वृत्ताकारः"
+          }
         }
       }
     },
     "Seconds" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثوانٍ"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1219,10 +2863,28 @@
             "value" : "Segundos"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثانیه‌ها"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Secondes"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שניות"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेकंड"
           }
         },
         "ru" : {
@@ -1230,11 +2892,23 @@
             "state" : "translated",
             "value" : "Секунды"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "क्षणाः"
+          }
         }
       }
     },
     "Sets the digit thickness from Ultra Light to Black." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحدّد سُمك الأرقام من رفيع جداً إلى أسود."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1247,10 +2921,28 @@
             "value" : "Define el grosor de los dígitos, de Ultrafino a Negro."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخامت ارقام را از خیلی روشن تا مشکی تنظیم می‌کند."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Définit l’épaisseur des chiffres, d’Ultrafine à Noire."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מגדיר את עובי הספרות מבהיר במיוחד לשחור."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "डिजिट्स की मोटाई अल्ट्रा लाइट से ब्लैक तक सेट करता है।"
           }
         },
         "ru" : {
@@ -1258,11 +2950,81 @@
             "state" : "translated",
             "value" : "Задаёт толщину цифр от сверхтонкой до чёрной."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अत्यन्तं सूक्ष्मतः कृष्णपर्यन्तं अङ्कानां स्थूलतां निर्धारयति।"
+          }
+        }
+      }
+    },
+    "Sets the numeral system used for the digits. Automatic follows your Mac's region." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يحدّد نظام الأعداد المُستخدم للأرقام. يتبع الوضع التلقائي منطقة الـ Mac."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legt das Zahlensystem für die Ziffern fest. Automatisch folgt der Region des Mac."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Define los números usados para los dígitos. Automático sigue la región del Mac."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیستم ارقام مورد استفاده برای ارقام را تنظیم می‌کند. خودکار از منطقه مک شما پیروی می‌کند."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Définit le système de numération utilisé pour les chiffres. Automatique suit la région du Mac."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קובע את מערכת הספרות המשמשת את האותיות. אוטומטי עוקב אחר אזור ה-Mac שלך."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अंकों के लिए उपयोग की जाने वाली अंक प्रणाली सेट करता है। स्वचालित आपके Mac के क्षेत्र का अनुसरण करता है।"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задаёт систему счисления для цифр. Автоматически следует региону Mac."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अङ्कानां कृते प्रयुक्तां अङ्कप्रणालीं निर्धारयति। स्वचालितं भवतः Mac-क्षेत्रस्य अनुसरणं करोति।"
+          }
         }
       }
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الأرقام فقط، بدون تسميات أسفلها."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1275,10 +3037,28 @@
             "value" : "Mostrar solo los dígitos, sin etiquetas debajo."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فقط ارقام را نمایش بده، بدون برچسب زیر آن‌ها."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Afficher uniquement les chiffres, sans étiquettes en dessous."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הצג רק ספרות, ללא תוויות מתחת."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "केवल अंक दिखाएं, नीचे कोई लेबल नहीं।"
           }
         },
         "ru" : {
@@ -1286,11 +3066,23 @@
             "state" : "translated",
             "value" : "Показывать только цифры, без подписей под ними."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "केवलम् अङ्कान् दर्शय, अधः किमपि लेबलं नास्ति।"
+          }
         }
       }
     },
     "The available range is one year before and after the current date." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النطاق المتاح هو سنة واحدة قبل وبعد التاريخ الحالي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1303,10 +3095,28 @@
             "value" : "El intervalo disponible es de un año antes y después de la fecha actual."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محدوده موجود یک سال قبل و بعد از تاریخ فعلی است."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "La plage disponible est d’un an avant et après la date actuelle."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הטווח הזמין הוא שנה אחת לפני ואחרי התאריך הנוכחי."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपलब्ध सीमा वर्तमान तारीख से एक वर्ष पहले और बाद की है।"
           }
         },
         "ru" : {
@@ -1314,11 +3124,23 @@
             "state" : "translated",
             "value" : "Доступный диапазон — один год до и после текущей даты."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
+          }
         }
       }
     },
     "Theme" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السمة"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1331,10 +3153,28 @@
             "value" : "Tema"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thème"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערכת נושא"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "थीम"
           }
         },
         "ru" : {
@@ -1342,11 +3182,23 @@
             "state" : "translated",
             "value" : "Тема"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "विषयः"
+          }
         }
       }
     },
     "Think of a cool idea for a screen saver title and write it here" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فكّر في فكرة رائعة لعنوان شاشة التوقف واكتبها هنا"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1359,10 +3211,28 @@
             "value" : "Piensa en una genial idea para el título y escríbelo aquí"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "یک ایده عالی برای عنوان محافظ صفحه فکر کن و اینجا بنویس"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trouvez un titre sympa pour l’économiseur d’écran et écrivez-le ici"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חשוב על רעיון מגניב לכותרת שומר המסך וכתוב אותו כאן"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्क्रीन सेवर के लिए एक शानदार शीर्षक का विचार करें और यहां लिखें"
           }
         },
         "ru" : {
@@ -1370,11 +3240,23 @@
             "state" : "translated",
             "value" : "Придумайте классный заголовок для заставки и напишите его здесь"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्क्रीनसेवर-शीर्षकस्य कृते उत्तमं विचारं चिन्तय तत्र लिख।"
+          }
         }
       }
     },
     "Time" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الوقت"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1387,10 +3269,28 @@
             "value" : "Hora"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زمان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heure"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שעה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "समय"
           }
         },
         "ru" : {
@@ -1398,11 +3298,23 @@
             "state" : "translated",
             "value" : "Время"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कालः"
+          }
         }
       }
     },
     "Title" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العنوان"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1415,10 +3327,28 @@
             "value" : "Título"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titre"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כותרת"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षक"
           }
         },
         "ru" : {
@@ -1426,11 +3356,23 @@
             "state" : "translated",
             "value" : "Заголовок"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "शीर्षकम्"
+          }
         }
       }
     },
     "Weight" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السمك"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1443,10 +3385,28 @@
             "value" : "Grosor"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخامت"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Épaisseur"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עובי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मोटाई"
           }
         },
         "ru" : {
@@ -1454,12 +3414,24 @@
             "state" : "translated",
             "value" : "Толщина цифр"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्थौल्यम्"
+          }
         }
       }
     },
     "Weight.black" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسود"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1478,10 +3450,28 @@
             "value" : "Negro"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سیاه"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noire"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שחור"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "काला (मोटाई)"
           }
         },
         "ru" : {
@@ -1489,12 +3479,24 @@
             "state" : "translated",
             "value" : "Чёрная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "कृष्णः"
+          }
         }
       }
     },
     "Weight.bold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عريض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1513,10 +3515,28 @@
             "value" : "Negrito"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ضخیم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Grasse"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "מודגש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मोटा"
           }
         },
         "ru" : {
@@ -1524,12 +3544,24 @@
             "state" : "translated",
             "value" : "Жирная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्थूलः"
+          }
         }
       }
     },
     "Weight.heavy" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثقيل"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1548,10 +3580,28 @@
             "value" : "Grueso"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنگین"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lourde"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כבד"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भारी"
           }
         },
         "ru" : {
@@ -1559,12 +3609,24 @@
             "state" : "translated",
             "value" : "Сверхжирная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "गुरुः"
+          }
         }
       }
     },
     "Weight.light" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خفيف"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1583,10 +3645,28 @@
             "value" : "Ligero"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سبک"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Légère"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "קל"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हल्का"
           }
         },
         "ru" : {
@@ -1594,12 +3674,24 @@
             "state" : "translated",
             "value" : "Светлая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "लघुः"
+          }
         }
       }
     },
     "Weight.medium" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1618,10 +3710,28 @@
             "value" : "Medio"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متوسط"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Moyenne"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यम (मोटाई)"
           }
         },
         "ru" : {
@@ -1629,12 +3739,24 @@
             "state" : "translated",
             "value" : "Средняя"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "मध्यमः"
+          }
         }
       }
     },
     "Weight.regular" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عادي"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1653,10 +3775,28 @@
             "value" : "Normal"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "معمولی"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Normale"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רגיל"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "नियमित"
           }
         },
         "ru" : {
@@ -1664,12 +3804,24 @@
             "state" : "translated",
             "value" : "Обычная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सामान्यः"
+          }
         }
       }
     },
     "Weight.semibold" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شبه عريض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1688,10 +3840,28 @@
             "value" : "Seminegrito"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نیمه‌ضخیم"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Demi-grasse"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "בינוני-מודגש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अर्ध मोटा"
           }
         },
         "ru" : {
@@ -1699,12 +3869,24 @@
             "state" : "translated",
             "value" : "Полужирная"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अर्धस्थूलः"
+          }
         }
       }
     },
     "Weight.thin" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفيع"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1723,10 +3905,28 @@
             "value" : "Fino"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نازک"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fine"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דק"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पतला"
           }
         },
         "ru" : {
@@ -1734,12 +3934,24 @@
             "state" : "translated",
             "value" : "Тонкая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सूक्ष्मः"
+          }
         }
       }
     },
     "Weight.ultraLight" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفيع جداً"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1758,10 +3970,28 @@
             "value" : "Ultrafino"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بسیار نازک"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ultrafine"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דק במיוחד"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अति पतला"
           }
         },
         "ru" : {
@@ -1769,11 +3999,23 @@
             "state" : "translated",
             "value" : "Сверхтонкая"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अतिसूक्ष्मः"
+          }
         }
       }
     },
     "When the countdown reaches zero, it automatically switches to Stopwatch Mode and starts counting up." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما يصل العد التنازلي إلى الصفر، يتحول تلقائياً إلى وضع ساعة الإيقاف ويبدأ العد التصاعدي."
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1786,10 +4028,28 @@
             "value" : "Cuando la cuenta atrás llega a cero, cambia automáticamente al modo Cronómetro y empieza a contar hacia arriba."
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وقتی شمارش معکوس به صفر برسد، به طور خودکار به حالت کرونومتر تغییر می‌کند و شروع به شمارش رو به بالا می‌کند."
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lorsque le compte à rebours atteint zéro, il passe automatiquement en mode Chronomètre et commence à compter le temps écoulé."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "כאשר הספירה לאחור מגיעה לאפס, הוא עובר אוטומטית למצב שעון עצר ומתחיל לספור כלפי מעלה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जब काउंटडाउन शून्य पर पहुंचे, तो यह स्वचालित रूप से स्टॉपवॉच मोड में बदल जाता है और ऊपर की ओर गिनना शुरू कर देता है।"
           }
         },
         "ru" : {
@@ -1797,11 +4057,23 @@
             "state" : "translated",
             "value" : "Когда отсчёт достигает нуля, автоматически включается режим секундомера и он начинает идти вперёд."
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "यदा गणना शून्यं प्राप्नोति, तदा स्वयमेव स्टॉपवॉच-मोडं प्राप्नोति ऊर्ध्वं गणयितुं च आरभते।"
+          }
         }
       }
     },
     "White" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أبيض"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1814,10 +4086,28 @@
             "value" : "Blanco"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سفید"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Blanc"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "לבן"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सफेद"
           }
         },
         "ru" : {
@@ -1825,11 +4115,23 @@
             "state" : "translated",
             "value" : "Белый"
           }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "श्वेतः"
+          }
         }
       }
     },
     "Yellow" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أصفر"
+          }
+        },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1842,16 +4144,40 @@
             "value" : "Amarillo"
           }
         },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زرد"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jaune"
           }
         },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צהוב"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पीला"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Жёлтый"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "पीतः"
           }
         }
       }

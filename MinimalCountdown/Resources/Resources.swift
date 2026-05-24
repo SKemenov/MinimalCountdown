@@ -72,6 +72,14 @@ enum Resources {
             static let purple = LocalizedStringResource("Purple", bundle: .app)
             static let black = LocalizedStringResource("Black", bundle: .app)
         }
+
+        enum NumeralSystem {
+            static let automatic = LocalizedStringResource("Automatic", bundle: .app)
+            static let latin = LocalizedStringResource("Latin", bundle: .app)
+            static let arabic = LocalizedStringResource("Arabic", bundle: .app)
+            static let persian = LocalizedStringResource("Persian", bundle: .app)
+            static let devanagari = LocalizedStringResource("Devanagari", bundle: .app)
+        }
     }
 
     enum Appearance {
@@ -127,6 +135,11 @@ enum Resources {
         )
         static let rounded = LocalizedStringResource("Round digits", bundle: .app)
         static let roundedHint = LocalizedStringResource("Renders the digits with the Rounded design.", bundle: .app)
+        static let numerals = LocalizedStringResource("Numerals", bundle: .app)
+        static let numeralsHint = LocalizedStringResource(
+            "Sets the numeral system used for the digits. Automatic follows your Mac's region.",
+            bundle: .app
+        )
     }
 
     enum Title {

@@ -9,10 +9,10 @@ import Foundation
 
 extension Date {
     // MARK: - Duration components relative to a reference `now` for target date
-    func daysString(relativeTo now: Date) -> String { self.duration(from: now, for: .days) }
-    func hoursString(relativeTo now: Date) -> String { self.duration(from: now, for: .hours) }
-    func minutesString(relativeTo now: Date) -> String { self.duration(from: now, for: .minutes) }
-    func secondsString(relativeTo now: Date) -> String { self.duration(from: now, for: .seconds) }
+    func days(relativeTo now: Date) -> Int { self.duration(from: now, for: .days) }
+    func hours(relativeTo now: Date) -> Int { self.duration(from: now, for: .hours) }
+    func minutes(relativeTo now: Date) -> Int { self.duration(from: now, for: .minutes) }
+    func seconds(relativeTo now: Date) -> Int { self.duration(from: now, for: .seconds) }
 
     // MARK: - DatePicker and date verification components
     func datesInBetween() -> ClosedRange<Date> { minDate ... maxDate }
@@ -23,19 +23,18 @@ extension Date {
 
 // MARK: - Private helpers
 private extension Date {
-    func duration(from now: Date, for element: AppearanceStyle) -> String {
+    func duration(from now: Date, for element: AppearanceStyle) -> Int {
         // use ceil to fix double-zero issue
         let total = Int(abs(ceil(self.timeIntervalSince(now))))
 
-        let elementDuration: Int = switch element {
+        return switch element {
             case .days: total / .oneDay
             case .hours: total % .oneDay / .oneHour
             case .minutes: total % .oneHour / .oneMinute
             case .seconds: total % .oneMinute
         }
-        return String(format: "%02d", elementDuration)
     }
-    
+
     func farAvailableDate(isFuture: Bool) -> Self {
         Date(timeInterval: (isFuture ? .oneYearAndOneDay : -.oneYearAndOneDay), since: self)
     }

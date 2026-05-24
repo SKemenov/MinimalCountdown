@@ -153,6 +153,17 @@ private extension ConfigurationWindow {
                 }
             }
             .help(Text(Resources.Digits.roundedHint))
+
+            Picker(selection: $settings.typography.numeralSystem) {
+                ForEach(NumeralSystem.allCases) { system in
+                    Text(numeralRow(system)).tag(system)
+                }
+            } label: {
+                Text(Resources.Digits.numerals)
+                Text(Resources.Digits.numeralsHint)
+                    .subtitleFont
+            }
+            .help(Text(Resources.Digits.numeralsHint))
         } header: {
             Text(Resources.Digits.title)
         }
@@ -222,6 +233,16 @@ private extension ConfigurationWindow {
         row.foregroundColor = option.color
         row.append(AttributedString(localized: option.label))
         return Text(row)
+    }
+
+    /// Picker row: the numeral-system name + a `123` glyph sample for the explicit systems.
+    /// `.automatic` shows the name only — its glyphs depend on the viewer's locale.
+    func numeralRow(_ system: NumeralSystem) -> String {
+        let name = String(localized: system.label)
+        guard let numbering = system.numberingSystem else { return name }
+        var components = Locale.Components(identifier: "en_US")
+        components.numberingSystem = numbering
+        return "\(name)  \(UIModel.formattedDigits(123, in: Locale(components: components)))"
     }
 
     func prepareForDisplay() {

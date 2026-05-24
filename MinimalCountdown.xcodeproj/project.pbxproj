@@ -43,6 +43,7 @@
 				Models/EffectStyle.swift,
 				Models/FontWeight.swift,
 				Models/LegacySettings.swift,
+				Models/NumeralSystem.swift,
 				Models/SafeIntDecodable.swift,
 				Models/SaverSettings.swift,
 				Models/Schedule.swift,
@@ -202,6 +203,11 @@
 				de,
 				es,
 				fr,
+				ar,
+				he,
+				fa,
+				hi,
+				sa,
 			);
 			mainGroup = E9B531912B854D60002A2B79;
 			productRefGroup = E9B5319C2B854D60002A2B79 /* Products */;
