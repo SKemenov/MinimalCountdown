@@ -49,7 +49,8 @@ extension LegacySettings.V1 {
                 effect: .none,
                 effectColor: .white
             ),
-            typography: .init(weight: .ultraLight, isRounded: false),
+            typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
+            language: .init(countdownLanguage: .automatic, settingsLanguage: .automatic),
             title: .init(text: message, isHidden: isMessageHidden)
         )
     }

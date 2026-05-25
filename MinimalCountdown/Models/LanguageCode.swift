@@ -8,6 +8,6 @@
 import Foundation
 
 struct LanguageCode: Codable, Equatable, Hashable {
-    var countdownLanguage: AppLanguage = .automatic
-    var settingsLanguage: AppLanguage = .automatic
+    var countdownLanguage: AppLanguage
+    var settingsLanguage: AppLanguage
 }
