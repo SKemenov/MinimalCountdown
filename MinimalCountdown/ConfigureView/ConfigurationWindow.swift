@@ -32,13 +32,14 @@ struct ConfigurationWindow: View {
                 themeSection
                 digitsSection
                 titleSection
+                languageSection
             }
             .formStyle(.grouped)
             .animation(.default, value: settings)
             .onKeyPress(.return, action: saveByEnterKey)
 
+            languageWarning
             errorMessage
-
             buttons
         }
         .frame(width: 512, height: 860 + 48)
@@ -184,16 +185,50 @@ private extension ConfigurationWindow {
         }
     }
 
+    var languageSection: some View {
+        Section {
+            Picker(selection: $settings.language.countdownLanguage) {
+                Text(AppLanguage.automatic.label).tag(AppLanguage.automatic)
+
+                if !UIModel.preferredLanguages.isEmpty {
+                    ForEach(UIModel.preferredLanguages) { language in
+                        Text(language.label).tag(language)
+                    }
+                }
+                Divider()
+
+                ForEach(UIModel.otherLanguages) { language in
+                    Text(language.label).tag(language)
+                }
+            } label: {
+                Text(Resources.Language.countdown)
+                Text(Resources.Language.countdownHint)
+                    .subtitleFont
+            }
+            .help(Text(Resources.Language.countdownHint))
+
+            Text(Resources.Language.translationDisclaimer)
+                .subtitleFont
+        } header: {
+            Text(Resources.Language.title)
+        }
+    }
+
+    @ViewBuilder
+    var languageWarning: some View {
+        if settings.language.countdownLanguage != settingsManager.settings.language.countdownLanguage {
+            Text(Resources.Language.applyWarning)
+                .foregroundStyle(.secondary)
+                .formNote
+        }
+    }
+
     @ViewBuilder
     var errorMessage: some View {
         if let saveError {
             Text(saveError)
                 .foregroundStyle(.red)
-                .font(.callout)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-                .padding(.vertical, 4)
-                .transition(.asymmetric(insertion: .opacity, removal: .identity))
+                .formNote
         }
     }
 
