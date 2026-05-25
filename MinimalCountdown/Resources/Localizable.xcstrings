@@ -175,6 +175,64 @@
         }
       }
     },
+    "⚠️ The selected language will be applied after you close this window." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ سيتم تطبيق اللغة المختارة بعد إغلاق هذه النافذة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Die ausgewählte Sprache wird nach dem Schließen dieses Fensters  angewendet."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ El idioma seleccionado se aplicará al cerrar esta ventana."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ زبان انتخاب شده پس از بستن این پنجره اعمال خواهد شد."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ La langue sélectionnée sera appliquée après la fermeture de cette fenêtre."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ השפה שנבחרה תחול לאחר סגירת חלון זה."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ चुनी हुई भाषा इस विंडो को बंद करने के बाद लागू हो जाएगी।"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ Выбранный язык будет применён после закрытия этого окна."
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "⚠️ भवता एतत् विण्डो बन्दं कृत्वा चयनितभाषा प्रयुक्ता भविष्यति।"
+          }
+        }
+      }
+    },
     "Adds an effect to the digits:" : {
       "localizations" : {
         "ar" : {
@@ -229,6 +287,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "अङ्केषु प्रभावं योजयति:"
+          }
+        }
+      }
+    },
+    "Affects only the countdown display" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يؤثر هذا على نافذة العد التنازلي فقط"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Betrifft nur die Countdown-Anzeige"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afecta solo a la visualización de la cuenta regresiva"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فقط روی پنجره شمارش معکوس تأثیر می‌گذارد."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N’affecte que l’affichage du compte à rebours"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "משפיע רק על תצוגת הספירה לאחור"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सिर्फ़ काउंटडाउन विंडो पर असर पड़ता है"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Влияет только на отображение таймера"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "केवलं उल्टागणनाविण्डो प्रभावितं करोति"
           }
         }
       }
@@ -925,6 +1041,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
+          }
+        }
+      }
+    },
+    "Countdown language" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لغة العد التنازلي"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Sprache der Countdown-Anzeige"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma de la cuenta regresiva"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زبان شمارش معکوس"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue de l’affichage du compte à rebours"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שפת תצוגת הספירה לאחור"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "काउंटडाउन भाषा"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык отображения таймера"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "उल्टागणना भाषा"
           }
         }
       }
@@ -1857,6 +2031,64 @@
         }
       }
     },
+    "I may use some inappropriate or wrong word translations in this localization. Please contact me to resolve this issue." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قد أستخدم بعض الترجمات غير الدقيقة أو الخاطئة في هذه النسخة. يُرجى التواصل معي لحل هذه المشكلة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich verwende möglicherweise einige unpassende oder falsche Wortübersetzungen in dieser Lokalisierung. Bitte kontaktieren Sie mich, um dieses Problem zu lösen. "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es posible que algunas traducciones de palabras sean incorrectas o inapropiadas en esta localización. Por favor, contáctame para solucionar este problema."
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ممکن است در این بومی‌سازی از ترجمه‌های نامناسب یا اشتباه کلمات استفاده کنم. لطفاً برای حل این مشکل با من تماس بگیرید."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je peux utiliser des traductions de mots inappropriées ou incorrectes dans cette localisation. Veuillez me contacter pour résoudre ce problème."
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ייתכן שאשתמש בתרגומי מילים לא הולמים או שגויים בלוקליזציה זו. אנא צור איתי קשר כדי לפתור בעיה זו."
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हो सकता है कि मैंने इस लोकलाइज़ेशन में कुछ गलत या गलत शब्दों का ट्रांसलेशन इस्तेमाल किया हो। इस समस्या को ठीक करने के लिए कृपया मुझसे संपर्क करें।"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я могу использовать некоторые неподходящие или неправильные переводы слов в этой локализации. Пожалуйста, свяжитесь со мной, чтобы решить эту проблему.  "
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अस्मिन् स्थानीयकरणे अहं केचन अनुचिताः अथवा गलत् शब्दानुवादाः प्रयोक्तुं शक्नोमि। अस्य समस्यायाः समाधानार्थं मया सह सम्पर्कं कुर्वन्तु।"
+          }
+        }
+      }
+    },
     "Indigo" : {
       "localizations" : {
         "ar" : {
@@ -2027,6 +2259,779 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "टाइमर-मोडस्य कृते भविष्यतिथिः वा स्टॉपवॉच-मोडस्य कृते अतीततिथिः भवितुं शक्यते।"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللغة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "زبان"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "שפה"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भाषा"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भाषा"
+          }
+        }
+      }
+    },
+    "Language.arabic" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العربية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Arabic"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "árabe"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "arabe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ערבית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "арабский"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अरबीभाषा"
+          }
+        }
+      }
+    },
+    "Language.automatic" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تلقائي"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Automatic"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "automático"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خودکار"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "automatique"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אוטומטית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ऑटोमैटिक"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "автоматический"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्वचालित"
+          }
+        }
+      }
+    },
+    "Language.english" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإنجليزية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "English"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "inglés"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انگلیسی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "anglais"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אנגלית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इंग्लिश"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "английский"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "आंग्ल"
+          }
+        }
+      }
+    },
+    "Language.farsi" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الفارسية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farsi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Farsi"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "farsi"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فارسی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "farsi"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "פרסית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़ारसी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "фарси"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फरसी"
+          }
+        }
+      }
+    },
+    "Language.french" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الفرنسية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Französisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "French"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "francés"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فرانسوی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "français"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "צרפתית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ़्रेंच"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "французский"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "फ्रेंचभाषा"
+          }
+        }
+      }
+    },
+    "Language.german" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الألمانية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deutsch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "German"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "alemán"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آلمانی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "allemand"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "גרמנית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जर्मन"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "немецкий"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "जर्मन"
+          }
+        }
+      }
+    },
+    "Language.hebrew" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العبرية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hebräisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Hebrew"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hebreo"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عبری"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hébreu"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עברית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हिब्रू"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "иврит"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "िब्रूभाषा"
+          }
+        }
+      }
+    },
+    "Language.hindi" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الهندية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hindi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Hindi"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hindi"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هندی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "hindi"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הינדי"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हिंदी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "хинди"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "हिन्दी"
+          }
+        }
+      }
+    },
+    "Language.russian" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الروسية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Russisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Russian"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ruso"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "روسی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "russe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "רוסית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रशियन"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "русский"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "रूसी भाषा"
+          }
+        }
+      }
+    },
+    "Language.sanskrit" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السنسكريتية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sanskrit"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sanskrit"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sánscrito"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سانسکریت"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sanskrit"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סנסקריט"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "संस्कृत"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "санскрит"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "संस्कृत"
+          }
+        }
+      }
+    },
+    "Language.spanish" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإسبانية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spanisch"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Spanish"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "español"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسپانیایی"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "espagnol"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ספרדית"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्पैनिश"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "испанский"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "स्पेनी भाषा"
           }
         }
       }
@@ -3075,6 +4080,64 @@
         }
       }
     },
+    "Show settings in this language too" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الإعدادات بهذه اللغة أيضًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen ebenfalls in dieser Sprache anzeigen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar Ajustes también en este idioma "
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تنظیمات را به این زبان نیز نمایش دهید."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher les Réglages également dans cette langue"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "הצג את ההגדרות גם בשפה זו"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "इस भाषा में भी सेटिंग्स दिखाएँ"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать настройки на этом же языке "
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अस्मिन् भाषायां अपि सेटिङ्ग्स् दर्शयतु"
+          }
+        }
+      }
+    },
     "The available range is one year before and after the current date." : {
       "localizations" : {
         "ar" : {
@@ -3129,6 +4192,64 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
+          }
+        }
+      }
+    },
+    "The settings window will use the selected language after you reopen it" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ستستخدم نافذة الإعدادات اللغة المختارة بعد إعادة فتحها."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Einstellungsfenster verwendet die ausgewählte Sprache nach dem erneuten Öffnen"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La ventana de Ajustes usará el idioma seleccionado después de volver a abrirla"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "پنجره تنظیمات پس از بازگشایی مجدد، از زبان انتخاب شده استفاده خواهد کرد."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La fenêtre des Réglages utilisera la langue sélectionnée après réouverture"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "חלון ההגדרות ישתמש בשפה שנבחרה לאחר פתיחתו מחדש"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "सेटिंग्स विंडो को दोबारा खोलने के बाद, यह चुनी हुई भाषा का इस्तेमाल करेगी"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " Окно настроек будет использовать выбранный язык после повторного открытия"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "भवता पुनः उद्घाटितस्य अनन्तरं सेटिङ्ग्स् विण्डो चयनितभाषायाः उपयोगं करिष्यति"
           }
         }
       }
