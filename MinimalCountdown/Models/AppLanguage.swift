@@ -44,4 +44,20 @@ extension AppLanguage {
             case .sanskrit:  Resources.Labels.AppLanguage.sanskrit
         }
     }
+
+    var languageCode: String {
+        switch self {
+            case .english: "en"
+            case .spanish: "es"
+            case .german: "de"
+            case .french: "fr"
+            case .russian: "ru"
+            case .hebrew: "he"
+            case .arabic: "ar"
+            case .farsi: "fa"
+            case .hindi: "hi"
+            case .sanskrit: "sa"
+            default: ""
+        }
+    }
 }

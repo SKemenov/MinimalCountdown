@@ -81,4 +81,18 @@ enum UIModel {
             .formatted(.list(type: .or))
         return "\(String(localized: Resources.Theme.effectHint)) \(effectNames)"
     }
+
+    static var preferredLanguages: [AppLanguage] {
+        allLanguages.filter { preferredLanguagesCodes.contains($0.languageCode) }
+    }
+    static var otherLanguages: [AppLanguage] {
+        allLanguages.filter { !preferredLanguages.contains($0) }
+    }
+}
+
+private extension UIModel {
+    static var allLanguages: [AppLanguage] { AppLanguage.allCases.filter { $0 != .automatic } }
+    static var allLanguagesCodes: [String] { AppLanguage.allCases.filter { $0 != .automatic }.map { $0.languageCode } }
+    static var systemPreferredCodes: [String] { Locale.preferredLanguages.map { String($0.prefix(2)) } }
+    static var preferredLanguagesCodes: [String] { systemPreferredCodes.filter { allLanguagesCodes.contains($0) } }
 }
