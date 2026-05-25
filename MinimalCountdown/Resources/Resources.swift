@@ -80,6 +80,20 @@ enum Resources {
             static let persian = LocalizedStringResource("Persian", bundle: .app)
             static let devanagari = LocalizedStringResource("Devanagari", bundle: .app)
         }
+
+        enum AppLanguage {
+            static let automatic = LocalizedStringResource("Language.automatic", defaultValue: "Automatic", bundle: .app)
+            static let english = LocalizedStringResource("Language.english", defaultValue: "English", bundle: .app)
+            static let spanish = LocalizedStringResource("Language.spanish", defaultValue: "Spanish", bundle: .app)
+            static let german = LocalizedStringResource("Language.german", defaultValue: "German", bundle: .app)
+            static let french = LocalizedStringResource("Language.french", defaultValue: "French", bundle: .app)
+            static let russian = LocalizedStringResource("Language.russian", defaultValue: "Russian", bundle: .app)
+            static let hebrew = LocalizedStringResource("Language.hebrew", defaultValue: "Hebrew", bundle: .app)
+            static let arabic = LocalizedStringResource("Language.arabic", defaultValue: "Arabic", bundle: .app)
+            static let farsi = LocalizedStringResource("Language.farsi", defaultValue: "Farsi", bundle: .app)
+            static let hindi = LocalizedStringResource("Language.hindi", defaultValue: "Hindi", bundle: .app)
+            static let sanskrit = LocalizedStringResource("Language.sanskrit", defaultValue: "Sanskrit", bundle: .app)
+        }
     }
 
     enum Appearance {
