@@ -16,7 +16,7 @@ enum UIModel {
         let isLabelHidden: Bool
         let effect: EffectStyle
         let effectGlowColor: Color
-        let digitLocale: Locale
+        let countdownLocale: Locale
         let isNeedFixLabelSize: Bool
 
         init(_ settings: SaverSettings, locale: Locale = .autoupdatingCurrent) {
@@ -31,16 +31,19 @@ enum UIModel {
             effectGlowColor = (theme.effect == .glow ? theme.effectColor : theme.accent)
                 .color.opacity(theme.brightness.digitsOpacity)
 
+            var components = Locale.Components(locale: locale)
+            // Countdown language: an explicit pick overrides, `.automatic` skips this step
+            if settings.language.countdownLanguage != .automatic {
+                components.languageComponents.languageCode = Locale.LanguageCode(settings.language.countdownLanguage.languageCode)
+            }
             // Numerals: an explicit pick overrides; `.automatic` falls back to the locale's own
             // numbering system (UAE → Latin, Egypt → Arabic).
-            let numbering = settings.typography.numeralSystem.numberingSystem ?? locale.numberingSystem
-            var components = Locale.Components(locale: locale)
-            components.numberingSystem = numbering
-            digitLocale = Locale(components: components)
-            isNeedFixLabelSize = !nonCapitalizedLanguages.map { $0.contains(locale.identifier.lowercased()) }.isEmpty
+            components.numberingSystem = settings.typography.numeralSystem.numberingSystem ?? locale.numberingSystem
+            countdownLocale = Locale(components: components)
+            isNeedFixLabelSize = !UIModel.nonCapitalizedLanguageCodes
+                .map { $0.contains(locale.identifier.lowercased()) }
+                .isEmpty
         }
-
-        private let nonCapitalizedLanguages = ["ar", "he", "fa"]
     }
 
     struct Element {
@@ -72,6 +75,12 @@ enum UIModel {
         value.formatted(.number.precision(.integerLength(2...)).grouping(.never).locale(locale))
     }
 
+    static func formattedLabels(_ value: LocalizedStringResource, in locale: Locale) -> String {
+        var localizedValue = value
+        localizedValue.locale = locale
+        return String(localized: localizedValue)
+    }
+
     /// Effect-section subtitle/tooltip: the base hint + a localized "or"-list of the available
     /// effect names (lowercased).
     static var effectsHint: String {
@@ -81,4 +90,19 @@ enum UIModel {
             .formatted(.list(type: .or))
         return "\(String(localized: Resources.Theme.effectHint)) \(effectNames)"
     }
+
+    static var preferredLanguages: [AppLanguage] {
+        allLanguages.filter { preferredLanguagesCodes.contains($0.languageCode) }
+    }
+    static var otherLanguages: [AppLanguage] {
+        allLanguages.filter { !preferredLanguages.contains($0) }
+    }
+}
+
+private extension UIModel {
+    static var nonCapitalizedLanguageCodes: [String] { ["ar", "he", "fa"] }
+    static var allLanguages: [AppLanguage] { AppLanguage.allCases.filter { $0 != .automatic } }
+    static var allLanguagesCodes: [String] { AppLanguage.allCases.filter { $0 != .automatic }.map { $0.languageCode } }
+    static var systemPreferredCodes: [String] { Locale.preferredLanguages.map { String($0.prefix(2)) } }
+    static var preferredLanguagesCodes: [String] { systemPreferredCodes.filter { allLanguagesCodes.contains($0) } }
 }

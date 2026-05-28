@@ -15,6 +15,17 @@ extension View {
             .multilineTextAlignment(.leading)
     }
 
+    var formNote: some View {
+        self
+            .font(.callout)
+            .padding(.horizontal)
+            .padding(.top, .Spacing.small)
+            .multilineTextAlignment(.leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal)
+            .transition(.asymmetric(insertion: .opacity, removal: .identity))
+    }
+
     /// Applies the digit `EffectStyle` from `RenderSettings`: fill + glow / blur / inner glow.
     /// Digits only — the parent owns `foregroundStyle` so each effect fully controls the fill.
     /// `backlight` and `innerGlow` always fill with black so the digit body reads on any background.

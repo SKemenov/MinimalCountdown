@@ -20,7 +20,7 @@ struct CountdownView: View {
                 ElementView(
                     element: .init(
                         digits: digits(for: style),
-                        label: String(localized: style.label),
+                        label: labels(for: style),
                         size: digitsSize,
                         render: render
                     )
@@ -47,7 +47,11 @@ private extension CountdownView {
             case .minutes: settings.schedule.target.minutes(relativeTo: now)
             case .seconds: settings.schedule.target.seconds(relativeTo: now)
         }
-        return UIModel.formattedDigits(value, in: render.digitLocale)
+        return UIModel.formattedDigits(value, in: render.countdownLocale)
+    }
+
+    func labels(for style: AppearanceStyle) -> String {
+        UIModel.formattedLabels(style.label, in: render.countdownLocale)
     }
 }
 
