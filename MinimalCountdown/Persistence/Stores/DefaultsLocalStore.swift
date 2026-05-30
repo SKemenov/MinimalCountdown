@@ -11,7 +11,7 @@ import ScreenSaver
 final class DefaultsLocalStore: SettingsLoader {
     private let defaults: ScreenSaverDefaults
     private let logger: Logger
-
+    
     init?(bundleIdentifier: String = AppSettings.subSystem) {
         logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
         guard let defaults = ScreenSaverDefaults(forModuleWithName: bundleIdentifier) else {
@@ -21,7 +21,7 @@ final class DefaultsLocalStore: SettingsLoader {
         self.defaults = defaults
         logger.log("Initialized with bundle: \(bundleIdentifier, privacy: .public)")
     }
-
+    
     func load() -> SaverSettings? {
         guard defaults.targetDate.timeIntervalSince1970 != 0.0 else {
             logger.log("No saved settings in defaults (targetDate is zero)")

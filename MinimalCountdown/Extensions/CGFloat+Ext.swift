@@ -22,7 +22,7 @@ extension CGFloat {
         static let large: CGFloat = 12
         /// CGFloat = 16
         static let xLarge: CGFloat = 16
-        
+
     }
 
     enum Border {
@@ -51,7 +51,7 @@ extension CGFloat {
 
     /// Label text size relative to the digits baseline. CGFloat = 1.0 / 5.0
     static let labelsToDigitsRatio: CGFloat = 1.0 / 5.0
-   /// Non Latin label text size relative to the digits baseline. CGFloat = 1.0 / 3.8
+    /// Non Latin label text size relative to the digits baseline. CGFloat = 1.0 / 3.8
     static let nonLatinLabelsToDigitsRatio: CGFloat = 1.0 / 3.8
     /// Title text size relative to the digits baseline. CGFloat = 1.0 / 4.0
     static let titleToDigitsRatio: CGFloat = 1.0 / 4.0

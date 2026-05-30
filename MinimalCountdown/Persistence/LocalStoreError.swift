@@ -11,7 +11,7 @@ enum LocalStoreError: Error, LocalizedError {
     case directoryUnavailable(url: URL, underlying: Error)
     case encodingFailed(underlying: Error)
     case writeFailed(url: URL, underlying: Error)
-
+    
     var logDescription: String {
         switch self {
             case .directoryUnavailable(let url, let underlying):
@@ -22,6 +22,6 @@ enum LocalStoreError: Error, LocalizedError {
                 "Could not write settings to \(url.path): \(underlying.localizedDescription)"
         }
     }
-
+    
     var errorDescription: String? { String(localized: Resources.Errors.saving) }
 }

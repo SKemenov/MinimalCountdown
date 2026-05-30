@@ -22,54 +22,54 @@
 		E9BDA78E2F8A924100FB19A4 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				ConfigureView/AppearancePicker.swift,
-				ConfigureView/BrightnessSlider.swift,
-				ConfigureView/ColorPalettePicker.swift,
-				ConfigureView/ConfigurationWindow.swift,
-				ConfigureView/ConfigureSheetController.swift,
-				"Extensions/CGFloat+Extensions.swift",
-				"Extensions/Date+Extensions.swift",
+				App/AppSettings.swift,
+				App/ConfigureSheetController.swift,
+				"Extensions/CGFloat+Ext.swift",
+				"Extensions/Date+Ext.swift",
 				"Extensions/Double+Ext.swift",
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
-				"Extensions/UserDefaults+Extensions.swift",
+				"Extensions/UserDefaults+Ext.swift",
 				"Extensions/View+Ext.swift",
-				Models/AccentColor.swift,
-				Models/Appearance.swift,
-				Models/AppearanceStyle.swift,
-				Models/AppLanguage.swift,
-				Models/BackgroundColor.swift,
-				Models/Brightness.swift,
-				Models/ColorExtendable.swift,
-				Models/EffectStyle.swift,
-				Models/FontWeight.swift,
-				Models/LanguageCode.swift,
-				Models/LegacySettings.swift,
-				Models/NumeralSystem.swift,
-				Models/SafeIntDecodable.swift,
-				Models/SaverSettings.swift,
-				Models/Schedule.swift,
-				Models/Theme.swift,
-				Models/Title.swift,
-				Models/Typography.swift,
-				Resources/AppSettings.swift,
+				Models/Domain/Appearance/Appearance.swift,
+				Models/Domain/Appearance/AppearanceStyle.swift,
+				Models/Domain/AppLanguage.swift,
+				Models/Domain/LanguageCode.swift,
+				Models/Domain/SaverSettings.swift,
+				Models/Domain/Schedule.swift,
+				Models/Domain/Theme/AccentColor.swift,
+				Models/Domain/Theme/BackgroundColor.swift,
+				Models/Domain/Theme/Brightness.swift,
+				Models/Domain/Theme/Theme.swift,
+				Models/Domain/Title.swift,
+				Models/Domain/Typography/EffectStyle.swift,
+				Models/Domain/Typography/FontWeight.swift,
+				Models/Domain/Typography/NumeralSystem.swift,
+				Models/Domain/Typography/Typography.swift,
+				Models/LegacySupport/LegacySettings.swift,
+				Models/Presentation/UIModel.swift,
+				Models/Protocols/ColorExtendable.swift,
+				Models/Protocols/SafeIntDecodable.swift,
+				Persistence/LocalStoreError.swift,
+				Persistence/Protocols/SettingsLoader.swift,
+				Persistence/Protocols/SettingsSaver.swift,
+				Persistence/SettingsManager.swift,
+				Persistence/Stores/DefaultsLocalStore.swift,
+				Persistence/Stores/FileLocalStore.swift,
+				Persistence/Stores/MigratingLoader.swift,
+				Persistence/Stores/MockInMemoryLocalStore.swift,
 				Resources/Assets.xcassets,
 				Resources/Localizable.xcstrings,
 				Resources/Resources.swift,
-				Settings/DefaultsLocalStore.swift,
-				Settings/FileLocalStore.swift,
-				Settings/LocalStoreError.swift,
-				Settings/MigratingLoader.swift,
-				Settings/MockInMemoryLocalStore.swift,
-				Settings/SettingsLoader.swift,
-				Settings/SettingsManager.swift,
-				Settings/SettingsSaver.swift,
-				Views/CountdownView.swift,
-				Views/CountdownWindow.swift,
-				Views/ElementView.swift,
-				Views/TextElementView.swift,
-				Views/TitleView.swift,
-				Views/UIModel.swift,
+				Views/Countdown/CountdownView.swift,
+				Views/Countdown/CountdownWindow.swift,
+				Views/ReusableViews/AppearancePicker.swift,
+				Views/ReusableViews/BrightnessSlider.swift,
+				Views/ReusableViews/ColorPalettePicker.swift,
+				Views/ReusableViews/ElementView.swift,
+				Views/ReusableViews/TextElementView.swift,
+				Views/ReusableViews/TitleView.swift,
+				Views/Settings/ConfigurationWindow.swift,
 			);
 			target = E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */;
 		};
@@ -411,6 +411,7 @@
 				INFOPLIST_FILE = MinimalCountdown/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
 				INFOPLIST_KEY_CFBundleName = "Minimal Countdown";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
@@ -438,6 +439,7 @@
 				INFOPLIST_FILE = MinimalCountdown/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Minimal Countdown";
 				INFOPLIST_KEY_CFBundleName = "Minimal Countdown";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = MinimalCountdown.MinimalCountdownView;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";

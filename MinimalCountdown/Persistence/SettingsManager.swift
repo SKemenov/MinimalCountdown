@@ -15,7 +15,7 @@ final class SettingsManager {
     private let saver: SettingsSaver
     private let loader: SettingsLoader
     private let logger: Logger
-
+    
     init(saver: SettingsSaver, loader: SettingsLoader? = nil) {
         self.saver = saver
         self.loader = loader ?? saver
@@ -25,12 +25,12 @@ final class SettingsManager {
             "SettingsManager initialized with loader: \(String(describing: type(of: self.loader)), privacy: .public)"
         )
     }
-
+    
     func load() {
         settings = loader.load()?.normalized ?? .default
         logger.log("Loaded settings, schedule.target: \(self.settings.schedule.target, privacy: .public)")
     }
-
+    
     func save(_ settings: SaverSettings) throws {
         guard settings != self.settings else {
             logger.log("No changes, skipping save")

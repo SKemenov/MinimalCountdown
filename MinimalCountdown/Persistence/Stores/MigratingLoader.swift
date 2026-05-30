@@ -12,13 +12,13 @@ struct MigratingLoader: SettingsLoader {
     let saver: SettingsSaver
     let fallback: SettingsLoader
     private let logger: Logger
-
+    
     init(saver: SettingsSaver, fallback: SettingsLoader) {
         self.saver = saver
         self.fallback = fallback
         self.logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
     }
-
+    
     func load() -> SaverSettings? {
         if let primary = saver.load() {
             return primary
