@@ -12,8 +12,7 @@ struct AppearancePicker: View {
     private let contentStyles: [StyleType]
     private let settings: SaverSettings
     @Binding var selection: Appearance
-    @State private var pickerNow: Date = Date()
-    @State private var markedStyle: StyleType
+    @State private var hoveredStyle: StyleType
 
     init(
         selection: Binding<Appearance>,
@@ -23,85 +22,41 @@ struct AppearancePicker: View {
         self._selection = selection
         self.settings = settings
         self.contentStyles = contentStyles
-        self.markedStyle = selection.wrappedValue.style
+        self.hoveredStyle = selection.wrappedValue.style
     }
 
     var body: some View {
-        HStack(alignment: .top, spacing: .zero) {
-            ForEach(contentStyles) { style in
-                VStack(alignment: .center, spacing: .Spacing.xSmall) {
-                    Button(
-                        action: { changeSelection(to: style) },
-                        label: { createAppearance(for: style) }
+        VStack(alignment: .leading, spacing: .Spacing.xSmall) {
+            HStack(alignment: .top, spacing: .zero) {
+                ForEach(contentStyles) { style in
+                    AppearanceButton(
+                        settings: settings,
+                        style: style,
+                        selection: $selection,
+                        isHovered: style == hoveredStyle
                     )
-                    .buttonStyle(.plain)
-                    .padding(.horizontal, .Spacing.xxSmall)
-
-                    showLabel(for: style)
+                    .onHover { hoveredStyle = $0 ? style : selection.style }
                 }
-                .contentShape(Rectangle())
-                .onHover { markedStyle = $0 ? style : selection.style }
             }
+            showAppearanceUnits
         }
-        .onAppear { withAnimation(.none) { markedStyle = selection.style } }
+        .onAppear { withAnimation(.none) { hoveredStyle = selection.style } }
     }
 }
 
 private extension AppearancePicker {
-    func isHover(_ style: StyleType) -> Bool {
-        style <= markedStyle
-    }
-
-    func changeSelection(to selected: StyleType) {
-        selection.style = selected
-    }
-
-    func createAppearance(for style: StyleType) -> some View {
-        var styleSettings = settings
-        styleSettings.appearance.style = style
-
-        return ZStack(alignment: .center) {
-            showSelection(for: style)
-            showCountdownView(settings: styleSettings)
-        }
-    }
-
-    func showLabel(for style: StyleType) -> some View {
-        Text(style.label)
+    var showAppearanceUnits: some View {
+        Text(appearanceUnits)
             .font(.callout)
-            .fontWeight(isHover(style) ? .medium : .regular)
-            .foregroundStyle(isHover(style) ? .primary : .secondary)
+            .fontWeight(.regular)
+            .foregroundStyle(.primary)
     }
 
-    func showSelection(for style: StyleType) -> some View {
-        RoundedRectangle(cornerRadius: .Spacing.medium)
-            .stroke(
-                selectBorderColor(for: style),
-                lineWidth: .Border.medium
-            )
-            .frame(height: .Sizes.appearanceHeight + .Spacing.medium)
-    }
-
-    func selectBorderColor(for style: StyleType) -> Color {
-        if style == selection.style {
-            return Color.accentColor
-        } else if style == markedStyle {
-            return .secondary
-        } else {
-            return .clear
-        }
-    }
-
-    func showCountdownView(settings: SaverSettings) -> some View {
-        CountdownWindow(
-            now: pickerNow,
-            settings: settings,
-            isPreview: true
-        )
-        .padding(.Spacing.small)
-        .frame(height: .Sizes.appearanceHeight)
-        .background(settings.theme.background.color, in: RoundedRectangle(cornerRadius: .Spacing.small))
-        .padding(.horizontal, .Spacing.xSmall)
+    var appearanceUnits: String {
+        StyleType.allCases
+            .filter { $0 <= hoveredStyle }
+            .map { String(localized: $0.label) }
+            .formatted(.list(type: .and))
     }
 }
 

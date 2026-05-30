@@ -74,6 +74,7 @@
 				Resources/Resources.swift,
 				Views/Countdown/CountdownView.swift,
 				Views/Countdown/CountdownWindow.swift,
+				Views/ReusableViews/AppearanceButton.swift,
 				Views/ReusableViews/AppearancePicker.swift,
 				Views/ReusableViews/BrightnessSlider.swift,
 				Views/ReusableViews/ColorPalettePicker.swift,
