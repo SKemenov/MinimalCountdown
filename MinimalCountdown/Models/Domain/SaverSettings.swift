@@ -15,7 +15,7 @@ struct SaverSettings: Codable, Equatable, Hashable {
     var schedule: Schedule
     var theme: Theme
     var typography: Typography
-    var language: LanguageCode
+    var language: AppLanguage
     var title: Title
 }
 
@@ -39,7 +39,7 @@ extension SaverSettings {
             effectColor: .white
         ),
         typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
-        language: .init(countdownLanguage: .automatic, settingsLanguage: .automatic),
+        language: .automatic,
         title: .init(text: "", isHidden: true)
     )
 }
@@ -57,7 +57,7 @@ extension SaverSettings {
             effectColor: .white
         ),
         typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
-        language: .init(countdownLanguage: .automatic, settingsLanguage: .automatic),
+        language: .automatic,
         title: .init(text: "See you soon", isHidden: false)
     )
 }

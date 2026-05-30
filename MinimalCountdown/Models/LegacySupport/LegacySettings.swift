@@ -50,7 +50,7 @@ extension LegacySettings.V1 {
                 effectColor: .white
             ),
             typography: .init(weight: .ultraLight, isRounded: false, numeralSystem: .automatic),
-            language: .init(countdownLanguage: .automatic, settingsLanguage: .automatic),
+            language: .automatic,
             title: .init(text: message, isHidden: isMessageHidden)
         )
     }

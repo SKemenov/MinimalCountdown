@@ -45,7 +45,6 @@
 				Models/Domain/Appearance/Appearance.swift,
 				Models/Domain/Appearance/AppearanceStyle.swift,
 				Models/Domain/AppLanguage.swift,
-				Models/Domain/LanguageCode.swift,
 				Models/Domain/SaverSettings.swift,
 				Models/Domain/Schedule.swift,
 				Models/Domain/Theme/AccentColor.swift,

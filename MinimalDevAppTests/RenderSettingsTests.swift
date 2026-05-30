@@ -15,7 +15,7 @@ struct `Render Settings Tests` {
 
     private func render(language: AppLanguage, locale: Locale = Locale(identifier: "en_US")) -> UIModel.RenderSettings {
         var settings = SaverSettings.default
-        settings.language.countdownLanguage = language
+        settings.language = language
         return UIModel.RenderSettings(settings, locale: locale)
     }
 

@@ -4080,64 +4080,6 @@
         }
       }
     },
-    "Show settings in this language too" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "عرض الإعدادات بهذه اللغة أيضًا"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen ebenfalls in dieser Sprache anzeigen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar Ajustes también en este idioma "
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "تنظیمات را به این زبان نیز نمایش دهید."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Afficher les Réglages également dans cette langue"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הצג את ההגדרות גם בשפה זו"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "इस भाषा में भी सेटिंग्स दिखाएँ"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Показывать настройки на этом же языке "
-          }
-        },
-        "sa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "अस्मिन् भाषायां अपि सेटिङ्ग्स् दर्शयतु"
-          }
-        }
-      }
-    },
     "The available range is one year before and after the current date." : {
       "localizations" : {
         "ar" : {
@@ -4192,64 +4134,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
-          }
-        }
-      }
-    },
-    "The settings window will use the selected language after you reopen it" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ستستخدم نافذة الإعدادات اللغة المختارة بعد إعادة فتحها."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das Einstellungsfenster verwendet die ausgewählte Sprache nach dem erneuten Öffnen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La ventana de Ajustes usará el idioma seleccionado después de volver a abrirla"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "پنجره تنظیمات پس از بازگشایی مجدد، از زبان انتخاب شده استفاده خواهد کرد."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La fenêtre des Réglages utilisera la langue sélectionnée après réouverture"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "חלון ההגדרות ישתמש בשפה שנבחרה לאחר פתיחתו מחדש"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सेटिंग्स विंडो को दोबारा खोलने के बाद, यह चुनी हुई भाषा का इस्तेमाल करेगी"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " Окно настроек будет использовать выбранный язык после повторного открытия"
-          }
-        },
-        "sa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "भवता पुनः उद्घाटितस्य अनन्तरं सेटिङ्ग्स् विण्डो चयनितभाषायाः उपयोगं करिष्यति"
           }
         }
       }

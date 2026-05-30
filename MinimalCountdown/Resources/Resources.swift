@@ -170,11 +170,6 @@ enum Resources {
         static let title = LocalizedStringResource("Language", bundle: .app)
         static let countdown = LocalizedStringResource("Countdown language", bundle: .app)
         static let countdownHint = LocalizedStringResource("Affects only the countdown display", bundle: .app)
-        static let settings = LocalizedStringResource("Show settings in this language too", bundle: .app)
-        static let settingsHint = LocalizedStringResource(
-            "The settings window will use the selected language after you reopen it",
-            bundle: .app
-        )
         static let applyWarning = LocalizedStringResource(
             "⚠️ The selected language will be applied after you close this window.",
             bundle: .app

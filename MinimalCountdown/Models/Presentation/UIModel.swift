@@ -33,8 +33,8 @@ enum UIModel {
 
             var components = Locale.Components(locale: locale)
             // Countdown language: an explicit pick overrides, `.automatic` skips this step
-            if settings.language.countdownLanguage != .automatic {
-                components.languageComponents.languageCode = Locale.LanguageCode(settings.language.countdownLanguage.languageCode)
+            if settings.language != .automatic {
+                components.languageComponents.languageCode = Locale.LanguageCode(settings.language.languageCode)
             }
             // Numerals: an explicit pick overrides; `.automatic` falls back to the locale's own
             // numbering system (UAE → Latin, Egypt → Arabic).

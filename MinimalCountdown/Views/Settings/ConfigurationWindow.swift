@@ -187,7 +187,7 @@ private extension ConfigurationWindow {
 
     var languageSection: some View {
         Section {
-            Picker(selection: $settings.language.countdownLanguage) {
+            Picker(selection: $settings.language) {
                 Text(AppLanguage.automatic.label).tag(AppLanguage.automatic)
 
                 if !UIModel.preferredLanguages.isEmpty {
@@ -216,7 +216,7 @@ private extension ConfigurationWindow {
 
     @ViewBuilder
     var languageWarning: some View {
-        if settings.language.countdownLanguage != settingsManager.settings.language.countdownLanguage {
+        if settings.language != settingsManager.settings.language {
             Text(Resources.Language.applyWarning)
                 .foregroundStyle(.secondary)
                 .formNote

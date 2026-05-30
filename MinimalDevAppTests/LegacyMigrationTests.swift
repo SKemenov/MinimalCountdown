@@ -53,6 +53,6 @@ struct `Legacy Migration Tests` {
         #expect(sui.typography.isRounded == false)
         #expect(sui.typography.numeralSystem == .automatic)
         // NOTE: commit 2 (E2 — LanguageCode collapse) updates this assertion.
-        #expect(sui.language.countdownLanguage == .automatic)
+        #expect(sui.language == .automatic)
     }
 }
