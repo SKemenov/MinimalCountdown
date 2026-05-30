@@ -39,10 +39,13 @@ enum UIModel {
             // Numerals: an explicit pick overrides; `.automatic` falls back to the locale's own
             // numbering system (UAE → Latin, Egypt → Arabic).
             components.numberingSystem = settings.typography.numeralSystem.numberingSystem ?? locale.numberingSystem
-            countdownLocale = Locale(components: components)
-            isNeedFixLabelSize = !UIModel.nonCapitalizedLanguageCodes
-                .map { $0.contains(locale.identifier.lowercased()) }
-                .isEmpty
+            // I need resolvedLocale because isNeedFixLabelSize's closure capture it, instead of self.countdownLocale
+            let resolvedLocale = Locale(components: components)
+            countdownLocale = resolvedLocale
+            // Bigger label ratio only for scripts without capitals (Arabic/Hebrew/Farsi), keyed off
+            // the *resolved* countdown locale — explicit pick or an automatic non-Latin Mac region.
+            let localeID = resolvedLocale.identifier.lowercased()
+            isNeedFixLabelSize = UIModel.nonCapitalizedLanguageCodes.contains { localeID.hasPrefix($0) }
         }
     }
 
