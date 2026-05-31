@@ -7,16 +7,6 @@
 
 import Foundation
 
-private final class BundleToken {}
-
-extension LocalizedStringResource.BundleDescription {
-    /// Anchors `LocalizedStringResource` lookups to *this* bundle. Inside a `.saver`, `Bundle.main`
-    /// is the host app (System Settings), so the default `.main` resolution silently falls back to
-    /// the development-language key. `BundleToken` compiles into each target, so `.forClass` resolves
-    /// to the saver bundle in the saver and the app bundle in DevApp.
-    static let app = LocalizedStringResource.BundleDescription.forClass(BundleToken.self)
-}
-
 // MARK: - Localized UI strings
 enum Resources {
     /// Single source of truth for strings that used to be derived inline via `String(describing:)`.

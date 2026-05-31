@@ -40,6 +40,7 @@
 				"Extensions/Double+Ext.swift",
 				"Extensions/JSONDecoder+Ext.swift",
 				"Extensions/JSONEncoder+Ext.swift",
+				"Extensions/LocalizedStringResource+Ext.swift",
 				"Extensions/UserDefaults+Ext.swift",
 				"Extensions/View+Ext.swift",
 				Models/Domain/Appearance/Appearance.swift,
