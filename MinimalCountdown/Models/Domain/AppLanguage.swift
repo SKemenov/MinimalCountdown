@@ -45,8 +45,9 @@ extension AppLanguage {
         }
     }
 
-    var languageCode: String {
+    var languageCode: String? {
         switch self {
+            case .automatic: nil
             case .english: "en"
             case .spanish: "es"
             case .german: "de"
@@ -57,7 +58,6 @@ extension AppLanguage {
             case .farsi: "fa"
             case .hindi: "hi"
             case .sanskrit: "sa"
-            default: ""
         }
     }
 }

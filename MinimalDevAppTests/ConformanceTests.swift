@@ -46,4 +46,13 @@ struct `Conformance Tests` {
         #expect(Set(AccentColor.allCases).count == AccentColor.allCases.count)
         #expect(Set(BackgroundColor.allCases).count == BackgroundColor.allCases.count)
     }
+
+    @Test func `app Language Code Is Nil Only For Automatic`() {
+        // `.automatic` returns nil (the locale-override step is skipped); every other case
+        // carries a non-nil ISO code, and they're all distinct.
+        #expect(AppLanguage.automatic.languageCode == nil)
+        let sut = AppLanguage.allCases.compactMap(\.languageCode)
+        #expect(sut.count == AppLanguage.allCases.count - 1)
+        #expect(Set(sut).count == sut.count)
+    }
 }

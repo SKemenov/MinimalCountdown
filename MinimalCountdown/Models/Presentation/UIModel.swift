@@ -32,9 +32,9 @@ enum UIModel {
                 .color.opacity(theme.brightness.digitsOpacity)
 
             var components = Locale.Components(locale: locale)
-            // Countdown language: an explicit pick overrides, `.automatic` skips this step
-            if settings.language != .automatic {
-                components.languageComponents.languageCode = Locale.LanguageCode(settings.language.languageCode)
+            // Countdown language: an explicit pick overrides, `.automatic` (nil code) skips this step
+            if let code = settings.language.languageCode {
+                components.languageComponents.languageCode = Locale.LanguageCode(code)
             }
             // Numerals: an explicit pick overrides; `.automatic` falls back to the locale's own
             // numbering system (UAE → Latin, Egypt → Arabic).
@@ -95,7 +95,10 @@ enum UIModel {
     }
 
     static var preferredLanguages: [AppLanguage] {
-        allLanguages.filter { preferredLanguagesCodes.contains($0.languageCode) }
+        allLanguages.filter { language in
+            guard let code = language.languageCode else { return false }
+            return preferredLanguagesCodes.contains(code)
+        }
     }
     static var otherLanguages: [AppLanguage] {
         allLanguages.filter { !preferredLanguages.contains($0) }
@@ -105,7 +108,9 @@ enum UIModel {
 private extension UIModel {
     static var nonCapitalizedLanguageCodes: [String] { ["ar", "he", "fa"] }
     static var allLanguages: [AppLanguage] { AppLanguage.allCases.filter { $0 != .automatic } }
-    static var allLanguagesCodes: [String] { AppLanguage.allCases.filter { $0 != .automatic }.map { $0.languageCode } }
-    static var systemPreferredCodes: [String] { Locale.preferredLanguages.map { String($0.prefix(2)) } }
+    static var allLanguagesCodes: [String] { allLanguages.compactMap { $0.languageCode } }
+    static var systemPreferredCodes: [String] {
+        Locale.preferredLanguages.compactMap { $0.components(separatedBy: "-").first }
+    }
     static var preferredLanguagesCodes: [String] { systemPreferredCodes.filter { allLanguagesCodes.contains($0) } }
 }
