@@ -37,8 +37,8 @@ extension CGFloat {
         static let settingsWidth: CGFloat = 512
         /// CGFloat = 36 for each appearance tile height
         static let appearanceHeight: CGFloat = 36
-        /// CGFloat = 20 for color selector's icons
-        static let colorSelector: CGFloat = 20
+        /// CGFloat = 20 for color swatch icons
+        static let colorSwatch: CGFloat = 20
     }
 
     // MARK: - View elements helpers

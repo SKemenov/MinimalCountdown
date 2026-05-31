@@ -77,6 +77,8 @@
 				Views/ReusableViews/AppearancePicker.swift,
 				Views/ReusableViews/BrightnessSlider.swift,
 				Views/ReusableViews/ColorPalettePicker.swift,
+				Views/ReusableViews/ColorSwatch.swift,
+				Views/ReusableViews/ColorSwatchButton.swift,
 				Views/ReusableViews/ElementView.swift,
 				Views/ReusableViews/TextElementView.swift,
 				Views/ReusableViews/TitleView.swift,
