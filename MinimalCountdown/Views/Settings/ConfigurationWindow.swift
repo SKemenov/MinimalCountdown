@@ -101,27 +101,6 @@ private extension ConfigurationWindow {
         Section {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
-
-            Picker(selection: $settings.theme.effect) {
-                ForEach(EffectStyle.allCases) { effect in
-                    Text(effect.label).tag(effect)
-                }
-            } label: {
-                Text(Resources.Theme.effect)
-                Text(UIModel.effectsHint)
-                    .subtitleFont
-            }
-            .help(UIModel.effectsHint)
-
-            if settings.theme.effect == .glow {
-                Picker(selection: $settings.theme.effectColor) {
-                    ForEach(AccentColor.allCases) { color in
-                        showColor(color).tag(color)
-                    }
-                } label: {
-                    Text(Resources.Theme.effectColor)
-                }
-            }
         } header: {
             Text(Resources.Theme.title)
         }
@@ -154,6 +133,27 @@ private extension ConfigurationWindow {
                 }
             }
             .help(Text(Resources.Digits.roundedHint))
+
+            Picker(selection: $settings.theme.effect) {
+                ForEach(EffectStyle.allCases) { effect in
+                    Text(effect.label).tag(effect)
+                }
+            } label: {
+                Text(Resources.Theme.effect)
+                Text(UIModel.effectsHint)
+                    .subtitleFont
+            }
+            .help(UIModel.effectsHint)
+
+            if settings.theme.effect == .glow {
+                Picker(selection: $settings.theme.effectColor) {
+                    ForEach(AccentColor.allCases) { color in
+                        showColor(color).tag(color)
+                    }
+                } label: {
+                    Text(Resources.Theme.effectColor)
+                }
+            }
 
             Picker(selection: $settings.typography.numeralSystem) {
                 ForEach(NumeralSystem.allCases) { system in
