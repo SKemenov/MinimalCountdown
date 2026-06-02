@@ -34,7 +34,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				App/AppSettings.swift,
-				App/ConfigureSheetController.swift,
+				App/SettingsWindowController.swift,
 				"Extensions/CGFloat+Ext.swift",
 				"Extensions/Date+Ext.swift",
 				"Extensions/Double+Ext.swift",
@@ -84,10 +84,10 @@
 				Views/ReusableViews/TextElementView.swift,
 				Views/ReusableViews/TitleView.swift,
 				Views/Settings/AppearanceSectionView.swift,
-				Views/Settings/ConfigurationWindow.swift,
 				Views/Settings/DateSectionView.swift,
 				Views/Settings/DigitsSectionView.swift,
 				Views/Settings/LanguageSectionView.swift,
+				Views/Settings/SettingsWindow.swift,
 				Views/Settings/ThemeSectionView.swift,
 				Views/Settings/TitleSectionView.swift,
 			);

@@ -17,13 +17,13 @@ final class MinimalCountdownView: ScreenSaverView {
     private let clock = CountdownClock()
     private var hostingView: NSHostingView<AnyView>?
 
-    lazy var sheetController: ConfigureSheetController = ConfigureSheetController(settingsManager: settingsManager)
+    lazy var settingsController: SettingsWindowController = SettingsWindowController(settingsManager: settingsManager)
 
     // MARK: - Public properties
 
     override var hasConfigureSheet: Bool { true }
 
-    override var configureSheet: NSWindow? { sheetController.window }
+    override var configureSheet: NSWindow? { settingsController.window }
 
     // MARK: - Inits
 

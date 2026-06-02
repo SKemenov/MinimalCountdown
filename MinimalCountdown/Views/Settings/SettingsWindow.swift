@@ -1,5 +1,5 @@
 //
-//  ConfigurationWindow.swift
+//  SettingsWindow.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -8,8 +8,7 @@
 import OSLog
 import SwiftUI
 
-// TODO: - rename to SettingsWindow
-struct ConfigurationWindow: View {
+struct SettingsWindow: View {
 
     private let logger: Logger
     var onClose: (() -> Void)?
@@ -49,11 +48,7 @@ struct ConfigurationWindow: View {
     }
 }
 
-private extension ConfigurationWindow {
-    /// Fit the window to the screen: the full Form shows on large displays (no scroll); on smaller
-    /// screens the window shrinks to the visible height while the Form scrolls inside — `Close` and
-    /// the warnings stay pinned below. Read off the key screen once per render (settings windows
-    /// don't migrate between displays mid-use).
+private extension SettingsWindow {
     var windowHeight: CGFloat {
         let visibleHeight = NSScreen.main?.visibleFrame.height ?? .Sizes.settingsIdealHeight
         return min(.Sizes.settingsIdealHeight, visibleHeight - .Sizes.settingsScreenMargin)
@@ -138,13 +133,13 @@ private extension ConfigurationWindow {
 
 #if DEBUG
 #Preview("Light mode") {
-    ConfigurationWindow()
+    SettingsWindow()
         .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.light)
 }
 
 #Preview("Dark mode") {
-    ConfigurationWindow()
+    SettingsWindow()
         .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
         .preferredColorScheme(.dark)
 }

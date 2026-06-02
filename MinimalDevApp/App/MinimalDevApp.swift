@@ -33,7 +33,7 @@ struct MinimalDevApp: App {
         .extraMenu(isAnimating: $isAnimating, isTestPreview: $isTestPreview)
 
         Settings {
-            ConfigurationWindow()
+            SettingsWindow()
                 .environment(settingsManager)
         }
     }

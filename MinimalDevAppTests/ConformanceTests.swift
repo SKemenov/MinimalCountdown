@@ -32,7 +32,7 @@ struct `Conformance Tests` {
     }
 
     @Test func `font Weight Guard Rail Thresholds`() {
-        // ConfigurationWindow warns: glow at weight >= .bold; innerGlow at weight < .regular.
+        // DigitsSectionView warns: glow at weight >= .bold; innerGlow at weight < .regular.
         #expect(FontWeight.semibold < .bold)       // below the glow threshold
         #expect(!(FontWeight.bold < .bold))         // bold reaches it
         #expect(FontWeight.thin < .regular)         // below the innerGlow threshold
