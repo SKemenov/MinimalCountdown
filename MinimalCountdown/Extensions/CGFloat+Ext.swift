@@ -35,6 +35,12 @@ extension CGFloat {
     enum Sizes {
         /// CGFloat = 512 for Settings window width
         static let settingsWidth: CGFloat = 512
+        /// CGFloat = 1240 — Settings window ideal height (≈ Form content 1172 + Close chrome 56,
+        /// measured). The window shrinks below this to fit smaller screens; the Form scrolls then.
+        static let settingsIdealHeight: CGFloat = 1240
+        /// CGFloat = 60 — title bar + breathing room subtracted from the screen's visible height
+        /// when fitting the Settings window.
+        static let settingsScreenMargin: CGFloat = 60
         /// CGFloat = 36 for each appearance tile height
         static let appearanceHeight: CGFloat = 36
         /// CGFloat = 20 for color swatch icons

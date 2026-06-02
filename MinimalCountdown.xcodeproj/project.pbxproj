@@ -83,7 +83,13 @@
 				Views/ReusableViews/ElementView.swift,
 				Views/ReusableViews/TextElementView.swift,
 				Views/ReusableViews/TitleView.swift,
+				Views/Settings/AppearanceSectionView.swift,
 				Views/Settings/ConfigurationWindow.swift,
+				Views/Settings/DateSectionView.swift,
+				Views/Settings/DigitsSectionView.swift,
+				Views/Settings/LanguageSectionView.swift,
+				Views/Settings/ThemeSectionView.swift,
+				Views/Settings/TitleSectionView.swift,
 			);
 			target = E9BDA7812F8A922F00FB19A4 /* MinimalDevApp */;
 		};
