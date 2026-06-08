@@ -38,7 +38,23 @@ struct AppearancePicker: View {
                     .onHover { hoveredStyle = $0 ? style : selection.style }
                 }
             }
+            // VoiceOver reads the custom tile row as one native picker bound to the real selection.
+            .accessibilityHidden(true)
+            .accessibilityRepresentation {
+                Picker(selection: $selection.style) {
+                    ForEach(contentStyles) { style in
+                        Text(style.label).tag(style)
+                    }
+                } label: {
+                    Text(Resources.Appearance.title)
+                }
+                .pickerStyle(.menu)
+                .accessibilityValue(Text(appearanceUnits))
+//                .accessibilityElement(children: .combine)
+            }
+
             showAppearanceUnits
+                .accessibilityHidden(true)
         }
         .onAppear { withAnimation(.none) { hoveredStyle = selection.style } }
     }

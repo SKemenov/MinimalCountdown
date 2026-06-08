@@ -12,6 +12,8 @@ enum Resources {
     /// Single source of truth for strings that used to be derived inline via `String(describing:)`.
     /// Mirrors the model enums.
     enum Labels {
+        static let settingsTitle = LocalizedStringResource("Settings", bundle: .app)
+        
         enum AppearanceStyle {
             static let days = LocalizedStringResource("Days", bundle: .app)
             static let hours = LocalizedStringResource("Hours", bundle: .app)
@@ -122,6 +124,10 @@ enum Resources {
         static let effect = LocalizedStringResource("Effect", bundle: .app)
         static let effectHint = LocalizedStringResource("Adds an effect to the digits:", bundle: .app)
         static let effectColor = LocalizedStringResource("Effect Color", bundle: .app)
+        static let effectColorHint = LocalizedStringResource(
+            "⚠️ Additional pop-up menu Effect Color available for Glow effect",
+            bundle: .app
+        )
         static let glowWeightWarning = LocalizedStringResource("⚠️ Looks better at lighter weights.", bundle: .app)
         static let innerGlowWeightWarning = LocalizedStringResource(
             "⚠️ Looks better at Regular weight or higher.",

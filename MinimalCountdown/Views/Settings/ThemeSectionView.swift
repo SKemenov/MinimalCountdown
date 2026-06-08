@@ -11,11 +11,12 @@ struct ThemeSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Theme.title) {
             ColorPalettePicker(Resources.Theme.color, selection: $settings.theme.accent)
+
+            Divider()
+
             BrightnessSlider(Resources.Theme.brightness, selection: $settings.theme.brightness)
-        } header: {
-            Text(Resources.Theme.title)
         }
     }
 }

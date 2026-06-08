@@ -83,6 +83,7 @@
 				Views/ReusableViews/ElementView.swift,
 				Views/ReusableViews/TextElementView.swift,
 				Views/ReusableViews/TitleView.swift,
+				Views/Settings/AccessibleSection.swift,
 				Views/Settings/AppearanceSectionView.swift,
 				Views/Settings/DateSectionView.swift,
 				Views/Settings/DigitsSectionView.swift,

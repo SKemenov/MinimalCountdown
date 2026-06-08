@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "⚠️ Additional pop-up menu Effect Color available for Glow effect" : {
+
+    },
     "⚠️ Looks better at lighter weights." : {
       "localizations" : {
         "ar" : {
@@ -4021,6 +4024,9 @@
           }
         }
       }
+    },
+    "Settings" : {
+
     },
     "Show only digits, without any labels underneath." : {
       "localizations" : {

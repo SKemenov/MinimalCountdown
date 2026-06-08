@@ -28,7 +28,23 @@ struct ColorPalettePicker: View {
     var body: some View {
         HStack(alignment: .top, spacing: .zero) {
             pickerTitle
+                .accessibilityHidden(true)
+
             colorElements
+            // VoiceOver reads the custom swatch row as one native picker bound to the real selection.
+                .accessibilityElement(children: .ignore)
+                .accessibilityRepresentation {
+                    Picker(selection: $selection) {
+                        ForEach(contentColors) { color in
+                            Text(color.label).tag(color)
+                        }
+                    } label: {
+                        Text(titleResource)
+                    }
+                    .pickerStyle(.menu)
+                }
+                .accessibilityValue(Text(selection.label))
+                .accessibilityElement(children: .combine)
         }
         .task(id: selection) { hoverColor = selection }
     }

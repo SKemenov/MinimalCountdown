@@ -26,6 +26,18 @@ extension View {
             .transition(.asymmetric(insertion: .opacity, removal: .identity))
     }
 
+    /// Surfaces one hint to both pointer users (`.help` tooltip) and VoiceOver
+    /// (`.accessibilityHint`), so they can't drift apart — and it restores the guidance lost when
+    /// the visible subtitles were removed (help-only left VoiceOver with nothing).
+    func hint(_ resource: LocalizedStringResource) -> some View {
+        help(Text(resource)).accessibilityHint(Text(resource))
+    }
+
+    /// String overload for runtime-composed hints (e.g. `UIModel.effectsHint`).
+    func hint(_ string: String) -> some View {
+        help(string).accessibilityHint(string)
+    }
+
     /// Applies the digit `EffectStyle` from `RenderSettings`: fill + glow / blur / inner glow.
     /// Digits only — the parent owns `foregroundStyle` so each effect fully controls the fill.
     /// `backlight` and `innerGlow` always fill with black so the digit body reads on any background.

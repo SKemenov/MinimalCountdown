@@ -24,7 +24,7 @@ struct AppearanceButton: View {
     }
 
     var body: some View {
-        Button(action: changeSelection) {
+        Button( action: changeSelection) {
             ZStack(alignment: .center) {
                 showBorder
                 showCountdownView

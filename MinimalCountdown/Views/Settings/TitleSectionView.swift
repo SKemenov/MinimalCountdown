@@ -11,15 +11,18 @@ struct TitleSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Title.title) {
             TextField(text: $settings.title.text, prompt: Text(Resources.Title.titlePrompt)) { Text(verbatim: "") }
+                .accessibilityLabel(Text(Resources.Title.title))
+
+            Divider()
 
             Toggle(isOn: $settings.title.isHidden) {
                 Text(Resources.Title.hideTitle)
             }
-            .help(Text(Resources.Title.hideTitleHint))
-        } header: {
-            Text(Resources.Title.title)
+            .accessibilityAddTraits(.isToggle)
+            .hint(Resources.Title.hideTitleHint)
+            .accessibilityElement(children: .combine)
         }
     }
 }

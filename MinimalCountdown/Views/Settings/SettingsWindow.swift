@@ -18,6 +18,8 @@ struct SettingsWindow: View {
     @State private var dismissTask: Task<Void, Never>?
     @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
+    @AccessibilityFocusState(for: .voiceOver) var focusedForVoiceOver: Bool
+    @FocusState private var focused: Bool
 
     init(onClose: (() -> Void)? = nil) {
         logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
@@ -28,6 +30,8 @@ struct SettingsWindow: View {
         VStack(spacing: .zero) {
             Form {
                 AppearanceSectionView(settings: $settings)
+                    .defaultFocus($focused, true)
+                    .accessibilityFocused($focusedForVoiceOver)
                 DateSectionView(settings: $settings)
                 ThemeSectionView(settings: $settings)
                 DigitsSectionView(settings: $settings)
@@ -37,7 +41,8 @@ struct SettingsWindow: View {
             .formStyle(.grouped)
             .animation(.default, value: settings)
             .onKeyPress(.return, action: saveByEnterKey)
-
+            .accessibilityElement(children: .contain)
+            .accessibilityLabel(Text(Resources.Labels.settingsTitle))
             languageWarning
             errorMessage
             buttons
@@ -84,6 +89,8 @@ private extension SettingsWindow {
     }
 
     func prepareForDisplay() {
+        focusedForVoiceOver = true
+        focused = true
         withAnimation(.none) {
             settings = settingsManager.settings
         }

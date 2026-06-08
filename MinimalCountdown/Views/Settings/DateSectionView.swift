@@ -11,11 +11,10 @@ struct DateSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Date.title) {
             timePicker
+            Divider()
             dayPicker
-        } header: {
-            Text(Resources.Date.title)
         }
     }
 }
@@ -24,8 +23,10 @@ private extension DateSectionView {
     var timePicker: some View {
         DatePicker(selection: $settings.schedule.target, displayedComponents: .hourAndMinute) {
             Text(Resources.Date.time)
+//                .accessibilityHidden(true)
         }
-        .help(Text(Resources.Date.timeHint))
+        .hint(Resources.Date.timeHint)
+        .accessibilityElement(children: .combine)
     }
 
     var dayPicker: some View {
@@ -44,6 +45,7 @@ private extension DateSectionView {
             .subtitleFont
         }
         .datePickerStyle(.graphical)
+        .accessibilityElement(children: .combine)
     }
 }
 

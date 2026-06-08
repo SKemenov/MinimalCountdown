@@ -11,7 +11,7 @@ struct LanguageSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Language.title) {
             Picker(selection: $settings.language) {
                 Text(AppLanguage.automatic.label).tag(AppLanguage.automatic)
 
@@ -28,12 +28,13 @@ struct LanguageSectionView: View {
             } label: {
                 Text(Resources.Language.countdown)
             }
-            .help(Text(Resources.Language.countdownHint))
+            .hint(Resources.Language.countdownHint)
+            .accessibilityElement(children: .combine)
+
+            Divider()
 
             Text(Resources.Language.translationDisclaimer)
                 .subtitleFont
-        } header: {
-            Text(Resources.Language.title)
         }
     }
 }
@@ -41,3 +42,4 @@ struct LanguageSectionView: View {
 #Preview {
     LanguageSectionView(settings: .constant(.default))
 }
+

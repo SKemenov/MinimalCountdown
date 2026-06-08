@@ -29,9 +29,12 @@ struct BrightnessSlider: View {
             } maximumValueLabel: {
                 Image(systemName: "sun.max.fill")
             }
+            .accessibilityValue(Text(selection.label))
+            .accessibilityElement(children: .combine)
 
             Text(selection.label)
                 .subtitleFont
+                .accessibilityHidden(true)
         }
     }
 }

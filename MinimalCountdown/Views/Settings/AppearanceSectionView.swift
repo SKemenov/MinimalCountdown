@@ -11,15 +11,15 @@ struct AppearanceSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Appearance.title) {
             AppearancePicker(selection: $settings.appearance, in: settings)
 
+            Divider()
             hideLabelsToggle
+            Divider()
 
             Text(Resources.Appearance.previewHint)
                 .subtitleFont
-        } header: {
-            Text(Resources.Appearance.title)
         }
     }
 
@@ -27,7 +27,9 @@ struct AppearanceSectionView: View {
         Toggle(isOn: $settings.appearance.isLabelHidden) {
             Text(Resources.Appearance.hideLabels)
         }
-        .help(Text(Resources.Appearance.hideLabelsHint))
+        .accessibilityAddTraits(.isToggle)
+        .accessibilityElement(children: .combine)
+        .hint(Resources.Appearance.hideLabelsHint)
     }
 }
 

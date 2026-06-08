@@ -11,14 +11,18 @@ struct DigitsSectionView: View {
     @Binding var settings: SaverSettings
 
     var body: some View {
-        Section {
+        AccessibleSection(Resources.Digits.title) {
             weightPicker
+            Divider()
             roundedToggle
+            Divider()
             effectPicker
-            effectColorPicker
+            Divider()
+            if settings.theme.effect == .glow {
+                effectColorPicker
+                Divider()
+            }
             numeralsPicker
-        } header: {
-            Text(Resources.Digits.title)
         }
     }
 }
@@ -30,19 +34,69 @@ private extension DigitsSectionView {
                 Text(weight.label).tag(weight)
             }
         } label: {
-            Text(Resources.Digits.weight)
-            innerGlowWeightWarning
-            glowWeightWarning
+            Group {
+                Text(Resources.Digits.weight)
+                innerGlowWeightWarning
+                glowWeightWarning
+            }
+            .accessibilityHidden(true)
         }
-        .help(Text(Resources.Digits.weightHint))
+        .pickerStyle(.menu)
+        .hint(Resources.Digits.weightHint)
+        // TODO: - use `.accessibilityHint(_,isEnabled)` instead, after migrating saver target to macOS 15+
+        .accessibilityLabel(weightPickerLabelText)
+//        .accessibilityLabel(Text(Resources.Digits.weight))
+//        .accessibilityHint(
+//            Text(Resources.Theme.glowWeightWarning),
+//            isEnabled: settings.theme.effect == .glow && settings.typography.weight >= .bold
+//        )
+//        .accessibilityHint(
+//            Text(Resources.Theme.innerGlowWeightWarning),
+//            isEnabled: settings.theme.effect == .innerGlow && settings.typography.weight < .regular
+//        )
+    }
+
+    var weightPickerLabelText: Text {
+        let mainLabel = String(localized: Resources.Digits.weight)
+        let conditionalLabel: String
+        if settings.theme.effect == .glow && settings.typography.weight >= .bold {
+            conditionalLabel = String(localized: Resources.Theme.glowWeightWarning)
+        } else if settings.theme.effect == .innerGlow && settings.typography.weight < .regular {
+            conditionalLabel = String(localized: Resources.Theme.innerGlowWeightWarning)
+        } else {
+            conditionalLabel = String()
+        }
+        if conditionalLabel.isEmpty {
+            return .init(verbatim: mainLabel)
+        } else {
+            return .init(verbatim: "\(mainLabel), \(conditionalLabel)")
+        }
     }
 
     var roundedToggle: some View {
         Toggle(isOn: $settings.typography.isRounded) {
-            Text(Resources.Digits.rounded)
-            roundedWarning
+            Group {
+                Text(Resources.Digits.rounded)
+                roundedWarning
+            }
+            .accessibilityHidden(true)
         }
-        .help(Text(Resources.Digits.roundedHint))
+        .hint(Resources.Digits.roundedHint)
+        // TODO: - use `.accessibilityHint(_,isEnabled)` instead, after migrating saver target to macOS 15+
+        .accessibilityLabel(roundedToggleLabelText)
+//        .accessibilityHint(
+//            Text(Resources.Theme.blurRoundedWarning),
+//            isEnabled: settings.theme.effect == .blur && !settings.typography.isRounded
+//        )
+    }
+
+    var roundedToggleLabelText: Text {
+        let mainLabel = String(localized: Resources.Digits.rounded)
+        if settings.theme.effect == .blur && !settings.typography.isRounded {
+            return .init(verbatim: "\(mainLabel), \(String(localized: Resources.Theme.blurRoundedWarning))")
+        } else {
+            return .init(verbatim: mainLabel)
+        }
     }
 
     var effectPicker: some View {
@@ -55,20 +109,73 @@ private extension DigitsSectionView {
             }
         } label: {
             Text(Resources.Theme.effect)
+                .accessibilityHidden(true)
         }
-        .help(UIModel.effectsHint)
+        .pickerStyle(.menu)
+        .hint(UIModel.effectsHint)
+        // TODO: - use `.accessibilityHint(_,isEnabled)` instead, after migrating saver target to macOS 15+
+        .accessibilityLabel(effectPickerLabelText)
+//        .accessibilityLabel(Text(Resources.Theme.effect))
+//        .accessibilityHint(
+//            Text("\(Resources.Digits.rounded), \(Resources.Theme.blurRoundedWarning)"),
+//            isEnabled: settings.theme.effect == .blur && !settings.typography.isRounded
+//        )
+//        .accessibilityHint(
+//            Text("⚠️ Additional pop-up menu Effect Color available for Glow effect"),
+//            isEnabled: settings.theme.effect == .glow
+//        )
+//        .accessibilityHint(
+//            Text("\(Resources.Digits.weight), \(Text(Resources.Theme.glowWeightWarning))"),
+//            isEnabled: settings.theme.effect == .glow && settings.typography.weight >= .bold
+//        )
+//        .accessibilityHint(
+//            Text("\(Resources.Digits.weight), \(Resources.Theme.innerGlowWeightWarning)"),
+//            isEnabled: settings.theme.effect == .innerGlow && settings.typography.weight < .regular
+//        )
     }
 
-    @ViewBuilder
+    var effectPickerLabelText: Text {
+        let mainLabel = String(localized: Resources.Theme.effect)
+        let conditionalLabel: String
+        if settings.theme.effect == .blur && !settings.typography.isRounded {
+            conditionalLabel = String(localized: Resources.Digits.rounded) + ", " + String(localized: Resources.Theme.blurRoundedWarning)
+        } else if settings.theme.effect == .innerGlow && settings.typography.weight < .regular {
+            conditionalLabel = String(localized: Resources.Digits.weight) + ", " + String(localized: Resources.Theme.innerGlowWeightWarning)
+        } else if settings.theme.effect == .glow && settings.typography.weight >= .bold {
+            conditionalLabel = String(localized: Resources.Digits.weight) + ", " + String(localized: Resources.Theme.glowWeightWarning)
+        } else if settings.theme.effect == .glow {
+            conditionalLabel = String(localized: Resources.Theme.effectColorHint)
+        } else {
+            conditionalLabel = String()
+        }
+        if conditionalLabel.isEmpty {
+            return .init(verbatim: mainLabel)
+        } else {
+            return .init(verbatim: "\(mainLabel), \(conditionalLabel)")
+        }
+    }
+
     var effectColorPicker: some View {
-        if settings.theme.effect == .glow {
+        Picker(selection: $settings.theme.effectColor) {
+            ForEach(AccentColor.allCases) { color in
+                showColor(color).tag(color)
+            }
+        } label: {
+            Text(Resources.Theme.effectColor)
+        }
+        .pickerStyle(.menu)
+        .accessibilityElement(children: .ignore)
+        .accessibilityRepresentation {
             Picker(selection: $settings.theme.effectColor) {
                 ForEach(AccentColor.allCases) { color in
-                    showColor(color).tag(color)
+                    Text(color.label).tag(color)
                 }
             } label: {
                 Text(Resources.Theme.effectColor)
+                    .accessibilityHidden(true)
             }
+            .pickerStyle(.menu)
+            .accessibilityLabel(Text(Resources.Theme.effectColor))
         }
     }
 
@@ -82,8 +189,11 @@ private extension DigitsSectionView {
             }
         } label: {
             Text(Resources.Digits.numerals)
+                .accessibilityHidden(true)
         }
-        .help(Text(Resources.Digits.numeralsHint))
+        .pickerStyle(.menu)
+        .hint(Resources.Digits.numeralsHint)
+        .accessibilityLabel(Text(Resources.Digits.numerals))
     }
 
     /// `● Label` row for a color Picker. An AttributedString keeps the dot's color in the
@@ -116,7 +226,7 @@ private extension DigitsSectionView {
     /// Effect-driven font warnings, shown on the Font controls the user would adjust.
     @ViewBuilder
     var innerGlowWeightWarning: some View {
-        if settings.theme.effect == .innerGlow, settings.typography.weight < .regular {
+        if settings.theme.effect == .innerGlow && settings.typography.weight < .regular {
             Text(Resources.Theme.innerGlowWeightWarning)
                 .subtitleFont
         }
@@ -125,7 +235,7 @@ private extension DigitsSectionView {
     /// Effect-driven font warnings, shown on the Font controls the user would adjust.
     @ViewBuilder
     var glowWeightWarning: some View {
-        if settings.theme.effect == .glow, settings.typography.weight >= .bold {
+        if settings.theme.effect == .glow && settings.typography.weight >= .bold {
             Text(Resources.Theme.glowWeightWarning)
                 .subtitleFont
         }
