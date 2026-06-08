@@ -48,5 +48,8 @@ private extension DateSectionView {
 }
 
 #Preview {
-    DateSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        DateSectionView(settings: .constant(.default))
+    }
+    .padding()
 }

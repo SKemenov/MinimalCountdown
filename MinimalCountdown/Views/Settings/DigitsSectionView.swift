@@ -133,5 +133,8 @@ private extension DigitsSectionView {
 }
 
 #Preview {
-    DigitsSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        DigitsSectionView(settings: .constant(.default))
+    }
+    .padding()
 }

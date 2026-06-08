@@ -64,10 +64,28 @@ private extension AppearanceButton {
 }
 
 #Preview {
-    AppearanceButton(
-        settings: SaverSettings.default,
-        style: .minutes,
-        selection: .constant(.init(style: .hours, isLabelHidden: false)),
-        isHovered: false
-    )
+    HStack {
+        Group {
+            AppearanceButton(
+                settings: SaverSettings.default,
+                style: .minutes,
+                selection: .constant(.init(style: .hours, isLabelHidden: false)),
+                isHovered: false
+            )
+            AppearanceButton(
+                settings: SaverSettings.default,
+                style: .minutes,
+                selection: .constant(.init(style: .hours, isLabelHidden: false)),
+                isHovered: true
+            )
+            AppearanceButton(
+                settings: SaverSettings.default,
+                style: .minutes,
+                selection: .constant(.init(style: .minutes, isLabelHidden: false)),
+                isHovered: false
+            )
+        }
+        .frame(width: .Sizes.settingsWidth * 0.25, height: .Sizes.appearanceHeight)
+        .padding()
+    }
 }

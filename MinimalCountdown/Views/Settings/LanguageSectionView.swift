@@ -39,5 +39,8 @@ struct LanguageSectionView: View {
 }
 
 #Preview {
-    LanguageSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        LanguageSectionView(settings: .constant(.default))
+    }
+    .padding()
 }

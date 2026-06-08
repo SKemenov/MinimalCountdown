@@ -51,5 +51,11 @@ private extension ColorSwatch {
 }
 
 #Preview {
-    ColorSwatch(.blue, isSelected: false)
+    HStack {
+        ColorSwatch(.blue, isSelected: false)
+        ColorSwatch(.blue, isSelected: true)
+        ColorSwatch(.white, isSelected: false)
+        ColorSwatch(.white, isSelected: true)
+    }
+    .padding()
 }

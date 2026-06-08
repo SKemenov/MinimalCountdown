@@ -21,5 +21,8 @@ struct ThemeSectionView: View {
 }
 
 #Preview {
-    ThemeSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        ThemeSectionView(settings: .constant(.default))
+    }
+    .padding()
 }

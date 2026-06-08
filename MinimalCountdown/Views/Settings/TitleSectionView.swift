@@ -25,5 +25,8 @@ struct TitleSectionView: View {
 }
 
 #Preview {
-    TitleSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        TitleSectionView(settings: .constant(.default))
+    }
+    .padding()
 }

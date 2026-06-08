@@ -32,5 +32,8 @@ struct AppearanceSectionView: View {
 }
 
 #Preview {
-    AppearanceSectionView(settings: .constant(.default))
+    VStack(alignment: .leading) {
+        AppearanceSectionView(settings: .constant(.default))
+    }
+    .padding()
 }
