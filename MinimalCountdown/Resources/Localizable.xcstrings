@@ -987,60 +987,60 @@
         }
       }
     },
-    "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
+    "⚠️ Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
+            "value" : "⚠️ تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einstellungen konnten nicht gespeichert werden. Schließen Sie die Einstellungen und öffnen Sie sie erneut, starten Sie Ihren Mac neu oder installieren Sie den Bildschirmschoner neu."
+            "value" : "⚠️ Einstellungen konnten nicht gespeichert werden. Schließen Sie die Einstellungen und öffnen Sie sie erneut, starten Sie Ihren Mac neu oder installieren Sie den Bildschirmschoner neu."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
+            "value" : "⚠️ No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
+            "value" : "⚠️ تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
+            "value" : "⚠️ Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
+            "value" : "⚠️ לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
+            "value" : "⚠️ सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
+            "value" : "⚠️ Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
+            "value" : "⚠️ सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
           }
         }
       }

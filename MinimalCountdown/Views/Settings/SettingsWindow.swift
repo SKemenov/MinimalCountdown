@@ -14,7 +14,7 @@ struct SettingsWindow: View {
     var onClose: (() -> Void)?
 
     @State private var settings: SaverSettings = .default
-    @State private var saveError: String?
+    @State private var saveWarning: String?
     @State private var dismissTask: Task<Void, Never>?
     @Environment(SettingsManager.self) private var settingsManager
     @Environment(\.dismiss) private var dismiss
@@ -43,7 +43,7 @@ struct SettingsWindow: View {
             buttons
         }
         .frame(width: .Sizes.settingsWidth, height: windowHeight)
-        .animation(.default, value: saveError)
+        .animation(.default, value: saveWarning)
         .onAppear(perform: prepareForDisplay)
     }
 }
@@ -65,10 +65,14 @@ private extension SettingsWindow {
 
     @ViewBuilder
     var errorMessage: some View {
-        if let saveError {
-            Text(saveError)
-                .foregroundStyle(.red)
-                .formNote
+        if let saveWarning {
+            VStack(alignment: .leading, spacing: .Spacing.small) {
+                Text(Resources.Errors.saving)
+                    .foregroundStyle(.orange)
+                Text(saveWarning)
+                    .foregroundStyle(.secondary)
+            }
+            .formNote
         }
     }
 
@@ -87,7 +91,7 @@ private extension SettingsWindow {
         withAnimation(.none) {
             settings = settingsManager.settings
         }
-        saveError = nil
+        saveWarning = nil
         dismissTask?.cancel()
         dismissTask = nil
     }
@@ -109,7 +113,7 @@ private extension SettingsWindow {
     }
 
     func saveAndExit() {
-        guard saveError == nil else {
+        guard saveWarning == nil else {
             logger.log("Close clicked while banner shown — cancelling dismiss timer and exiting")
             dismissTask?.cancel()
             exitSettings()
@@ -121,7 +125,7 @@ private extension SettingsWindow {
             exitSettings()
         } catch {
             logger.error("Save failed: \(error.localizedDescription, privacy: .public)")
-            saveError = error.localizedDescription
+            saveWarning = (error as? LocalStoreError)?.underlyingDescription ?? error.localizedDescription
             dismissTask = Task { @MainActor in
                 try? await Task.sleep(for: .seconds(4))
                 guard !Task.isCancelled else { return }

@@ -23,5 +23,14 @@ enum LocalStoreError: Error, LocalizedError {
         }
     }
     
+    var underlyingDescription: String {
+        switch self {
+            case .directoryUnavailable(_, let underlying),
+                 .encodingFailed(let underlying),
+                 .writeFailed(_, let underlying):
+                underlying.localizedDescription
+        }
+    }
+    
     var errorDescription: String? { String(localized: Resources.Errors.saving) }
 }

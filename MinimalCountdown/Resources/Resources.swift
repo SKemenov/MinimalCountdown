@@ -172,7 +172,7 @@ enum Resources {
 
     enum Errors {
         static let saving = LocalizedStringResource(
-            "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver.",
+            "⚠️ Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver.",
             bundle: .app
         )
     }
