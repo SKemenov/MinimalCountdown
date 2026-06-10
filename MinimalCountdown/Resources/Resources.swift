@@ -165,9 +165,11 @@ enum Resources {
             bundle: .app
         )
         static let translationDisclaimer = LocalizedStringResource(
-            "I may use some inappropriate or wrong word translations in this localization. Please contact me to resolve this issue.",
+            "Language.translationDisclaimer",
+            defaultValue: "Some translations may be imperfect. If you spot a mistake, I'd appreciate a report.",
             bundle: .app
         )
+        static let reportIssue = LocalizedStringResource("Report a translation issue", bundle: .app)
     }
 
     enum Errors {

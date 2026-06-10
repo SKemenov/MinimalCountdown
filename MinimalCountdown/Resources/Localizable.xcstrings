@@ -2031,60 +2031,125 @@
         }
       }
     },
-    "I may use some inappropriate or wrong word translations in this localization. Please contact me to resolve this issue." : {
+    "Language.translationDisclaimer" : {
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قد أستخدم بعض الترجمات غير الدقيقة أو الخاطئة في هذه النسخة. يُرجى التواصل معي لحل هذه المشكلة."
+            "value" : "قد تكون بعض الترجمات غير دقيقة. إذا لاحظت خطأً، سأكون ممتنًا لإبلاغي به."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ich verwende möglicherweise einige unpassende oder falsche Wortübersetzungen in dieser Lokalisierung. Bitte kontaktieren Sie mich, um dieses Problem zu lösen. "
+            "value" : "Einige Übersetzungen sind möglicherweise nicht perfekt. Wenn Ihnen ein Fehler auffällt, freue ich mich über eine Meldung."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Some translations may be imperfect. If you spot a mistake, I'd appreciate a report."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es posible que algunas traducciones de palabras sean incorrectas o inapropiadas en esta localización. Por favor, contáctame para solucionar este problema."
+            "value" : "Es posible que algunas traducciones no sean perfectas. Si detectas un error, agradecería que me lo informaras."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ممکن است در این بومی‌سازی از ترجمه‌های نامناسب یا اشتباه کلمات استفاده کنم. لطفاً برای حل این مشکل با من تماس بگیرید."
+            "value" : "ممکن است برخی ترجمه‌ها بی‌نقص نباشند. اگر اشتباهی دیدید، از گزارش آن سپاسگزار خواهم بود."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Je peux utiliser des traductions de mots inappropriées ou incorrectes dans cette localisation. Veuillez me contacter pour résoudre ce problème."
+            "value" : "Certaines traductions peuvent être imparfaites. Si vous repérez une erreur, je serais reconnaissant que vous la signaliez."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ייתכן שאשתמש בתרגומי מילים לא הולמים או שגויים בלוקליזציה זו. אנא צור איתי קשר כדי לפתור בעיה זו."
+            "value" : "ייתכן שחלק מהתרגומים אינם מושלמים. אם אתם מבחינים בטעות, אשמח לקבל דיווח."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "हो सकता है कि मैंने इस लोकलाइज़ेशन में कुछ गलत या गलत शब्दों का ट्रांसलेशन इस्तेमाल किया हो। इस समस्या को ठीक करने के लिए कृपया मुझसे संपर्क करें।"
+            "value" : "हो सकता है कुछ अनुवाद सटीक न हों। यदि आपको कोई गलती दिखे, तो कृपया रिपोर्ट करें।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Я могу использовать некоторые неподходящие или неправильные переводы слов в этой локализации. Пожалуйста, свяжитесь со мной, чтобы решить эту проблему.  "
+            "value" : "Некоторые переводы могут быть неточными. Если заметите ошибку, буду признателен за сообщение."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "अस्मिन् स्थानीयकरणे अहं केचन अनुचिताः अथवा गलत् शब्दानुवादाः प्रयोक्तुं शक्नोमि। अस्य समस्यायाः समाधानार्थं मया सह सम्पर्कं कुर्वन्तु।"
+            "value" : "केचन अनुवादाः सम्यक् न स्युः। यदि कांचित् त्रुटिं पश्यथ, तर्हि कृपया निवेदयत।"
+          }
+        }
+      }
+    },
+    "Report a translation issue" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإبلاغ عن خطأ في الترجمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersetzungsfehler melden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informar de un error de traducción"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گزارش خطای ترجمه"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signaler une erreur de traduction"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דיווח על טעות בתרגום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनुवाद त्रुटि की रिपोर्ट करें"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщить об ошибке перевода"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनुवादत्रुटेः निवेदनम्"
           }
         }
       }

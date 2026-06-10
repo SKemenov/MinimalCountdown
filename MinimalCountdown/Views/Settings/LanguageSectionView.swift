@@ -30,8 +30,16 @@ struct LanguageSectionView: View {
             }
             .help(Text(Resources.Language.countdownHint))
 
-            Text(Resources.Language.translationDisclaimer)
-                .subtitleFont
+            VStack(alignment: .leading, spacing: .Spacing.small) {
+                Text(Resources.Language.translationDisclaimer)
+                    .subtitleFont
+                if let issuesURL = AppSettings.issuesURL {
+                    Link(destination: issuesURL) {
+                        Text(Resources.Language.reportIssue)
+                    }
+                    .font(.caption)
+                }
+            }
         } header: {
             Text(Resources.Language.title)
         }
