@@ -9,14 +9,13 @@ import Foundation
 
 enum NumeralSystem: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
     case automatic = 0, latin, arabic, persian, devanagari
-
-    // safe and un-optional, defaults to .automatic
-    init(_ rawValue: Int) {
-        self = .init(rawValue: rawValue) ?? .automatic
-    }
 }
 
 extension NumeralSystem {
+    init(_ rawValue: Int) {
+        self = .init(rawValue: rawValue) ?? .automatic
+    }
+
     var id: Self { self }
 
     /// `nil` for `.automatic` — the caller falls back to the resolved locale's own numbering

@@ -11,14 +11,13 @@ import Foundation
 
 enum AppearanceStyle: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Comparable, Hashable {
     case days = 0, hours, minutes, seconds
-
-    // safe and un-optional, defaults to .seconds (show all)
-    init(_ rawValue: Int) {
-        self = .init(rawValue: rawValue) ?? .seconds
-    }
 }
 
 extension AppearanceStyle {
+    init(_ rawValue: Int) {
+        self = .init(rawValue: rawValue) ?? .seconds
+    }
+
     var id: Self { self }
 
     static func < (lhs: AppearanceStyle, rhs: AppearanceStyle) -> Bool {

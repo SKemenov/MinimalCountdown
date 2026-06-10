@@ -51,9 +51,11 @@ extension View {
                 foregroundStyle(innerGlow(render.effectGlowColor, size: size))
         }
     }
+}
 
+private extension View {
     /// Dense, compressed colored glow — few tight core layers + a wider spread.
-    private func glow(_ color: Color, size: CGFloat) -> some View {
+    func glow(_ color: Color, size: CGFloat) -> some View {
         self
             .shadow(color: color, radius: size * .glowCoreRatio)
             .shadow(color: color, radius: size * .glowCoreRatio)
@@ -63,7 +65,7 @@ extension View {
     }
 
     /// Wider glow used behind blurred digits.
-    private func blurGlow(_ color: Color, size: CGFloat) -> some View {
+    func blurGlow(_ color: Color, size: CGFloat) -> some View {
         self
             .blur(radius: size * .blurRatio)
             .shadow(color: color, radius: size * .glowCoreRatio)
@@ -71,7 +73,7 @@ extension View {
     }
 
     /// Sharp edges with inner glow.
-    private func innerGlow(_ color: Color, size: CGFloat) -> some ShapeStyle {
+    func innerGlow(_ color: Color, size: CGFloat) -> some ShapeStyle {
         Color.black
             .shadow(.inner(color: color, radius: size * .innerGlowRatio))
             .shadow(.inner(color: color, radius: size * .innerGlowRatio))

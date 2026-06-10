@@ -1,5 +1,5 @@
 //
-//  JSONEncoder.swift
+//  JSONEncoder+Ext.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov

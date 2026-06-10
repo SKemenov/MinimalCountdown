@@ -72,8 +72,6 @@ enum UIModel {
         return words.joined(separator: separator)
     }
 
-    /// Countdown digit string: zero-padded (min 2, grows for 3-digit day counts) and rendered
-    /// in `locale`'s numeral system (the resolved `RenderSettings.digitLocale`).
     static func formattedDigits(_ value: Int, in locale: Locale) -> String {
         value.formatted(.number.precision(.integerLength(2...)).grouping(.never).locale(locale))
     }
@@ -84,8 +82,6 @@ enum UIModel {
         return String(localized: localizedValue)
     }
 
-    /// Effect-section subtitle/tooltip: the base hint + a localized "or"-list of the available
-    /// effect names (lowercased).
     static var effectsHint: String {
         let effectNames = EffectStyle.allCases
             .filter { $0 != .none }
@@ -107,10 +103,17 @@ enum UIModel {
 
 private extension UIModel {
     static var nonCapitalizedLanguageCodes: [String] { ["ar", "he", "fa"] }
-    static var allLanguages: [AppLanguage] { AppLanguage.allCases.filter { $0 != .automatic } }
-    static var allLanguagesCodes: [String] { allLanguages.compactMap { $0.languageCode } }
+
+    static var allLanguages: [AppLanguage] {
+        AppLanguage.allCases.filter { $0 != .automatic }
+    }
+    static var allLanguagesCodes: [String] {
+        allLanguages.compactMap { $0.languageCode }
+    }
     static var systemPreferredCodes: [String] {
         Locale.preferredLanguages.compactMap { $0.components(separatedBy: "-").first }
     }
-    static var preferredLanguagesCodes: [String] { systemPreferredCodes.filter { allLanguagesCodes.contains($0) } }
+    static var preferredLanguagesCodes: [String] {
+        systemPreferredCodes.filter { allLanguagesCodes.contains($0) }
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  CGFloat+Extensions.swift
+//  CGFloat+Ext.swift
 //  MinimalCountdown
 //
 //  Created by Sergey Kemenov
@@ -28,8 +28,8 @@ extension CGFloat {
     enum Border {
         /// CGFloat = 1
         static let small: CGFloat = 1
-        /// CGFloat = 3
-        static let medium: CGFloat = 3
+        /// CGFloat = 2
+        static let medium: CGFloat = 2
     }
 
     enum Sizes {

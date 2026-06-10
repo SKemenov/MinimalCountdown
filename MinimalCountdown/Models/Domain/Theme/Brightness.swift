@@ -9,14 +9,13 @@ import Foundation
 
 enum Brightness: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, Hashable {
     case low = 0, medium, high
-
-    // safe and un-optional, defaults to .high
-    init(_ rawValue: Int) {
-        self = .init(rawValue: rawValue) ?? .high
-    }
 }
 
 extension Brightness {
+    init(_ rawValue: Int) {
+        self = .init(rawValue: rawValue) ?? .high
+    }
+
     var id: Self { self }
 
     var label: LocalizedStringResource {

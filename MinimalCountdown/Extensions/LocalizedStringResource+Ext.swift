@@ -10,7 +10,7 @@ import Foundation
 private final class BundleToken {}
 
 extension LocalizedStringResource.BundleDescription {
-    /// Anchors `LocalizedStringResource` lookups to *this* bundle. Inside a `.saver`, `Bundle.main`
+    /// Locks `LocalizedStringResource` lookups to *this* bundle. Inside a `.saver`, `Bundle.main`
     /// is the host app (System Settings), so the default `.main` resolution silently falls back to
     /// the development-language key. `.forClass` instead resolves to the bundle a class is compiled
     /// into; `BundleToken` compiles into each target, so `.app` resolves to the saver bundle in the

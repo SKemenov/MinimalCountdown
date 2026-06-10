@@ -19,14 +19,13 @@ enum AppLanguage: Int, CaseIterable, Identifiable, SafeIntDecodable, Equatable, 
     case farsi
     case hindi
     case sanskrit
-
-    // safe and un-optional, defaults to .automatic
-    init(_ rawValue: Int) {
-        self = .init(rawValue: rawValue) ?? .automatic
-    }
 }
 
 extension AppLanguage {
+    init(_ rawValue: Int) {
+        self = .init(rawValue: rawValue) ?? .automatic
+    }
+
     var id: Self { self }
 
     var label: LocalizedStringResource {
