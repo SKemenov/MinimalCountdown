@@ -7,16 +7,6 @@
 
 import Foundation
 
-private final class BundleToken {}
-
-extension LocalizedStringResource.BundleDescription {
-    /// Anchors `LocalizedStringResource` lookups to *this* bundle. Inside a `.saver`, `Bundle.main`
-    /// is the host app (System Settings), so the default `.main` resolution silently falls back to
-    /// the development-language key. `BundleToken` compiles into each target, so `.forClass` resolves
-    /// to the saver bundle in the saver and the app bundle in DevApp.
-    static let app = LocalizedStringResource.BundleDescription.forClass(BundleToken.self)
-}
-
 // MARK: - Localized UI strings
 enum Resources {
     /// Single source of truth for strings that used to be derived inline via `String(describing:)`.
@@ -114,7 +104,7 @@ enum Resources {
             bundle: .app
         )
         static let dayHint2 = LocalizedStringResource(
-            "The available range is one year before and after the current date.",
+            "The available range is two years before and after the current date.",
             bundle: .app
         )
         static let dayHint3 = LocalizedStringResource(
@@ -170,24 +160,21 @@ enum Resources {
         static let title = LocalizedStringResource("Language", bundle: .app)
         static let countdown = LocalizedStringResource("Countdown language", bundle: .app)
         static let countdownHint = LocalizedStringResource("Affects only the countdown display", bundle: .app)
-        static let settings = LocalizedStringResource("Show settings in this language too", bundle: .app)
-        static let settingsHint = LocalizedStringResource(
-            "The settings window will use the selected language after you reopen it",
-            bundle: .app
-        )
         static let applyWarning = LocalizedStringResource(
             "⚠️ The selected language will be applied after you close this window.",
             bundle: .app
         )
         static let translationDisclaimer = LocalizedStringResource(
-            "I may use some inappropriate or wrong word translations in this localization. Please contact me to resolve this issue.",
+            "Language.translationDisclaimer",
+            defaultValue: "Some translations may be imperfect. If you spot a mistake, I'd appreciate a report.",
             bundle: .app
         )
+        static let reportIssue = LocalizedStringResource("Report a translation issue", bundle: .app)
     }
 
     enum Errors {
         static let saving = LocalizedStringResource(
-            "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver.",
+            "⚠️ Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver.",
             bundle: .app
         )
     }

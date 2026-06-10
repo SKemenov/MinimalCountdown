@@ -987,60 +987,60 @@
         }
       }
     },
-    "Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
+    "⚠️ Could not save settings. Try closing and reopening Settings, restarting your Mac, or reinstalling the screen saver." : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
+            "value" : "⚠️ تعذّر حفظ الإعدادات. حاول إغلاق الإعدادات وإعادة فتحها، أو إعادة تشغيل الـ Mac، أو إعادة تثبيت شاشة التوقف."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einstellungen konnten nicht gespeichert werden. Schließen Sie die Einstellungen und öffnen Sie sie erneut, starten Sie Ihren Mac neu oder installieren Sie den Bildschirmschoner neu."
+            "value" : "⚠️ Einstellungen konnten nicht gespeichert werden. Schließen Sie die Einstellungen und öffnen Sie sie erneut, starten Sie Ihren Mac neu oder installieren Sie den Bildschirmschoner neu."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
+            "value" : "⚠️ No se pudieron guardar los ajustes. Prueba a cerrar y volver a abrir Ajustes, reiniciar el Mac o reinstalar el salvapantallas."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
+            "value" : "⚠️ تنظیمات ذخیره نشد. پنجره تنظیمات را ببند و دوباره باز کن، مک را ری‌استارت کن یا محافظ صفحه را دوباره نصب کن."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
+            "value" : "⚠️ Impossible d’enregistrer les réglages. Essayez de fermer puis de rouvrir les Réglages, de redémarrer votre Mac ou de réinstaller l’économiseur d’écran."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
+            "value" : "⚠️ לא ניתן לשמור את ההגדרות. נסה לסגור ולפתוח מחדש את ההגדרות, לאתחל את ה-Mac או להתקין מחדש את שומר המסך."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
+            "value" : "⚠️ सेटिंग्स सेव नहीं हो सकीं। सेटिंग्स विंडो बंद करके फिर से खोलें, Mac रीस्टार्ट करें या स्क्रीन सेवर दोबारा इंस्टॉल करें।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
+            "value" : "⚠️ Не удалось сохранить настройки. Попробуйте закрыть и снова открыть «Настройки», перезагрузить Mac или переустановить заставку."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
+            "value" : "⚠️ सेटिङ्ग्स् रक्षितुं न शक्यते। सेटिङ्ग्स् विण्डो पिधाय पुनः उद्घाटय, Mac पुनः आरभस्व वा स्क्रीनसेवरं पुनः संस्थापय।"
           }
         }
       }
@@ -2031,60 +2031,125 @@
         }
       }
     },
-    "I may use some inappropriate or wrong word translations in this localization. Please contact me to resolve this issue." : {
+    "Language.translationDisclaimer" : {
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "قد أستخدم بعض الترجمات غير الدقيقة أو الخاطئة في هذه النسخة. يُرجى التواصل معي لحل هذه المشكلة."
+            "value" : "قد تكون بعض الترجمات غير دقيقة. إذا لاحظت خطأً، سأكون ممتنًا لإبلاغي به."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ich verwende möglicherweise einige unpassende oder falsche Wortübersetzungen in dieser Lokalisierung. Bitte kontaktieren Sie mich, um dieses Problem zu lösen. "
+            "value" : "Einige Übersetzungen sind möglicherweise nicht perfekt. Wenn Ihnen ein Fehler auffällt, freue ich mich über eine Meldung."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Some translations may be imperfect. If you spot a mistake, I'd appreciate a report."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Es posible que algunas traducciones de palabras sean incorrectas o inapropiadas en esta localización. Por favor, contáctame para solucionar este problema."
+            "value" : "Es posible que algunas traducciones no sean perfectas. Si detectas un error, agradecería que me lo informaras."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ممکن است در این بومی‌سازی از ترجمه‌های نامناسب یا اشتباه کلمات استفاده کنم. لطفاً برای حل این مشکل با من تماس بگیرید."
+            "value" : "ممکن است برخی ترجمه‌ها بی‌نقص نباشند. اگر اشتباهی دیدید، از گزارش آن سپاسگزار خواهم بود."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Je peux utiliser des traductions de mots inappropriées ou incorrectes dans cette localisation. Veuillez me contacter pour résoudre ce problème."
+            "value" : "Certaines traductions peuvent être imparfaites. Si vous repérez une erreur, je serais reconnaissant que vous la signaliez."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ייתכן שאשתמש בתרגומי מילים לא הולמים או שגויים בלוקליזציה זו. אנא צור איתי קשר כדי לפתור בעיה זו."
+            "value" : "ייתכן שחלק מהתרגומים אינם מושלמים. אם אתם מבחינים בטעות, אשמח לקבל דיווח."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "हो सकता है कि मैंने इस लोकलाइज़ेशन में कुछ गलत या गलत शब्दों का ट्रांसलेशन इस्तेमाल किया हो। इस समस्या को ठीक करने के लिए कृपया मुझसे संपर्क करें।"
+            "value" : "हो सकता है कुछ अनुवाद सटीक न हों। यदि आपको कोई गलती दिखे, तो कृपया रिपोर्ट करें।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Я могу использовать некоторые неподходящие или неправильные переводы слов в этой локализации. Пожалуйста, свяжитесь со мной, чтобы решить эту проблему.  "
+            "value" : "Некоторые переводы могут быть неточными. Если заметите ошибку, буду признателен за сообщение."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "अस्मिन् स्थानीयकरणे अहं केचन अनुचिताः अथवा गलत् शब्दानुवादाः प्रयोक्तुं शक्नोमि। अस्य समस्यायाः समाधानार्थं मया सह सम्पर्कं कुर्वन्तु।"
+            "value" : "केचन अनुवादाः सम्यक् न स्युः। यदि कांचित् त्रुटिं पश्यथ, तर्हि कृपया निवेदयत।"
+          }
+        }
+      }
+    },
+    "Report a translation issue" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإبلاغ عن خطأ في الترجمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Übersetzungsfehler melden"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informar de un error de traducción"
+          }
+        },
+        "fa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "گزارش خطای ترجمه"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Signaler une erreur de traduction"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "דיווח על טעות בתרגום"
+          }
+        },
+        "hi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनुवाद त्रुटि की रिपोर्ट करें"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщить об ошибке перевода"
+          }
+        },
+        "sa" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "अनुवादत्रुटेः निवेदनम्"
           }
         }
       }
@@ -4080,176 +4145,60 @@
         }
       }
     },
-    "Show settings in this language too" : {
+    "The available range is two years before and after the current date." : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "عرض الإعدادات بهذه اللغة أيضًا"
+            "value" : "النطاق المتاح هو سنتان قبل وبعد التاريخ الحالي."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Einstellungen ebenfalls in dieser Sprache anzeigen"
+            "value" : "Der verfügbare Bereich beträgt zwei Jahre vor und nach dem aktuellen Datum."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Mostrar Ajustes también en este idioma "
+            "value" : "El intervalo disponible es de dos años antes y después de la fecha actual."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "تنظیمات را به این زبان نیز نمایش دهید."
+            "value" : "محدوده موجود دو سال قبل و بعد از تاریخ فعلی است."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Afficher les Réglages également dans cette langue"
+            "value" : "La plage disponible est de deux ans avant et après la date actuelle."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הצג את ההגדרות גם בשפה זו"
+            "value" : "הטווח הזמין הוא שנתיים לפני ואחרי התאריך הנוכחי."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "इस भाषा में भी सेटिंग्स दिखाएँ"
+            "value" : "उपलब्ध सीमा वर्तमान तारीख से दो वर्ष पहले और बाद की है।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Показывать настройки на этом же языке "
+            "value" : "Доступный диапазон — два года до и после текущей даты."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "अस्मिन् भाषायां अपि सेटिङ्ग्स् दर्शयतु"
-          }
-        }
-      }
-    },
-    "The available range is one year before and after the current date." : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "النطاق المتاح هو سنة واحدة قبل وبعد التاريخ الحالي."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Der verfügbare Bereich beträgt ein Jahr vor und nach dem aktuellen Datum."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "El intervalo disponible es de un año antes y después de la fecha actual."
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "محدوده موجود یک سال قبل و بعد از تاریخ فعلی است."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La plage disponible est d’un an avant et après la date actuelle."
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "הטווח הזמין הוא שנה אחת לפני ואחרי התאריך הנוכחי."
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "उपलब्ध सीमा वर्तमान तारीख से एक वर्ष पहले और बाद की है।"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Доступный диапазон — один год до и после текущей даты."
-          }
-        },
-        "sa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
-          }
-        }
-      }
-    },
-    "The settings window will use the selected language after you reopen it" : {
-      "localizations" : {
-        "ar" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ستستخدم نافذة الإعدادات اللغة المختارة بعد إعادة فتحها."
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Das Einstellungsfenster verwendet die ausgewählte Sprache nach dem erneuten Öffnen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La ventana de Ajustes usará el idioma seleccionado después de volver a abrirla"
-          }
-        },
-        "fa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "پنجره تنظیمات پس از بازگشایی مجدد، از زبان انتخاب شده استفاده خواهد کرد."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La fenêtre des Réglages utilisera la langue sélectionnée après réouverture"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "חלון ההגדרות ישתמש בשפה שנבחרה לאחר פתיחתו מחדש"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "सेटिंग्स विंडो को दोबारा खोलने के बाद, यह चुनी हुई भाषा का इस्तेमाल करेगी"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " Окно настроек будет использовать выбранный язык после повторного открытия"
-          }
-        },
-        "sa" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "भवता पुनः उद्घाटितस्य अनन्तरं सेटिङ्ग्स् विण्डो चयनितभाषायाः उपयोगं करिष्यति"
+            "value" : "उपलब्धः परिसरः वर्तमानतिथेः द्विवर्षपूर्वं च द्विवर्षोत्तरं च अस्ति।"
           }
         }
       }

@@ -1,0 +1,151 @@
+//
+//  SettingsWindow.swift
+//  MinimalCountdown
+//
+//  Created by Sergey Kemenov
+//
+
+import OSLog
+import SwiftUI
+
+struct SettingsWindow: View {
+
+    private let logger: Logger
+    var onClose: (() -> Void)?
+
+    @State private var settings: SaverSettings = .default
+    @State private var saveWarning: String?
+    @State private var dismissTask: Task<Void, Never>?
+    @Environment(SettingsManager.self) private var settingsManager
+    @Environment(\.dismiss) private var dismiss
+
+    init(onClose: (() -> Void)? = nil) {
+        logger = Logger(subsystem: AppSettings.subSystem, category: String(describing: Self.self))
+        self.onClose = onClose
+    }
+
+    var body: some View {
+        VStack(spacing: .zero) {
+            Form {
+                AppearanceSectionView(settings: $settings)
+                DateSectionView(settings: $settings)
+                ThemeSectionView(settings: $settings)
+                DigitsSectionView(settings: $settings)
+                TitleSectionView(settings: $settings)
+                LanguageSectionView(settings: $settings)
+            }
+            .formStyle(.grouped)
+            .animation(.default, value: settings)
+            .onKeyPress(.return, action: saveByEnterKey)
+
+            languageWarning
+            errorMessage
+            buttons
+        }
+        .frame(width: .Sizes.settingsWidth, height: windowHeight)
+        .animation(.default, value: saveWarning)
+        .onAppear(perform: prepareForDisplay)
+    }
+}
+
+private extension SettingsWindow {
+    var windowHeight: CGFloat {
+        let visibleHeight = NSScreen.main?.visibleFrame.height ?? .Sizes.settingsIdealHeight
+        return min(.Sizes.settingsIdealHeight, visibleHeight - .Sizes.settingsScreenMargin)
+    }
+
+    @ViewBuilder
+    var languageWarning: some View {
+        if settings.language != settingsManager.settings.language {
+            Text(Resources.Language.applyWarning)
+                .foregroundStyle(.secondary)
+                .formNote
+        }
+    }
+
+    @ViewBuilder
+    var errorMessage: some View {
+        if let saveWarning {
+            VStack(alignment: .leading, spacing: .Spacing.small) {
+                Text(Resources.Errors.saving)
+                    .foregroundStyle(.orange)
+                Text(saveWarning)
+                    .foregroundStyle(.secondary)
+            }
+            .formNote
+        }
+    }
+
+    var buttons: some View {
+        HStack {
+            Spacer()
+            Button(action: saveAndExit) {
+                Text(Resources.Buttons.close)
+            }
+            .buttonStyle(.borderedProminent)
+            .padding()
+        }
+    }
+
+    func prepareForDisplay() {
+        withAnimation(.none) {
+            settings = settingsManager.settings
+        }
+        saveWarning = nil
+        dismissTask?.cancel()
+        dismissTask = nil
+    }
+
+    @discardableResult
+    func saveByEnterKey() -> KeyPress.Result {
+        saveAndExit()
+        return .handled
+    }
+
+    func exitSettings() {
+        if let onClose {
+            logger.log("Run onClose callback to close configuration sheet")
+            onClose()
+        } else {
+            logger.log("Dismiss SwiftUI window")
+            dismiss()
+        }
+    }
+
+    func saveAndExit() {
+        guard saveWarning == nil else {
+            logger.log("Close clicked while banner shown — cancelling dismiss timer and exiting")
+            dismissTask?.cancel()
+            exitSettings()
+            return
+        }
+        logger.log("Saving and closing configuration sheet")
+        do {
+            try settingsManager.save(settings)
+            exitSettings()
+        } catch {
+            logger.error("Save failed: \(error.localizedDescription, privacy: .public)")
+            saveWarning = (error as? LocalStoreError)?.underlyingDescription ?? error.localizedDescription
+            dismissTask = Task { @MainActor in
+                try? await Task.sleep(for: .seconds(4))
+                guard !Task.isCancelled else { return }
+                exitSettings()
+            }
+        }
+    }
+}
+
+#if DEBUG
+#Preview("Light mode") {
+    SettingsWindow()
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
+        .preferredColorScheme(.light)
+}
+
+#Preview("Dark mode") {
+    SettingsWindow()
+        .environment(SettingsManager(saver: MockInMemoryLocalStore(initial: .preview)))
+        .preferredColorScheme(.dark)
+}
+
+#endif
