@@ -16,6 +16,7 @@ final class MinimalCountdownView: ScreenSaverView {
     private let logger: Logger
     private let clock = CountdownClock()
     private var hostingView: NSHostingView<AnyView>?
+    private var isPreviewKindString: String { isPreview ? "preview" : "screen saver" }
 
     lazy var settingsController: SettingsWindowController = SettingsWindowController(settingsManager: settingsManager)
 
@@ -52,7 +53,7 @@ final class MinimalCountdownView: ScreenSaverView {
         animationTimeInterval = 1.0
         configureHostingView()
 
-        logger.log("Init complete for \(message, privacy: .public)")
+        logger.log("Init complete for \(self.isPreviewKindString, privacy: .public)")
     }
 
     required init?(coder: NSCoder) {
@@ -62,11 +63,20 @@ final class MinimalCountdownView: ScreenSaverView {
     }
 
     deinit {
-        let message: String = isPreview ? "screen saver" : "preview"
-        logger.log("Finished \(message, privacy: .public)")
+        logger.log("Finished \(self.isPreviewKindString, privacy: .public)")
     }
 
     // MARK: - Lifecycle
+
+    override func startAnimation() {
+        super.startAnimation()
+        logger.log("Started animation for \(self.isPreviewKindString, privacy: .public)")
+    }
+
+    override func stopAnimation() {
+        super.stopAnimation()
+        logger.log("Stopped animation for \(self.isPreviewKindString, privacy: .public)")
+    }
 
     override func animateOneFrame() {
         clock.now = Date()
