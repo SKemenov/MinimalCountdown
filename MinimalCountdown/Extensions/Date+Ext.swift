@@ -36,7 +36,7 @@ private extension Date {
     }
 
     func farAvailableDate(isFuture: Bool) -> Self {
-        Date(timeInterval: (isFuture ? .oneYearAndOneDay : -.oneYearAndOneDay), since: self)
+        Date(timeInterval: (isFuture ? .rangeLimit : -.rangeLimit), since: self)
     }
 }
 

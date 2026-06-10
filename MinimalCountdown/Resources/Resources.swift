@@ -104,7 +104,7 @@ enum Resources {
             bundle: .app
         )
         static let dayHint2 = LocalizedStringResource(
-            "The available range is one year before and after the current date.",
+            "The available range is two years before and after the current date.",
             bundle: .app
         )
         static let dayHint3 = LocalizedStringResource(

@@ -4145,60 +4145,60 @@
         }
       }
     },
-    "The available range is one year before and after the current date." : {
+    "The available range is two years before and after the current date." : {
       "localizations" : {
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "النطاق المتاح هو سنة واحدة قبل وبعد التاريخ الحالي."
+            "value" : "النطاق المتاح هو سنتان قبل وبعد التاريخ الحالي."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Der verfügbare Bereich beträgt ein Jahr vor und nach dem aktuellen Datum."
+            "value" : "Der verfügbare Bereich beträgt zwei Jahre vor und nach dem aktuellen Datum."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "El intervalo disponible es de un año antes y después de la fecha actual."
+            "value" : "El intervalo disponible es de dos años antes y después de la fecha actual."
           }
         },
         "fa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "محدوده موجود یک سال قبل و بعد از تاریخ فعلی است."
+            "value" : "محدوده موجود دو سال قبل و بعد از تاریخ فعلی است."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "La plage disponible est d’un an avant et après la date actuelle."
+            "value" : "La plage disponible est de deux ans avant et après la date actuelle."
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "הטווח הזמין הוא שנה אחת לפני ואחרי התאריך הנוכחי."
+            "value" : "הטווח הזמין הוא שנתיים לפני ואחרי התאריך הנוכחי."
           }
         },
         "hi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "उपलब्ध सीमा वर्तमान तारीख से एक वर्ष पहले और बाद की है।"
+            "value" : "उपलब्ध सीमा वर्तमान तारीख से दो वर्ष पहले और बाद की है।"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Доступный диапазон — один год до и после текущей даты."
+            "value" : "Доступный диапазон — два года до и после текущей даты."
           }
         },
         "sa" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "उपलब्धः परिसरः वर्तमानतिथेः एकवर्षपूर्वं च एकवर्षोत्तरं च अस्ति।"
+            "value" : "उपलब्धः परिसरः वर्तमानतिथेः द्विवर्षपूर्वं च द्विवर्षोत्तरं च अस्ति।"
           }
         }
       }
