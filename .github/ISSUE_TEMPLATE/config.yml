@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions & ideas
+    url: https://github.com/SKemenov/MinimalCountdown/discussions
+    about: Ask a question or share an idea in Discussions
+  - name: ℹ️ About Minimal Countdown
+    url: https://github.com/SKemenov/MinimalCountdown
+    about: Features, screenshots, and install guide in the README
