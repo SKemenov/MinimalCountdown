@@ -1,8 +1,8 @@
 ---
-name: MacOS Bug report
+name: "\U0001FAB2 Bug report"
 about: Create a report to help us improve
 title: "[BUG] "
-labels: ''
+labels: bug
 assignees: ''
 
 ---

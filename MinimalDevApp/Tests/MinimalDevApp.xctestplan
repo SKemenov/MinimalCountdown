@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "AF16204A-9F05-4717-A731-9627627F949D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:MinimalCountdown.xcodeproj",
+      "identifier" : "E9BDA7812F8A922F00FB19A4",
+      "name" : "MinimalDevApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:MinimalCountdown.xcodeproj",
+        "identifier" : "E9BE06BD2FCB29A500996D7A",
+        "name" : "MinimalDevAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

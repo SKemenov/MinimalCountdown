@@ -1,1 +1,8 @@
-*.xcscheme
+.DS_Store
+/.build
+/Packages
+xcuserdata/
+DerivedData/
+
+# Local release staging (published to GitHub Releases, not committed)
+/Releases
